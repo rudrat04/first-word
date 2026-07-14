@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firstword — Product Consultancy</title>
+<title>Firstword | Coming Soon</title>
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -1126,6 +1126,13 @@
     outline: 3px solid var(--coral);
     outline-offset: 3px;
   }
+  @media (max-width: 480px) {
+    .modal-card {
+      padding: 1.75rem 1.25rem 1.5rem;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0 var(--coral);
+    }
+  }
 </style>
 <body>
 
@@ -1163,7 +1170,7 @@
 <section class="hero" style="min-height: 78vh; padding: 10rem 1.5rem 5rem;">
   <div class="hero-eyebrow"><span class="dot"></span> This page is still being built</div>
   <h1 class="hero-headline" id="comingSoonTitle" style="max-width: 16ch; font-size: clamp(2.3rem, 6.5vw, 4.5rem);">Coming<span class="line2">soon</span></h1>
-  <p class="hero-sub" id="comingSoonSub">This service page isn't live yet — but the work itself already is. Reach out and we'll figure out the details directly.</p>
+  <p class="hero-sub" id="comingSoonSub">This service page isn't live yet, but the work itself already is. Reach out and we'll figure out the details directly.</p>
   <button type="button" class="cta-btn" onclick="openContactModal()">Ask me about it
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </button>
@@ -1173,7 +1180,7 @@
 </section>
 
 <footer>
-  <strong>Firstword</strong> — LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
+  <strong>Firstword</strong> · LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
 </footer>
 <div class="modal-overlay" id="contactModal" aria-hidden="true">
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -1182,7 +1189,7 @@
     <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
       <span class="modal-eyebrow">Let's talk</span>
       <h3 id="modalTitle">Tell me a bit about you</h3>
-      <p class="modal-sub">I'll follow up within a day with next steps — no auto-responder, an actual reply from me.</p>
+      <p class="modal-sub">I'll follow up within a day with next steps. You'll get an actual reply from me, not an auto-responder.</p>
 
       <div class="form-group">
         <label for="cf-name">Name</label>
@@ -1240,10 +1247,10 @@
       if (titleEl) titleEl.innerHTML = names[service] + '<span class="line2">is on its way</span>';
       if (subEl) {
         subEl.textContent = isContentSection
-          ? "This section is still being written up — check back soon, or reach out and I'll share examples directly."
-          : "The " + names[service] + " page isn't live yet — but I'm already doing this work for clients. Reach out and we'll sort the details directly.";
+          ? "This section is still being written up. Check back soon, or reach out and I'll share examples directly."
+          : "The " + names[service] + " page isn't live yet, but I'm already doing this work for clients. Reach out and we'll sort the details directly.";
       }
-      document.title = 'Firstword — ' + names[service] + ' (Coming Soon)';
+      document.title = 'Firstword | ' + names[service] + ' (Coming Soon)';
     }
   })();
 
@@ -1281,6 +1288,10 @@
   }
 
   function openContactModal() {
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks && navLinks.classList.contains('open')) {
+      toggleMobileNav();
+    }
     document.getElementById('contactModal').classList.add('open');
     document.getElementById('contactModal').setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -1372,7 +1383,7 @@
       }
     })
     .catch(function() {
-      formError.textContent = "Something went wrong — please try again, or email me directly.";
+      formError.textContent = "Something went wrong. Please try again, or email me directly.";
       formError.classList.add('show');
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send it over';

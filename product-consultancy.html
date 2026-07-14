@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firstword — Product Consultancy</title>
+<title>Firstword | Product Consultancy</title>
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -1126,6 +1126,13 @@
     outline: 3px solid var(--coral);
     outline-offset: 3px;
   }
+  @media (max-width: 480px) {
+    .modal-card {
+      padding: 1.75rem 1.25rem 1.5rem;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0 var(--coral);
+    }
+  }
 </style>
 <body>
 
@@ -1170,7 +1177,7 @@
 </section>
 
 <section class="intro-strip">
-  <p>This isn't a full-time PM hire, and it isn't a roadmap rewrite. It's a <span class="highlight">focused second opinion</span> — brought in specifically where growth work has exposed a product gap.</p>
+  <p>This isn't a full-time PM hire, and it isn't a roadmap rewrite. It's a <span class="highlight">focused second opinion</span>, brought in specifically where growth work has exposed a product gap.</p>
 </section>
 
 <section class="metrics-section" style="padding-bottom: 3rem;">
@@ -1199,19 +1206,19 @@
 </section>
 
 <section class="intro-strip" style="padding-top: 0; padding-bottom: 2rem;">
-  <p>This sits <span class="highlight">alongside</span> the growth work, not instead of it — usually the smallest and last piece added to an engagement, not the first.</p>
+  <p>This sits <span class="highlight">alongside</span> the growth work, not instead of it. It is usually the smallest and last piece added to an engagement, not the first.</p>
 </section>
 
 <section class="final-cta">
   <h2>Only if it's the right fit.</h2>
-  <p>Tell me where the drop-off is happening — if this isn't the right tool for it, I'll say so.</p>
+  <p>Tell me where the drop-off is happening. If this isn't the right tool for it, I'll say so.</p>
   <button type="button" class="cta-btn" onclick="openContactModal()">Get in touch
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </button>
 </section>
 
 <footer>
-  <strong>Firstword</strong> — LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
+  <strong>Firstword</strong> · LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
 </footer>
 <div class="modal-overlay" id="contactModal" aria-hidden="true">
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -1220,7 +1227,7 @@
     <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
       <span class="modal-eyebrow">Let's talk</span>
       <h3 id="modalTitle">Tell me a bit about you</h3>
-      <p class="modal-sub">I'll follow up within a day with next steps — no auto-responder, an actual reply from me.</p>
+      <p class="modal-sub">I'll follow up within a day with next steps. You'll get an actual reply from me, not an auto-responder.</p>
 
       <div class="form-group">
         <label for="cf-name">Name</label>
@@ -1294,6 +1301,10 @@
   }
 
   function openContactModal() {
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks && navLinks.classList.contains('open')) {
+      toggleMobileNav();
+    }
     document.getElementById('contactModal').classList.add('open');
     document.getElementById('contactModal').setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -1385,7 +1396,7 @@
       }
     })
     .catch(function() {
-      formError.textContent = "Something went wrong — please try again, or email me directly.";
+      formError.textContent = "Something went wrong. Please try again, or email me directly.";
       formError.classList.add('show');
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send it over';

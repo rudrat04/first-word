@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firstword — Growth Ops for Early-Stage B2B SaaS</title>
+<title>Firstword | Growth Ops for Early-Stage B2B SaaS</title>
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -1250,6 +1250,13 @@
     padding: 0.25rem 0.65rem;
     border-radius: 999px;
   }
+  @media (max-width: 480px) {
+    .modal-card {
+      padding: 1.75rem 1.25rem 1.5rem;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0 var(--coral);
+    }
+  }
 </style>
 <body>
 
@@ -1502,6 +1509,10 @@
   }
 
   function openContactModal() {
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks && navLinks.classList.contains('open')) {
+      toggleMobileNav();
+    }
     document.getElementById('contactModal').classList.add('open');
     document.getElementById('contactModal').setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';

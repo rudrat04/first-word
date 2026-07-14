@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firstword — Website Positioning</title>
+<title>Firstword | Website Positioning</title>
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -1126,6 +1126,13 @@
     outline: 3px solid var(--coral);
     outline-offset: 3px;
   }
+  @media (max-width: 480px) {
+    .modal-card {
+      padding: 1.75rem 1.25rem 1.5rem;
+      border-radius: 20px;
+      box-shadow: 4px 4px 0 var(--coral);
+    }
+  }
 </style>
 <body>
 
@@ -1183,7 +1190,7 @@
     <div class="metric-card">
       <span class="card-label">Symptom 01</span>
       <div class="metric-title" style="margin-top: 0.5rem;">Visitors bounce in under 8 seconds</div>
-      <p class="metric-plain">If someone can't finish reading your headline and know exactly who you're for, they're gone before they scroll — no amount of animation fixes that.</p>
+      <p class="metric-plain">If someone can't finish reading your headline and know exactly who you're for, they're gone before they scroll. No amount of animation fixes that.</p>
     </div>
     <div class="metric-card">
       <span class="card-label">Symptom 02</span>
@@ -1208,7 +1215,7 @@
       <div class="step">
         <span class="step-num">01</span>
         <h3>Audit what's there</h3>
-        <p>Read your site the way a cold prospect would — line by line, flagging every sentence that could describe five other companies.</p>
+        <p>Read your site the way a cold prospect would, line by line, flagging every sentence that could describe five other companies.</p>
       </div>
       <div class="step">
         <span class="step-num">02</span>
@@ -1218,19 +1225,19 @@
       <div class="step">
         <span class="step-num">03</span>
         <h3>Rewrite hero-down</h3>
-        <p>Headline, subhead, and above-the-fold copy first — the part that decides whether anyone reads the rest of the page at all.</p>
+        <p>Headline, subhead, and above-the-fold copy first: the part that decides whether anyone reads the rest of the page at all.</p>
       </div>
       <div class="step">
         <span class="step-num">04</span>
         <h3>Hand off, ready to ship</h3>
-        <p>Copy delivered section-by-section, ready to drop into your existing site — no redesign required unless you want one.</p>
+        <p>Copy delivered section-by-section, ready to drop into your existing site, with no redesign required unless you want one.</p>
       </div>
     </div>
   </div>
 </section>
 
 <section class="intro-strip" style="padding-bottom: 1rem;">
-  <p>Usually paired with <span class="highlight">GTM Strategy</span> — positioning and go-to-market are the same problem, said in two different rooms.</p>
+  <p>Usually paired with <span class="highlight">GTM Strategy</span>. Positioning and go-to-market are the same problem, said in two different rooms.</p>
 </section>
 
 <section class="final-cta">
@@ -1242,7 +1249,7 @@
 </section>
 
 <footer>
-  <strong>Firstword</strong> — LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
+  <strong>Firstword</strong> · LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
 </footer>
 <div class="modal-overlay" id="contactModal" aria-hidden="true">
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -1251,7 +1258,7 @@
     <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
       <span class="modal-eyebrow">Let's talk</span>
       <h3 id="modalTitle">Tell me a bit about you</h3>
-      <p class="modal-sub">I'll follow up within a day with next steps — no auto-responder, an actual reply from me.</p>
+      <p class="modal-sub">I'll follow up within a day with next steps. You'll get an actual reply from me, not an auto-responder.</p>
 
       <div class="form-group">
         <label for="cf-name">Name</label>
@@ -1325,6 +1332,10 @@
   }
 
   function openContactModal() {
+    const navLinks = document.getElementById('navLinks');
+    if (navLinks && navLinks.classList.contains('open')) {
+      toggleMobileNav();
+    }
     document.getElementById('contactModal').classList.add('open');
     document.getElementById('contactModal').setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -1416,7 +1427,7 @@
       }
     })
     .catch(function() {
-      formError.textContent = "Something went wrong — please try again, or email me directly.";
+      formError.textContent = "Something went wrong. Please try again, or email me directly.";
       formError.classList.add('show');
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send it over';
