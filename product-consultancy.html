@@ -294,6 +294,7 @@
       right: 4%;
       max-height: calc(100vh - 6.5rem);
       overflow-y: auto;
+      overflow-x: hidden;
       flex-direction: column;
       align-items: stretch;
       background: rgba(255, 246, 238, 0.97);
@@ -314,33 +315,91 @@
       from { opacity: 0; transform: translateY(-8px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    /* All nav links: left-aligned, full width */
     .nav-links a {
-      text-align: center;
-      padding: 0.95rem 1rem;
+      text-align: left;
+      padding: 0.85rem 1rem;
       font-size: 1rem;
       border-radius: 14px;
+      display: flex;
+      align-items: center;
+      width: 100%;
     }
     .nav-links a:active { background: rgba(26,21,35,0.08); }
-    .nav-links a.nav-cta { margin-left: 0; margin-top: 0.4rem; }
+    .nav-links a.nav-cta {
+      margin-left: 0;
+      margin-top: 0.4rem;
+      justify-content: center;
+      text-align: center;
+    }
     .nav-toggle { display: block; }
 
-    .services-dropdown {
+    /* Services accordion trigger: chevron on the right */
+    .nav-item-dropdown {
       position: static;
-      transform: none;
-      opacity: 1;
-      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .nav-item-dropdown > a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      text-align: left;
+    }
+    .nav-item-dropdown > a .caret {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-right: 2.5px solid var(--ink);
+      border-bottom: 2.5px solid var(--ink);
+      transform: rotate(45deg);
+      transition: transform 0.22s ease;
+      flex-shrink: 0;
+      margin-left: auto;
+    }
+    .nav-item-dropdown.mobile-open > a .caret {
+      transform: rotate(-135deg) translateY(-2px);
+    }
+
+    /* Services dropdown: inline accordion, no absolute positioning */
+    .services-dropdown {
+      position: static !important;
+      transform: none !important;
+      opacity: 1 !important;
+      visibility: visible !important;
       pointer-events: auto;
       display: none;
       width: 100%;
       box-shadow: none;
       border: none;
-      background: rgba(26,21,35,0.05);
-      margin-top: 0.35rem;
-      padding: 0.4rem;
+      border-radius: 14px;
+      background: rgba(26,21,35,0.06);
+      margin-top: 0.3rem;
+      margin-bottom: 0.2rem;
+      padding: 0.35rem 0.45rem;
     }
-    .nav-item-dropdown.mobile-open .services-dropdown { display: block; }
-    .nav-item-dropdown > a .caret { display: none; }
-    .services-dropdown a { padding: 0.8rem 0.85rem; }
+    .nav-item-dropdown.mobile-open .services-dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+    .services-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.65rem 0.75rem;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      text-align: left;
+      width: 100%;
+      justify-content: flex-start;
+    }
+    .services-dropdown a .service-num {
+      min-width: 1.5rem;
+    }
   }
 
   /* extra small phones */
