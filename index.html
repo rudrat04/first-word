@@ -334,13 +334,27 @@
       width: 100%;
       box-shadow: none;
       border: none;
-      background: rgba(26,21,35,0.05);
-      margin-top: 0.35rem;
-      padding: 0.4rem;
+      border-radius: 14px;
+      background: rgba(26,21,35,0.06);
+      margin-top: 0.3rem;
+      margin-bottom: 0.15rem;
+      padding: 0.3rem 0.4rem;
     }
     .nav-item-dropdown.mobile-open .services-dropdown { display: block; }
-    .nav-item-dropdown > a .caret { display: none; }
-    .services-dropdown a { padding: 0.8rem 0.85rem; }
+    .nav-item-dropdown > a .caret { display: inline-block; transition: transform 0.2s ease; }
+    .nav-item-dropdown.mobile-open > a .caret { transform: rotate(225deg) translateY(2px); }
+    .services-dropdown a {
+      padding: 0.7rem 0.85rem;
+      font-size: 0.92rem;
+      border-radius: 10px;
+      justify-content: flex-start;
+    }
+    .nav-item-dropdown > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
   }
 
   /* extra small phones */
@@ -1225,7 +1239,7 @@
 <section class="hero">
   <div class="hero-eyebrow"><span class="dot"></span> One operator. Seven ways to grow.</div>
   <h1 class="hero-headline">You don't need<span class="line2">a growth team yet</span></h1>
-  <p class="hero-sub">You need someone who's already run the playbook — outbound, positioning, GTM, and the reporting to prove it's working. <strong>That's the whole job here.</strong></p>
+  <p class="hero-sub">You need someone who's already run the playbook: outbound, positioning, GTM, and the reporting to prove it's working. <strong>That's the whole job here.</strong></p>
   <button type="button" class="cta-btn" onclick="openContactModal()">Let's talk
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </button>
@@ -1290,7 +1304,7 @@
       <a href="/gtm-strategy" class="service-card">
         <span class="service-card-num">04</span>
         <h3>GTM Strategy</h3>
-        <p>ICP, channel, and a 90-day motion — a decision document you'll actually use, not a deck.</p>
+        <p>ICP, channel, and a 90-day motion. A decision document you'll actually use, not a deck.</p>
       </a>
 
       <a href="/coming-soon?service=crm-cleanup" class="service-card">
@@ -1303,14 +1317,14 @@
       <a href="/coming-soon?service=automated-reporting" class="service-card">
         <span class="service-card-num">06</span>
         <h3>Automated Reporting</h3>
-        <p>A live dashboard that updates itself, same day every week — no manually compiled decks.</p>
+        <p>A live dashboard that updates itself, same day every week. No manually compiled decks.</p>
         <span class="soon-tag">Coming soon</span>
       </a>
 
       <a href="/product-consultancy" class="service-card">
         <span class="service-card-num">07</span>
         <h3>Product Consultancy</h3>
-        <p>A narrow, focused second opinion — only where growth work has exposed a real product gap.</p>
+        <p>A narrow, focused second opinion. Only where growth work has exposed a real product gap.</p>
       </a>
 
     </div>
@@ -1332,17 +1346,17 @@
       <div class="step" style="background: var(--cream-2); border-color: var(--line);">
         <span class="step-num">02</span>
         <h3 style="color: var(--ink);">Pick the right service</h3>
-        <p style="color: var(--ink-soft);">Sometimes it's one thing. Sometimes outbound and positioning need to move together — I'll say which, honestly.</p>
+        <p style="color: var(--ink-soft);">Sometimes it's one thing. Sometimes outbound and positioning need to move together. I'll say which, honestly.</p>
       </div>
       <div class="step" style="background: var(--cream-2); border-color: var(--line);">
         <span class="step-num">03</span>
         <h3 style="color: var(--ink);">Run it, hands-on</h3>
-        <p style="color: var(--ink-soft);">I execute the work directly — no handoffs to a junior team member you've never spoken to.</p>
+        <p style="color: var(--ink-soft);">I execute the work directly. No handoffs to a junior team member you've never spoken to.</p>
       </div>
       <div class="step" style="background: var(--cream-2); border-color: var(--line);">
         <span class="step-num">04</span>
         <h3 style="color: var(--ink);">Report it straight</h3>
-        <p style="color: var(--ink-soft);">Weekly, same day, every week — what moved, what didn't, and what's changing next.</p>
+        <p style="color: var(--ink-soft);">Weekly, same day, every week. What moved, what didn't, and what's changing next.</p>
       </div>
     </div>
   </div>
@@ -1350,14 +1364,14 @@
 
 <section class="final-cta">
   <h2>Let's find the right starting point.</h2>
-  <p>One conversation, no obligation — tell me what's not working and I'll tell you honestly where to start.</p>
+  <p>One conversation, no obligation. Tell me what's not working and I'll tell you honestly where to start.</p>
   <button type="button" class="cta-btn" onclick="openContactModal()">Get in touch
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
   </button>
 </section>
 
 <footer>
-  <strong>Firstword</strong> — LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
+  <strong>Firstword</strong> · LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.
 </footer>
 <div class="modal-overlay" id="contactModal" aria-hidden="true">
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -1366,7 +1380,7 @@
     <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
       <span class="modal-eyebrow">Let's talk</span>
       <h3 id="modalTitle">Tell me a bit about you</h3>
-      <p class="modal-sub">I'll follow up within a day with next steps — no auto-responder, an actual reply from me.</p>
+      <p class="modal-sub">I'll follow up within a day with next steps. No auto-responder, an actual reply from me.</p>
 
       <div class="form-group">
         <label for="cf-name">Name</label>
@@ -1531,7 +1545,7 @@
       }
     })
     .catch(function() {
-      formError.textContent = "Something went wrong — please try again, or email me directly.";
+      formError.textContent = "Something went wrong. Please try again, or email me directly.";
       formError.classList.add('show');
       submitBtn.disabled = false;
       submitBtn.textContent = 'Send it over';
