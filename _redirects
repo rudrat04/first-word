@@ -1,0 +1,6 @@
+# Clean URL rewrites — serves the real .html file, keeps the pretty URL in the address bar
+/linkedin-outbound      /linkedin-outbound.html      200
+/website-positioning    /website-positioning.html    200
+/gtm-strategy           /gtm-strategy.html           200
+/product-consultancy    /product-consultancy.html    200
+/coming-soon            /coming-soon.html            200

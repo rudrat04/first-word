@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firstword — LinkedIn Outbound That Actually Works</title>
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --sky-1: #F4A896;
+    --sky-2: #E8A0C4;
+    --sky-3: #B8A9D9;
+    --sky-4: #7FA8D9;
+    --ink: #1A1523;
+    --ink-soft: #453B52;
+    --coral: #FF5233;
+    --coral-dark: #C23A20;
+    --cream: #FFF6EE;
+    --cream-2: #FBEEE0;
+    --line: rgba(26,21,35,0.12);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Space Grotesk', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; transition: none !important; }
+  }
+
+  /* ---------- NAVBAR ---------- */
+  .navbar {
+    position: fixed;
+    top: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 90;
+    width: min(94%, 1180px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 0.7rem 0.9rem 0.7rem 1.1rem;
+    background: rgba(255, 246, 238, 0.6);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1.5px solid rgba(26,21,35,0.14);
+    border-radius: 999px;
+    box-shadow: 0 8px 32px rgba(26,21,35,0.12), inset 0 1px 0 rgba(255,255,255,0.5);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .nav-logo .mark-img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+    display: block;
+  }
+  .nav-logo .mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+  }
+  .nav-logo .mark::before {
+    content: '"';
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--coral);
+    line-height: 1;
+    transform: translateY(-2px);
+  }
+  .nav-logo .mark .cursor-dot {
+    position: absolute;
+    bottom: 6px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--coral);
+    animation: cursorBlink 1.4s step-start infinite;
+  }
+  @keyframes cursorBlink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  .nav-logo .wordmark {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .nav-logo .wordmark span {
+    color: var(--coral);
+    font-style: italic;
+    font-weight: 600;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    list-style: none;
+  }
+  .nav-links a {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    transition: background 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+  }
+  .nav-links a:hover {
+    background: rgba(26,21,35,0.08);
+  }
+  .nav-links a.nav-cta {
+    background: var(--coral);
+    color: var(--cream);
+    border: 1.5px solid var(--ink);
+    box-shadow: 2px 2px 0 var(--ink);
+    margin-left: 0.3rem;
+  }
+  .nav-links a.nav-cta:hover {
+    background: var(--coral-dark);
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0 var(--ink);
+  }
+
+  /* ---------- SERVICES DROPDOWN ---------- */
+  .nav-item-dropdown {
+    position: relative;
+  }
+  .nav-item-dropdown > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .nav-item-dropdown > a .caret {
+    width: 9px;
+    height: 9px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translateY(-2px);
+    transition: transform 0.2s ease;
+    margin-left: 0.1rem;
+  }
+  .nav-item-dropdown:hover > a .caret {
+    transform: rotate(225deg) translateY(2px);
+  }
+
+  .services-dropdown {
+    position: absolute;
+    top: calc(100% + 0.9rem);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    width: 320px;
+    background: rgba(255, 246, 238, 0.75);
+    backdrop-filter: blur(20px) saturate(160%);
+    -webkit-backdrop-filter: blur(20px) saturate(160%);
+    border: 1.5px solid rgba(26,21,35,0.14);
+    border-radius: 22px;
+    padding: 0.6rem;
+    box-shadow: 0 16px 40px rgba(26,21,35,0.18), inset 0 1px 0 rgba(255,255,255,0.5);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    z-index: 95;
+  }
+  .nav-item-dropdown:hover .services-dropdown,
+  .nav-item-dropdown:focus-within .services-dropdown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .services-dropdown a {
+    display: flex;
+    align-items: baseline;
+    gap: 0.65rem;
+    padding: 0.65rem 0.85rem;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--ink);
+    transition: background 0.15s ease;
+  }
+  .services-dropdown a:hover {
+    background: rgba(255,82,51,0.1);
+  }
+  .services-dropdown a .service-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: var(--coral);
+    flex-shrink: 0;
+    width: 1.2rem;
+  }
+  .services-dropdown a .service-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    line-height: 1.3;
+  }
+
+  .nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    z-index: 101;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    margin: 5px auto;
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.2s ease;
+  }
+  .nav-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.active span:nth-child(2) { opacity: 0; }
+  .nav-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .nav-scrim {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(26,21,35,0.35);
+    backdrop-filter: blur(2px);
+    z-index: 85;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .nav-scrim.open {
+    display: block;
+    opacity: 1;
+  }
+
+  /* ---------- TABLET (881px – 1024px): tighten spacing, keep horizontal nav ---------- */
+  @media (max-width: 1024px) and (min-width: 881px) {
+    .navbar { width: 96%; padding: 0.6rem 0.7rem 0.6rem 1rem; gap: 0.75rem; }
+    .nav-links a { font-size: 0.85rem; padding: 0.5rem 0.65rem; }
+    .nav-logo .wordmark { font-size: 1.15rem; }
+  }
+
+  /* ---------- MOBILE + SMALL TABLET (<=880px): collapse to menu ---------- */
+  @media (max-width: 880px) {
+    .navbar { top: 0.85rem; padding: 0.55rem 0.65rem 0.55rem 0.9rem; width: 92%; }
+
+    .nav-links {
+      position: fixed;
+      top: 5.2rem;
+      left: 4%;
+      right: 4%;
+      max-height: calc(100vh - 6.5rem);
+      overflow-y: auto;
+      flex-direction: column;
+      align-items: stretch;
+      background: rgba(255, 246, 238, 0.97);
+      backdrop-filter: blur(20px);
+      border: 1.5px solid rgba(26,21,35,0.14);
+      border-radius: 24px;
+      padding: 0.85rem;
+      box-shadow: 0 20px 50px rgba(26,21,35,0.22);
+      display: none;
+      gap: 0.15rem;
+      z-index: 95;
+    }
+    .nav-links.open {
+      display: flex;
+      animation: navSlideDown 0.22s ease;
+    }
+    @keyframes navSlideDown {
+      from { opacity: 0; transform: translateY(-8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .nav-links a {
+      text-align: center;
+      padding: 0.95rem 1rem;
+      font-size: 1rem;
+      border-radius: 14px;
+    }
+    .nav-links a:active { background: rgba(26,21,35,0.08); }
+    .nav-links a.nav-cta { margin-left: 0; margin-top: 0.4rem; }
+    .nav-toggle { display: block; }
+
+    .services-dropdown {
+      position: static;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      display: none;
+      width: 100%;
+      box-shadow: none;
+      border: none;
+      background: rgba(26,21,35,0.05);
+      margin-top: 0.35rem;
+      padding: 0.4rem;
+    }
+    .nav-item-dropdown.mobile-open .services-dropdown { display: block; }
+    .nav-item-dropdown > a .caret { display: none; }
+    .services-dropdown a { padding: 0.8rem 0.85rem; }
+  }
+
+  /* extra small phones */
+  @media (max-width: 400px) {
+    .navbar { padding: 0.5rem 0.55rem 0.5rem 0.75rem; }
+    .nav-logo .wordmark { font-size: 1.1rem; }
+    .nav-logo .mark-img { width: 30px; height: 30px; }
+  }
+
+  /* push hero content below fixed navbar */
+  .hero { padding-top: 8rem; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #EAB4A8 0%, #E7A7BE 28%, #C6A3D6 55%, #8FA9DA 85%, #6C97D2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1.5rem 8rem;
+    text-align: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 20% 15%, rgba(255,255,255,0.35), transparent 60%),
+      radial-gradient(ellipse 50% 30% at 85% 75%, rgba(255,255,255,0.18), transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255,255,255,0.85);
+    border: 1.5px solid var(--ink);
+    border-radius: 999px;
+    padding: 0.45rem 1.1rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 2.5rem;
+    box-shadow: 3px 3px 0 rgba(26,21,35,0.25);
+  }
+  .hero-eyebrow .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--coral);
+    display: inline-block;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.3); opacity: 0.6; }
+  }
+
+  .hero-headline {
+    position: relative;
+    z-index: 2;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 9vw, 7.5rem);
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: #FFEDD9;
+    -webkit-text-stroke: 2px var(--ink);
+    text-shadow:
+      1px 1px 0 var(--coral-dark),
+      2px 2px 0 var(--coral-dark),
+      3px 3px 0 var(--coral-dark),
+      4px 4px 0 var(--coral-dark),
+      5px 5px 0 var(--coral-dark),
+      6px 6px 0 var(--coral-dark),
+      7px 7px 0 var(--coral-dark),
+      8px 8px 0 var(--coral-dark),
+      9px 9px 0 var(--coral-dark),
+      10px 10px 0 var(--coral-dark),
+      11px 11px 14px rgba(26,21,35,0.35);
+    max-width: 16ch;
+    margin-bottom: 0.3em;
+  }
+  .hero-headline .line2 { display: block; }
+
+  .hero-sub {
+    position: relative;
+    z-index: 2;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    font-weight: 500;
+    max-width: 34ch;
+    color: var(--ink);
+    line-height: 1.5;
+    margin-bottom: 2.75rem;
+  }
+  .hero-sub strong { font-weight: 700; }
+
+  .cta-btn {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--coral);
+    color: var(--cream);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    padding: 1.05rem 2.3rem;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    text-decoration: none;
+    box-shadow: 4px 4px 0 var(--ink);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+  }
+  .cta-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .cta-btn:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  .cta-btn svg { width: 18px; height: 18px; }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    opacity: 0.65;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .scroll-hint .arrow {
+    animation: bob 1.6s ease-in-out infinite;
+    font-size: 1.1rem;
+  }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ---------- WAVE DIVIDER ---------- */
+  .wave-divider {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: -2px;
+  }
+
+  /* ---------- SECTION: INTRO STRIP ---------- */
+  .intro-strip {
+    background: var(--cream);
+    padding: 5rem 1.5rem 2rem;
+    text-align: center;
+  }
+  .intro-strip p {
+    max-width: 46ch;
+    margin: 0 auto;
+    font-size: clamp(1.3rem, 2.6vw, 1.9rem);
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--ink);
+  }
+  .intro-strip .highlight {
+    background: linear-gradient(120deg, transparent 0%, transparent 4%, #FFD8B8 4%, #FFD8B8 96%, transparent 96%);
+    padding: 0 0.1em;
+  }
+
+  /* ---------- METRICS SECTION ---------- */
+  .metrics-section {
+    background: var(--cream);
+    padding: 4rem 1.5rem 6rem;
+  }
+
+  .metrics-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  .metrics-heading .kicker {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--coral-dark);
+    margin-bottom: 0.8rem;
+  }
+  .metrics-heading h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    color: var(--ink);
+    max-width: 20ch;
+    margin: 0 auto;
+    line-height: 1.1;
+  }
+
+  .metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.75rem;
+    max-width: 1180px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 920px) {
+    .metrics-grid { grid-template-columns: 1fr; }
+  }
+
+  .metric-card {
+    background: var(--cream-2);
+    border: 2px solid var(--ink);
+    border-radius: 28px;
+    padding: 2.5rem 2rem 2.25rem;
+    position: relative;
+    box-shadow: 6px 6px 0 var(--line);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .metric-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 6px 12px 0 var(--line);
+  }
+
+  .metric-card .card-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    margin-bottom: 1.6rem;
+  }
+
+  .metric-card .big-number {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(3rem, 6vw, 4rem);
+    line-height: 1;
+    color: var(--coral);
+    -webkit-text-stroke: 1.5px var(--ink);
+    margin-bottom: 0.5rem;
+  }
+
+  .metric-card .metric-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 0.9rem;
+    color: var(--ink);
+  }
+
+  .metric-card .metric-plain {
+    font-size: 0.98rem;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .metric-card .metric-plain strong { color: var(--ink); }
+
+  .metric-card .card-foot {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1.5px dashed var(--line);
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .metric-card .card-foot .icon { font-size: 1rem; }
+
+  /* funnel connector line for desktop */
+  .funnel-note {
+    text-align: center;
+    max-width: 760px;
+    margin: 3rem auto 0;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+    padding: 1.25rem 1.75rem;
+    background: rgba(255,82,51,0.07);
+    border: 1.5px dashed var(--coral);
+    border-radius: 18px;
+  }
+  .funnel-note strong { color: var(--ink); }
+
+  /* ---------- HOW IT WORKS ---------- */
+  .how-section {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 6rem 1.5rem;
+  }
+  .how-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .how-heading {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+  .how-heading .kicker {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #FFB199;
+    margin-bottom: 0.8rem;
+  }
+  .how-heading h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    line-height: 1.15;
+  }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+  @media (max-width: 900px) {
+    .steps { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 560px) {
+    .steps { grid-template-columns: 1fr; }
+  }
+
+  .step {
+    background: rgba(255,255,255,0.05);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 1.75rem 1.5rem;
+  }
+  .step .step-num {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--coral);
+    margin-bottom: 0.9rem;
+    display: block;
+  }
+  .step h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+  }
+  .step p {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: rgba(255,246,238,0.75);
+  }
+
+  /* ---------- REPLY CLOUD ---------- */
+  .cloud-section {
+    background: var(--cream-2);
+    padding: 5.5rem 1.5rem 6rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid var(--ink);
+    border-bottom: 2px solid var(--ink);
+  }
+  .cloud-heading {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+  .cloud-heading .kicker {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--coral-dark);
+    margin-bottom: 0.8rem;
+  }
+  .cloud-heading h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: clamp(1.9rem, 4.2vw, 2.9rem);
+    max-width: 22ch;
+    margin: 0 auto 0.6rem;
+    line-height: 1.15;
+  }
+  .cloud-heading p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+    margin: 0 auto;
+  }
+
+  .word-cloud {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.9rem 1.1rem;
+    padding: 1rem;
+  }
+
+  .word-cloud span {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.5em 0.85em;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    white-space: nowrap;
+    cursor: default;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .word-cloud span:hover {
+    transform: scale(1.08) rotate(0deg) !important;
+    box-shadow: 5px 5px 0 var(--ink);
+    z-index: 5;
+    position: relative;
+  }
+
+  /* size + color variants for texture */
+  .word-cloud .w-xl { font-size: clamp(1.4rem, 3vw, 2.1rem); background: var(--coral); color: var(--cream); box-shadow: 3px 3px 0 var(--ink); }
+  .word-cloud .w-lg { font-size: clamp(1.15rem, 2.2vw, 1.55rem); background: #FFD8B8; color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
+  .word-cloud .w-md { font-size: clamp(0.95rem, 1.7vw, 1.2rem); background: var(--cream); color: var(--ink); box-shadow: 2px 2px 0 var(--ink); }
+  .word-cloud .w-sm { font-size: 0.85rem; background: transparent; color: var(--ink-soft); border-color: var(--line); box-shadow: none; font-weight: 500; font-family: 'Space Grotesk', sans-serif; }
+
+  .word-cloud span:nth-child(3n) { transform: rotate(-3deg); }
+  .word-cloud span:nth-child(4n) { transform: rotate(2.5deg); }
+  .word-cloud span:nth-child(5n) { transform: rotate(-1.5deg); }
+  .word-cloud span:nth-child(7n) { transform: rotate(3deg); }
+
+  .cloud-caption {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 50ch;
+    margin: 2.75rem auto 0;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 640px) {
+    .word-cloud span:nth-child(n) { transform: none !important; }
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta {
+    background: linear-gradient(180deg, #6C97D2 0%, #8FA9DA 30%, #C6A3D6 60%, #E7A7BE 85%, #EAB4A8 100%);
+    padding: 7rem 1.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 55% 45% at 50% 20%, rgba(255,255,255,0.3), transparent 65%);
+    pointer-events: none;
+  }
+  .final-cta h2 {
+    position: relative;
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    color: #FFEDD9;
+    -webkit-text-stroke: 1.5px var(--ink);
+    text-shadow:
+      1px 1px 0 var(--coral-dark),
+      2px 2px 0 var(--coral-dark),
+      3px 3px 0 var(--coral-dark),
+      4px 4px 0 var(--coral-dark),
+      5px 5px 0 var(--coral-dark),
+      6px 6px 10px rgba(26,21,35,0.3);
+    max-width: 16ch;
+    margin: 0 auto 2rem;
+  }
+  .final-cta p {
+    position: relative;
+    max-width: 40ch;
+    margin: 0 auto 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--ink);
+  }
+
+  footer {
+    background: var(--ink);
+    color: rgba(255,246,238,0.55);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    font-size: 0.85rem;
+  }
+  footer strong { color: var(--cream); }
+
+  /* ---------- CONTACT MODAL ---------- */
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,21,35,0.55);
+    backdrop-filter: blur(3px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    z-index: 100;
+  }
+  .modal-overlay.open {
+    display: flex;
+    animation: fadeIn 0.2s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .modal-card {
+    background: var(--cream);
+    border: 2.5px solid var(--ink);
+    border-radius: 28px;
+    max-width: 460px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.5rem 2.25rem 2.25rem;
+    position: relative;
+    box-shadow: 8px 8px 0 var(--coral);
+    animation: popIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  @keyframes popIn {
+    from { opacity: 0; transform: scale(0.9) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 1.1rem;
+    right: 1.1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--ink);
+    background: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: var(--ink);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+  .modal-close:hover {
+    background: var(--coral);
+    color: var(--cream);
+    transform: rotate(90deg);
+  }
+
+  .modal-eyebrow {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--coral-dark);
+    margin-bottom: 0.6rem;
+  }
+
+  .modal-card h3 {
+    font-family: 'Fraunces', serif;
+    font-weight: 800;
+    font-size: 1.7rem;
+    line-height: 1.15;
+    margin-bottom: 0.5rem;
+    max-width: 22ch;
+  }
+
+  .modal-card .modal-sub {
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.6rem;
+    line-height: 1.5;
+  }
+
+  .form-group {
+    margin-bottom: 1.1rem;
+  }
+  .form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+    color: var(--ink);
+  }
+  .form-group label .optional-tag {
+    font-weight: 500;
+    color: var(--ink-soft);
+    text-transform: none;
+    letter-spacing: 0;
+  }
+  .form-group input {
+    width: 100%;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.98rem;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--ink);
+    border-radius: 12px;
+    background: var(--cream-2);
+    color: var(--ink);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .form-group input::placeholder {
+    color: rgba(69,59,82,0.45);
+  }
+  .form-group input:focus {
+    outline: none;
+    border-color: var(--coral);
+    box-shadow: 3px 3px 0 var(--coral);
+    background: var(--cream);
+  }
+  .form-group input:invalid:not(:placeholder-shown) {
+    border-color: #D64545;
+  }
+
+  .modal-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    background: var(--coral);
+    color: var(--cream);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.95rem 1.5rem;
+    border-radius: 999px;
+    border: 2px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .modal-submit:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+  .modal-submit:active {
+    transform: translate(1px, 1px);
+    box-shadow: 2px 2px 0 var(--ink);
+  }
+  .modal-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .modal-note {
+    text-align: center;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 1rem;
+  }
+
+  /* success state */
+  .modal-success {
+    display: none;
+    text-align: center;
+    padding: 1.5rem 0 0.5rem;
+  }
+  .modal-success.show { display: block; }
+  .modal-success .success-icon {
+    font-size: 2.75rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .modal-success h3 {
+    margin: 0 auto 0.6rem;
+  }
+  .modal-success p {
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+    max-width: 30ch;
+    margin: 0 auto;
+  }
+  .modal-form.hide { display: none; }
+
+  .form-error {
+    font-size: 0.8rem;
+    color: #D64545;
+    margin-top: 0.35rem;
+    display: none;
+  }
+  .form-error.show { display: block; }
+
+  /* focus visibility */
+  a:focus-visible, button:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+  <a href="/" class="nav-logo">
+    <img src="/assets/logo-icon-transparent.png" alt="Firstword" class="mark-img">
+    <span class="wordmark">First<span>word</span></span>
+  </a>
+
+  <button type="button" class="nav-toggle" id="navToggleBtn" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/">Home</a></li>
+    <li class="nav-item-dropdown" id="servicesNavItem">
+      <a href="#" onclick="return toggleServicesMobile(event)">Services <span class="caret"></span></a>
+      <div class="services-dropdown">
+        <a href="/linkedin-outbound"><span class="service-num">01</span><span class="service-name">LinkedIn Outbound</span></a>
+        <a href="/coming-soon?service=linkedin-ads"><span class="service-num">02</span><span class="service-name">LinkedIn Ads</span></a>
+        <a href="/website-positioning"><span class="service-num">03</span><span class="service-name">Website Positioning</span></a>
+        <a href="/gtm-strategy"><span class="service-num">04</span><span class="service-name">GTM Strategy</span></a>
+        <a href="/coming-soon?service=crm-cleanup"><span class="service-num">05</span><span class="service-name">CRM Cleanup</span></a>
+        <a href="/coming-soon?service=automated-reporting"><span class="service-num">06</span><span class="service-name">Automated Reporting</span></a>
+        <a href="/product-consultancy"><span class="service-num">07</span><span class="service-name">Product Consultancy</span></a>
+      </div>
+    </li>
+    <li><a href="/coming-soon?service=case-studies">Case Studies</a></li>
+    <li><a href="/coming-soon?service=blogs">Blogs</a></li>
+    <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;">Let's Talk</a></li>
+  </ul>
+</nav>
+
+<div class="nav-scrim" id="navScrim" onclick="toggleMobileNav()"></div>
+
+<section class="hero">
+  <div class="hero-eyebrow"><span class="dot"></span> Done-for-you LinkedIn outreach, run by a person who's booked these numbers before</div>
+  <h1 class="hero-headline">Your inbox<span class="line2">is ready to grow</span></h1>
+  <p class="hero-sub">LinkedIn outbound for early-stage B2B SaaS teams. <strong>Real connects, real replies, real demos on the calendar</strong> — no vanity metrics.</p>
+  <a href="#metrics" class="cta-btn">See the real numbers
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </a>
+  <div class="scroll-hint">Scroll to believe it <span class="arrow">↓</span></div>
+</section>
+
+<svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none" style="margin-top:-4px;">
+  <path fill="#6C97D2" d="M0,64 C240,120 480,0 720,32 C960,64 1200,112 1440,48 L1440,0 L0,0 Z" opacity="0"/>
+</svg>
+
+<section class="intro-strip">
+  <p>Most agencies show you a dashboard full of green arrows. <span class="highlight">Here's what actually happened</span> the last time this exact system ran on a real B2B SaaS inbox.</p>
+</section>
+
+<section class="metrics-section" id="metrics">
+  <div class="metrics-heading">
+    <span class="kicker">Real campaign data · one inbox</span>
+    <h2>Three numbers. Zero fluff.</h2>
+  </div>
+
+  <div class="metrics-grid">
+
+    <div class="metric-card">
+      <span class="card-label">Step 1 · Getting in the door</span>
+      <div class="big-number">36.5%</div>
+      <div class="metric-title">Connection acceptance rate</div>
+      <p class="metric-plain">Out of <strong>4,181 people</strong> I reached out to cold on LinkedIn, <strong>1,527 said yes</strong> to connecting. That's more than 1 in 3 — comfortably ahead of the ~28–30% most cold outbound sees.</p>
+      <div class="card-foot"><span class="icon">🤝</span> 1,527 new connections made</div>
+    </div>
+
+    <div class="metric-card">
+      <span class="card-label">Step 2 · Starting a conversation</span>
+      <div class="big-number">31.6%</div>
+      <div class="metric-title">Reply rate</div>
+      <p class="metric-plain">Of everyone who accepted, <strong>483 people actually replied</strong> to a message — not a bot reaction, a real typed response. Consistent, not a lucky spike, and sitting well past what "good" usually looks like.</p>
+      <div class="card-foot"><span class="icon">💬</span> 483 real conversations started</div>
+    </div>
+
+    <div class="metric-card">
+      <span class="card-label">Step 3 · Where it counts</span>
+      <div class="big-number">100+</div>
+      <div class="metric-title">Meetings & demos booked</div>
+      <p class="metric-plain">Every reply was read by hand and checked for a genuine next step — a shared contact, a proposed time, an actual "let's talk." <strong>1 in 5 conversations</strong> turned into real forward motion, well clear of what most outbound programs convert.</p>
+      <div class="card-foot"><span class="icon">📅</span> 20% of replies became a real next step</div>
+    </div>
+
+  </div>
+
+  <div class="funnel-note">
+    <strong>The honest version:</strong> 4,181 cold sends → 1,527 said yes → 483 replied → 100+ moved toward a real meeting. Every stage checked by hand, not auto-tagged software guesses.
+  </div>
+</section>
+
+<section class="cloud-section">
+  <div class="cloud-heading">
+    <span class="kicker">Real replies, real inboxes</span>
+    <h2>100+ meetings didn't come from luck. They came from replies like these.</h2>
+    <p>Actual prospect replies pulled straight from the campaign. Names, companies, and contact details removed — the words are theirs.</p>
+  </div>
+  <div class="word-cloud">
+    <span class="w-xl">"Let's connect"</span>
+    <span class="w-sm">"Sounds interesting"</span>
+    <span class="w-lg">"Sure, let's schedule it"</span>
+    <span class="w-sm">"Happy to explore"</span>
+    <span class="w-md">"Let's get on a call"</span>
+    <span class="w-xl">"Yes, that works"</span>
+    <span class="w-lg">"Send me the details"</span>
+    <span class="w-lg">"Keen to explore this"</span>
+    <span class="w-sm">"Good concept"</span>
+    <span class="w-sm">"Works for me"</span>
+    <span class="w-lg">"Let's talk"</span>
+    <span class="w-xl">"Sounds good, let's do it"</span>
+    <span class="w-md">"Would love to see a demo"</span>
+    <span class="w-sm">"I'm keen, tell me more"</span>
+    <span class="w-lg">"Share the deck"</span>
+    <span class="w-md">"Let's set up a time"</span>
+    <span class="w-sm">"Yes please, go ahead"</span>
+    <span class="w-xl">"Interesting, let's connect"</span>
+    <span class="w-md">"Happy to hop on a call"</span>
+    <span class="w-sm">"That could work for us"</span>
+    <span class="w-lg">"That would be great"</span>
+    <span class="w-md">"Do share more details"</span>
+    <span class="w-sm">"That sounds great"</span>
+    <span class="w-md">"Explain further, please"</span>
+  </div>
+  <p class="cloud-caption">Every phrase above came from a real prospect during outreach for a live B2B SaaS campaign — not written for this page.</p>
+</section>
+
+<section class="how-section">
+  <div class="how-inner">
+    <div class="how-heading">
+      <span class="kicker">How this actually gets built</span>
+      <h2>No black box. Just a system that gets refined every week.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>Build the ICP list</h3>
+        <p>Pre-seed to seed B2B SaaS, 1–50 people. Sourced from Apollo or your Sales Navigator seat, filtered to the titles who'd actually take the call.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Write realistic sequences</h3>
+        <p>Messages that sound like a person noticed something real, tested and rewritten against what's actually getting replies, not a template with your name copy-pasted in.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Scale outreach through automation</h3>
+        <p>Sequencing runs through your own licensed automation tool, paced at human speed, so volume goes up without your account or your reputation taking the hit.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">04</span>
+        <h3>Automated reporting for your team</h3>
+        <p>A live dashboard that updates itself, same day every week — sends, accepts, replies, meetings. No waiting on someone to compile a deck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Let's book your first of hundreds.</h2>
+  <p>Two-month minimum. Real numbers from week one. No case studies with someone else's logo pretending it's yours.</p>
+  <button type="button" class="cta-btn" onclick="openContactModal()">Get in touch
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </button>
+</section>
+
+<footer>
+  <strong>LinkedIn Outbound & Growth Ops</strong> — for early-stage B2B SaaS teams who need pipeline, not a dashboard.
+</footer>
+
+<div class="modal-overlay" id="contactModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
+
+    <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
+      <span class="modal-eyebrow">Let's talk pipeline</span>
+      <h3 id="modalTitle">Tell me a bit about you</h3>
+      <p class="modal-sub">I'll follow up within a day with next steps — no auto-responder, an actual reply from me.</p>
+
+      <div class="form-group">
+        <label for="cf-name">Name</label>
+        <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cf-email">Email</label>
+        <input type="email" id="cf-email" name="email" placeholder="you@company.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cf-company">Company name</label>
+        <input type="text" id="cf-company" name="company" placeholder="Your company" required>
+      </div>
+
+      <div class="form-group">
+        <label for="cf-phone">Phone number <span class="optional-tag">(optional)</span></label>
+        <input type="tel" id="cf-phone" name="phone" placeholder="+91 00000 00000">
+      </div>
+
+      <div class="form-error" id="formError">Please fill in your name, email, and company to continue.</div>
+
+      <button type="submit" class="modal-submit" id="submitBtn">
+        Send it over
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+      <p class="modal-note">No spam. Just a real reply from a real person.</p>
+    </form>
+
+    <div class="modal-success" id="modalSuccess">
+      <span class="success-icon">🎉</span>
+      <h3>Got it, thank you!</h3>
+      <p>I'll be in touch within a day. Talk soon.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function toggleMobileNav() {
+    const navLinks = document.getElementById('navLinks');
+    const toggleBtn = document.getElementById('navToggleBtn');
+    const scrim = document.getElementById('navScrim');
+    const isOpen = navLinks.classList.toggle('open');
+    toggleBtn.classList.toggle('active', isOpen);
+    toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    scrim.classList.toggle('open', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (!isOpen) {
+      const servicesItem = document.getElementById('servicesNavItem');
+      if (servicesItem) servicesItem.classList.remove('mobile-open');
+    }
+  }
+
+  // close mobile nav on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      const navLinks = document.getElementById('navLinks');
+      if (navLinks && navLinks.classList.contains('open')) toggleMobileNav();
+    }
+  });
+
+  function toggleServicesMobile(e) {
+    if (window.innerWidth <= 880) {
+      e.preventDefault();
+      document.getElementById('servicesNavItem').classList.toggle('mobile-open');
+      return false;
+    }
+    // on desktop, let it behave as a normal link (currently '#', update when Services page exists)
+    return true;
+  }
+
+  function openContactModal() {
+    document.getElementById('contactModal').classList.add('open');
+    document.getElementById('contactModal').setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeContactModal() {
+    document.getElementById('contactModal').classList.remove('open');
+    document.getElementById('contactModal').setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    // reset error state so a stale error doesn't linger next time the modal opens
+    const errorEl = document.getElementById('formError');
+    if (errorEl) errorEl.classList.remove('show');
+    ['cf-name', 'cf-email', 'cf-company'].forEach(function(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.borderColor = '';
+    });
+  }
+  // close on backdrop click
+  document.getElementById('contactModal').addEventListener('click', function(e) {
+    if (e.target === this) closeContactModal();
+  });
+  // close on Escape
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeContactModal();
+  });
+
+  // handle submit via fetch so we can show an in-modal success state
+  const contactForm = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const formError = document.getElementById('formError');
+
+  // Real email check: needs a local part, an @, and a domain with a valid-looking TLD.
+  // Works for company emails, Gmail, or any other domain.
+  function isValidEmail(value) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+    return emailPattern.test(value);
+  }
+
+  function setFieldInvalid(inputEl, invalid) {
+    if (invalid) {
+      inputEl.style.borderColor = '#D64545';
+    } else {
+      inputEl.style.borderColor = '';
+    }
+  }
+
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    formError.classList.remove('show');
+
+    const nameInput = document.getElementById('cf-name');
+    const emailInput = document.getElementById('cf-email');
+    const companyInput = document.getElementById('cf-company');
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const company = companyInput.value.trim();
+
+    setFieldInvalid(nameInput, false);
+    setFieldInvalid(emailInput, false);
+    setFieldInvalid(companyInput, false);
+
+    const missing = [];
+    if (!name) { missing.push('name'); setFieldInvalid(nameInput, true); }
+    if (!email) { missing.push('email'); setFieldInvalid(emailInput, true); }
+    else if (!isValidEmail(email)) { missing.push('a valid email'); setFieldInvalid(emailInput, true); }
+    if (!company) { missing.push('company name'); setFieldInvalid(companyInput, true); }
+
+    if (missing.length > 0) {
+      const fieldList = missing.join(', ');
+      formError.textContent = 'Please add ' + fieldList + ' to continue.';
+      formError.classList.add('show');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(response) {
+      if (response.ok) {
+        contactForm.classList.add('hide');
+        document.getElementById('modalSuccess').classList.add('show');
+      } else {
+        throw new Error('Submission failed');
+      }
+    })
+    .catch(function() {
+      formError.textContent = "Something went wrong — please try again, or email me directly.";
+      formError.classList.add('show');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send it over';
+    });
+  });
+</script>
+
+</body>
+</html>
