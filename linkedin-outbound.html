@@ -919,6 +919,71 @@
       color: rgba(255, 246, 238, 0.75);
     }
 
+    /* ---------- CASE STUDY CARD ---------- */
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .case-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--cream-2);
+      border: 2px solid var(--ink);
+      border-radius: 28px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 6px 6px 0 var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 6px 12px 0 var(--line);
+    }
+
+    .case-card-logo {
+      background: var(--cream);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .case-card-logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    .case-card-body {
+      padding: 1.75rem 2rem 2rem;
+    }
+
+    .case-card-body h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 0.6rem 0 0.7rem;
+    }
+
+    .case-card-body p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin-bottom: 1.1rem;
+    }
+
+    .case-card-cta {
+      font-weight: 700;
+      color: var(--coral-dark);
+      font-size: 0.9rem;
+    }
+
     /* ---------- REPLY CLOUD ---------- */
     .cloud-section {
       background: var(--cream-2);
@@ -1537,8 +1602,6 @@
                 Strategy</span></a>
             <a href="/coming-soon?service=crm-cleanup"><span class="service-num">05</span><span class="service-name">CRM
                 Cleanup</span></a>
-            <a href="/coming-soon?service=automated-reporting"><span class="service-num">06</span><span
-                class="service-name">Automated Reporting</span></a>
             <a href="/product-consultancy"><span class="service-num">07</span><span class="service-name">Product
                 Consultancy</span></a>
           </div>
@@ -1558,11 +1621,11 @@
     <h1 class="hero-headline">Your inbox<span class="line2">is ready to grow</span></h1>
     <p class="hero-sub">LinkedIn outbound for early-stage B2B SaaS teams. <strong>Real connects, real replies, real
         demos on the calendar</strong>. No vanity metrics.</p>
-    <a href="#metrics" class="cta-btn">See the real numbers
+    <button type="button" class="cta-btn" onclick="openContactModal()">Let's talk
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
         <path d="M5 12h14M13 6l6 6-6 6" />
       </svg>
-    </a>
+    </button>
     <div class="scroll-hint">Scroll to believe it <span class="arrow">↓</span></div>
   </section>
 
@@ -1630,14 +1693,14 @@
     </div>
     <div class="word-cloud">
       <span class="w-xl">"Let's connect"</span>
-      <span class="w-sm">"Sounds interesting"</span>
+      <span class="w-md">"Can we schedule the demo this week?"</span>
       <span class="w-lg">"Sure, let's schedule it"</span>
       <span class="w-sm">"Happy to explore"</span>
       <span class="w-md">"Let's get on a call"</span>
       <span class="w-xl">"Yes, that works"</span>
       <span class="w-lg">"Send me the details"</span>
       <span class="w-lg">"Keen to explore this"</span>
-      <span class="w-sm">"Good concept"</span>
+      <span class="w-sm">"I've shared the calendar invite"</span>
       <span class="w-sm">"Works for me"</span>
       <span class="w-lg">"Let's talk"</span>
       <span class="w-xl">"Sounds good, let's do it"</span>
@@ -1648,7 +1711,7 @@
       <span class="w-sm">"Yes please, go ahead"</span>
       <span class="w-xl">"Interesting, let's connect"</span>
       <span class="w-md">"Happy to hop on a call"</span>
-      <span class="w-sm">"That could work for us"</span>
+      <span class="w-md">"Let's connect this Friday"</span>
       <span class="w-lg">"That would be great"</span>
       <span class="w-md">"Do share more details"</span>
       <span class="w-sm">"That sounds great"</span>
@@ -1668,26 +1731,23 @@
         <div class="step">
           <span class="step-num">01</span>
           <h3>Build the ICP list</h3>
-          <p>Pre-seed to seed B2B SaaS, 1–50 people. Sourced from Apollo or your Sales Navigator seat, filtered to the
-            titles who'd actually take the call.</p>
+          <p>Sourced from Apollo or Sales Navigator, filtered to titles that actually take the call.</p>
         </div>
         <div class="step">
           <span class="step-num">02</span>
           <h3>Write realistic sequences</h3>
-          <p>Messages that sound like a person noticed something real, tested and rewritten against what's actually
-            getting replies, not a template with your name copy-pasted in.</p>
+          <p>Messages tested and rewritten against what actually gets replies, not a copy-pasted template.</p>
         </div>
         <div class="step">
           <span class="step-num">03</span>
           <h3>Scale outreach through automation</h3>
-          <p>Sequencing runs through your own licensed automation tool, paced at human speed, so volume goes up without
-            your account or your reputation taking the hit.</p>
+          <p>Runs through your own licensed tool, paced at human speed, no reputation risk.</p>
         </div>
         <div class="step">
           <span class="step-num">04</span>
           <h3>Automated reporting for your team</h3>
-          <p>A live dashboard that updates itself, same day every week: sends, accepts, replies, meetings. No waiting on
-            someone to compile a deck.</p>
+          <p>A live dashboard that updates itself every week: sends, accepts, replies, meetings. <em>Available as an
+              add-on with any Outbound engagement.</em></p>
         </div>
       </div>
     </div>
@@ -1695,29 +1755,21 @@
 
   <section class="metrics-section" style="padding-top: 1rem;">
     <div class="metrics-heading">
-      <span class="kicker">Case studies</span>
-      <h2>Real numbers, by industry.</h2>
+      <span class="kicker">Case study</span>
+      <h2>Real results, one client at a time.</h2>
     </div>
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <span class="card-label">Retail</span>
-        <div class="metric-title" style="margin-top: 0.5rem;">42.4% acceptance rate</div>
-        <p class="metric-plain">1,304 sends, 553 accepted, across 7 campaigns targeting retail HR and leadership.</p>
-      </div>
-      <div class="metric-card">
-        <span class="card-label">Pharma</span>
-        <div class="metric-title" style="margin-top: 0.5rem;">28.1% reply rate</div>
-        <p class="metric-plain">915 sends across 9 campaigns, the strongest reply-to-accept ratio of any industry run.
-        </p>
-      </div>
-      <div class="metric-card">
-        <span class="card-label">Banking</span>
-        <div class="metric-title" style="margin-top: 0.5rem;">165 connections accepted</div>
-        <p class="metric-plain">2 campaigns targeting L&amp;D and HR leadership, 34.7% acceptance rate.</p>
-      </div>
-    </div>
-    <div class="proof-link-row" style="margin-top: 2rem;">
-      <a href="/case-studies">See all case studies →</a>
+    <div class="case-study-grid">
+      <a href="/case-study-mpleai" class="case-card">
+        <div class="case-card-logo">
+          <img src="/assets/client-mple-logo.png" alt="mple.ai">
+        </div>
+        <div class="case-card-body">
+          <span class="card-label">LinkedIn Outbound</span>
+          <h3>From thin leads to 100+ booked meetings</h3>
+          <p>ICP targeting, personalized messaging, and better timing turned mple.ai's outbound around.</p>
+          <span class="case-card-cta">Read the case study →</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -1758,7 +1810,6 @@
             <li><a href="/website-positioning">Website Positioning</a></li>
             <li><a href="/gtm-strategy">GTM Strategy</a></li>
             <li><a href="/coming-soon?service=crm-cleanup">CRM Cleanup</a></li>
-            <li><a href="/coming-soon?service=automated-reporting">Automated Reporting</a></li>
             <li><a href="/product-consultancy">Product Consultancy</a></li>
           </ul>
         </div>
@@ -1820,7 +1871,6 @@
             <option value="Website Positioning">Website Positioning</option>
             <option value="GTM Strategy">GTM Strategy</option>
             <option value="CRM Cleanup">CRM Cleanup</option>
-            <option value="Automated Reporting">Automated Reporting</option>
             <option value="Product Consultancy">Product Consultancy</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>

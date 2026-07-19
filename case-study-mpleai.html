@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Firstword: Pharma Case Study</title>
+<title>Firstword: mple.ai Case Study</title>
 <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
@@ -648,6 +648,19 @@
   .metric-card .card-foot .icon { font-size: 1rem; }
 
   /* funnel connector line for desktop */
+  .proof-link-row { text-align: center; }
+  .proof-link-row a {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--coral-dark);
+    text-decoration: none;
+    border-bottom: 2px solid var(--coral-dark);
+    padding-bottom: 2px;
+    transition: opacity 0.15s ease;
+  }
+  .proof-link-row a:hover { opacity: 0.7; }
+
   .funnel-note {
     text-align: center;
     max-width: 760px;
@@ -730,12 +743,8 @@
   }
 
   .client-badge {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    padding: 1.25rem 1.5rem 0;
-    background: var(--cream);
+    display: flex; align-items: center; justify-content: center; gap: 0.75rem;
+    padding: 1.25rem 1.5rem 0; background: var(--cream);
   }
   .client-badge span { font-size: 0.85rem; color: var(--ink-soft); font-weight: 600; }
   .client-badge img { height: 24px; width: auto; }
@@ -837,102 +846,37 @@
     .word-cloud span:nth-child(n) { transform: none !important; }
   }
 
-  /* ---------- REPLY CLOUD ---------- */
-  .cloud-section {
-    background: var(--cream-2);
-    padding: 5.5rem 1.5rem 6rem;
-    position: relative;
-    overflow: hidden;
-    border-top: 2px solid var(--ink);
-    border-bottom: 2px solid var(--ink);
-  }
-  .cloud-heading {
-    text-align: center;
-    margin-bottom: 3rem;
-    position: relative;
-    z-index: 2;
-  }
-  .cloud-heading .kicker {
-    display: inline-block;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--coral-dark);
-    margin-bottom: 0.8rem;
-  }
-  .cloud-heading h2 {
-    font-family: 'Fraunces', serif;
-    font-weight: 700;
-    font-size: clamp(1.9rem, 4.2vw, 2.9rem);
-    max-width: 22ch;
-    margin: 0 auto 0.6rem;
-    line-height: 1.15;
-  }
-  .cloud-heading p {
-    font-size: 0.95rem;
-    color: var(--ink-soft);
-    max-width: 42ch;
-    margin: 0 auto;
-  }
-
-  .word-cloud {
-    position: relative;
-    z-index: 2;
+  .industry-cloud-group {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 2;
+  }
+  .industry-cloud-group h4 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-align: center;
+    margin-bottom: 0.9rem;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 0.9rem 1.1rem;
-    padding: 1rem;
+    gap: 0.5rem;
   }
-
-  .word-cloud span {
-    display: inline-block;
-    font-family: 'Fraunces', serif;
+  .new-tag {
+    background: var(--coral);
+    color: var(--cream);
+    font-size: 0.68rem;
     font-weight: 700;
-    line-height: 1;
-    padding: 0.5em 0.85em;
+    letter-spacing: 0.04em;
+    padding: 0.15rem 0.55rem;
     border-radius: 999px;
-    border: 2px solid var(--ink);
-    white-space: nowrap;
-    cursor: default;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
   }
-  .word-cloud span:hover {
-    transform: scale(1.08) rotate(0deg) !important;
-    box-shadow: 5px 5px 0 var(--ink);
-    z-index: 5;
-    position: relative;
-  }
-
-  /* size + color variants for texture */
-  .word-cloud .w-xl { font-size: clamp(1.4rem, 3vw, 2.1rem); background: var(--coral); color: var(--cream); box-shadow: 3px 3px 0 var(--ink); }
-  .word-cloud .w-lg { font-size: clamp(1.15rem, 2.2vw, 1.55rem); background: #FFD8B8; color: var(--ink); box-shadow: 3px 3px 0 var(--ink); }
-  .word-cloud .w-md { font-size: clamp(0.95rem, 1.7vw, 1.2rem); background: var(--cream); color: var(--ink); box-shadow: 2px 2px 0 var(--ink); }
-  .word-cloud .w-sm { font-size: 0.85rem; background: transparent; color: var(--ink-soft); border-color: var(--line); box-shadow: none; font-weight: 500; font-family: 'Space Grotesk', sans-serif; }
-
-  .word-cloud span:nth-child(3n) { transform: rotate(-3deg); }
-  .word-cloud span:nth-child(4n) { transform: rotate(2.5deg); }
-  .word-cloud span:nth-child(5n) { transform: rotate(-1.5deg); }
-  .word-cloud span:nth-child(7n) { transform: rotate(3deg); }
-
-  .cloud-caption {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 50ch;
-    margin: 2.75rem auto 0;
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-    line-height: 1.6;
-  }
-
-  @media (max-width: 640px) {
-    .word-cloud span:nth-child(n) { transform: none !important; }
-  }
+  .industry-cloud-group .word-cloud { padding: 0.25rem; margin-bottom: 0; }
 
   /* ---------- FINAL CTA ---------- */
   .final-cta {
@@ -1266,6 +1210,7 @@
     outline-offset: 3px;
   }
 </style>
+</head>
 <body>
 
 <nav class="navbar">
@@ -1288,7 +1233,6 @@
         <a href="/website-positioning"><span class="service-num">03</span><span class="service-name">Website Positioning</span></a>
         <a href="/gtm-strategy"><span class="service-num">04</span><span class="service-name">GTM Strategy</span></a>
         <a href="/coming-soon?service=crm-cleanup"><span class="service-num">05</span><span class="service-name">CRM Cleanup</span></a>
-        <a href="/coming-soon?service=automated-reporting"><span class="service-num">06</span><span class="service-name">Automated Reporting</span></a>
         <a href="/product-consultancy"><span class="service-num">07</span><span class="service-name">Product Consultancy</span></a>
       </div></div>
     </li>
@@ -1299,14 +1243,15 @@
 </nav>
 
 <div class="nav-scrim" id="navScrim" onclick="toggleMobileNav()"></div>
-<section class="hero" style="min-height: auto; padding: clamp(6rem, 14vw, 10rem) clamp(1rem, 4vw, 1.5rem) clamp(3rem, 8vw, 5rem);">
-  <div class="hero-eyebrow"><span class="dot"></span> Case Study · Pharma</div>
-  <h1 class="hero-headline" style="max-width: 18ch; font-size: clamp(2.3rem, 6.5vw, 4.5rem);">The largest volume run,<span class="line2">the strongest replies</span></h1>
-  <p class="hero-sub">Sales leadership and decision-makers across pharma and medtech companies, the highest-volume industry in the whole campaign set.</p>
-</section>
 
-<section class="intro-strip">
-  <p><span class="highlight">Who we reached out to:</span> Sales leads, CXOs, and decision-makers at pharma and medtech companies across India, ranging from 200 to 10,000+ employees, across 9 separate campaigns.</p>
+<section class="hero">
+  <div class="hero-eyebrow"><span class="dot"></span> Case Study &middot; mple.ai</div>
+  <h1 class="hero-headline">From cold inbox<span class="line2">to booked demos</span></h1>
+  <p class="hero-sub">How targeted ICPs, personalized messaging, and better timing turned a stalled outbound motion into <strong>100+ real meetings</strong> for mple.ai.</p>
+  <button type="button" class="cta-btn" onclick="openContactModal()">Get results like this
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+  </button>
+  <div class="scroll-hint">See what changed <span class="arrow">↓</span></div>
 </section>
 
 <div class="client-badge">
@@ -1314,52 +1259,157 @@
   <img src="/assets/client-mple-logo.png" alt="mple.ai">
 </div>
 
-<section class="metrics-section" style="padding-bottom: 2rem;">
+<section class="intro-strip">
+  <p><span class="highlight">The problem:</span> mple.ai's outbound was live, but leads were thin and inconsistent. One generic message was going out to everyone, regardless of industry, role, or timing.</p>
+</section>
+
+<section class="how-section">
+  <div class="how-inner">
+    <div class="how-heading">
+      <span class="kicker">What changed</span>
+      <h2>Three fixes, applied together.</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <h3>ICP targeting, per industry</h3>
+        <p>Split one broad list into Retail, Pharma, and Banking, each with its own decision-maker profile.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <h3>Personalized messaging</h3>
+        <p>Rewrote the opener for each ICP, speaking to what that industry actually cares about.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <h3>Better send timing</h3>
+        <p>Tested send windows per industry instead of one blanket schedule for every campaign.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="metrics-section" id="metrics">
   <div class="metrics-heading">
-    <span class="kicker">The numbers</span>
-    <h2>What Pharma actually looked like.</h2>
+    <span class="kicker">The results, by industry</span>
+    <h2>Same playbook, now running across 10 industries.</h2>
   </div>
   <div class="metrics-grid">
     <div class="metric-card">
-      <span class="card-label">Step 1 · Getting in the door</span>
-      <div class="big-number">31.5%</div>
-      <div class="metric-title">Connection acceptance rate</div>
-      <p class="metric-plain"><strong>288</strong> of <strong>915</strong> connection requests accepted, across 9 campaigns.</p>
+      <span class="card-label">Retail &middot; 7 campaigns</span>
+      <div class="big-number">42.4%</div>
+      <div class="metric-title">Acceptance rate</div>
+      <p class="metric-plain">553 of 1,304 sends accepted, targeting Directors, MDs &amp; HR/CHRO heads. 22.8% reply rate on accepted connections.</p>
     </div>
     <div class="metric-card">
-      <span class="card-label">Step 2 · Starting a conversation</span>
+      <span class="card-label">Pharma &middot; 9 campaigns</span>
       <div class="big-number">28.1%</div>
       <div class="metric-title">Reply rate</div>
-      <p class="metric-plain">Of everyone who accepted, this share replied with a real, typed response, not an auto-tag.</p>
+      <p class="metric-plain">915 sends, 288 accepted (31.5%), targeting sales leadership. Strongest reply-to-accept ratio of the three.</p>
     </div>
     <div class="metric-card">
-      <span class="card-label">Campaign scope</span>
-      <div class="big-number">9</div>
-      <div class="metric-title">Campaigns run</div>
-      <p class="metric-plain">Sales leadership &amp; decision-makers, pharma &amp; medtech, run for <strong>mple.ai</strong>.</p>
+      <span class="card-label">Banking &middot; 2 campaigns</span>
+      <div class="big-number">34.7%</div>
+      <div class="metric-title">Acceptance rate</div>
+      <p class="metric-plain">165 of 475 sends accepted, targeting L&amp;D and HR leadership. Fewer campaigns, same rigor.</p>
     </div>
+  </div>
+  <div class="funnel-note">
+    <strong>Combined:</strong> 2,694 sends across 18 campaigns and 3 industries &rarr; 1,006 accepted &rarr; 100+ real meetings booked. Every number hand-checked, not auto-tagged.
   </div>
 </section>
 
 <section class="cloud-section">
   <div class="cloud-heading">
-    <span class="kicker">Real replies, Pharma</span>
-    <h2>What Pharma prospects actually said.</h2>
-    <p>Actual replies from this campaign. Names and contact details removed, the words are theirs.</p>
+    <span class="kicker">Real replies, across every industry run</span>
+    <h2>What actually landed, in their own words.</h2>
+    <p>Genuine replies pulled from live campaigns. Names and contact details removed, the words are theirs.</p>
   </div>
-  <div class="word-cloud">
-    <span class="w-xl">"I'm happy to connect"</span>
-    <span class="w-lg">"Tuesday works for me"</span>
-    <span class="w-sm">"Sounds good"</span>
-    <span class="w-md">"Happy to be in touch"</span>
-    <span class="w-lg">"Yes, please tell me"</span>
-    <span class="w-sm">"Happy to share"</span>
-    <span class="w-md">"Thanks, that sounds good"</span>
-    <span class="w-xl">"Happy to connect"</span>
-    <span class="w-sm">"Would love to explore"</span>
-    <span class="w-lg">"Let's talk further"</span>
+
+  <div class="industry-cloud-group">
+    <h4>Retail</h4>
+    <div class="word-cloud">
+      <span class="w-xl">"Yes, that would be great"</span>
+      <span class="w-lg">"Absolutely, happy to connect"</span>
+      <span class="w-md">"Can we schedule the demo for this week?"</span>
+      <span class="w-lg">"Sounds interesting, let's get on a gmeet"</span>
+      <span class="w-sm">"Please share your email id"</span>
+      <span class="w-md">"Would love to hear your perspective"</span>
+    </div>
   </div>
-  <p class="cloud-caption">Every phrase came from a real Pharma prospect during this campaign, not written for this page.</p>
+
+  <div class="industry-cloud-group">
+    <h4>Pharma</h4>
+    <div class="word-cloud">
+      <span class="w-xl">"I'm happy to connect"</span>
+      <span class="w-lg">"Tuesday works for me"</span>
+      <span class="w-md">"I've shared the calendar invite"</span>
+      <span class="w-lg">"Let's connect in the new FY"</span>
+      <span class="w-sm">"Yes, please tell me"</span>
+    </div>
+  </div>
+
+  <div class="industry-cloud-group">
+    <h4>Banking</h4>
+    <div class="word-cloud">
+      <span class="w-lg">"Happy to explore"</span>
+      <span class="w-md">"Sure, would love to hear more"</span>
+      <span class="w-sm">"Do share more details on this please"</span>
+      <span class="w-md">"Absolutely happy to connect with you"</span>
+    </div>
+  </div>
+
+  <div class="industry-cloud-group">
+    <h4>Insurance</h4>
+    <div class="word-cloud">
+      <span class="w-lg">"Let's connect next week to discuss"</span>
+      <span class="w-md">"Could you please share your number"</span>
+      <span class="w-sm">"Explain further in detail please"</span>
+      <span class="w-md">"I'm available, let's connect"</span>
+    </div>
+  </div>
+
+  <div class="industry-cloud-group">
+    <h4>Automotive</h4>
+    <div class="word-cloud">
+      <span class="w-lg">"Let's connect this Friday or Saturday"</span>
+      <span class="w-md">"Would love to connect"</span>
+      <span class="w-sm">"Let's connect to understand better"</span>
+    </div>
+  </div>
+
+  <div class="industry-cloud-group">
+    <h4>FMCG</h4>
+    <div class="word-cloud">
+      <span class="w-lg">"Let's connect next week"</span>
+      <span class="w-md">"Would love to stay connected"</span>
+      <span class="w-sm">"Yes, absolutely"</span>
+    </div>
+  </div>
+
+  <div class="industry-cloud-group">
+    <h4>Real Estate <span class="new-tag">New</span></h4>
+    <div class="word-cloud">
+      <span class="w-md">"Would love to connect and exchange notes"</span>
+      <span class="w-sm">"Do share"</span>
+    </div>
+  </div>
+
+  <div class="industry-cloud-group">
+    <h4>MedTech <span class="new-tag">New</span></h4>
+    <div class="word-cloud">
+      <span class="w-md">"I'll share the calendar invite"</span>
+    </div>
+  </div>
+
+  <div class="industry-cloud-group">
+    <h4>Consumer Goods <span class="new-tag">New</span></h4>
+    <div class="word-cloud">
+      <span class="w-md">"Yes sure!"</span>
+    </div>
+  </div>
+
+  <p class="cloud-caption">Every phrase came from a real prospect during an active campaign, not written for this page. Industries marked "New" have fewer replies so far, more data lands as those campaigns run.</p>
 </section>
 
 <section class="final-cta">
@@ -1396,14 +1446,13 @@
           <li><a href="/website-positioning">Website Positioning</a></li>
           <li><a href="/gtm-strategy">GTM Strategy</a></li>
           <li><a href="/coming-soon?service=crm-cleanup">CRM Cleanup</a></li>
-          <li><a href="/coming-soon?service=automated-reporting">Automated Reporting</a></li>
           <li><a href="/product-consultancy">Product Consultancy</a></li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-tagline"><strong>Firstword</strong>: Firstword: LinkedIn Outbound, GTM &amp; Positioning for early-stage B2B SaaS teams.</div>
+    <div class="footer-tagline"><strong>Firstword</strong>: LinkedIn Outbound &amp; Growth Ops, for early-stage B2B SaaS teams who need pipeline, not a dashboard.</div>
     <div class="footer-social">
       <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18v-8.4H5.67V18h2.67zM7 8.4a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zM18.34 18v-4.6c0-2.46-1.31-3.61-3.06-3.61-1.41 0-2.04.78-2.39 1.32v-1.13H10.2c.04.75 0 8.02 0 8.02h2.69v-4.48c0-.24.02-.48.09-.65.2-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82V18h2.63z"/></svg>
@@ -1414,12 +1463,13 @@
     </div>
   </div>
 </footer>
+
 <div class="modal-overlay" id="contactModal" aria-hidden="true">
   <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
 
     <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
-      <span class="modal-eyebrow">Let's talk</span>
+      <span class="modal-eyebrow">Let's talk pipeline</span>
       <h3 id="modalTitle">Tell me a bit about you</h3>
       <p class="modal-sub">I'll follow up within a day with next steps. No auto-responder, an actual reply from me.</p>
 
@@ -1440,14 +1490,13 @@
 
       <div class="form-group">
         <label for="cf-service">Service needed</label>
-        <select id="cf-service" name="service" required data-default="Product Consultancy">
+        <select id="cf-service" name="service" required data-default="LinkedIn Outbound">
           <option value="" disabled>Select a service</option>
           <option value="LinkedIn Outbound">LinkedIn Outbound</option>
           <option value="LinkedIn Ads">LinkedIn Ads</option>
           <option value="Website Positioning">Website Positioning</option>
           <option value="GTM Strategy">GTM Strategy</option>
           <option value="CRM Cleanup">CRM Cleanup</option>
-          <option value="Automated Reporting">Automated Reporting</option>
           <option value="Product Consultancy">Product Consultancy</option>
           <option value="Not sure yet">Not sure yet</option>
         </select>

@@ -1551,90 +1551,184 @@
       opacity: 0.7;
     }
 
-    /* ---------- HOME: SERVICES GRID ---------- */
-    .services-section {
-      background: var(--ink);
-      padding: 6rem 1.5rem;
-    }
-
-    .services-section .how-heading .kicker {
-      color: #FFB199;
-    }
-
-    .services-section .how-heading h2 {
-      color: var(--cream);
-    }
-
-    .services-grid {
+    /* ---------- CASE STUDY CARD (HOME) ---------- */
+    .case-study-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      max-width: 1100px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+      max-width: 700px;
       margin: 0 auto;
     }
 
-    @media (max-width: 920px) {
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 620px) {
-      .services-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .service-card {
-      display: block;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1.5px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
-      padding: 1.85rem 1.6rem;
+    .case-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--cream-2);
+      border: 2px solid var(--ink);
+      border-radius: 28px;
+      overflow: hidden;
       text-decoration: none;
-      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
-      position: relative;
+      color: inherit;
+      box-shadow: 6px 6px 0 var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .service-card:hover {
-      transform: translateY(-4px);
-      background: rgba(255, 82, 51, 0.12);
-      border-color: var(--coral);
+    .case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 6px 12px 0 var(--line);
     }
 
-    .service-card .service-card-num {
+    .case-card-logo {
+      background: var(--cream);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .case-card-logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    .case-card-body {
+      padding: 1.75rem 2rem 2rem;
+    }
+
+    .case-card-body h3 {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.4rem;
-      color: var(--coral);
-      display: block;
-      margin-bottom: 0.9rem;
+      font-size: 1.3rem;
+      margin: 0.6rem 0 0.7rem;
     }
 
-    .service-card h3 {
-      font-size: 1.05rem;
+    .case-card-body p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin-bottom: 1.1rem;
+    }
+
+    .case-card-cta {
       font-weight: 700;
-      color: var(--cream);
-      margin-bottom: 0.5rem;
+      color: var(--coral-dark);
+      font-size: 0.9rem;
     }
 
-    .service-card p {
-      font-size: 0.88rem;
-      line-height: 1.5;
-      color: rgba(255, 246, 238, 0.7);
+    /* ---------- HOME: SERVICES GRID ---------- */
+    .services-section {
+      background: var(--cream);
+      padding: 5rem 0 2rem;
     }
 
-    .service-card .soon-tag {
+    .services-section .how-heading .kicker {
+      color: var(--coral-dark);
+    }
+
+    .services-section .how-heading h2 {
+      color: var(--ink);
+    }
+
+    .services-section .how-heading {
+      padding: 0 1.5rem;
+    }
+
+    .service-row {
+      display: flex;
+      align-items: center;
+      gap: clamp(2rem, 6vw, 5rem);
+      max-width: 1180px;
+      margin: 0 auto 1.5rem;
+      padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
+      text-decoration: none;
+      background: var(--cream-2);
+      border: 2px solid var(--ink);
+      border-radius: 28px;
+      box-shadow: 6px 6px 0 var(--line);
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+
+    .service-row:hover {
+      background: #FFF0E6;
+      transform: translateY(-4px);
+      box-shadow: 6px 12px 0 var(--line);
+    }
+
+    .service-row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .service-row-num {
+      flex-shrink: 0;
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      line-height: 1;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--coral);
+      width: clamp(90px, 12vw, 160px);
+    }
+
+    .service-row-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .service-row-content h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-row-content p {
+      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+      line-height: 1.6;
+      color: var(--ink-soft);
+      max-width: 52ch;
+      margin-bottom: 1.1rem;
+    }
+
+    .service-row-hook {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--coral-dark);
+    }
+
+    .service-row-hook::before {
+      content: '→';
+    }
+
+    .service-row .soon-tag {
       display: inline-block;
-      margin-top: 0.9rem;
       font-size: 0.72rem;
       font-weight: 700;
       letter-spacing: 0.06em;
       text-transform: uppercase;
-      color: #FFB199;
-      background: rgba(255, 82, 51, 0.15);
-      padding: 0.25rem 0.65rem;
+      color: var(--coral-dark);
+      background: rgba(255, 82, 51, 0.12);
+      padding: 0.3rem 0.75rem;
       border-radius: 999px;
+    }
+
+    @media (max-width: 720px) {
+
+      .service-row,
+      .service-row:nth-child(even) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .service-row-num {
+        width: auto;
+        font-size: 2.5rem;
+      }
     }
   </style>
 
@@ -1667,8 +1761,6 @@
                 Strategy</span></a>
             <a href="/coming-soon?service=crm-cleanup"><span class="service-num">05</span><span class="service-name">CRM
                 Cleanup</span></a>
-            <a href="/coming-soon?service=automated-reporting"><span class="service-num">06</span><span
-                class="service-name">Automated Reporting</span></a>
             <a href="/product-consultancy"><span class="service-num">07</span><span class="service-name">Product
                 Consultancy</span></a>
           </div>
@@ -1724,60 +1816,64 @@
   </section>
 
   <section class="services-section" id="services">
-    <div class="how-inner">
-      <div class="how-heading">
-        <span class="kicker">What I actually do</span>
-        <h2>Pick one. Or let them work together.</h2>
-      </div>
-      <div class="services-grid">
-
-        <a href="/linkedin-outbound" class="service-card">
-          <span class="service-card-num">01</span>
-          <h3>LinkedIn Outbound</h3>
-          <p>Cold connects, real replies, meetings on the calendar. The proof-backed core of the practice.</p>
-        </a>
-
-        <a href="/coming-soon?service=linkedin-ads" class="service-card">
-          <span class="service-card-num">02</span>
-          <h3>LinkedIn Ads</h3>
-          <p>Paid campaigns run through Campaign Manager, aimed at the same ICP your outbound already targets.</p>
-          <span class="soon-tag">Coming soon</span>
-        </a>
-
-        <a href="/website-positioning" class="service-card">
-          <span class="service-card-num">03</span>
-          <h3>Website Positioning</h3>
-          <p>Rewriting the words on your site so visitors know what you do in five seconds, not fifty.</p>
-        </a>
-
-        <a href="/gtm-strategy" class="service-card">
-          <span class="service-card-num">04</span>
-          <h3>GTM Strategy</h3>
-          <p>ICP, channel, and a 90-day motion: a decision document you'll actually use, not a deck.</p>
-        </a>
-
-        <a href="/coming-soon?service=crm-cleanup" class="service-card">
-          <span class="service-card-num">05</span>
-          <h3>CRM Cleanup</h3>
-          <p>HubSpot or Zoho, set up properly so your pipeline data is trustworthy from day one.</p>
-          <span class="soon-tag">Coming soon</span>
-        </a>
-
-        <a href="/coming-soon?service=automated-reporting" class="service-card">
-          <span class="service-card-num">06</span>
-          <h3>Automated Reporting</h3>
-          <p>A live dashboard that updates itself, same day every week, no manually compiled decks.</p>
-          <span class="soon-tag">Coming soon</span>
-        </a>
-
-        <a href="/product-consultancy" class="service-card">
-          <span class="service-card-num">07</span>
-          <h3>Product Consultancy</h3>
-          <p>A narrow, focused second opinion, brought in only where growth work has exposed a real product gap.</p>
-        </a>
-
-      </div>
+    <div class="how-heading">
+      <span class="kicker">What I actually do</span>
+      <h2>Pick one. Or let them work together.</h2>
     </div>
+
+    <a href="/linkedin-outbound" class="service-row">
+      <span class="service-row-num">01</span>
+      <div class="service-row-content">
+        <h3>LinkedIn Outbound</h3>
+        <p>Cold connects, real replies, meetings on the calendar. The proof-backed core of the practice.</p>
+        <span class="service-row-hook">36.5% acceptance, 100+ meetings booked</span>
+      </div>
+    </a>
+
+    <a href="/coming-soon?service=linkedin-ads" class="service-row">
+      <span class="service-row-num">02</span>
+      <div class="service-row-content">
+        <h3>LinkedIn Ads</h3>
+        <p>Paid campaigns run through Campaign Manager, aimed at the same ICP your outbound already targets.</p>
+        <span class="soon-tag">Coming soon</span>
+      </div>
+    </a>
+
+    <a href="/website-positioning" class="service-row">
+      <span class="service-row-num">03</span>
+      <div class="service-row-content">
+        <h3>Website Positioning</h3>
+        <p>Rewriting the words on your site so visitors know what you do in five seconds, not fifty.</p>
+        <span class="service-row-hook">For sites that bounce visitors before they read</span>
+      </div>
+    </a>
+
+    <a href="/gtm-strategy" class="service-row">
+      <span class="service-row-num">04</span>
+      <div class="service-row-content">
+        <h3>GTM Strategy</h3>
+        <p>ICP, channel, and a 90-day motion: a decision document you'll actually use, not a deck.</p>
+        <span class="service-row-hook">For teams with no dedicated GTM lead yet</span>
+      </div>
+    </a>
+
+    <a href="/coming-soon?service=crm-cleanup" class="service-row">
+      <span class="service-row-num">05</span>
+      <div class="service-row-content">
+        <h3>CRM Cleanup</h3>
+        <p>HubSpot or Zoho, set up properly so your pipeline data is trustworthy from day one.</p>
+        <span class="soon-tag">Coming soon</span>
+      </div>
+    </a>
+
+    <a href="/product-consultancy" class="service-row">
+      <span class="service-row-num">06</span>
+      <div class="service-row-content">
+        <h3>Product Consultancy</h3>
+        <p>A narrow, focused second opinion, brought in only where growth work has exposed a real product gap.</p>
+        <span class="service-row-hook">For when meetings book but demos don't convert</span>
+      </div>
+    </a>
   </section>
 
   <section class="how-section" style="background: var(--cream); color: var(--ink); padding-top: 5.5rem;">
@@ -1817,29 +1913,21 @@
 
   <section class="metrics-section" style="padding-top: 1rem;">
     <div class="metrics-heading">
-      <span class="kicker">Case studies</span>
-      <h2>Real numbers, by industry.</h2>
+      <span class="kicker">Case study</span>
+      <h2>Real results, one client at a time.</h2>
     </div>
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <span class="card-label">Retail</span>
-        <div class="metric-title" style="margin-top: 0.5rem;">42.4% acceptance rate</div>
-        <p class="metric-plain">1,304 sends, 553 accepted, across 7 campaigns targeting retail HR and leadership.</p>
-      </div>
-      <div class="metric-card">
-        <span class="card-label">Pharma</span>
-        <div class="metric-title" style="margin-top: 0.5rem;">28.1% reply rate</div>
-        <p class="metric-plain">915 sends across 9 campaigns, the strongest reply-to-accept ratio of any industry run.
-        </p>
-      </div>
-      <div class="metric-card">
-        <span class="card-label">Banking</span>
-        <div class="metric-title" style="margin-top: 0.5rem;">165 connections accepted</div>
-        <p class="metric-plain">2 campaigns targeting L&amp;D and HR leadership, 34.7% acceptance rate.</p>
-      </div>
-    </div>
-    <div class="proof-link-row" style="margin-top: 2rem;">
-      <a href="/case-studies">See all case studies →</a>
+    <div class="case-study-grid">
+      <a href="/case-study-mpleai" class="case-card">
+        <div class="case-card-logo">
+          <img src="/assets/client-mple-logo.png" alt="mple.ai">
+        </div>
+        <div class="case-card-body">
+          <span class="card-label">LinkedIn Outbound</span>
+          <h3>From thin leads to 100+ booked meetings</h3>
+          <p>ICP targeting, personalized messaging, and better timing turned mple.ai's outbound around.</p>
+          <span class="case-card-cta">Read the case study →</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -1880,7 +1968,6 @@
             <li><a href="/website-positioning">Website Positioning</a></li>
             <li><a href="/gtm-strategy">GTM Strategy</a></li>
             <li><a href="/coming-soon?service=crm-cleanup">CRM Cleanup</a></li>
-            <li><a href="/coming-soon?service=automated-reporting">Automated Reporting</a></li>
             <li><a href="/product-consultancy">Product Consultancy</a></li>
           </ul>
         </div>
@@ -1941,7 +2028,6 @@
             <option value="Website Positioning">Website Positioning</option>
             <option value="GTM Strategy">GTM Strategy</option>
             <option value="CRM Cleanup">CRM Cleanup</option>
-            <option value="Automated Reporting">Automated Reporting</option>
             <option value="Product Consultancy">Product Consultancy</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>
