@@ -444,7 +444,11 @@
       }
 
       .nav-item-dropdown>a .caret {
-        display: none;
+        display: inline-block;
+      }
+
+      .nav-item-dropdown.mobile-open>a .caret {
+        transform: rotate(180deg);
       }
 
       .services-dropdown a {
@@ -476,7 +480,7 @@
     /* ---------- HERO ---------- */
     .hero {
       position: relative;
-      min-height: 100vh;
+      min-height: min(100vh, 900px);
       background: linear-gradient(180deg, #EAB4A8 0%, #E7A7BE 28%, #C6A3D6 55%, #8FA9DA 85%, #6C97D2 100%);
       display: flex;
       flex-direction: column;
@@ -1085,7 +1089,7 @@
     footer {
       background: var(--ink);
       color: rgba(255, 246, 238, 0.55);
-      padding: 2.5rem 1.5rem;
+      padding: 3.5rem 1.5rem 2rem;
       font-size: 0.85rem;
     }
 
@@ -1093,20 +1097,29 @@
       color: var(--cream);
     }
 
-    .footer-inner {
+    footer a {
+      text-decoration: none;
+    }
+
+    .footer-top {
       max-width: 1100px;
       margin: 0 auto;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      gap: 1.5rem;
+      gap: 2.5rem;
       flex-wrap: wrap;
+      padding-bottom: 2.5rem;
+    }
+
+    .footer-brand-col {
+      max-width: 260px;
     }
 
     .footer-brand {
       display: flex;
       align-items: center;
       gap: 0.6rem;
+      margin-bottom: 0.9rem;
     }
 
     .footer-brand img {
@@ -1122,35 +1135,93 @@
       color: var(--cream);
     }
 
-    .footer-links {
+    .footer-desc {
+      font-size: 0.83rem;
+      line-height: 1.5;
+    }
+
+    .footer-cols {
       display: flex;
-      align-items: center;
-      gap: 1.5rem;
+      gap: 3rem;
       flex-wrap: wrap;
     }
 
-    .footer-links a {
-      color: rgba(255, 246, 238, 0.75);
-      text-decoration: none;
-      font-weight: 600;
+    .footer-col h4 {
+      color: var(--cream);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.9rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .footer-col a {
+      color: rgba(255, 246, 238, 0.7);
+      font-weight: 500;
       transition: color 0.15s ease;
     }
 
-    .footer-links a:hover {
+    .footer-col a:hover {
       color: var(--coral);
     }
 
-    .footer-tagline {
-      width: 100%;
-      text-align: center;
-      margin-top: 1.5rem;
-      padding-top: 1.5rem;
+    .footer-bottom {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-top: 1.75rem;
       border-top: 1px solid rgba(255, 246, 238, 0.12);
+    }
+
+    .footer-tagline {
       font-size: 0.8rem;
     }
 
+    .footer-social {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .footer-social a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 246, 238, 0.08);
+      color: var(--cream);
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .footer-social a:hover {
+      background: var(--coral);
+      color: var(--ink);
+    }
+
+    .footer-social svg {
+      width: 17px;
+      height: 17px;
+    }
+
     @media (max-width: 640px) {
-      .footer-inner {
+      .footer-top {
+        flex-direction: column;
+      }
+
+      .footer-bottom {
         flex-direction: column;
         text-align: center;
       }
@@ -1280,7 +1351,8 @@
       letter-spacing: 0;
     }
 
-    .form-group input {
+    .form-group input,
+    .form-group select {
       width: 100%;
       font-family: 'Space Grotesk', sans-serif;
       font-size: 0.98rem;
@@ -1292,15 +1364,30 @@
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
     }
 
+    .form-group select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231A1523' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 16px;
+      padding-right: 2.5rem;
+    }
+
+    .form-group select:invalid {
+      color: rgba(69, 59, 82, 0.45);
+    }
+
     .form-group input::placeholder {
       color: rgba(69, 59, 82, 0.45);
     }
 
-    .form-group input:focus {
+    .form-group input:focus,
+    .form-group select:focus {
       outline: none;
       border-color: var(--coral);
       box-shadow: 3px 3px 0 var(--coral);
-      background: var(--cream);
+      background-color: var(--cream);
     }
 
     .form-group input:invalid:not(:placeholder-shown) {
@@ -1437,7 +1524,7 @@
           </div>
         </div>
       </li>
-      <li><a href="/coming-soon?service=case-studies">Case Studies</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="/coming-soon?service=blogs">Blogs</a></li>
       <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;">Let's Talk</a></li>
     </ul>
@@ -1464,18 +1551,58 @@
   </section>
 
   <footer>
-    <div class="footer-inner">
-      <div class="footer-brand">
-        <img src="/assets/logo-icon-transparent.png" alt="Firstword">
-        <span>Firstword</span>
+    <div class="footer-top">
+      <div class="footer-brand-col">
+        <div class="footer-brand">
+          <img src="/assets/logo-icon-transparent.png" alt="Firstword">
+          <span>Firstword</span>
+        </div>
+        <p class="footer-desc">LinkedIn Outbound, GTM &amp; Positioning for early-stage B2B SaaS teams. One operator,
+          hands-on.</p>
       </div>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:triveditrudra4@gmail.com">Email</a>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/coming-soon?service=blogs">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/linkedin-outbound">LinkedIn Outbound</a></li>
+            <li><a href="/coming-soon?service=linkedin-ads">LinkedIn Ads</a></li>
+            <li><a href="/website-positioning">Website Positioning</a></li>
+            <li><a href="/gtm-strategy">GTM Strategy</a></li>
+            <li><a href="/coming-soon?service=crm-cleanup">CRM Cleanup</a></li>
+            <li><a href="/coming-soon?service=automated-reporting">Automated Reporting</a></li>
+            <li><a href="/product-consultancy">Product Consultancy</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer-tagline"><strong>Firstword</strong>: LinkedIn Outbound, GTM & Positioning for early-stage B2B
-      SaaS teams.</div>
+    <div class="footer-bottom">
+      <div class="footer-tagline"><strong>Firstword</strong>: Firstword: LinkedIn Outbound, GTM &amp; Positioning for
+        early-stage B2B SaaS teams.</div>
+      <div class="footer-social">
+        <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18v-8.4H5.67V18h2.67zM7 8.4a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zM18.34 18v-4.6c0-2.46-1.31-3.61-3.06-3.61-1.41 0-2.04.78-2.39 1.32v-1.13H10.2c.04.75 0 8.02 0 8.02h2.69v-4.48c0-.24.02-.48.09-.65.2-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82V18h2.63z" />
+          </svg>
+        </a>
+        <a href="mailto:triveditrudra4@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M4 4h16v16H4z" opacity="0" />
+            <path d="M22 6l-10 7L2 6" />
+            <rect x="2" y="4" width="20" height="16" rx="2" />
+          </svg>
+        </a>
+      </div>
+    </div>
   </footer>
   <div class="modal-overlay" id="contactModal" aria-hidden="true">
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
@@ -1500,6 +1627,21 @@
         <div class="form-group">
           <label for="cf-company">Company name</label>
           <input type="text" id="cf-company" name="company" placeholder="Your company" required>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-service">Service needed</label>
+          <select id="cf-service" name="service" required data-default="">
+            <option value="" disabled>Select a service</option>
+            <option value="LinkedIn Outbound">LinkedIn Outbound</option>
+            <option value="LinkedIn Ads">LinkedIn Ads</option>
+            <option value="Website Positioning">Website Positioning</option>
+            <option value="GTM Strategy">GTM Strategy</option>
+            <option value="CRM Cleanup">CRM Cleanup</option>
+            <option value="Automated Reporting">Automated Reporting</option>
+            <option value="Product Consultancy">Product Consultancy</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
         </div>
 
         <div class="form-group">
@@ -1590,6 +1732,16 @@
       document.getElementById('contactModal').classList.add('open');
       document.getElementById('contactModal').setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
+      // pre-select the service dropdown based on the current page, if it hasn't been touched yet
+      const serviceSelect = document.getElementById('cf-service');
+      if (serviceSelect && !serviceSelect.dataset.userChanged) {
+        const defaultVal = serviceSelect.getAttribute('data-default');
+        if (defaultVal) {
+          for (const opt of serviceSelect.options) {
+            if (opt.value === defaultVal) { serviceSelect.value = defaultVal; break; }
+          }
+        }
+      }
     }
     function closeContactModal() {
       document.getElementById('contactModal').classList.remove('open');
@@ -1598,7 +1750,7 @@
       // reset error state so a stale error doesn't linger next time the modal opens
       const errorEl = document.getElementById('formError');
       if (errorEl) errorEl.classList.remove('show');
-      ['cf-name', 'cf-email', 'cf-company'].forEach(function (id) {
+      ['cf-name', 'cf-email', 'cf-company', 'cf-service'].forEach(function (id) {
         const el = document.getElementById(id);
         if (el) el.style.borderColor = '';
       });
@@ -1616,6 +1768,12 @@
     const contactForm = document.getElementById('contactForm');
     const submitBtn = document.getElementById('submitBtn');
     const formError = document.getElementById('formError');
+    const serviceSelectEl = document.getElementById('cf-service');
+    if (serviceSelectEl) {
+      serviceSelectEl.addEventListener('change', function () {
+        this.dataset.userChanged = 'true';
+      });
+    }
 
     // Real email check: needs a local part, an @, and a domain with a valid-looking TLD.
     // Works for company emails, Gmail, or any other domain.
@@ -1639,20 +1797,24 @@
       const nameInput = document.getElementById('cf-name');
       const emailInput = document.getElementById('cf-email');
       const companyInput = document.getElementById('cf-company');
+      const serviceInput = document.getElementById('cf-service');
 
       const name = nameInput.value.trim();
       const email = emailInput.value.trim();
       const company = companyInput.value.trim();
+      const service = serviceInput.value.trim();
 
       setFieldInvalid(nameInput, false);
       setFieldInvalid(emailInput, false);
       setFieldInvalid(companyInput, false);
+      setFieldInvalid(serviceInput, false);
 
       const missing = [];
       if (!name) { missing.push('name'); setFieldInvalid(nameInput, true); }
       if (!email) { missing.push('email'); setFieldInvalid(emailInput, true); }
       else if (!isValidEmail(email)) { missing.push('a valid email'); setFieldInvalid(emailInput, true); }
       if (!company) { missing.push('company name'); setFieldInvalid(companyInput, true); }
+      if (!service) { missing.push('a service'); setFieldInvalid(serviceInput, true); }
 
       if (missing.length > 0) {
         const fieldList = missing.join(', ');
