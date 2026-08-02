@@ -834,6 +834,331 @@
       color: var(--ink);
     }
 
+    /* ---------- HTML DESIGN SNAPSHOTS (BEFORE / AFTER) ---------- */
+    .snapshots-section {
+      background: var(--cream);
+      padding: 5.5rem 1.5rem 6.5rem;
+      border-top: 2px solid var(--ink);
+    }
+
+    .snapshots-heading {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .snapshots-heading .kicker {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--coral-dark);
+      margin-bottom: 0.8rem;
+    }
+
+    .snapshots-heading h2 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      color: var(--ink);
+      max-width: 24ch;
+      margin: 0 auto 1rem;
+      line-height: 1.1;
+    }
+
+    .snapshots-sub {
+      font-size: 1.05rem;
+      color: var(--ink-soft);
+      max-width: 52ch;
+      margin: 0 auto;
+      line-height: 1.55;
+    }
+
+    .snapshots-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 960px) {
+      .snapshots-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .snapshot-column-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--ink);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .snapshot-pair {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .browser-frame {
+      background: #FFFFFF;
+      border: 2px solid var(--ink);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 6px 6px 0 var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .browser-frame:hover {
+      transform: translateY(-4px);
+      box-shadow: 6px 10px 0 var(--line);
+    }
+
+    .browser-frame.frame-before {
+      background: #FAF8F5;
+      border-color: rgba(26, 21, 35, 0.4);
+    }
+
+    .browser-frame.frame-after {
+      background: #FFFDF9;
+      border-color: var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+    }
+
+    .browser-header {
+      background: #EAE6E1;
+      border-bottom: 2px solid var(--ink);
+      padding: 0.6rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .browser-dots {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .browser-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .browser-dot.red { background: #FF5F56; }
+    .browser-dot.yellow { background: #FFBD2E; }
+    .browser-dot.green { background: #27C93F; }
+
+    .browser-url {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      background: #FFFFFF;
+      padding: 0.2rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(26, 21, 35, 0.15);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+    }
+
+    .browser-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    .browser-tag.tag-before {
+      background: #FEE2E2;
+      color: #991B1B;
+      border: 1px solid #FCA5A5;
+    }
+
+    .browser-tag.tag-after {
+      background: #DCFCE7;
+      color: #166534;
+      border: 1px solid #86EFAC;
+    }
+
+    .browser-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .mock-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      display: inline-block;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      width: fit-content;
+    }
+
+    .frame-before .mock-eyebrow {
+      background: rgba(26, 21, 35, 0.08);
+      color: var(--ink-soft);
+    }
+
+    .frame-after .mock-eyebrow {
+      background: rgba(255, 82, 51, 0.12);
+      color: var(--coral-dark);
+      border: 1px solid rgba(255, 82, 51, 0.25);
+    }
+
+    .mock-title {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      line-height: 1.2;
+      color: var(--ink);
+    }
+
+    .frame-before .mock-title {
+      color: #554D61;
+      font-weight: 600;
+    }
+
+    .mock-sub {
+      font-size: 0.88rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+
+    .mock-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-top: 0.4rem;
+      width: fit-content;
+    }
+
+    .frame-before .mock-cta {
+      background: #E2DFD8;
+      color: #665F70;
+      border: 1px solid #C4C0B5;
+    }
+
+    .frame-after .mock-cta {
+      background: var(--coral);
+      color: var(--cream);
+      border: 1.5px solid var(--ink);
+      box-shadow: 2px 2px 0 var(--ink);
+    }
+
+    .mock-foot-note {
+      font-size: 0.78rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--line);
+      color: var(--ink-soft);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .snapshot-vs-badge {
+      text-align: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--coral-dark);
+      background: var(--cream-2);
+      border: 1.5px dashed var(--coral);
+      border-radius: 999px;
+      padding: 0.35rem 1rem;
+      width: fit-content;
+      margin: 0.5rem auto;
+    }
+
+    /* ---------- CASE STUDY GRID ---------- */
+    .case-study-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .case-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--cream-2);
+      border: 2px solid var(--ink);
+      border-radius: 28px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 6px 6px 0 var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .case-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 6px 12px 0 var(--line);
+    }
+
+    .case-card-logo {
+      background: var(--cream);
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .case-card-logo img {
+      height: 36px;
+      width: auto;
+    }
+
+    .case-card-body {
+      padding: 1.75rem 2rem 2rem;
+    }
+
+    .case-card-body h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin: 0.6rem 0 0.7rem;
+    }
+
+    .case-card-body p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.55;
+      margin-bottom: 1.1rem;
+    }
+
+    .case-card-cta {
+      font-weight: 700;
+      color: var(--coral-dark);
+      font-size: 0.9rem;
+    }
+
     /* ---------- HOW IT WORKS ---------- */
     .how-section {
       background: var(--ink);
@@ -1501,6 +1826,7 @@
       outline-offset: 3px;
     }
   </style>
+</head>
 
 <body>
 
@@ -1589,6 +1915,148 @@
     </div>
   </section>
 
+  <section class="cloud-section">
+    <div class="cloud-heading">
+      <span class="kicker">What good positioning actually sounds like</span>
+      <h2>When the words are right, buyers don't need convincing. They just recognise themselves.</h2>
+      <p>These are the thoughts, phrases, and reactions that move someone from "interesting" to "book a demo".</p>
+    </div>
+    <div class="word-cloud">
+      <span class="w-xl">"That's exactly our problem"</span>
+      <span class="w-md">"Is this built for us?"</span>
+      <span class="w-lg">"Finally, someone who gets it"</span>
+      <span class="w-sm">"Send me the pricing"</span>
+      <span class="w-md">"We've been looking for this"</span>
+      <span class="w-xl">"Book a demo"</span>
+      <span class="w-lg">"Forward this to my co-founder"</span>
+      <span class="w-sm">"This solves the exact thing"</span>
+      <span class="w-md">"Can we trial this week?"</span>
+      <span class="w-xl">"Where has this been?"</span>
+      <span class="w-sm">"I've been describing this problem for months"</span>
+      <span class="w-lg">"Our team needs to see this"</span>
+      <span class="w-md">"I know who else should see this"</span>
+      <span class="w-sm">"Let's hop on a call"</span>
+      <span class="w-lg">"This is what we've been waiting for"</span>
+      <span class="w-md">"Does it integrate with our stack?"</span>
+      <span class="w-xl">"I get it immediately"</span>
+      <span class="w-sm">"This makes the decision obvious"</span>
+      <span class="w-md">"Sharing this with the team"</span>
+    </div>
+    <p class="cloud-caption">What buyers think — but only say out loud — when your positioning actually does its job. If your site isn't triggering any of these, the words aren't working.</p>
+  </section>
+
+  <section class="snapshots-section">
+    <div class="snapshots-heading">
+      <span class="kicker">Visual positioning snapshots</span>
+      <h2>What sharp positioning looks like on an actual homepage.</h2>
+      <p class="snapshots-sub">Before &amp; after design snapshots comparing generic engineering speak against buyer-focused, high-converting copy.</p>
+    </div>
+
+    <div class="snapshots-grid">
+      <!-- PAIR 1: HERO TRANSFORM -->
+      <div class="snapshot-pair">
+        <div class="snapshot-column-title">
+          <span>01. The Hero Headline Rewrite</span>
+        </div>
+
+        <div class="browser-frame frame-before">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+            </div>
+            <div class="browser-url">your-saas-app.com</div>
+            <span class="browser-tag tag-before">❌ Before · Vague Copy</span>
+          </div>
+          <div class="browser-body">
+            <span class="mock-eyebrow">Enterprise Cloud Solution</span>
+            <div class="mock-title">"The All-in-One AI-Powered Platform for Next-Gen Teams"</div>
+            <p class="mock-sub">Streamline cross-functional workflows, optimize operational throughput, and leverage unified analytics across your organization.</p>
+            <div class="mock-cta">Request Enterprise Demo</div>
+            <div class="mock-foot-note">
+              <span>⚠️ Result: Visitors leave in 6 seconds because it sounds like every other B2B website.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snapshot-vs-badge">↓ Positioning Rewrite ↓</div>
+
+        <div class="browser-frame frame-after">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+            </div>
+            <div class="browser-url">firstword-positioning.com</div>
+            <span class="browser-tag tag-after">✅ After · Sharp &amp; Clear</span>
+          </div>
+          <div class="browser-body">
+            <span class="mock-eyebrow">● Built for Finance &amp; Operations</span>
+            <div class="mock-title">"Stop spending 5 hours every Monday fixing broken CSV revenue exports."</div>
+            <p class="mock-sub">Sync your Stripe subscriptions directly into Postgres &amp; Snowflake in 3 minutes. Zero manual data entry or engineer help required.</p>
+            <div class="mock-cta">Start 14-Day Free Trial →</div>
+            <div class="mock-foot-note">
+              <span>🎯 Result: ICP buyers immediately recognize their exact daily pain and click to try.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAIR 2: FEATURE VS OUTCOME -->
+      <div class="snapshot-pair">
+        <div class="snapshot-column-title">
+          <span>02. Feature List vs. Buyer Outcome</span>
+        </div>
+
+        <div class="browser-frame frame-before">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+            </div>
+            <div class="browser-url">your-saas-app.com/features</div>
+            <span class="browser-tag tag-before">❌ Before · Feature Dump</span>
+          </div>
+          <div class="browser-body">
+            <span class="mock-eyebrow">Product Features</span>
+            <div class="mock-title">"Multi-Tenant Database Architecture &amp; GraphQL API"</div>
+            <p class="mock-sub">Robust microservices backend supporting real-time webhooks, custom schemas, and high-throughput data processing endpoints.</p>
+            <div class="mock-cta">View API Docs</div>
+            <div class="mock-foot-note">
+              <span>⚠️ Result: Buyers don't buy architecture; they buy business outcomes.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="snapshot-vs-badge">↓ Positioning Rewrite ↓</div>
+
+        <div class="browser-frame frame-after">
+          <div class="browser-header">
+            <div class="browser-dots">
+              <span class="browser-dot red"></span>
+              <span class="browser-dot yellow"></span>
+              <span class="browser-dot green"></span>
+            </div>
+            <div class="browser-url">firstword-positioning.com/value</div>
+            <span class="browser-tag tag-after">✅ After · Outcome Driven</span>
+          </div>
+          <div class="browser-body">
+            <span class="mock-eyebrow">● Revenue Protection</span>
+            <div class="mock-title">"Know which 10 accounts will renew this month before your VP asks."</div>
+            <p class="mock-sub">Automated renewal health alerts delivered to Slack 30 days before contract expiry. Catch churn risks before they happen.</p>
+            <div class="mock-cta">See How It Works →</div>
+            <div class="mock-foot-note">
+              <span>🎯 Result: Executive decision-makers see instant value for their bottom line.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="how-section">
     <div class="how-inner">
       <div class="how-heading">
@@ -1621,6 +2089,26 @@
             want one.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="metrics-section" style="padding-top: 1rem;">
+    <div class="metrics-heading">
+      <span class="kicker">Case study</span>
+      <h2>Real positioning, real traction.</h2>
+    </div>
+    <div class="case-study-grid">
+      <a href="/case-study-mpleai" class="case-card">
+        <div class="case-card-logo">
+          <img src="/assets/client-mple-logo.png" alt="mple.ai">
+        </div>
+        <div class="case-card-body">
+          <span class="card-label">Positioning &amp; Outbound</span>
+          <h3>From thin leads to 100+ booked meetings</h3>
+          <p>ICP targeting, personalized messaging, and sharper homepage positioning turned mple.ai's pipeline around.</p>
+          <span class="case-card-cta">Read the case study →</span>
+        </div>
+      </a>
     </div>
   </section>
 
@@ -1755,6 +2243,14 @@
   </div>
 
   <script>
+    // highlight active nav link
+    (function(){
+      var path = window.location.pathname.replace(/\/+$/, '') || '/';
+      document.querySelectorAll('.nav-links a[href]').forEach(function(a){
+        var href = a.getAttribute('href').split('?')[0].replace(/\/+$/, '') || '/';
+        if (href === path) a.style.background = 'rgba(26,21,35,0.10)';
+      });
+    })();
     function toggleMobileNav() {
       const navLinks = document.getElementById('navLinks');
       const toggleBtn = document.getElementById('navToggleBtn');

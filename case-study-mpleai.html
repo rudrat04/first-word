@@ -1536,6 +1536,14 @@
 </div>
 
 <script>
+  // highlight active nav link
+  (function(){
+    var path = window.location.pathname.replace(/\/+$/, '') || '/';
+    document.querySelectorAll('.nav-links a[href]').forEach(function(a){
+      var href = a.getAttribute('href').split('?')[0].replace(/\/+$/, '') || '/';
+      if (href === path) a.style.background = 'rgba(26,21,35,0.10)';
+    });
+  })();
   function toggleMobileNav() {
     const navLinks = document.getElementById('navLinks');
     const toggleBtn = document.getElementById('navToggleBtn');
