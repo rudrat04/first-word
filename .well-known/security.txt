@@ -1,0 +1,6 @@
+# Firstword Security Contact Policy
+Contact: mailto:rudra@f1rstword.com
+Contact: https://first-word.netlify.app/
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://first-word.netlify.app/.well-known/security.txt

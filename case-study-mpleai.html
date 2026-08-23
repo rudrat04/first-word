@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Firstword: mple.ai Case Study</title>
+<meta name="description" content="Read how Firstword helped mple.ai turn a stalled outbound motion into 100+ qualified B2B SaaS demos via targeted ICP messaging & LinkedIn outbound.">
+<link rel="canonical" href="https://first-word.netlify.app/case-study-mpleai">
+<link rel="manifest" href="/site.webmanifest">
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:url" content="https://first-word.netlify.app/case-study-mpleai">
 <meta property="og:title" content="Firstword: mple.ai Case Study">
 <meta property="og:description" content="How targeted ICPs, personalized messaging, and better timing turned a stalled outbound motion into 100+ real meetings for mple.ai.">
@@ -22,8 +25,32 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+
+<!-- JSON-LD Structured Data for Case Study Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "mple.ai Case Study: 100+ Qualified Meetings via LinkedIn Outbound",
+  "description": "How targeted ICPs, personalized messaging, and better timing turned a stalled outbound motion into 100+ real meetings for mple.ai.",
+  "url": "https://first-word.netlify.app/case-study-mpleai",
+  "author": {
+    "@type": "Organization",
+    "name": "Firstword",
+    "url": "https://first-word.netlify.app/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Firstword",
+    "logo": "https://first-word.netlify.app/assets/logo-full.png"
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+<meta name="theme-color" content="#FF5233">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -1469,7 +1496,7 @@
       <a href="https://www.linkedin.com/in/rudra-trivedi-t04/" target="_blank" rel="noopener" aria-label="LinkedIn">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18v-8.4H5.67V18h2.67zM7 8.4a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zM18.34 18v-4.6c0-2.46-1.31-3.61-3.06-3.61-1.41 0-2.04.78-2.39 1.32v-1.13H10.2c.04.75 0 8.02 0 8.02h2.69v-4.48c0-.24.02-.48.09-.65.2-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82V18h2.63z"/></svg>
       </a>
-      <a href="mailto:triveditrudra4@gmail.com" aria-label="Email">
+      <a href="mailto:rudra@f1rstword.com" aria-label="Email">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
       </a>
     </div>
@@ -1481,13 +1508,18 @@
     <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
 
     <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
-      <span class="modal-eyebrow">Let's talk pipeline</span>
+      <!-- Formspree Anti-Spam Honeypot & Routing Config -->
+      <input type="hidden" name="_subject" value="New Lead Submission from Firstword Website">
+      <input type="hidden" name="_to" value="rudra@f1rstword.com">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none !important" aria-hidden="true">
+
+      <span class="modal-eyebrow">Let's talk</span>
       <h3 id="modalTitle">Tell me a bit about you</h3>
       <p class="modal-sub">I'll follow up within a day with next steps. No auto-responder, an actual reply from me.</p>
 
       <div class="form-group">
         <label for="cf-name">Name</label>
-        <input type="text" id="cf-name" name="name" placeholder="Your full name" required>
+        <input type="text" id="cf-name" name="name" placeholder="Your full name" required minlength="2">
       </div>
 
       <div class="form-group">
@@ -1497,7 +1529,7 @@
 
       <div class="form-group">
         <label for="cf-company">Company name</label>
-        <input type="text" id="cf-company" name="company" placeholder="Your company" required>
+        <input type="text" id="cf-company" name="company" placeholder="Your company" required minlength="2">
       </div>
 
       <div class="form-group">
@@ -1643,6 +1675,14 @@
     e.preventDefault();
     formError.classList.remove('show');
 
+    // Honeypot check for spam bots
+    const gotchaInput = contactForm.querySelector('input[name="_gotcha"]');
+    if (gotchaInput && gotchaInput.value.trim() !== '') {
+      contactForm.classList.add('hide');
+      document.getElementById('modalSuccess').classList.add('show');
+      return;
+    }
+
     const nameInput = document.getElementById('cf-name');
     const emailInput = document.getElementById('cf-email');
     const companyInput = document.getElementById('cf-company');
@@ -1659,10 +1699,10 @@
     setFieldInvalid(serviceInput, false);
 
     const missing = [];
-    if (!name) { missing.push('name'); setFieldInvalid(nameInput, true); }
+    if (!name || name.length < 2) { missing.push('name'); setFieldInvalid(nameInput, true); }
     if (!email) { missing.push('email'); setFieldInvalid(emailInput, true); }
     else if (!isValidEmail(email)) { missing.push('a valid email'); setFieldInvalid(emailInput, true); }
-    if (!company) { missing.push('company name'); setFieldInvalid(companyInput, true); }
+    if (!company || company.length < 2) { missing.push('company name'); setFieldInvalid(companyInput, true); }
     if (!service) { missing.push('a service'); setFieldInvalid(serviceInput, true); }
 
     if (missing.length > 0) {
