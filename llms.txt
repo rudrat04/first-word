@@ -1,12 +1,11 @@
 # Firstword: Growth Ops for Early-Stage B2B SaaS
 
-> Firstword helps early-stage B2B SaaS founders build predictable pipeline through founder-led LinkedIn outbound, strategic website positioning, product consultancy, and GTM execution.
+> Firstword helps early-stage B2B SaaS founders build predictable pipeline through founder-led LinkedIn outbound, GTM consultancy & website positioning, and product consultancy.
 
 ## Core Capabilities & Services
 
 - [LinkedIn Outbound](https://first-word.netlify.app/linkedin-outbound): Done-for-you founder outbound engine generating high-intent meetings without spamming or diluting personal brand equity.
-- [Website Positioning](https://first-word.netlify.app/website-positioning): Positioning and conversion messaging audit/redesign to turn technical product features into compelling value propositions.
-- [GTM Strategy](https://first-word.netlify.app/gtm-strategy): Go-To-Market roadmap, ICP targeting, sales message validation, and customer acquisition execution for seed to Series A SaaS.
+- [GTM Consultancy](https://first-word.netlify.app/gtm-consultancy): Go-To-Market roadmap, website positioning & conversion messaging, ICP targeting, sales message validation, and customer acquisition execution for seed to Series A SaaS.
 - [Product Consultancy](https://first-word.netlify.app/product-consultancy): Product strategy, onboarding optimization, and feature prioritization grounded in direct buyer feedback.
 
 ## Proof & Case Studies

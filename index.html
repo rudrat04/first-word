@@ -1797,16 +1797,9 @@
         <a href="#" onclick="return toggleServicesMobile(event)">Services <span class="caret"></span></a>
         <div class="services-dropdown">
           <div class="services-dropdown-inner">
-            <a href="/linkedin-outbound"><span class="service-num">01</span><span class="service-name">LinkedIn
-                Outbound</span></a>
-            <a href="/coming-soon?service=linkedin-ads"><span class="service-num">02</span><span
-                class="service-name">LinkedIn Ads</span></a>
-            <a href="/website-positioning"><span class="service-num">03</span><span class="service-name">Website
-                Positioning</span></a>
-            <a href="/gtm-strategy"><span class="service-num">04</span><span class="service-name">GTM
-                Strategy</span></a>
-            <a href="/product-consultancy"><span class="service-num">05</span><span class="service-name">Product
-                Consultancy</span></a>
+            <a href="/linkedin-outbound"><span class="service-num">01</span><span class="service-name">LinkedIn Outbound</span></a>
+            <a href="/gtm-consultancy"><span class="service-num">02</span><span class="service-name">GTM Consultancy</span></a>
+            <a href="/product-consultancy"><span class="service-num">03</span><span class="service-name">Product Consultancy</span></a>
           </div>
         </div>
       </li>
@@ -1874,35 +1867,17 @@
       </div>
     </a>
 
-    <a href="/coming-soon?service=linkedin-ads" class="service-row">
+    <a href="/gtm-consultancy" class="service-row">
       <span class="service-row-num">02</span>
       <div class="service-row-content">
-        <h3>LinkedIn Ads</h3>
-        <p>Paid campaigns run through Campaign Manager, aimed at the same ICP your outbound already targets.</p>
-        <span class="soon-tag">Coming soon</span>
-      </div>
-    </a>
-
-    <a href="/website-positioning" class="service-row">
-      <span class="service-row-num">03</span>
-      <div class="service-row-content">
-        <h3>Website Positioning</h3>
-        <p>Rewriting the words on your site so visitors know what you do in five seconds, not fifty.</p>
-        <span class="service-row-hook">For sites that bounce visitors before they read</span>
-      </div>
-    </a>
-
-    <a href="/gtm-strategy" class="service-row">
-      <span class="service-row-num">04</span>
-      <div class="service-row-content">
-        <h3>GTM Strategy</h3>
-        <p>ICP, channel, and a 90-day motion: a decision document you'll actually use, not a deck.</p>
-        <span class="service-row-hook">For teams with no dedicated GTM lead yet</span>
+        <h3>GTM Consultancy</h3>
+        <p>Website positioning, sharp landing page messaging, ICP mapping, channel validation, and a 90-day execution motion.</p>
+        <span class="service-row-hook">For teams needing positioning & GTM direction</span>
       </div>
     </a>
 
     <a href="/product-consultancy" class="service-row">
-      <span class="service-row-num">05</span>
+      <span class="service-row-num">03</span>
       <div class="service-row-content">
         <h3>Product Consultancy</h3>
         <p>A narrow, focused second opinion, brought in only where growth work has exposed a real product gap.</p>
@@ -1989,27 +1964,29 @@
       <div class="footer-cols">
         <div class="footer-col">
           <h4>Pages</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/case-studies">Case Studies</a></li>
-            <li><a href="/coming-soon?service=blogs">Blogs</a></li>
-          </ul>
-        </div>
+          Firstword
+        </a>
+        <p>Growth Operations & Positioning for Early-Stage B2B SaaS.</p>
+        <span class="copyright">© 2026 Firstword. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
             <li><a href="/linkedin-outbound">LinkedIn Outbound</a></li>
-            <li><a href="/coming-soon?service=linkedin-ads">LinkedIn Ads</a></li>
-            <li><a href="/website-positioning">Website Positioning</a></li>
-            <li><a href="/gtm-strategy">GTM Strategy</a></li>
+            <li><a href="/gtm-consultancy">GTM Consultancy</a></li>
             <li><a href="/product-consultancy">Product Consultancy</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/coming-soon?service=blogs">Blogs</a></li>
+            <li><a href="#" onclick="openContactModal(); return false;">Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-tagline"><strong>Firstword</strong>: Firstword: LinkedIn Outbound, GTM &amp; Positioning for
-        early-stage B2B SaaS teams.</div>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/rudra-trivedi-t04/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor">
@@ -2061,11 +2038,9 @@
         <div class="form-group">
           <label for="cf-service">Service needed</label>
           <select id="cf-service" name="service" required data-default="">
-            <option value="" disabled>Select a service</option>
+            <option value="" disabled selected>Select a service</option>
             <option value="LinkedIn Outbound">LinkedIn Outbound</option>
-            <option value="LinkedIn Ads">LinkedIn Ads</option>
-            <option value="Website Positioning">Website Positioning</option>
-            <option value="GTM Strategy">GTM Strategy</option>
+            <option value="GTM Consultancy">GTM Consultancy</option>
             <option value="Product Consultancy">Product Consultancy</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>

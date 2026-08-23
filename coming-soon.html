@@ -1527,16 +1527,9 @@
         <a href="#" onclick="return toggleServicesMobile(event)">Services <span class="caret"></span></a>
         <div class="services-dropdown">
           <div class="services-dropdown-inner">
-            <a href="/linkedin-outbound"><span class="service-num">01</span><span class="service-name">LinkedIn
-                Outbound</span></a>
-            <a href="/coming-soon?service=linkedin-ads"><span class="service-num">02</span><span
-                class="service-name">LinkedIn Ads</span></a>
-            <a href="/website-positioning"><span class="service-num">03</span><span class="service-name">Website
-                Positioning</span></a>
-            <a href="/gtm-strategy"><span class="service-num">04</span><span class="service-name">GTM
-                Strategy</span></a>
-            <a href="/product-consultancy"><span class="service-num">05</span><span class="service-name">Product
-                Consultancy</span></a>
+            <a href="/linkedin-outbound"><span class="service-num">01</span><span class="service-name">LinkedIn Outbound</span></a>
+            <a href="/gtm-consultancy"><span class="service-num">02</span><span class="service-name">GTM Consultancy</span></a>
+            <a href="/product-consultancy"><span class="service-num">03</span><span class="service-name">Product Consultancy</span></a>
           </div>
         </div>
       </li>
@@ -1589,17 +1582,19 @@
           <h4>Services</h4>
           <ul>
             <li><a href="/linkedin-outbound">LinkedIn Outbound</a></li>
-            <li><a href="/coming-soon?service=linkedin-ads">LinkedIn Ads</a></li>
-            <li><a href="/website-positioning">Website Positioning</a></li>
-            <li><a href="/gtm-strategy">GTM Strategy</a></li>
+            <li><a href="/gtm-consultancy">GTM Consultancy</a></li>
             <li><a href="/product-consultancy">Product Consultancy</a></li>
           </ul>
         </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/coming-soon?service=blogs">Blogs</a></li>
+            <li><a href="#" onclick="openContactModal(); return false;">Contact</a></li>
+          </ul>
+        </div>
       </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-tagline"><strong>Firstword</strong>: Firstword: LinkedIn Outbound, GTM &amp; Positioning for
-        early-stage B2B SaaS teams.</div>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/rudra-trivedi-t04/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor">
@@ -1651,11 +1646,9 @@
         <div class="form-group">
           <label for="cf-service">Service needed</label>
           <select id="cf-service" name="service" required data-default="">
-            <option value="" disabled>Select a service</option>
+            <option value="" disabled selected>Select a service</option>
             <option value="LinkedIn Outbound">LinkedIn Outbound</option>
-            <option value="LinkedIn Ads">LinkedIn Ads</option>
-            <option value="Website Positioning">Website Positioning</option>
-            <option value="GTM Strategy">GTM Strategy</option>
+            <option value="GTM Consultancy">GTM Consultancy</option>
             <option value="Product Consultancy">Product Consultancy</option>
             <option value="Not sure yet">Not sure yet</option>
           </select>
@@ -1692,7 +1685,6 @@
       const params = new URLSearchParams(window.location.search);
       const service = params.get('service');
       const names = {
-        'linkedin-ads': 'LinkedIn Ads',
         'case-studies': 'Case Studies',
         'blogs': 'Blogs'
       };
