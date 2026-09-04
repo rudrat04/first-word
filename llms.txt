@@ -1,12 +1,13 @@
-# Firstword: Growth Ops for Early-Stage B2B SaaS
+# Firstword: Growth Ops, GTM Strategy & AI Automation for B2B Teams
 
-> Firstword helps early-stage B2B SaaS founders build predictable pipeline through founder-led LinkedIn outbound, GTM consultancy & website positioning, and product consultancy.
+> Firstword helps B2B SaaS founders and SMBs build predictable pipeline and efficient operations through founder-led LinkedIn outbound, GTM consultancy & positioning, product consultancy, and AI-powered sales & marketing automation.
 
 ## Core Capabilities & Services
 
 - [LinkedIn Outbound](https://first-word.netlify.app/linkedin-outbound): Done-for-you founder outbound engine generating high-intent meetings without spamming or diluting personal brand equity.
 - [GTM Consultancy](https://first-word.netlify.app/gtm-consultancy): Go-To-Market roadmap, website positioning & conversion messaging, ICP targeting, sales message validation, and customer acquisition execution for seed to Series A SaaS.
 - [Product Consultancy](https://first-word.netlify.app/product-consultancy): Product strategy, onboarding optimization, and feature prioritization grounded in direct buyer feedback.
+- [Sales & Marketing Automation](https://first-word.netlify.app/automation): AI-powered workflow automation for sales and marketing teams — prospect intelligence briefs, CRM auto-enrichment, LinkedIn reply routing, website visitor alerts. Also covers SMB process automation for real estate, customs brokerage, insurance, and legal firms (invoice automation, lead gen workflows, operations automation).
 
 ## Proof & Case Studies
 
