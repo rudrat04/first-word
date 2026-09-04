@@ -1,18 +1,17 @@
-# Firstword: Growth Ops, GTM Strategy & AI Automation for B2B Teams
+# Firstword: Growth Ops, GTM Strategy & AI Automation for B2B Teams and SMBs
 
-> Firstword helps B2B SaaS founders and SMBs build predictable pipeline and efficient operations through founder-led LinkedIn outbound, GTM consultancy & positioning, product consultancy, and AI-powered sales & marketing automation.
+> Firstword helps B2B SaaS founders and SMBs build predictable pipeline and efficient operations through GTM consultancy & website positioning (including founder-led LinkedIn outbound), product consultancy, and custom business process & AI automations.
 
 ## Core Capabilities & Services
 
-- [LinkedIn Outbound](https://first-word.netlify.app/linkedin-outbound): Done-for-you founder outbound engine generating high-intent meetings without spamming or diluting personal brand equity.
-- [GTM Consultancy](https://first-word.netlify.app/gtm-consultancy): Go-To-Market roadmap, website positioning & conversion messaging, ICP targeting, sales message validation, and customer acquisition execution for seed to Series A SaaS.
+- [GTM Consultancy & Outbound](https://first-word.netlify.app/gtm-consultancy): Go-To-Market roadmap, website positioning & conversion copywriting, ICP targeting, and done-for-you founder-led LinkedIn outbound execution that puts qualified demos on the calendar.
 - [Product Consultancy](https://first-word.netlify.app/product-consultancy): Product strategy, onboarding optimization, and feature prioritization grounded in direct buyer feedback.
-- [Sales & Marketing Automation](https://first-word.netlify.app/automation): AI-powered workflow automation for sales and marketing teams — prospect intelligence briefs, CRM auto-enrichment, LinkedIn reply routing, website visitor alerts. Also covers SMB process automation for real estate, customs brokerage, insurance, and legal firms (invoice automation, lead gen workflows, operations automation).
+- [Business & AI Automations](https://first-word.netlify.app/automation): Custom workflow automation for SMBs and B2B teams — invoice automation, instant lead generation intake & WhatsApp routing, operations workflows, CRM data sync, and AI prospect intelligence briefs (e.g. 60-second AI briefs with buyer triggers, suggested replies, and demo prep). Covers Real Estate, Customs Brokerage, Insurance, Legal Firms, and Tech teams.
 
 ## Proof & Case Studies
 
-- [Case Studies Overview](https://first-word.netlify.app/case-studies): Real outcomes for early-stage B2B SaaS companies.
-- [mple.ai Case Study](https://first-word.netlify.app/case-study-mpleai): How Firstword helped mple.ai validate positioning and open strategic enterprise pipeline via LinkedIn outbound.
+- [Case Studies Overview](https://first-word.netlify.app/case-studies): Real outcomes for early-stage B2B SaaS companies and growing teams.
+- [mple.ai Case Study](https://first-word.netlify.app/case-study-mpleai): How Firstword helped mple.ai validate positioning, automate AI reply intelligence, and book 100+ qualified enterprise demos.
 
 ## Detailed Context & Deep AI Indexing
 

@@ -2,8 +2,9 @@
 /gtm-consultancy       /gtm-consultancy.html       200
 /gtm-strategy          /gtm-consultancy            301
 /website-positioning   /gtm-consultancy            301
-/linkedin-outbound     /linkedin-outbound.html     200
+/linkedin-outbound     /gtm-consultancy            301
 /product-consultancy   /product-consultancy.html   200
+/automation            /automation.html            200
 /coming-soon           /coming-soon.html           200
 /case-studies          /case-studies.html          200
 /case-study-mpleai     /case-study-mpleai.html     200
