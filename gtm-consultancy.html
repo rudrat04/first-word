@@ -543,13 +543,13 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--ink);
-      background: rgba(255, 255, 255, 0.55);
+      background: rgba(255, 255, 255, 0.85);
       backdrop-filter: blur(10px);
       padding: 0.45rem 1rem;
       border-radius: 999px;
-      border: 1.5px solid rgba(26, 21, 35, 0.15);
+      border: 1.5px solid var(--ink);
       margin-bottom: 1.5rem;
-      box-shadow: 0 4px 12px rgba(26, 21, 35, 0.06);
+      box-shadow: 3px 3px 0 rgba(26, 21, 35, 0.25);
     }
 
     .hero-eyebrow .dot {
@@ -781,6 +781,7 @@
       font-size: clamp(2.8rem, 5.5vw, 3.8rem);
       line-height: 1;
       color: var(--coral);
+      -webkit-text-stroke: 1.5px var(--ink);
       margin-bottom: 0.5rem;
     }
 
@@ -804,9 +805,10 @@
     .card-foot {
       font-size: 0.82rem;
       font-weight: 700;
-      color: var(--ink);
+      color: var(--ink-soft);
       padding-top: 0.9rem;
-      border-top: 1.5px solid var(--line);
+      margin-top: auto;
+      border-top: 1.5px dashed var(--line);
       display: flex;
       align-items: center;
       gap: 0.4rem;
@@ -815,14 +817,18 @@
     .funnel-note {
       max-width: 1100px;
       margin: 2.5rem auto 0;
-      background: var(--cream-2);
-      border: 2px solid var(--ink);
-      border-radius: 16px;
-      padding: 1.2rem 1.5rem;
+      background: rgba(255, 82, 51, 0.07);
+      border: 1.5px dashed var(--coral);
+      border-radius: 18px;
+      padding: 1.25rem 1.75rem;
       font-size: 0.95rem;
-      line-height: 1.5;
-      box-shadow: 3px 3px 0 var(--coral);
+      line-height: 1.6;
+      color: var(--ink-soft);
       text-align: center;
+    }
+
+    .funnel-note strong {
+      color: var(--ink);
     }
 
     /* ---------- WORD CLOUD ---------- */
@@ -2163,10 +2169,12 @@
     }
 
     function toggleServicesMobile(e) {
-      if (window.innerWidth <= 768) {
+      if (window.innerWidth <= 880) {
         e.preventDefault();
         const item = document.getElementById('servicesNavItem');
-        item.classList.toggle('open-mobile');
+        item.classList.toggle('mobile-open');
+        const btn = document.getElementById('navToggleBtn');
+        btn.setAttribute('aria-expanded', item.classList.contains('mobile-open'));
       }
     }
 
