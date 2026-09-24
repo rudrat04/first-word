@@ -1,10 +1,21 @@
-# Clean URL rewrites & 301 Redirects for Firstword
-/gtm-consultancy       /gtm-consultancy.html       200
-/gtm-strategy          /gtm-consultancy            301
-/website-positioning   /gtm-consultancy            301
-/linkedin-outbound     /gtm-consultancy            301
-/product-consultancy   /product-consultancy.html   200
-/automation            /automation.html            200
-/coming-soon           /coming-soon.html           200
+# Clean URL rewrites & 301 Redirects for Rudra Trivedi Portfolio
+
+# New portfolio pages
+/what-i-do             /what-i-do.html             200
 /case-studies          /case-studies.html          200
-/case-study-mpleai     /case-study-mpleai.html     200
+
+# Old service pages → redirect to new What I Do page with anchors
+/gtm-consultancy       /what-i-do#gtm              301
+/product-consultancy   /what-i-do#product          301
+/automation            /what-i-do#automation       301
+
+# Old aliases → new pages
+/gtm-strategy          /what-i-do#gtm              301
+/website-positioning   /what-i-do#gtm              301
+/linkedin-outbound     /what-i-do#gtm              301
+
+# Old case study page → fold into new case studies page
+/case-study-mpleai     /case-studies               301
+
+# Legacy
+/coming-soon           /                           301

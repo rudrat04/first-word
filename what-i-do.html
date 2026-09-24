@@ -4,19 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Case Studies — Rudra Trivedi</title>
-  <meta name="description" content="Real stories from real client work. See how Rudra Trivedi turned mple.ai's stalled outbound into 100+ qualified B2B demos.">
-  <link rel="canonical" href="https://first-word.netlify.app/case-studies">
+  <title>What I Do — Rudra Trivedi</title>
+  <meta name="description" content="GTM Consultancy, Product Strategy, and AI Automation services by Rudra Trivedi — hands-on operator for early-stage B2B SaaS teams.">
+  <link rel="canonical" href="https://first-word.netlify.app/what-i-do">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://first-word.netlify.app/case-studies">
-  <meta property="og:title" content="Case Studies — Rudra Trivedi">
-  <meta property="og:description" content="Real stories from real client work. mple.ai: 100+ qualified B2B demos via LinkedIn outbound.">
+  <meta property="og:url" content="https://first-word.netlify.app/what-i-do">
+  <meta property="og:title" content="What I Do — Rudra Trivedi">
+  <meta property="og:description" content="GTM Consultancy, Product Strategy, and AI Automation services for early-stage B2B SaaS teams.">
   <meta property="og:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://first-word.netlify.app/case-studies">
-  <meta property="twitter:title" content="Case Studies — Rudra Trivedi">
-  <meta property="twitter:description" content="Real stories from real client work. mple.ai: 100+ qualified B2B demos via LinkedIn outbound.">
+  <meta property="twitter:url" content="https://first-word.netlify.app/what-i-do">
+  <meta property="twitter:title" content="What I Do — Rudra Trivedi">
+  <meta property="twitter:description" content="GTM Consultancy, Product Strategy, and AI Automation services for early-stage B2B SaaS teams.">
   <meta property="twitter:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -78,6 +78,7 @@
     .delay-2 { transition-delay: 0.2s; }
     .delay-3 { transition-delay: 0.3s; }
     .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
 
     /* ---------- NAVBAR ---------- */
     .navbar {
@@ -207,6 +208,7 @@
 
     @media (max-width: 760px) {
       .nav-toggle { display: flex; }
+
       .nav-links {
         display: none;
         position: fixed;
@@ -220,6 +222,7 @@
         z-index: 85;
         box-shadow: 0 8px 40px rgba(26, 21, 35, 0.18);
       }
+
       .nav-links.open { display: flex; }
       .nav-links li { border-bottom: 1px solid var(--line); }
       .nav-links a { display: block; padding: 0.9rem 0.5rem; border-radius: 0; font-size: 1.1rem; }
@@ -229,14 +232,15 @@
     /* ---------- HERO ---------- */
     .hero {
       position: relative;
-      min-height: 75vh;
-      background: linear-gradient(180deg, #EAB4A8 0%, #E7A7BE 28%, #C6A3D6 55%, #8FA9DA 85%, #6C97D2 100%);
+      min-height: 85vh;
+      background: radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.7) 0%, transparent 60%),
+        linear-gradient(180deg, #F4A896 0%, #E8A0C4 28%, #B8A9D9 62%, #7FA8D9 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: clamp(7rem, 16vw, 10rem) clamp(1rem, 4vw, 1.5rem) clamp(5rem, 8vw, 7rem);
+      padding: clamp(7rem, 16vw, 10rem) clamp(1rem, 4vw, 1.5rem) clamp(5rem, 10vw, 7rem);
       overflow: hidden;
     }
 
@@ -244,9 +248,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background:
-        radial-gradient(ellipse 60% 40% at 20% 15%, rgba(255, 255, 255, 0.35), transparent 60%),
-        radial-gradient(ellipse 50% 30% at 85% 75%, rgba(255, 255, 255, 0.18), transparent 60%);
+      background: radial-gradient(ellipse 70% 50% at 50% 30%, rgba(255, 255, 255, 0.4), transparent 70%);
       pointer-events: none;
     }
 
@@ -256,13 +258,17 @@
       display: inline-flex;
       align-items: center;
       gap: 0.5rem;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1.5px solid var(--ink);
-      border-radius: 999px;
-      padding: 0.45rem 1.1rem;
       font-size: 0.82rem;
-      font-weight: 600;
-      margin-bottom: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(10px);
+      padding: 0.45rem 1rem;
+      border-radius: 999px;
+      border: 1.5px solid var(--ink);
+      margin-bottom: 1.5rem;
       box-shadow: 3px 3px 0 rgba(26, 21, 35, 0.25);
       animation: fadeSlideDown 0.8s ease forwards;
     }
@@ -275,12 +281,12 @@
     .hero-eyebrow .dot {
       width: 8px; height: 8px; border-radius: 50%;
       background: var(--coral);
-      animation: pulse 1.8s ease-in-out infinite;
+      animation: pulse 2s ease-in-out infinite;
     }
 
     @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.6; }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.85); }
     }
 
     .hero-headline {
@@ -288,19 +294,20 @@
       z-index: 2;
       font-family: 'Fraunces', serif;
       font-weight: 900;
-      font-size: clamp(2.8rem, 7.5vw, 6rem);
-      line-height: 0.95;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      line-height: 1.0;
       letter-spacing: -0.02em;
       color: #FFEDD9;
-      -webkit-text-stroke: 2px var(--ink);
+      -webkit-text-stroke: 1.5px var(--ink);
       text-shadow:
-        1px 1px 0 var(--coral-dark), 2px 2px 0 var(--coral-dark),
-        3px 3px 0 var(--coral-dark), 4px 4px 0 var(--coral-dark),
-        5px 5px 0 var(--coral-dark), 6px 6px 0 var(--coral-dark),
-        7px 7px 0 var(--coral-dark), 8px 8px 0 var(--coral-dark),
-        9px 9px 14px rgba(26, 21, 35, 0.35);
-      max-width: 16ch;
-      margin-bottom: 0.3em;
+        1px 1px 0 var(--coral-dark),
+        2px 2px 0 var(--coral-dark),
+        3px 3px 0 var(--coral-dark),
+        4px 4px 0 var(--coral-dark),
+        5px 5px 0 var(--coral-dark),
+        6px 6px 12px rgba(26, 21, 35, 0.35);
+      max-width: 20ch;
+      margin-bottom: 1.2rem;
       animation: heroIn 0.9s ease 0.2s both;
     }
 
@@ -312,411 +319,360 @@
     .hero-sub {
       position: relative;
       z-index: 2;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
-      font-weight: 500;
-      max-width: 38ch;
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.55;
       color: var(--ink);
-      line-height: 1.5;
-      margin-bottom: 0;
+      max-width: 44ch;
+      margin-bottom: 2.25rem;
+      font-weight: 500;
       animation: heroIn 0.9s ease 0.35s both;
     }
+
+    .hero-sub strong { font-weight: 700; }
+
+    .cta-btn {
+      position: relative; z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      background: var(--coral);
+      color: var(--cream);
+      padding: 0.95rem 1.9rem;
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+      box-shadow: 4px 4px 0 var(--ink);
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      animation: heroIn 0.9s ease 0.5s both;
+    }
+
+    .cta-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+    .cta-btn svg { width: 18px; height: 18px; transition: transform 0.15s ease; }
+    .cta-btn:hover svg { transform: translateX(3px); }
 
     /* ---------- WAVE ---------- */
     .wave-divider { display: block; width: 100%; height: auto; margin-top: -2px; }
 
-    /* ---------- CASE STUDY BODY ---------- */
-    .case-body {
+    /* ---------- INTRO STRIP ---------- */
+    .intro-strip {
       background: var(--cream);
-      padding: 6rem 1.5rem 4rem;
+      padding: 3.5rem 1.5rem 4.5rem;
+      text-align: center;
     }
 
-    .case-inner {
+    .intro-strip p {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+      line-height: 1.45;
+      color: var(--ink);
+      max-width: 40ch;
+      margin: 0 auto;
+    }
+
+    .intro-strip .highlight {
+      background: linear-gradient(180deg, transparent 60%, rgba(255, 82, 51, 0.25) 60%);
+      padding: 0 0.2em;
+      font-weight: 700;
+    }
+
+    /* ---------- SERVICE SECTION ---------- */
+    .service-section {
+      padding: 6rem 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-section:nth-child(odd) { background: var(--cream); }
+    .service-section:nth-child(even) { background: var(--cream-2); }
+
+    .service-section.dark {
+      background: var(--ink);
+      color: var(--cream);
+    }
+
+    .service-section.dark .s-kicker { color: #FFB199 !important; }
+    .service-section.dark .s-headline { color: var(--cream); }
+    .service-section.dark .s-body { color: rgba(255, 246, 238, 0.75); }
+    .service-section.dark .deliverable-card { background: rgba(255, 255, 255, 0.06); border-color: rgba(255, 255, 255, 0.15); }
+    .service-section.dark .deliverable-card h4 { color: var(--cream); }
+    .service-section.dark .deliverable-card p { color: rgba(255, 246, 238, 0.7); }
+    .service-section.dark .process-step { border-color: rgba(255, 255, 255, 0.12); }
+    .service-section.dark .process-step h4 { color: var(--cream); }
+    .service-section.dark .process-step p { color: rgba(255, 246, 238, 0.7); }
+    .service-section.dark .hook-box { background: rgba(255, 82, 51, 0.12); border-color: rgba(255, 82, 51, 0.4); color: rgba(255, 246, 238, 0.85); }
+    .service-section.dark .hook-box strong { color: var(--cream); }
+
+    .service-anchor { scroll-margin-top: 100px; }
+
+    .service-inner {
       max-width: 1100px;
       margin: 0 auto;
     }
 
-    /* Section label */
-    .section-kicker {
+    .service-header {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+      margin-bottom: 4rem;
+    }
+
+    @media (max-width: 800px) {
+      .service-header { grid-template-columns: 1fr; }
+    }
+
+    .service-header-left {}
+
+    .s-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: clamp(4rem, 10vw, 8rem);
+      line-height: 0.85;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--coral);
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .s-kicker {
       display: inline-block;
       font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--coral-dark);
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
-    /* ---------- CASE STUDY HEADER CARD ---------- */
-    .cs-header-card {
+    .s-headline {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+      line-height: 1.12;
+      color: var(--ink);
+      margin-bottom: 1rem;
+    }
+
+    .s-body {
+      font-size: clamp(0.97rem, 1.6vw, 1.1rem);
+      line-height: 1.68;
+      color: var(--ink-soft);
+    }
+
+    .s-body strong { color: var(--ink); font-weight: 700; }
+
+    .hook-box {
+      margin-top: 1.5rem;
+      padding: 1.1rem 1.4rem;
+      background: rgba(255, 82, 51, 0.08);
+      border: 1.5px dashed var(--coral);
+      border-radius: 16px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    .hook-box strong { color: var(--ink); }
+
+    /* Deliverables Grid */
+    .deliverables-heading {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 1.25rem;
+      color: var(--ink);
+    }
+
+    .deliverables-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    @media (max-width: 500px) {
+      .deliverables-grid { grid-template-columns: 1fr; }
+    }
+
+    .deliverable-card {
+      background: var(--cream);
+      border: 1.5px solid var(--line);
+      border-radius: 16px;
+      padding: 1.25rem 1.1rem;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .deliverable-card:hover {
+      border-color: var(--coral);
+      transform: translateY(-3px);
+    }
+
+    .deliverable-card .d-icon {
+      font-size: 1.4rem;
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .deliverable-card h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.35rem;
+      color: var(--ink);
+    }
+
+    .deliverable-card p {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- PROCESS STRIP ---------- */
+    .process-strip {
+      margin-top: 4rem;
+      padding-top: 3.5rem;
+      border-top: 2px solid var(--line);
+    }
+
+    .service-section.dark .process-strip { border-color: rgba(255, 255, 255, 0.12); }
+
+    .process-heading {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      margin-bottom: 1.75rem;
+      color: var(--ink);
+    }
+
+    .service-section.dark .process-heading { color: var(--cream); }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.25rem;
+    }
+
+    @media (max-width: 900px) {
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 540px) {
+      .process-steps { grid-template-columns: 1fr; }
+    }
+
+    .process-step {
+      padding: 1.5rem 1.25rem;
+      border: 1.5px solid var(--line);
+      border-radius: 18px;
+      background: var(--cream-2);
+    }
+
+    .service-section.dark .process-step { background: rgba(255, 255, 255, 0.05); }
+
+    .process-step .step-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: var(--coral);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+
+    .process-step h4 {
+      font-weight: 700;
+      font-size: 0.98rem;
+      margin-bottom: 0.4rem;
+      color: var(--ink);
+    }
+
+    .process-step p {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: var(--ink-soft);
+    }
+
+    /* ---------- PROOF CARD ---------- */
+    .proof-card {
+      max-width: 1100px;
+      margin: 4rem auto 0;
       background: var(--cream-2);
       border: 2px solid var(--ink);
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 8px 8px 0 var(--line);
-      margin-bottom: 5rem;
-    }
-
-    .cs-header-top {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      min-height: 340px;
-    }
-
-    @media (max-width: 700px) {
-      .cs-header-top { grid-template-columns: 1fr; min-height: auto; }
-    }
-
-    .cs-header-left {
-      background: linear-gradient(160deg, #EAB4A8 0%, #C6A3D6 55%, #8FA9DA 100%);
+      border-radius: 24px;
+      padding: 2.5rem 2.5rem;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: space-between;
-      padding: 2.5rem 2rem;
-      border-right: 2px solid var(--ink);
-      gap: 1.5rem;
+      gap: 2.5rem;
+      box-shadow: 6px 6px 0 var(--line);
+      flex-wrap: wrap;
     }
 
-    @media (max-width: 700px) {
-      .cs-header-left { border-right: none; border-bottom: 2px solid var(--ink); flex-direction: row; flex-wrap: wrap; padding: 1.75rem 2rem; }
+    .service-section.dark .proof-card {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.2);
     }
 
-    .cs-header-left img { height: 36px; width: auto; }
-
-    .cs-stat-group { display: flex; flex-direction: column; gap: 1.25rem; }
-
-    @media (max-width: 700px) {
-      .cs-stat-group { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
+    .proof-card .proof-stat {
+      flex-shrink: 0;
     }
 
-    .cs-stat {}
-
-    .cs-stat .big {
+    .proof-card .big-num {
       font-family: 'Fraunces', serif;
       font-weight: 900;
       font-size: clamp(2.5rem, 5vw, 3.5rem);
       line-height: 1;
-      color: #FFEDD9;
+      color: var(--coral);
       -webkit-text-stroke: 1.5px var(--ink);
-      text-shadow: 2px 2px 0 var(--coral-dark);
     }
 
-    .cs-stat .label {
+    .service-section.dark .proof-card .big-num { -webkit-text-stroke-color: var(--cream); }
+
+    .proof-card .proof-label {
       font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--ink);
+      font-weight: 700;
+      color: var(--ink-soft);
       margin-top: 0.2rem;
     }
 
-    .cs-header-right {
-      padding: 2.5rem 2.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
+    .service-section.dark .proof-card .proof-label { color: rgba(255, 246, 238, 0.65); }
+
+    .proof-card .divider {
+      width: 2px; height: 60px;
+      background: var(--line);
+      flex-shrink: 0;
     }
 
-    .cs-tag {
-      display: inline-block;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--ink);
-      color: var(--cream);
-      padding: 0.3rem 0.8rem;
-      border-radius: 999px;
-      width: fit-content;
+    .service-section.dark .proof-card .divider { background: rgba(255, 255, 255, 0.15); }
+
+    .proof-card .proof-text {
+      flex: 1;
+      min-width: 200px;
     }
 
-    .cs-header-right h2 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
-      line-height: 1.15;
-      color: var(--ink);
-    }
-
-    .cs-header-right .cs-tldr {
-      font-size: 1.05rem;
+    .proof-card .proof-text p {
+      font-size: 1rem;
       line-height: 1.6;
       color: var(--ink-soft);
-      max-width: 48ch;
     }
 
-    .cs-header-right .cs-tldr strong { color: var(--ink); }
+    .service-section.dark .proof-card .proof-text p { color: rgba(255, 246, 238, 0.72); }
 
-    .cs-header-meta {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      padding: 1.5rem 2.5rem;
-      border-top: 2px solid var(--ink);
-      background: rgba(26, 21, 35, 0.03);
-    }
+    .proof-card .proof-text strong { color: var(--ink); font-weight: 700; }
+    .service-section.dark .proof-card .proof-text strong { color: var(--cream); }
 
-    .cs-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .cs-meta-item .meta-label {
-      font-size: 0.75rem;
+    .proof-card .proof-link {
       font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-    }
-
-    .cs-meta-item .meta-value {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-
-    /* ---------- STORY NARRATIVE ---------- */
-    .narrative-section {
-      margin-bottom: 5rem;
-    }
-
-    .narrative-heading {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--ink);
-      margin-bottom: 1.5rem;
-      line-height: 1.15;
-    }
-
-    .narrative-body {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .narrative-body p {
-      font-size: clamp(1rem, 1.7vw, 1.1rem);
-      line-height: 1.7;
-      color: var(--ink-soft);
-    }
-
-    .narrative-body p strong { color: var(--ink); }
-
-    .pull-quote {
-      padding: 1.5rem 1.75rem;
-      border-left: 4px solid var(--coral);
-      background: var(--cream-2);
-      border-radius: 0 16px 16px 0;
-      font-family: 'Fraunces', serif;
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      font-weight: 500;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--ink);
-    }
-
-    /* ---------- METRICS GRID ---------- */
-    .metrics-section {
-      margin-bottom: 5rem;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 860px) {
-      .metrics-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 540px) {
-      .metrics-grid { grid-template-columns: 1fr; }
-    }
-
-    .metric-card {
-      background: var(--cream-2);
-      border: 2px solid var(--ink);
-      border-radius: 24px;
-      padding: 2rem 1.75rem;
-      position: relative;
-      box-shadow: 5px 5px 0 var(--line);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .metric-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 5px 12px 0 var(--line);
-    }
-
-    .metric-card .card-label {
+      color: var(--coral-dark);
+      text-decoration: none;
+      font-size: 0.9rem;
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--ink);
-      color: var(--cream);
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 1.4rem;
-    }
-
-    .metric-card .big-number {
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
-      font-size: clamp(2.8rem, 5.5vw, 3.8rem);
-      line-height: 1;
-      color: var(--coral);
-      -webkit-text-stroke: 1.5px var(--ink);
-      margin-bottom: 0.4rem;
-    }
-
-    .metric-card .metric-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: var(--ink);
-    }
-
-    .metric-card .metric-plain {
-      font-size: 0.92rem;
-      line-height: 1.55;
-      color: var(--ink-soft);
-    }
-
-    .metric-card .metric-plain strong { color: var(--ink); }
-
-    .metric-card .card-foot {
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1.5px dashed var(--line);
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    /* ---------- PROCESS TIMELINE ---------- */
-    .timeline-section { margin-bottom: 5rem; }
-
-    .timeline {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 24px;
-      top: 28px;
-      bottom: 28px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--coral), var(--sky-3));
-    }
-
-    @media (max-width: 500px) {
-      .timeline::before { left: 18px; }
-    }
-
-    .timeline-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      padding: 1.75rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .timeline-item:last-child { border-bottom: none; }
-
-    .timeline-dot {
-      flex-shrink: 0;
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      background: var(--cream);
-      border: 2.5px solid var(--ink);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1rem;
-      color: var(--coral);
-      position: relative;
-      z-index: 1;
-      box-shadow: 3px 3px 0 var(--line);
-    }
-
-    @media (max-width: 500px) {
-      .timeline-dot { width: 38px; height: 38px; font-size: 0.85rem; }
-      .timeline-item { gap: 1.25rem; }
-    }
-
-    .timeline-content {}
-
-    .timeline-content h4 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: var(--ink);
-    }
-
-    .timeline-content p {
-      font-size: 0.97rem;
-      line-height: 1.6;
-      color: var(--ink-soft);
-    }
-
-    .timeline-content p strong { color: var(--ink); }
-
-    /* ---------- LEARNINGS ---------- */
-    .learnings-section { margin-bottom: 5rem; }
-
-    .learnings-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-
-    @media (max-width: 640px) {
-      .learnings-grid { grid-template-columns: 1fr; }
-    }
-
-    .learning-card {
-      background: var(--ink);
-      color: var(--cream);
-      border-radius: 20px;
-      padding: 1.75rem 1.5rem;
-      transition: transform 0.2s ease;
-    }
-
-    .learning-card:hover { transform: translateY(-3px); }
-
-    .learning-card .l-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .learning-card h4 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .learning-card p {
-      font-size: 0.88rem;
-      line-height: 1.55;
-      color: rgba(255, 246, 238, 0.75);
+      gap: 0.35rem;
+      margin-top: 0.6rem;
+      border-bottom: 2px solid var(--coral-dark);
+      padding-bottom: 1px;
     }
 
     /* ---------- FINAL CTA ---------- */
@@ -761,27 +717,6 @@
       color: var(--ink);
     }
 
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.65rem;
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      background: var(--coral);
-      color: var(--cream);
-      padding: 0.95rem 1.9rem;
-      border-radius: 999px;
-      border: 2px solid var(--ink);
-      box-shadow: 4px 4px 0 var(--ink);
-      cursor: pointer;
-      text-decoration: none;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-    }
-
-    .cta-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
-    .cta-btn svg { width: 18px; height: 18px; }
-
     /* ---------- FOOTER ---------- */
     footer {
       background: var(--ink);
@@ -825,7 +760,13 @@
       color: var(--cream);
     }
 
-    .footer-brand span { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.05rem; color: var(--cream); }
+    .footer-brand span {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--cream);
+    }
+
     .footer-desc { font-size: 0.83rem; line-height: 1.5; }
     .footer-cols { display: flex; gap: 3rem; flex-wrap: wrap; }
 
@@ -839,6 +780,7 @@
     }
 
     .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+
     .footer-col a { color: rgba(255, 246, 238, 0.7); font-weight: 500; transition: color 0.15s ease; }
     .footer-col a:hover { color: var(--coral); }
 
@@ -858,7 +800,9 @@
     .footer-social { display: flex; align-items: center; gap: 0.75rem; }
 
     .footer-social a {
-      display: flex; align-items: center; justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 36px; height: 36px;
       border-radius: 50%;
       background: rgba(255, 246, 238, 0.08);
@@ -887,6 +831,7 @@
     }
 
     .modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
     .modal-card {
@@ -926,14 +871,39 @@
 
     .modal-close:hover { background: var(--coral); color: var(--cream); transform: rotate(90deg); }
 
-    .modal-eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral-dark); margin-bottom: 0.6rem; }
+    .modal-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--coral-dark);
+      margin-bottom: 0.6rem;
+    }
 
-    .modal-card h3 { font-family: 'Fraunces', serif; font-weight: 800; font-size: 1.7rem; line-height: 1.15; margin-bottom: 0.5rem; }
+    .modal-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 800;
+      font-size: 1.7rem;
+      line-height: 1.15;
+      margin-bottom: 0.5rem;
+    }
 
-    .modal-card .modal-sub { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 1.6rem; line-height: 1.5; }
+    .modal-card .modal-sub {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      margin-bottom: 1.6rem;
+      line-height: 1.5;
+    }
 
     .form-group { margin-bottom: 1.1rem; }
-    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.4rem; }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
 
     .form-group input, .form-group select {
       width: 100%;
@@ -967,12 +937,20 @@
     }
 
     .modal-submit {
-      width: 100%; margin-top: 0.5rem;
-      display: inline-flex; align-items: center; justify-content: center; gap: 0.6rem;
-      background: var(--coral); color: var(--cream);
-      font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 1rem;
+      width: 100%;
+      margin-top: 0.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      background: var(--coral);
+      color: var(--cream);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
       padding: 0.95rem 1.5rem;
-      border-radius: 999px; border: 2px solid var(--ink);
+      border-radius: 999px;
+      border: 2px solid var(--ink);
       box-shadow: 4px 4px 0 var(--ink);
       cursor: pointer;
       transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -980,6 +958,7 @@
 
     .modal-submit:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
     .modal-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+
     .modal-note { text-align: center; font-size: 0.78rem; color: var(--ink-soft); margin-top: 1rem; }
     .modal-success { display: none; text-align: center; padding: 1.5rem 0 0.5rem; }
     .modal-success.show { display: block; }
@@ -1007,8 +986,8 @@
 
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="/what-i-do">What I Do</a></li>
-      <li><a href="/case-studies" class="active">Case Studies</a></li>
+      <li><a href="/what-i-do" class="active">What I Do</a></li>
+      <li><a href="/case-studies">Case Studies</a></li>
       <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;" id="navCtaBtn">Let's Talk</a></li>
     </ul>
   </nav>
@@ -1017,199 +996,272 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-eyebrow"><span class="dot"></span> Case Studies</div>
-    <h1 class="hero-headline">Real work.<br>Real results.</h1>
-    <p class="hero-sub">I don't take credit for things I didn't do. Here's the story of the work — the problem, what I tried, what worked, and the numbers that came out.</p>
+    <div class="hero-eyebrow"><span class="dot"></span> Services</div>
+    <h1 class="hero-headline">Three things.<br>Done deeply.</h1>
+    <p class="hero-sub">I don't do ten services at half the depth. I do <strong>three things end-to-end</strong> — GTM, Product, and Automation — and I'm hands-on across all of them.</p>
+    <button type="button" class="cta-btn" onclick="openContactModal()" id="heroCtaBtn">
+      Talk to me
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </svg>
+    </button>
   </section>
 
   <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FFF6EE"/>
   </svg>
 
-  <!-- CASE STUDY: mple.ai -->
-  <section class="case-body" aria-labelledby="case-mpleai-heading">
-    <div class="case-inner">
+  <!-- INTRO STRIP -->
+  <section class="intro-strip">
+    <p class="reveal">Most early-stage teams don't need five specialists. They need <span class="highlight">one person who's done the work</span> — and who can see how positioning, outbound, product, and ops are all connected anyway.</p>
+  </section>
 
-      <!-- HEADER CARD -->
-      <div class="cs-header-card reveal">
-        <div class="cs-header-top">
-          <div class="cs-header-left">
-            <img src="/assets/client-mple-logo.png" alt="mple.ai">
-            <div class="cs-stat-group">
-              <div class="cs-stat">
-                <div class="big">100+</div>
-                <div class="label">Demos booked</div>
-              </div>
-              <div class="cs-stat">
-                <div class="big">36.5%</div>
-                <div class="label">Connection acceptance rate</div>
-              </div>
-            </div>
-          </div>
-          <div class="cs-header-right">
-            <span class="cs-tag">GTM &amp; LinkedIn Outbound</span>
-            <h2 id="case-mpleai-heading">From stalled outbound to 100+ qualified B2B meetings</h2>
-            <p class="cs-tldr">
-              mple.ai had a solid product and a small but motivated team. What they <em>didn't</em> have was a working outbound motion. Vague ICPs, generic sequences, and zero tracking. <strong>I rebuilt it from the ground up — and then ran it.</strong>
-            </p>
-          </div>
+  <!-- ================================================================
+       SERVICE 01: GTM CONSULTANCY & OUTBOUND
+  ================================================================ -->
+  <section class="service-section" id="gtm" aria-labelledby="gtm-heading">
+    <div class="service-inner">
+      <div class="service-header">
+        <div class="service-header-left">
+          <span class="s-num reveal">01</span>
+          <span class="s-kicker reveal delay-1">GTM Consultancy &amp; Outbound</span>
+          <h2 class="s-headline reveal delay-2" id="gtm-heading">Pipeline doesn't build itself.</h2>
         </div>
-        <div class="cs-header-meta">
-          <div class="cs-meta-item">
-            <span class="meta-label">Client</span>
-            <span class="meta-value">mple.ai</span>
-          </div>
-          <div class="cs-meta-item">
-            <span class="meta-label">Service</span>
-            <span class="meta-value">GTM Consultancy &amp; LinkedIn Outbound</span>
-          </div>
-          <div class="cs-meta-item">
-            <span class="meta-label">Industry</span>
-            <span class="meta-value">B2B SaaS / AI Tools</span>
-          </div>
-          <div class="cs-meta-item">
-            <span class="meta-label">Timeline</span>
-            <span class="meta-value">3 months of active outbound</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- THE PROBLEM -->
-      <div class="narrative-section">
-        <span class="section-kicker reveal">The problem</span>
-        <h3 class="narrative-heading reveal delay-1">Outbound was happening. Nothing was converting.</h3>
-        <div class="narrative-body">
-          <p class="reveal delay-1">
-            When I first spoke to the mple.ai team, they weren't sitting still. They were sending connection requests, writing messages, and booking calls. <strong>But nothing was converting into real pipeline.</strong>
+        <div class="service-header-right reveal-right delay-1">
+          <p class="s-body">
+            Your product is good. Your team is sharp. But if the right people don't know you exist — or don't understand why they should care — none of that matters.
           </p>
-          <p class="reveal delay-2">
-            The issue wasn't effort. The issue was that nobody had taken the time to actually define who they were talking to, what those people cared about, or why mple.ai was the right solution for their specific problem. The messaging was generic. The ICP was essentially "anyone who might benefit from AI tools in their workflow." That's not an ICP — that's a prayer.
+          <p class="s-body" style="margin-top: 1rem;">
+            <strong>I fix the messaging, map the ICP, and then run founder-led LinkedIn outbound that books real demos.</strong> Not a spray-and-pray campaign. Not generic AI sequences. Actual personalized outreach that converts — at 36.5% acceptance rates.
           </p>
-          <div class="pull-quote reveal delay-2">
-            "They were sending hundreds of messages a month with near-zero response rate. The problem wasn't volume — it was that nobody felt like the message was for them."
+          <div class="hook-box">
+            <strong>Best for:</strong> Early-stage B2B teams where the founder is still doing sales and needs a consistent pipeline they didn't have to build themselves.
           </div>
-          <p class="reveal delay-3">
-            On top of the messaging problem, there was no tracking. No A/B testing. No understanding of which segments responded better, which message frames landed, or what time of day/week got more replies. The outbound was a black box — and the team was flying blind inside it.
+        </div>
+      </div>
+
+      <div class="deliverables-heading reveal">What you get</div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card reveal delay-1">
+          <span class="d-icon">🎯</span>
+          <h4>ICP Definition & Segmentation</h4>
+          <p>Tight ideal customer profiles built from real data — not assumptions. We find the segments that convert.</p>
+        </div>
+        <div class="deliverable-card reveal delay-2">
+          <span class="d-icon">✍️</span>
+          <h4>Messaging Architecture</h4>
+          <p>Website copy, positioning docs, and outbound messaging that makes prospects feel understood — not sold to.</p>
+        </div>
+        <div class="deliverable-card reveal delay-3">
+          <span class="d-icon">📨</span>
+          <h4>LinkedIn Outbound Execution</h4>
+          <p>Done-for-you outreach: connection requests, sequences, follow-ups, and reply handling. You show up for demos.</p>
+        </div>
+        <div class="deliverable-card reveal delay-4">
+          <span class="d-icon">🗺️</span>
+          <h4>90-Day GTM Roadmap</h4>
+          <p>A clear execution plan that sequences your positioning, outbound, and feedback loop into one motion.</p>
+        </div>
+      </div>
+
+      <div class="process-strip">
+        <div class="process-heading reveal">How it works</div>
+        <div class="process-steps">
+          <div class="process-step reveal delay-1">
+            <span class="step-num">01</span>
+            <h4>Discovery</h4>
+            <p>A working session to understand your market, existing messaging, and what's actually blocking pipeline.</p>
+          </div>
+          <div class="process-step reveal delay-2">
+            <span class="step-num">02</span>
+            <h4>ICP + Messaging</h4>
+            <p>I build the ICP definitions and write the messaging — positioning docs, copy updates, and outbound sequences.</p>
+          </div>
+          <div class="process-step reveal delay-3">
+            <span class="step-num">03</span>
+            <h4>Launch & Run</h4>
+            <p>Outbound goes live. I run the motion, manage replies, and iterate weekly based on what's working.</p>
+          </div>
+          <div class="process-step reveal delay-4">
+            <span class="step-num">04</span>
+            <h4>Report &amp; Refine</h4>
+            <p>Weekly updates: what moved, what didn't, what changes. No spin — just what the data says.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-stat">
+          <div class="big-num">100+</div>
+          <div class="proof-label">Demos booked</div>
+        </div>
+        <div class="divider"></div>
+        <div class="proof-text">
+          <p>For <strong>mple.ai</strong>, I turned a stalled outbound motion into 100+ qualified B2B meetings — with a 36.5% LinkedIn acceptance rate and real demo conversations, not vanity metrics.</p>
+          <a href="/case-studies" class="proof-link">Read the full story →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SERVICE 02: PRODUCT CONSULTANCY
+  ================================================================ -->
+  <section class="service-section dark" id="product" aria-labelledby="product-heading">
+    <div class="service-inner">
+      <div class="service-header">
+        <div class="service-header-left">
+          <span class="s-num reveal">02</span>
+          <span class="s-kicker reveal delay-1">Product Consultancy</span>
+          <h2 class="s-headline reveal delay-2" id="product-heading">When demos book but don't convert.</h2>
+        </div>
+        <div class="service-header-right reveal-right delay-1">
+          <p class="s-body">
+            Sometimes the outbound is working — meetings are booking — but something's happening in the demo or after it that's killing the deal. That's usually a product problem, not a sales problem.
           </p>
-        </div>
-      </div>
-
-      <!-- THE APPROACH -->
-      <div class="narrative-section">
-        <span class="section-kicker reveal">What I did</span>
-        <h3 class="narrative-heading reveal delay-1">Rebuilt the motion from the ICP down.</h3>
-        <div class="narrative-body">
-          <p class="reveal delay-1">
-            Before writing a single message, I spent two weeks on discovery: talking to existing customers, reviewing sales call recordings, and mapping which industries, roles, and company sizes had the clearest problem-to-solution fit for mple.ai. The goal was to narrow, not broaden — to get <strong>precise rather than comprehensive.</strong>
+          <p class="s-body" style="margin-top: 1rem;">
+            <strong>I come in as a focused second opinion.</strong> I look at onboarding flows, feature gaps exposed by customer conversations, and conversion drop-offs — then help you close the loop between what you're promising in the pitch and what you're delivering in the product.
           </p>
-          <p class="reveal delay-2">
-            Out of that process came three distinct ICP segments with specific targeting criteria, pain point frames, and timing signals. Each segment got its own messaging — not just a different opening line, but a completely different angle based on how that persona thinks about their problem.
+          <div class="hook-box">
+            <strong>Best for:</strong> Teams where growth work is surfacing product gaps — onboarding friction, feature confusion, or demo-to-close leakage you can't fully explain.
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverables-heading reveal">What you get</div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card reveal delay-1">
+          <span class="d-icon">🔍</span>
+          <h4>Onboarding Audit</h4>
+          <p>A clear walkthrough of your activation flow with specific friction points and what to fix first.</p>
+        </div>
+        <div class="deliverable-card reveal delay-2">
+          <span class="d-icon">🎛️</span>
+          <h4>Feature Prioritization</h4>
+          <p>Helping you build the right thing next — based on what customers actually need vs. what's in the backlog.</p>
+        </div>
+        <div class="deliverable-card reveal delay-3">
+          <span class="d-icon">💬</span>
+          <h4>Customer Feedback Loops</h4>
+          <p>Setting up structured ways to turn customer conversations into actionable product signals.</p>
+        </div>
+        <div class="deliverable-card reveal delay-4">
+          <span class="d-icon">📈</span>
+          <h4>Conversion Optimization</h4>
+          <p>Identifying where demos are leaking and what product or process change closes the gap.</p>
+        </div>
+      </div>
+
+      <div class="process-strip">
+        <div class="process-heading reveal">How it works</div>
+        <div class="process-steps">
+          <div class="process-step reveal delay-1">
+            <span class="step-num">01</span>
+            <h4>Audit Session</h4>
+            <p>I walk your product, your onboarding, and your demo — looking for the breaks that customers don't tell you about directly.</p>
+          </div>
+          <div class="process-step reveal delay-2">
+            <span class="step-num">02</span>
+            <h4>Gap Analysis</h4>
+            <p>Structured report on where the positioning-to-product gap exists and what's most impacting conversion.</p>
+          </div>
+          <div class="process-step reveal delay-3">
+            <span class="step-num">03</span>
+            <h4>Prioritized Fixes</h4>
+            <p>A focused list of the 3–5 changes that will have real impact — not a 40-item backlog rewrite.</p>
+          </div>
+          <div class="process-step reveal delay-4">
+            <span class="step-num">04</span>
+            <h4>Ongoing Loop</h4>
+            <p>Optional ongoing work to monitor the feedback loop and iterate as the product evolves.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       SERVICE 03: BUSINESS & AI AUTOMATIONS
+  ================================================================ -->
+  <section class="service-section" id="automation" aria-labelledby="automation-heading">
+    <div class="service-inner">
+      <div class="service-header">
+        <div class="service-header-left">
+          <span class="s-num reveal">03</span>
+          <span class="s-kicker reveal delay-1">Business &amp; AI Automations</span>
+          <h2 class="s-headline reveal delay-2" id="automation-heading">The pipeline works. Now let ops keep up.</h2>
+        </div>
+        <div class="service-header-right reveal-right delay-1">
+          <p class="s-body">
+            Growth creates operational load. When outbound starts working, suddenly your team is drowning in manual processes — invoice generation, lead routing, CRM updates, research that takes hours.
           </p>
-        </div>
-      </div>
-
-      <!-- PROCESS TIMELINE -->
-      <div class="timeline-section">
-        <span class="section-kicker reveal">The execution</span>
-        <h3 class="narrative-heading reveal delay-1">Week by week, iteration by iteration.</h3>
-        <div class="timeline">
-          <div class="timeline-item reveal delay-1">
-            <div class="timeline-dot">01</div>
-            <div class="timeline-content">
-              <h4>ICP Discovery & Segmentation (Weeks 1–2)</h4>
-              <p>Customer interviews, sales call analysis, and competitive research to define three tight ICP segments. Each with job titles, company stages, and specific pain triggers that mple.ai actually solves.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal delay-2">
-            <div class="timeline-dot">02</div>
-            <div class="timeline-content">
-              <h4>Messaging Architecture (Week 3)</h4>
-              <p>Three distinct message frameworks — one per segment. Connection request, follow-up sequence, and value messages written and reviewed. No generic copy, no AI-written spam. <strong>Specific, human, direct.</strong></p>
-            </div>
-          </div>
-          <div class="timeline-item reveal delay-3">
-            <div class="timeline-dot">03</div>
-            <div class="timeline-content">
-              <h4>Outbound Launch (Weeks 4–6)</h4>
-              <p>Outbound went live across all three segments. Tracking in place: acceptance rate, response rate, reply sentiment, and meeting booked rate. A/B testing message variants weekly.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal delay-4">
-            <div class="timeline-dot">04</div>
-            <div class="timeline-content">
-              <h4>Optimize & Scale (Weeks 7–12)</h4>
-              <p>Dropped the lowest-performing segment. Doubled down on the two that worked. <strong>Refined timing, message length, and personalization depth</strong> based on real response data. Scale up volume within what worked.</p>
-            </div>
+          <p class="s-body" style="margin-top: 1rem;">
+            <strong>I build custom automations for SMBs and B2B teams</strong> that remove the manual drag from your operations. Using tools like Make, Zapier, n8n, and custom AI pipelines, I turn hours of busywork into sub-60-second automated workflows.
+          </p>
+          <div class="hook-box">
+            <strong>Best for:</strong> SMBs and B2B teams where operations are bottlenecking growth — or where manual processes are burning time that should go into selling or building.
           </div>
         </div>
       </div>
 
-      <!-- METRICS -->
-      <div class="metrics-section">
-        <span class="section-kicker reveal">The results</span>
-        <h3 class="narrative-heading reveal delay-1">Three months of data that speak for themselves.</h3>
-        <div class="metrics-grid">
-          <div class="metric-card reveal delay-1">
-            <span class="card-label">Outbound Performance</span>
-            <div class="big-number">36.5%</div>
-            <div class="metric-title">LinkedIn Connection Acceptance Rate</div>
-            <p class="metric-plain">Industry average hovers around <strong>20–25%</strong>. A 36.5% acceptance rate means the targeting was tight and the connection message felt personal enough to say yes to.</p>
-            <div class="card-foot">🎯 Measured across 3 ICP segments</div>
-          </div>
-          <div class="metric-card reveal delay-2">
-            <span class="card-label">Pipeline Built</span>
-            <div class="big-number">100+</div>
-            <div class="metric-title">Qualified B2B Demo Meetings Booked</div>
-            <p class="metric-plain">Not vanity meetings. <strong>Qualified demos</strong> with decision-makers at companies that fit the refined ICP — companies with real budget, real need, and real timelines.</p>
-            <div class="card-foot">📅 Over a 3-month active outbound period</div>
-          </div>
-          <div class="metric-card reveal delay-3">
-            <span class="card-label">System Built</span>
-            <div class="big-number">3</div>
-            <div class="metric-title">Fully Documented ICP Playbooks</div>
-            <p class="metric-plain">Not just results — a <strong>repeatable system</strong>. The ICP definitions, message frameworks, and tracking dashboards were handed off so the team could keep the motion running without me.</p>
-            <div class="card-foot">📋 Handoff documentation included</div>
-          </div>
+      <div class="deliverables-heading reveal">What you get</div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card reveal delay-1">
+          <span class="d-icon">🧾</span>
+          <h4>Invoice Automation</h4>
+          <p>Automated invoice generation and delivery from form submissions, CRM triggers, or payment events.</p>
+        </div>
+        <div class="deliverable-card reveal delay-2">
+          <span class="d-icon">⚡</span>
+          <h4>Instant Lead Intake</h4>
+          <p>Lead form → CRM entry → Slack/WhatsApp alert → follow-up triggered in under 60 seconds. Automatically.</p>
+        </div>
+        <div class="deliverable-card reveal delay-3">
+          <span class="d-icon">🔄</span>
+          <h4>CRM Auto-Sync</h4>
+          <p>Keep your CRM clean and current without manual entry — synced from forms, emails, and calls automatically.</p>
+        </div>
+        <div class="deliverable-card reveal delay-4">
+          <span class="d-icon">🤖</span>
+          <h4>AI Research Briefs</h4>
+          <p>Automated pre-call research delivered in under a minute: company context, recent news, talking points.</p>
         </div>
       </div>
 
-      <!-- LEARNINGS -->
-      <div class="learnings-section">
-        <span class="section-kicker reveal">What I took away</span>
-        <h3 class="narrative-heading reveal delay-1">The honest lessons from this engagement.</h3>
-        <div class="learnings-grid">
-          <div class="learning-card reveal delay-1">
-            <span class="l-icon">🔍</span>
-            <h4>Specificity beats reach every time</h4>
-            <p>The instinct is always to talk to everyone. Narrowing to three tight segments and talking to each one in their own language is what moved the needle. Less breadth, more depth.</p>
+      <div class="process-strip">
+        <div class="process-heading reveal">How it works</div>
+        <div class="process-steps">
+          <div class="process-step reveal delay-1">
+            <span class="step-num">01</span>
+            <h4>Ops Audit</h4>
+            <p>I map your current manual workflows and find the 2–3 that are burning the most time.</p>
           </div>
-          <div class="learning-card reveal delay-2">
-            <span class="l-icon">⏰</span>
-            <h4>Timing signals are underrated</h4>
-            <p>Certain triggers — new funding, headcount growth, product launches — dramatically increased response rates. The right message at the right moment is 3x more effective than a perfect message at the wrong time.</p>
+          <div class="process-step reveal delay-2">
+            <span class="step-num">02</span>
+            <h4>Design & Spec</h4>
+            <p>Clear blueprint for each automation — what triggers it, what it does, and what it outputs.</p>
           </div>
-          <div class="learning-card reveal delay-3">
-            <span class="l-icon">🔄</span>
-            <h4>The first 4 weeks are a data-collection exercise</h4>
-            <p>Don't judge outbound by week 2 results. The first month is learning what doesn't work. The real gains come from iteration cycles in weeks 6–12.</p>
+          <div class="process-step reveal delay-3">
+            <span class="step-num">03</span>
+            <h4>Build & Test</h4>
+            <p>I build the automation, test it against edge cases, and document how it works so you're never dependent on me.</p>
           </div>
-          <div class="learning-card reveal delay-4">
-            <span class="l-icon">📝</span>
-            <h4>Short messages. Clear ask. Human tone.</h4>
-            <p>Every message format that worked followed the same pattern: short, specific to them, one clear call to action. Anything longer than 4 sentences got significantly worse response rates.</p>
+          <div class="process-step reveal delay-4">
+            <span class="step-num">04</span>
+            <h4>Handover</h4>
+            <p>Full walkthrough, documentation, and a 2-week watch period to make sure everything's running cleanly.</p>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
   <!-- FINAL CTA -->
   <section class="final-cta">
-    <h2 class="reveal">Want a story like this?</h2>
-    <p class="reveal delay-1">If your outbound is happening but nothing is converting — or if you haven't started yet — let's figure out where the break is.</p>
+    <h2 class="reveal">Not sure where to start?</h2>
+    <p class="reveal delay-1">One conversation is enough. Tell me what's not working and I'll tell you honestly which service (if any) is the right fit — and what to tackle first.</p>
     <button type="button" class="cta-btn reveal delay-2" onclick="openContactModal()" id="finalCtaBtn">
-      Talk to me about your pipeline
+      Let's figure it out
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
         <path d="M5 12h14M13 6l6 6-6 6" />
       </svg>
@@ -1275,7 +1327,7 @@
 
         <span class="modal-eyebrow">Let's talk</span>
         <h3 id="modalTitle">Tell me a bit about you</h3>
-        <p class="modal-sub">I'll follow up within a day. No auto-responder — an actual reply from me.</p>
+        <p class="modal-sub">I'll follow up within a day with next steps. No auto-responder — an actual reply from me.</p>
 
         <div class="form-group">
           <label for="cf-name">Name</label>
@@ -1322,6 +1374,7 @@
       document.body.style.overflow = open ? 'hidden' : '';
     }
 
+    /* ---------- SCROLL REVEAL ---------- */
     const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -1333,6 +1386,7 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
     revealEls.forEach(el => observer.observe(el));
 
+    /* ---------- MODAL ---------- */
     function openContactModal() {
       const modal = document.getElementById('contactModal');
       modal.classList.add('open');

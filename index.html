@@ -4,22 +4,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firstword: Growth Ops for Early-Stage B2B SaaS</title>
-  <meta name="description" content="Firstword provides Growth Ops, LinkedIn Outbound, GTM strategy & Positioning for early-stage B2B SaaS teams to build predictable pipeline.">
+  <title>Rudra Trivedi — GTM, Growth & AI Operator</title>
+  <meta name="description" content="Rudra Trivedi is a hands-on operator at the intersection of GTM strategy, growth, and AI automation for early-stage B2B SaaS teams.">
   <link rel="canonical" href="https://first-word.netlify.app/">
   <link rel="manifest" href="/site.webmanifest">
-  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://first-word.netlify.app/">
-  <meta property="og:title" content="Firstword: Growth Ops for Early-Stage B2B SaaS">
-  <meta property="og:description" content="LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.">
+  <meta property="og:title" content="Rudra Trivedi — GTM, Growth & AI Operator">
+  <meta property="og:description" content="I've been in the trenches of early-stage B2B — I know what breaks first.">
   <meta property="og:image" content="https://first-word.netlify.app/assets/logo-full.png">
-
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://first-word.netlify.app/">
-  <meta property="twitter:title" content="Firstword: Growth Ops for Early-Stage B2B SaaS">
-  <meta property="twitter:description" content="LinkedIn Outbound, GTM & Positioning for early-stage B2B SaaS teams.">
+  <meta property="twitter:title" content="Rudra Trivedi — GTM, Growth & AI Operator">
+  <meta property="twitter:description" content="I've been in the trenches of early-stage B2B — I know what breaks first.">
   <meta property="twitter:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -27,39 +24,37 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon-180.png">
   <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
 
-  <!-- JSON-LD Structured Data for Organization & WebSite -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": "https://first-word.netlify.app/#organization",
-        "name": "Firstword",
+        "@type": "Person",
+        "@id": "https://first-word.netlify.app/#person",
+        "name": "Rudra Trivedi",
         "url": "https://first-word.netlify.app/",
-        "logo": "https://first-word.netlify.app/assets/logo-full.png",
-        "description": "Growth Ops, LinkedIn Outbound, Positioning, and GTM Strategy for early-stage B2B SaaS."
+        "jobTitle": "GTM & Growth Operator",
+        "description": "Hands-on operator at the intersection of GTM strategy, growth, and AI automation for early-stage B2B SaaS teams.",
+        "sameAs": ["https://www.linkedin.com/in/rudra-trivedi-t04/"]
       },
       {
         "@type": "WebSite",
         "@id": "https://first-word.netlify.app/#website",
         "url": "https://first-word.netlify.app/",
-        "name": "Firstword",
-        "publisher": {
-          "@id": "https://first-word.netlify.app/#organization"
-        }
+        "name": "Rudra Trivedi",
+        "publisher": { "@id": "https://first-word.netlify.app/#person" }
       }
     ]
   }
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <meta name="theme-color" content="#FF5233">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     :root {
       --sky-1: #F4A896;
@@ -75,15 +70,8 @@
       --line: rgba(26, 21, 35, 0.12);
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: 'Space Grotesk', sans-serif;
@@ -93,11 +81,47 @@
     }
 
     @media (prefers-reduced-motion: reduce) {
-      * {
-        animation: none !important;
-        transition: none !important;
-      }
+      * { animation: none !important; transition: none !important; }
     }
+
+    /* ---------- SCROLL REVEAL ---------- */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .reveal-left.visible, .reveal-right.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal-scale.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .delay-1 { transition-delay: 0.1s; }
+    .delay-2 { transition-delay: 0.2s; }
+    .delay-3 { transition-delay: 0.3s; }
+    .delay-4 { transition-delay: 0.4s; }
+    .delay-5 { transition-delay: 0.5s; }
 
     /* ---------- NAVBAR ---------- */
     .navbar {
@@ -123,17 +147,9 @@
     .nav-logo {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      gap: 0.6rem;
       text-decoration: none;
       flex-shrink: 0;
-    }
-
-    .nav-logo .mark-img {
-      width: 36px;
-      height: 36px;
-      object-fit: contain;
-      flex-shrink: 0;
-      display: block;
     }
 
     .nav-logo .mark {
@@ -149,43 +165,18 @@
     }
 
     .nav-logo .mark::before {
-      content: '"';
+      content: 'R';
       font-family: 'Fraunces', serif;
       font-weight: 900;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: var(--coral);
       line-height: 1;
-      transform: translateY(-2px);
-    }
-
-    .nav-logo .mark .cursor-dot {
-      position: absolute;
-      bottom: 6px;
-      right: 6px;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--coral);
-      animation: cursorBlink 1.4s step-start infinite;
-    }
-
-    @keyframes cursorBlink {
-
-      0%,
-      49% {
-        opacity: 1;
-      }
-
-      50%,
-      100% {
-        opacity: 0;
-      }
     }
 
     .nav-logo .wordmark {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       letter-spacing: -0.01em;
       color: var(--ink);
       white-space: nowrap;
@@ -194,7 +185,6 @@
     .nav-logo .wordmark span {
       color: var(--coral);
       font-style: italic;
-      font-weight: 600;
     }
 
     .nav-links {
@@ -217,9 +207,7 @@
       white-space: nowrap;
     }
 
-    .nav-links a:hover {
-      background: rgba(26, 21, 35, 0.08);
-    }
+    .nav-links a:hover { background: rgba(26, 21, 35, 0.08); }
 
     .nav-links a.nav-cta {
       background: var(--coral);
@@ -235,106 +223,16 @@
       box-shadow: 3px 3px 0 var(--ink);
     }
 
-    /* ---------- SERVICES DROPDOWN ---------- */
-    .nav-item-dropdown {
-      position: relative;
-    }
-
-    .nav-item-dropdown>a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.3rem;
-    }
-
-    .nav-item-dropdown>a .caret {
-      width: 9px;
-      height: 9px;
-      border-right: 2px solid currentColor;
-      border-bottom: 2px solid currentColor;
-      transform: rotate(45deg) translateY(-2px);
-      transition: transform 0.2s ease;
-      margin-left: 0.1rem;
-    }
-
-    .nav-item-dropdown:hover>a .caret {
-      transform: rotate(225deg) translateY(2px);
-    }
-
-    .services-dropdown {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      padding-top: 0.9rem;
-      transform: translateX(-50%) translateY(8px);
-      width: 320px;
-      background: transparent;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
-      z-index: 95;
-    }
-
-    .nav-item-dropdown:hover .services-dropdown,
-    .nav-item-dropdown:focus-within .services-dropdown {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-      transform: translateX(-50%) translateY(0);
-    }
-
-    .services-dropdown-inner {
-      background: rgba(255, 246, 238, 0.98);
-      backdrop-filter: blur(20px) saturate(160%);
-      -webkit-backdrop-filter: blur(20px) saturate(160%);
-      border: 1.5px solid rgba(26, 21, 35, 0.16);
-      border-radius: 22px;
-      padding: 0.6rem;
-      box-shadow: 0 20px 48px rgba(26, 21, 35, 0.24);
-    }
-
-    .services-dropdown a {
-      display: flex;
-      align-items: baseline;
-      gap: 0.65rem;
-      padding: 0.65rem 0.85rem;
-      border-radius: 14px;
-      text-decoration: none;
-      color: var(--ink);
-      transition: background 0.15s ease;
-    }
-
-    .services-dropdown a:hover {
-      background: rgba(255, 82, 51, 0.1);
-    }
-
-    .services-dropdown a .service-num {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 0.78rem;
-      color: var(--coral);
-      flex-shrink: 0;
-      width: 1.2rem;
-    }
-
-    .services-dropdown a .service-name {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 600;
-      font-size: 0.92rem;
-      line-height: 1.3;
-    }
-
+    /* ---------- MOBILE NAV ---------- */
     .nav-toggle {
       display: none;
+      flex-direction: column;
+      gap: 5px;
       background: none;
       border: none;
       cursor: pointer;
-      padding: 0.5rem;
-      flex-shrink: 0;
-      width: 40px;
-      height: 40px;
-      position: relative;
-      z-index: 101;
+      padding: 6px;
+      border-radius: 8px;
     }
 
     .nav-toggle span {
@@ -342,198 +240,75 @@
       width: 22px;
       height: 2px;
       background: var(--ink);
-      margin: 5px auto;
       border-radius: 2px;
-      transition: transform 0.25s ease, opacity 0.2s ease;
+      transition: transform 0.2s ease, opacity 0.2s ease;
     }
 
-    .nav-toggle.active span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    .nav-toggle.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .nav-toggle.active span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
+    .nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle.open span:nth-child(2) { opacity: 0; }
+    .nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
     .nav-scrim {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(26, 21, 35, 0.35);
-      backdrop-filter: blur(2px);
-      z-index: 85;
-      opacity: 0;
-      transition: opacity 0.2s ease;
+      background: rgba(26, 21, 35, 0.4);
+      z-index: 80;
     }
+    .nav-scrim.open { display: block; }
 
-    .nav-scrim.open {
-      display: block;
-      opacity: 1;
-    }
-
-    /* ---------- TABLET (881px – 1024px): tighten spacing, keep horizontal nav ---------- */
-    @media (max-width: 1024px) and (min-width: 881px) {
-      .navbar {
-        width: 96%;
-        padding: 0.6rem 0.7rem 0.6rem 1rem;
-        gap: 0.75rem;
-      }
-
-      .nav-links a {
-        font-size: 0.85rem;
-        padding: 0.5rem 0.65rem;
-      }
-
-      .nav-logo .wordmark {
-        font-size: 1.15rem;
-      }
-    }
-
-    /* ---------- MOBILE + SMALL TABLET (<=880px): collapse to menu ---------- */
-    @media (max-width: 880px) {
-      .navbar {
-        top: 0.85rem;
-        padding: 0.55rem 0.65rem 0.55rem 0.9rem;
-        width: 92%;
-      }
+    @media (max-width: 760px) {
+      .nav-toggle { display: flex; }
 
       .nav-links {
+        display: none;
         position: fixed;
-        top: 5.2rem;
-        left: 4%;
-        right: 4%;
-        max-height: calc(100vh - 6.5rem);
-        overflow-y: auto;
+        top: 0; left: 0; right: 0;
         flex-direction: column;
         align-items: stretch;
-        background: rgba(255, 246, 238, 0.97);
-        backdrop-filter: blur(20px);
-        border: 1.5px solid rgba(26, 21, 35, 0.14);
-        border-radius: 24px;
-        padding: 0.85rem;
-        box-shadow: 0 20px 50px rgba(26, 21, 35, 0.22);
-        display: none;
-        gap: 0.15rem;
-        z-index: 95;
+        gap: 0;
+        background: var(--cream);
+        border-bottom: 2px solid var(--ink);
+        padding: 5rem 1.5rem 2rem;
+        z-index: 85;
+        box-shadow: 0 8px 40px rgba(26, 21, 35, 0.18);
       }
 
-      .nav-links.open {
-        display: flex;
-        animation: navSlideDown 0.22s ease;
-      }
+      .nav-links.open { display: flex; }
 
-      @keyframes navSlideDown {
-        from {
-          opacity: 0;
-          transform: translateY(-8px);
-        }
-
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
+      .nav-links li { border-bottom: 1px solid var(--line); }
       .nav-links a {
-        text-align: center;
-        padding: 0.95rem 1rem;
-        font-size: 1rem;
-        border-radius: 14px;
-      }
-
-      .nav-links a:active {
-        background: rgba(26, 21, 35, 0.08);
-      }
-
-      .nav-links a.nav-cta {
-        margin-left: 0;
-        margin-top: 0.4rem;
-      }
-
-      .nav-toggle {
         display: block;
-      }
-
-      .services-dropdown {
-        position: static !important;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        transform: none !important;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: auto;
-        display: none;
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        padding-top: 0;
-        margin-top: 0.35rem;
-      }
-
-      .services-dropdown-inner {
-        background: rgba(26, 21, 35, 0.04);
-        border: 1px solid rgba(26, 21, 35, 0.08);
-        border-radius: 16px;
-        box-shadow: none;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        padding: 0.4rem;
-      }
-
-      .nav-item-dropdown.mobile-open .services-dropdown {
-        display: block;
-      }
-
-      .nav-item-dropdown>a .caret {
-        display: inline-block;
-      }
-
-      .nav-item-dropdown.mobile-open>a .caret {
-        transform: rotate(180deg);
-      }
-
-      .services-dropdown a {
-        padding: 0.8rem 0.85rem;
-      }
-    }
-
-    /* extra small phones */
-    @media (max-width: 400px) {
-      .navbar {
-        padding: 0.5rem 0.55rem 0.5rem 0.75rem;
-      }
-
-      .nav-logo .wordmark {
+        padding: 0.9rem 0.5rem;
+        border-radius: 0;
         font-size: 1.1rem;
       }
 
-      .nav-logo .mark-img {
-        width: 30px;
-        height: 30px;
+      .nav-links a.nav-cta {
+        margin: 1rem 0 0;
+        border-radius: 999px;
+        text-align: center;
+        padding: 0.9rem;
       }
     }
 
-    /* push hero content below fixed navbar */
-    .hero {
-      padding-top: clamp(5rem, 12vw, 8rem);
+    @media (max-width: 400px) {
+      .navbar { padding: 0.5rem 0.55rem 0.5rem 0.75rem; }
+      .nav-logo .wordmark { font-size: 1rem; }
     }
 
     /* ---------- HERO ---------- */
     .hero {
       position: relative;
-      min-height: min(100vh, 900px);
+      min-height: 100vh;
       background: linear-gradient(180deg, #EAB4A8 0%, #E7A7BE 28%, #C6A3D6 55%, #8FA9DA 85%, #6C97D2 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: clamp(3rem, 8vw, 6rem) clamp(1rem, 4vw, 1.5rem) clamp(4rem, 10vw, 8rem);
+      padding: clamp(7rem, 16vw, 10rem) clamp(1rem, 4vw, 1.5rem) clamp(6rem, 10vw, 8rem);
       text-align: center;
+      overflow: hidden;
     }
 
     .hero::before {
@@ -556,44 +331,39 @@
       border: 1.5px solid var(--ink);
       border-radius: 999px;
       padding: 0.45rem 1.1rem;
-      font-size: 0.8rem;
+      font-size: 0.82rem;
       font-weight: 600;
       letter-spacing: 0.02em;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       box-shadow: 3px 3px 0 rgba(26, 21, 35, 0.25);
+      animation: fadeSlideDown 0.8s ease forwards;
+    }
+
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .hero-eyebrow .dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
+      width: 8px; height: 8px; border-radius: 50%;
       background: var(--coral);
       display: inline-block;
       animation: pulse 1.8s ease-in-out infinite;
     }
 
     @keyframes pulse {
-
-      0%,
-      100% {
-        transform: scale(1);
-        opacity: 1;
-      }
-
-      50% {
-        transform: scale(1.3);
-        opacity: 0.6;
-      }
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.3); opacity: 0.6; }
     }
 
-    .hero-headline {
+    .hero-name {
       position: relative;
       z-index: 2;
       font-family: 'Fraunces', serif;
       font-weight: 900;
-      font-size: clamp(3rem, 9vw, 7.5rem);
-      line-height: 0.95;
-      letter-spacing: -0.01em;
+      font-size: clamp(3.5rem, 11vw, 9rem);
+      line-height: 0.9;
+      letter-spacing: -0.02em;
       color: #FFEDD9;
       -webkit-text-stroke: 2px var(--ink);
       text-shadow:
@@ -605,35 +375,50 @@
         6px 6px 0 var(--coral-dark),
         7px 7px 0 var(--coral-dark),
         8px 8px 0 var(--coral-dark),
-        9px 9px 0 var(--coral-dark),
-        10px 10px 0 var(--coral-dark),
-        11px 11px 14px rgba(26, 21, 35, 0.35);
-      max-width: 16ch;
-      margin-bottom: 0.3em;
+        9px 9px 14px rgba(26, 21, 35, 0.35);
+      margin-bottom: 0.25em;
+      animation: heroEntrance 0.9s ease 0.15s both;
     }
 
-    .hero-headline .line2 {
+    @keyframes heroEntrance {
+      from { opacity: 0; transform: translateY(30px) scale(0.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .hero-name .italic {
+      font-style: italic;
+      font-weight: 500;
       display: block;
+      font-size: 0.72em;
+      color: #FFE4D0;
     }
 
-    .hero-sub {
+    .hero-tagline {
       position: relative;
       z-index: 2;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-size: clamp(1.05rem, 2.2vw, 1.4rem);
       font-weight: 500;
-      max-width: 34ch;
+      max-width: 38ch;
       color: var(--ink);
       line-height: 1.5;
-      margin-bottom: 2.75rem;
+      margin-bottom: 2.5rem;
+      animation: heroEntrance 0.9s ease 0.3s both;
     }
 
-    .hero-sub strong {
-      font-weight: 700;
+    .hero-tagline strong { font-weight: 700; }
+
+    .hero-ctas {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: heroEntrance 0.9s ease 0.45s both;
     }
 
     .cta-btn {
-      position: relative;
-      z-index: 2;
       display: inline-flex;
       align-items: center;
       gap: 0.6rem;
@@ -642,7 +427,7 @@
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 1.05rem;
-      padding: 1.05rem 2.3rem;
+      padding: 1rem 2.2rem;
       border-radius: 999px;
       border: 2px solid var(--ink);
       text-decoration: none;
@@ -661,14 +446,32 @@
       box-shadow: 2px 2px 0 var(--ink);
     }
 
-    .cta-btn svg {
-      width: 18px;
-      height: 18px;
+    .cta-btn svg { width: 18px; height: 18px; }
+
+    .cta-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255,255,255,0.65);
+      color: var(--ink);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 1rem 1.8rem;
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .cta-btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.9);
+      transform: translateY(-2px);
     }
 
     .scroll-hint {
       position: absolute;
-      bottom: 2rem;
+      bottom: 2.5rem;
       left: 50%;
       transform: translateX(-50%);
       z-index: 2;
@@ -682,210 +485,110 @@
       flex-direction: column;
       align-items: center;
       gap: 0.4rem;
+      animation: heroEntrance 0.9s ease 0.9s both;
     }
 
-    .scroll-hint .arrow {
-      animation: bob 1.6s ease-in-out infinite;
-      font-size: 1.1rem;
-    }
+    .scroll-hint .arrow { animation: bob 1.6s ease-in-out infinite; font-size: 1.1rem; }
 
     @keyframes bob {
-
-      0%,
-      100% {
-        transform: translateY(0);
-      }
-
-      50% {
-        transform: translateY(6px);
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(6px); }
     }
 
     /* ---------- WAVE DIVIDER ---------- */
-    .wave-divider {
-      display: block;
-      width: 100%;
-      height: auto;
-      margin-top: -2px;
-    }
+    .wave-divider { display: block; width: 100%; height: auto; margin-top: -2px; }
 
-    /* ---------- SECTION: INTRO STRIP ---------- */
-    .intro-strip {
+    /* ---------- STORY SECTION ---------- */
+    .story-section {
       background: var(--cream);
-      padding: 5rem 1.5rem 2rem;
-      text-align: center;
+      padding: 6rem 1.5rem;
     }
 
-    .intro-strip p {
-      max-width: 46ch;
+    .story-inner {
+      max-width: 800px;
       margin: 0 auto;
-      font-size: clamp(1.3rem, 2.6vw, 1.9rem);
-      font-family: 'Fraunces', serif;
-      font-weight: 500;
-      line-height: 1.35;
-      color: var(--ink);
     }
 
-    .intro-strip .highlight {
-      background: linear-gradient(120deg, transparent 0%, transparent 4%, #FFD8B8 4%, #FFD8B8 96%, transparent 96%);
-      padding: 0 0.1em;
-    }
-
-    /* ---------- METRICS SECTION ---------- */
-    .metrics-section {
-      background: var(--cream);
-      padding: 4rem 1.5rem 6rem;
-    }
-
-    .metrics-heading {
-      text-align: center;
-      margin-bottom: 3.5rem;
-    }
-
-    .metrics-heading .kicker {
+    .story-kicker {
       display: inline-block;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
       color: var(--coral-dark);
-      margin-bottom: 0.8rem;
+      margin-bottom: 1.5rem;
     }
 
-    .metrics-heading h2 {
+    .story-headline {
       font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: clamp(2rem, 4.5vw, 3.2rem);
+      line-height: 1.12;
       color: var(--ink);
-      max-width: 20ch;
-      margin: 0 auto;
-      line-height: 1.1;
+      margin-bottom: 2rem;
     }
 
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.75rem;
-      max-width: 1180px;
-      margin: 0 auto;
-    }
-
-    @media (max-width: 920px) {
-      .metrics-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .metric-card {
-      background: var(--cream-2);
-      border: 2px solid var(--ink);
-      border-radius: 28px;
-      padding: 2.5rem 2rem 2.25rem;
-      position: relative;
-      box-shadow: 6px 6px 0 var(--line);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .metric-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 6px 12px 0 var(--line);
-    }
-
-    .metric-card .card-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--ink);
-      color: var(--cream);
-      padding: 0.35rem 0.8rem;
-      border-radius: 999px;
-      margin-bottom: 1.6rem;
-    }
-
-    .metric-card .big-number {
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
-      font-size: clamp(3rem, 6vw, 4rem);
-      line-height: 1;
-      color: var(--coral);
-      -webkit-text-stroke: 1.5px var(--ink);
-      margin-bottom: 0.5rem;
-    }
-
-    .metric-card .metric-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      margin-bottom: 0.9rem;
-      color: var(--ink);
-    }
-
-    .metric-card .metric-plain {
-      font-size: 0.98rem;
-      line-height: 1.55;
-      color: var(--ink-soft);
-    }
-
-    .metric-card .metric-plain strong {
-      color: var(--ink);
-    }
-
-    .metric-card .card-foot {
-      margin-top: 1.5rem;
-      padding-top: 1.25rem;
-      border-top: 1.5px dashed var(--line);
-      font-size: 0.85rem;
-      color: var(--ink-soft);
+    .story-body {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
+      flex-direction: column;
+      gap: 1.4rem;
     }
 
-    .metric-card .card-foot .icon {
-      font-size: 1rem;
-    }
-
-    /* funnel connector line for desktop */
-    .funnel-note {
-      text-align: center;
-      max-width: 760px;
-      margin: 3rem auto 0;
-      font-size: 0.95rem;
+    .story-body p {
+      font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+      line-height: 1.7;
       color: var(--ink-soft);
-      line-height: 1.6;
-      padding: 1.25rem 1.75rem;
-      background: rgba(255, 82, 51, 0.07);
-      border: 1.5px dashed var(--coral);
-      border-radius: 18px;
     }
 
-    .funnel-note strong {
+    .story-body p strong { color: var(--ink); font-weight: 700; }
+
+    .story-body .highlight-block {
+      background: var(--cream-2);
+      border-left: 4px solid var(--coral);
+      border-radius: 0 16px 16px 0;
+      padding: 1.25rem 1.5rem;
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 500;
+      font-style: italic;
       color: var(--ink);
+      line-height: 1.45;
     }
 
-    /* ---------- HOW IT WORKS ---------- */
-    .how-section {
+    /* ---------- WHAT I KNOW SECTION ---------- */
+    .know-section {
       background: var(--ink);
       color: var(--cream);
       padding: 6rem 1.5rem;
+      position: relative;
+      overflow: hidden;
     }
 
-    .how-inner {
-      max-width: 1000px;
+    .know-section::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 82, 51, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .know-inner {
+      max-width: 1100px;
       margin: 0 auto;
     }
 
-    .how-heading {
+    .know-heading {
       text-align: center;
-      margin-bottom: 3.5rem;
+      margin-bottom: 4rem;
     }
 
-    .how-heading .kicker {
+    .know-heading .kicker {
       display: inline-block;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -893,79 +596,131 @@
       margin-bottom: 0.8rem;
     }
 
-    .how-heading h2 {
+    .know-heading h2 {
       font-family: 'Fraunces', serif;
       font-weight: 700;
       font-size: clamp(2rem, 4.5vw, 3rem);
       line-height: 1.15;
     }
 
-    .steps {
+    .know-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1.5rem;
     }
 
-    @media (max-width: 900px) {
-      .steps {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    @media (max-width: 860px) {
+      .know-grid { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 560px) {
-      .steps {
-        grid-template-columns: 1fr;
-      }
+      .know-grid { grid-template-columns: 1fr; }
     }
 
-    .step {
+    .know-card {
       background: rgba(255, 255, 255, 0.05);
-      border: 1.5px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
-      padding: 1.75rem 1.5rem;
+      border: 1.5px solid rgba(255, 255, 255, 0.15);
+      border-radius: 24px;
+      padding: 2rem 1.75rem;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
     }
 
-    .step .step-num {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.6rem;
-      color: var(--coral);
-      margin-bottom: 0.9rem;
+    .know-card:hover {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: rgba(255, 82, 51, 0.5);
+      transform: translateY(-4px);
+    }
+
+    .know-card .card-icon {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
       display: block;
     }
 
-    .step h3 {
-      font-size: 1.05rem;
+    .know-card h3 {
+      font-family: 'Fraunces', serif;
       font-weight: 700;
+      font-size: 1.2rem;
       margin-bottom: 0.6rem;
+      color: var(--cream);
     }
 
-    .step p {
-      font-size: 0.9rem;
-      line-height: 1.55;
-      color: rgba(255, 246, 238, 0.75);
+    .know-card p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: rgba(255, 246, 238, 0.72);
     }
 
-    /* ---------- REPLY CLOUD ---------- */
-    .cloud-section {
+    .know-card .card-tag {
+      display: inline-block;
+      margin-top: 1rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--coral);
+      border: 1px solid rgba(255, 82, 51, 0.4);
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+    }
+
+    /* ---------- NUMBERS STRIP ---------- */
+    .numbers-strip {
       background: var(--cream-2);
-      padding: 5.5rem 1.5rem 6rem;
-      position: relative;
-      overflow: hidden;
       border-top: 2px solid var(--ink);
       border-bottom: 2px solid var(--ink);
+      padding: 4rem 1.5rem;
     }
 
-    .cloud-heading {
+    .numbers-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
       text-align: center;
-      margin-bottom: 3rem;
-      position: relative;
-      z-index: 2;
     }
 
-    .cloud-heading .kicker {
+    @media (max-width: 720px) {
+      .numbers-inner { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .number-item .num {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 5vw, 3.8rem);
+      color: var(--coral);
+      -webkit-text-stroke: 1.5px var(--ink);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .number-item .num-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--ink-soft);
+      line-height: 1.3;
+    }
+
+    /* ---------- CASE STUDY PREVIEW ---------- */
+    .case-preview {
+      background: var(--cream);
+      padding: 6rem 1.5rem;
+    }
+
+    .case-preview-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-heading .kicker {
       display: inline-block;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
@@ -973,118 +728,199 @@
       margin-bottom: 0.8rem;
     }
 
-    .cloud-heading h2 {
+    .section-heading h2 {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: clamp(1.9rem, 4.2vw, 2.9rem);
-      max-width: 22ch;
-      margin: 0 auto 0.6rem;
-      line-height: 1.15;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      line-height: 1.12;
+      color: var(--ink);
     }
 
-    .cloud-heading p {
-      font-size: 0.95rem;
-      color: var(--ink-soft);
-      max-width: 42ch;
-      margin: 0 auto;
-    }
-
-    .word-cloud {
-      position: relative;
-      z-index: 2;
-      max-width: 1100px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: center;
-      gap: 0.9rem 1.1rem;
-      padding: 1rem;
-    }
-
-    .word-cloud span {
-      display: inline-block;
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      line-height: 1;
-      padding: 0.5em 0.85em;
-      border-radius: 999px;
+    .case-banner {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 0;
+      background: var(--cream-2);
       border: 2px solid var(--ink);
-      white-space: nowrap;
-      cursor: default;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 8px 8px 0 var(--line);
+      text-decoration: none;
+      color: inherit;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .word-cloud span:hover {
-      transform: scale(1.08) rotate(0deg) !important;
-      box-shadow: 5px 5px 0 var(--ink);
-      z-index: 5;
-      position: relative;
+    .case-banner:hover {
+      transform: translateY(-6px);
+      box-shadow: 8px 16px 0 var(--line);
     }
 
-    /* size + color variants for texture */
-    .word-cloud .w-xl {
-      font-size: clamp(1.4rem, 3vw, 2.1rem);
-      background: var(--coral);
+    @media (max-width: 720px) {
+      .case-banner { grid-template-columns: 1fr; }
+    }
+
+    .case-banner-left {
+      background: linear-gradient(160deg, #EAB4A8 0%, #C6A3D6 60%, #8FA9DA 100%);
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+      border-right: 2px solid var(--ink);
+    }
+
+    @media (max-width: 720px) {
+      .case-banner-left { border-right: none; border-bottom: 2px solid var(--ink); }
+    }
+
+    .case-banner-left img {
+      height: 32px;
+      width: auto;
+    }
+
+    .case-banner-stat {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-banner-stat .big { 
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: clamp(3rem, 6vw, 4.5rem);
+      line-height: 1;
+      color: #FFEDD9;
+      -webkit-text-stroke: 1.5px var(--ink);
+      text-shadow: 3px 3px 0 var(--coral-dark);
+    }
+
+    .case-banner-stat .small {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-top: 0.3rem;
+    }
+
+    .case-banner-right {
+      padding: 3rem 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.25rem;
+    }
+
+    .case-banner-right .tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--ink);
       color: var(--cream);
-      box-shadow: 3px 3px 0 var(--ink);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      width: fit-content;
     }
 
-    .word-cloud .w-lg {
-      font-size: clamp(1.15rem, 2.2vw, 1.55rem);
-      background: #FFD8B8;
+    .case-banner-right h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      line-height: 1.15;
       color: var(--ink);
-      box-shadow: 3px 3px 0 var(--ink);
     }
 
-    .word-cloud .w-md {
-      font-size: clamp(0.95rem, 1.7vw, 1.2rem);
-      background: var(--cream);
-      color: var(--ink);
-      box-shadow: 2px 2px 0 var(--ink);
-    }
-
-    .word-cloud .w-sm {
-      font-size: 0.85rem;
-      background: transparent;
-      color: var(--ink-soft);
-      border-color: var(--line);
-      box-shadow: none;
-      font-weight: 500;
-      font-family: 'Space Grotesk', sans-serif;
-    }
-
-    .word-cloud span:nth-child(3n) {
-      transform: rotate(-3deg);
-    }
-
-    .word-cloud span:nth-child(4n) {
-      transform: rotate(2.5deg);
-    }
-
-    .word-cloud span:nth-child(5n) {
-      transform: rotate(-1.5deg);
-    }
-
-    .word-cloud span:nth-child(7n) {
-      transform: rotate(3deg);
-    }
-
-    .cloud-caption {
-      position: relative;
-      z-index: 2;
-      text-align: center;
-      max-width: 50ch;
-      margin: 2.75rem auto 0;
-      font-size: 0.85rem;
-      color: var(--ink-soft);
+    .case-banner-right p {
+      font-size: 1rem;
       line-height: 1.6;
+      color: var(--ink-soft);
+      max-width: 44ch;
     }
 
-    @media (max-width: 640px) {
-      .word-cloud span:nth-child(n) {
-        transform: none !important;
-      }
+    .case-banner-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 700;
+      color: var(--coral-dark);
+      font-size: 0.92rem;
+      border-bottom: 2px solid var(--coral-dark);
+      padding-bottom: 2px;
+      width: fit-content;
+    }
+
+    /* ---------- SERVICES PREVIEW ---------- */
+    .services-preview {
+      background: var(--cream);
+      padding: 2rem 1.5rem 6rem;
+    }
+
+    .services-preview-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 860px) {
+      .services-grid { grid-template-columns: 1fr; }
+    }
+
+    .service-preview-card {
+      display: flex;
+      flex-direction: column;
+      background: var(--cream-2);
+      border: 2px solid var(--ink);
+      border-radius: 24px;
+      padding: 2.25rem 2rem;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 5px 5px 0 var(--line);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .service-preview-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 5px 12px 0 var(--line);
+      background: #FFF0E6;
+    }
+
+    .service-preview-card .svc-num {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--coral);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .service-preview-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .service-preview-card p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--ink-soft);
+      flex: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .service-preview-card .svc-link {
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--coral-dark);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
     }
 
     /* ---------- FINAL CTA ---------- */
@@ -1119,19 +955,20 @@
         4px 4px 0 var(--coral-dark),
         5px 5px 0 var(--coral-dark),
         6px 6px 10px rgba(26, 21, 35, 0.3);
-      max-width: 16ch;
-      margin: 0 auto 2rem;
+      max-width: 18ch;
+      margin: 0 auto 1.5rem;
     }
 
     .final-cta p {
       position: relative;
-      max-width: 40ch;
+      max-width: 42ch;
       margin: 0 auto 2.5rem;
       font-size: 1.1rem;
       font-weight: 500;
       color: var(--ink);
     }
 
+    /* ---------- FOOTER ---------- */
     footer {
       background: var(--ink);
       color: rgba(255, 246, 238, 0.55);
@@ -1139,13 +976,8 @@
       font-size: 0.85rem;
     }
 
-    footer strong {
-      color: var(--cream);
-    }
-
-    footer a {
-      text-decoration: none;
-    }
+    footer strong { color: var(--cream); }
+    footer a { text-decoration: none; }
 
     .footer-top {
       max-width: 1100px;
@@ -1157,9 +989,7 @@
       padding-bottom: 2.5rem;
     }
 
-    .footer-brand-col {
-      max-width: 260px;
-    }
+    .footer-brand-col { max-width: 260px; }
 
     .footer-brand {
       display: flex;
@@ -1168,10 +998,17 @@
       margin-bottom: 0.9rem;
     }
 
-    .footer-brand img {
-      width: 28px;
-      height: 28px;
-      object-fit: contain;
+    .footer-brand .mark-sm {
+      width: 28px; height: 28px;
+      border-radius: 8px;
+      background: var(--coral);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--cream);
     }
 
     .footer-brand span {
@@ -1181,16 +1018,9 @@
       color: var(--cream);
     }
 
-    .footer-desc {
-      font-size: 0.83rem;
-      line-height: 1.5;
-    }
+    .footer-desc { font-size: 0.83rem; line-height: 1.5; }
 
-    .footer-cols {
-      display: flex;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
+    .footer-cols { display: flex; gap: 3rem; flex-wrap: wrap; }
 
     .footer-col h4 {
       color: var(--cream);
@@ -1201,12 +1031,7 @@
       margin-bottom: 0.9rem;
     }
 
-    .footer-col ul {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
 
     .footer-col a {
       color: rgba(255, 246, 238, 0.7);
@@ -1214,9 +1039,7 @@
       transition: color 0.15s ease;
     }
 
-    .footer-col a:hover {
-      color: var(--coral);
-    }
+    .footer-col a:hover { color: var(--coral); }
 
     .footer-bottom {
       max-width: 1100px;
@@ -1230,47 +1053,27 @@
       border-top: 1px solid rgba(255, 246, 238, 0.12);
     }
 
-    .footer-tagline {
-      font-size: 0.8rem;
-    }
+    .footer-tagline { font-size: 0.8rem; }
 
-    .footer-social {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
+    .footer-social { display: flex; align-items: center; gap: 0.75rem; }
 
     .footer-social a {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
+      width: 36px; height: 36px;
       border-radius: 50%;
       background: rgba(255, 246, 238, 0.08);
       color: var(--cream);
       transition: background 0.15s ease, color 0.15s ease;
     }
 
-    .footer-social a:hover {
-      background: var(--coral);
-      color: var(--ink);
-    }
-
-    .footer-social svg {
-      width: 17px;
-      height: 17px;
-    }
+    .footer-social a:hover { background: var(--coral); color: var(--ink); }
+    .footer-social svg { width: 17px; height: 17px; }
 
     @media (max-width: 640px) {
-      .footer-top {
-        flex-direction: column;
-      }
-
-      .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-      }
+      .footer-top { flex-direction: column; }
+      .footer-bottom { flex-direction: column; text-align: center; }
     }
 
     /* ---------- CONTACT MODAL ---------- */
@@ -1292,13 +1095,8 @@
     }
 
     @keyframes fadeIn {
-      from {
-        opacity: 0;
-      }
-
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .modal-card {
@@ -1316,23 +1114,14 @@
     }
 
     @keyframes popIn {
-      from {
-        opacity: 0;
-        transform: scale(0.9) translateY(10px);
-      }
-
-      to {
-        opacity: 1;
-        transform: scale(1) translateY(0);
-      }
+      from { opacity: 0; transform: scale(0.9) translateY(10px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
     }
 
     .modal-close {
       position: absolute;
-      top: 1.1rem;
-      right: 1.1rem;
-      width: 36px;
-      height: 36px;
+      top: 1.1rem; right: 1.1rem;
+      width: 36px; height: 36px;
       border-radius: 50%;
       border: 2px solid var(--ink);
       background: var(--cream);
@@ -1378,9 +1167,7 @@
       line-height: 1.5;
     }
 
-    .form-group {
-      margin-bottom: 1.1rem;
-    }
+    .form-group { margin-bottom: 1.1rem; }
 
     .form-group label {
       display: block;
@@ -1388,13 +1175,6 @@
       font-weight: 700;
       margin-bottom: 0.4rem;
       color: var(--ink);
-    }
-
-    .form-group label .optional-tag {
-      font-weight: 500;
-      color: var(--ink-soft);
-      text-transform: none;
-      letter-spacing: 0;
     }
 
     .form-group input,
@@ -1420,13 +1200,8 @@
       padding-right: 2.5rem;
     }
 
-    .form-group select:invalid {
-      color: rgba(69, 59, 82, 0.45);
-    }
-
-    .form-group input::placeholder {
-      color: rgba(69, 59, 82, 0.45);
-    }
+    .form-group select:invalid { color: rgba(69, 59, 82, 0.45); }
+    .form-group input::placeholder { color: rgba(69, 59, 82, 0.45); }
 
     .form-group input:focus,
     .form-group select:focus {
@@ -1434,10 +1209,6 @@
       border-color: var(--coral);
       box-shadow: 3px 3px 0 var(--coral);
       background-color: var(--cream);
-    }
-
-    .form-group input:invalid:not(:placeholder-shown) {
-      border-color: #D64545;
     }
 
     .modal-submit {
@@ -1460,512 +1231,273 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .modal-submit:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0 var(--ink);
-    }
+    .modal-submit:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+    .modal-submit:active { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--ink); }
+    .modal-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
 
-    .modal-submit:active {
-      transform: translate(1px, 1px);
-      box-shadow: 2px 2px 0 var(--ink);
-    }
+    .modal-note { text-align: center; font-size: 0.78rem; color: var(--ink-soft); margin-top: 1rem; }
 
-    .modal-submit:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
+    .modal-success { display: none; text-align: center; padding: 1.5rem 0 0.5rem; }
+    .modal-success.show { display: block; }
+    .modal-success .success-icon { font-size: 2.75rem; margin-bottom: 1rem; display: block; }
+    .modal-success h3 { margin: 0 auto 0.6rem; }
+    .modal-success p { font-size: 0.95rem; color: var(--ink-soft); max-width: 30ch; margin: 0 auto; }
+    .modal-form.hide { display: none; }
+    .form-error { font-size: 0.8rem; color: #D64545; margin-top: 0.35rem; display: none; }
+    .form-error.show { display: block; }
 
-    .modal-note {
-      text-align: center;
-      font-size: 0.78rem;
-      color: var(--ink-soft);
-      margin-top: 1rem;
-    }
-
-    /* success state */
-    .modal-success {
-      display: none;
-      text-align: center;
-      padding: 1.5rem 0 0.5rem;
-    }
-
-    .modal-success.show {
-      display: block;
-    }
-
-    .modal-success .success-icon {
-      font-size: 2.75rem;
-      margin-bottom: 1rem;
-      display: block;
-    }
-
-    .modal-success h3 {
-      margin: 0 auto 0.6rem;
-    }
-
-    .modal-success p {
-      font-size: 0.95rem;
-      color: var(--ink-soft);
-      max-width: 30ch;
-      margin: 0 auto;
-    }
-
-    .modal-form.hide {
-      display: none;
-    }
-
-    .form-error {
-      font-size: 0.8rem;
-      color: #D64545;
-      margin-top: 0.35rem;
-      display: none;
-    }
-
-    .form-error.show {
-      display: block;
-    }
-
-    /* focus visibility */
-    a:focus-visible,
-    button:focus-visible {
-      outline: 3px solid var(--coral);
-      outline-offset: 3px;
-    }
-
-    /* ---------- HOME: CONDENSED PROOF STRIP ---------- */
-    .proof-condensed {
-      background: var(--cream);
-      padding: 1rem 1.5rem 5rem;
-    }
-
-    .proof-condensed-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.25rem;
-      max-width: 980px;
-      margin: 0 auto 2rem;
-    }
-
-    @media (max-width: 780px) {
-      .proof-condensed-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .proof-mini-card {
-      background: var(--cream-2);
-      border: 2px solid var(--ink);
-      border-radius: 22px;
-      padding: 1.75rem 1.5rem;
-      text-align: center;
-      box-shadow: 4px 4px 0 var(--line);
-    }
-
-    .proof-mini-card .mini-number {
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      color: var(--coral);
-      -webkit-text-stroke: 1px var(--ink);
-      line-height: 1;
-      margin-bottom: 0.4rem;
-    }
-
-    .proof-mini-card .mini-label {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--ink-soft);
-    }
-
-    .proof-link-row {
-      text-align: center;
-    }
-
-    .proof-link-row a {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 0.95rem;
-      color: var(--coral-dark);
-      text-decoration: none;
-      border-bottom: 2px solid var(--coral-dark);
-      padding-bottom: 2px;
-      transition: opacity 0.15s ease;
-    }
-
-    .proof-link-row a:hover {
-      opacity: 0.7;
-    }
-
-    /* ---------- CASE STUDY CARD (HOME) ---------- */
-    .case-study-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 1.75rem;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .case-card {
-      display: flex;
-      flex-direction: column;
-      background: var(--cream-2);
-      border: 2px solid var(--ink);
-      border-radius: 28px;
-      overflow: hidden;
-      text-decoration: none;
-      color: inherit;
-      box-shadow: 6px 6px 0 var(--line);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .case-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 6px 12px 0 var(--line);
-    }
-
-    .case-card-logo {
-      background: var(--cream);
-      padding: 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 2px solid var(--ink);
-    }
-
-    .case-card-logo img {
-      height: 36px;
-      width: auto;
-    }
-
-    .case-card-body {
-      padding: 1.75rem 2rem 2rem;
-    }
-
-    .case-card-body h3 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin: 0.6rem 0 0.7rem;
-    }
-
-    .case-card-body p {
-      font-size: 0.95rem;
-      color: var(--ink-soft);
-      line-height: 1.55;
-      margin-bottom: 1.1rem;
-    }
-
-    .case-card-cta {
-      font-weight: 700;
-      color: var(--coral-dark);
-      font-size: 0.9rem;
-    }
-
-    /* ---------- HOME: SERVICES GRID ---------- */
-    .services-section {
-      background: var(--cream);
-      padding: 5rem 1.5rem 4rem;
-    }
-
-    .services-section .how-heading .kicker {
-      color: var(--coral-dark);
-    }
-
-    .services-section .how-heading h2 {
-      color: var(--ink);
-    }
-
-    .services-section .how-heading {
-      padding: 0 1.5rem;
-    }
-
-    .service-row {
-      display: flex;
-      align-items: center;
-      gap: clamp(2rem, 6vw, 5rem);
-      max-width: 1180px;
-      margin: 0 auto 1.5rem;
-      padding: clamp(2rem, 5vw, 3rem) clamp(1.5rem, 4vw, 2.5rem);
-      text-decoration: none;
-      background: var(--cream-2);
-      border: 2px solid var(--ink);
-      border-radius: 28px;
-      box-shadow: 6px 6px 0 var(--line);
-      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-    }
-
-    .service-row:hover {
-      background: #FFF0E6;
-      transform: translateY(-4px);
-      box-shadow: 6px 12px 0 var(--line);
-    }
-
-    .service-row:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .service-row-num {
-      flex-shrink: 0;
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
-      font-size: clamp(3.5rem, 8vw, 6rem);
-      line-height: 1;
-      color: transparent;
-      -webkit-text-stroke: 2px var(--coral);
-      width: clamp(90px, 12vw, 160px);
-    }
-
-    .service-row-content {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .service-row-content h3 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: clamp(1.5rem, 3vw, 2.2rem);
-      color: var(--ink);
-      margin-bottom: 0.75rem;
-    }
-
-    .service-row-content p {
-      font-size: clamp(0.95rem, 1.5vw, 1.05rem);
-      line-height: 1.6;
-      color: var(--ink-soft);
-      max-width: 52ch;
-      margin-bottom: 1.1rem;
-    }
-
-    .service-row-hook {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--coral-dark);
-    }
-
-    .service-row-hook::before {
-      content: '→';
-    }
-
-    .service-row .soon-tag {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--coral-dark);
-      background: rgba(255, 82, 51, 0.12);
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-    }
-
-    @media (max-width: 720px) {
-
-      .service-row,
-      .service-row:nth-child(even) {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-
-      .service-row-num {
-        width: auto;
-        font-size: 2.5rem;
-      }
-    }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
   </style>
+</head>
 
 <body>
 
-  <nav class="navbar">
-    <a href="/" class="nav-logo">
-      <img src="/assets/logo-icon-transparent.png" alt="Firstword" class="mark-img">
-      <span class="wordmark">First<span>word</span></span>
+  <!-- NAVBAR -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <a href="/" class="nav-logo" aria-label="Rudra Trivedi — Home">
+      <div class="mark"></div>
+      <span class="wordmark">Rudra <span>Trivedi</span></span>
     </a>
 
-    <button type="button" class="nav-toggle" id="navToggleBtn" onclick="toggleMobileNav()" aria-label="Toggle menu"
-      aria-expanded="false">
+    <button type="button" class="nav-toggle" id="navToggleBtn" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li class="nav-item-dropdown" id="servicesNavItem">
-        <a href="#" onclick="return toggleServicesMobile(event)">Services <span class="caret"></span></a>
-        <div class="services-dropdown">
-          <div class="services-dropdown-inner">
-            <a href="/gtm-consultancy"><span class="service-num">01</span><span class="service-name">GTM Consultancy</span></a>
-            <a href="/product-consultancy"><span class="service-num">02</span><span class="service-name">Product Consultancy</span></a>
-            <a href="/automation"><span class="service-num">03</span><span class="service-name">Automations</span></a>
-          </div>
-        </div>
-      </li>
+      <li><a href="/what-i-do">What I Do</a></li>
       <li><a href="/case-studies">Case Studies</a></li>
-      <li><a href="/coming-soon?service=blogs">Blogs</a></li>
-      <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;">Let's Talk</a></li>
+      <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;" id="navCtaBtn">Let's Talk</a></li>
     </ul>
   </nav>
 
   <div class="nav-scrim" id="navScrim" onclick="toggleMobileNav()"></div>
-  <section class="hero">
-    <div class="hero-eyebrow"><span class="dot"></span> Growth ops, GTM strategy &amp; AI automation — all hands-on</div>
-    <h1 class="hero-headline">Pipeline doesn't<span class="line2">build itself</span></h1>
-    <p class="hero-sub">Positioning that converts. Outbound that books meetings. Automation that runs operations. <strong>One operator across all of it.</strong></p>
-    <button type="button" class="cta-btn" onclick="openContactModal()">Let's talk
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-        <path d="M5 12h14M13 6l6 6-6 6" />
-      </svg>
-    </button>
-    <div class="scroll-hint">See what's real <span class="arrow">↓</span></div>
-  </section>
 
-  <section class="intro-strip">
-    <p>Most early-stage teams don't need five specialists and a bloated agency retainer. They need <span class="highlight">one person who's done the work</span> — GTM positioning, founder-led outbound, and business automations — moving between pieces that are connected anyway.</p>
-  </section>
-
-  <section class="services-section" id="services">
-    <div class="how-heading">
-      <span class="kicker">What I actually do</span>
-      <h2>Pick one. Or let them work together.</h2>
+  <!-- HERO -->
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-eyebrow"><span class="dot"></span> GTM Operator · Growth · AI Automation</div>
+    <h1 class="hero-name">
+      Rudra
+      <span class="italic">Trivedi</span>
+    </h1>
+    <p class="hero-tagline">I've been in the trenches of early-stage B2B. <strong>I know what breaks first</strong> — and how to fix it before it costs you the quarter.</p>
+    <div class="hero-ctas">
+      <button type="button" class="cta-btn" onclick="openContactModal()" id="heroCtaBtn">
+        Let's Talk
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <path d="M5 12h14M13 6l6 6-6 6" />
+        </svg>
+      </button>
+      <a href="/what-i-do" class="cta-btn-ghost">See what I do →</a>
     </div>
-
-    <a href="/gtm-consultancy" class="service-row">
-      <span class="service-row-num">01</span>
-      <div class="service-row-content">
-        <h3>GTM Consultancy &amp; Outbound</h3>
-        <p>Website positioning, sharp messaging architecture, ICP mapping, 90-day execution roadmap, and done-for-you founder-led LinkedIn outbound that puts real demos on your calendar.</p>
-        <span class="service-row-hook">36.5% acceptance rate · 100+ meetings booked</span>
-      </div>
-    </a>
-
-    <a href="/product-consultancy" class="service-row">
-      <span class="service-row-num">02</span>
-      <div class="service-row-content">
-        <h3>Product Consultancy</h3>
-        <p>A focused second opinion brought in where growth work exposes real product gaps. User onboarding, feature prioritization, customer feedback loops, and conversion optimization.</p>
-        <span class="service-row-hook">For when meetings book but demos don't convert</span>
-      </div>
-    </a>
-
-    <a href="/automation" class="service-row">
-      <span class="service-row-num">03</span>
-      <div class="service-row-content">
-        <h3>Business &amp; AI Automations</h3>
-        <p>Custom workflows for SMBs and B2B teams: invoice generation, instant lead intake, task orchestration, WhatsApp/Slack routing, and automated AI research briefs delivered in under 60 seconds.</p>
-        <span class="service-row-hook">Invoice automation · Instant lead intake · Ops workflows</span>
-      </div>
-    </a>
+    <div class="scroll-hint" aria-hidden="true">Scroll to read my story <span class="arrow">↓</span></div>
   </section>
 
-  <section class="how-section" style="background: var(--cream); color: var(--ink); padding-top: 5.5rem;">
-    <div class="how-inner">
-      <div class="how-heading">
-        <span class="kicker" style="color: var(--coral-dark);">How I actually work</span>
-        <h2 style="color: var(--ink);">No account managers. No juniors doing your work.</h2>
-      </div>
-      <div class="steps">
-        <div class="step" style="background: var(--cream-2); border-color: var(--line);">
-          <span class="step-num">01</span>
-          <h3 style="color: var(--ink);">Understand the actual gap</h3>
-          <p style="color: var(--ink-soft);">A short working session to find out whether the problem is pipeline,
-            positioning, strategy, or something else entirely.</p>
+  <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FFF6EE"/>
+  </svg>
+
+  <!-- STORY SECTION -->
+  <section class="story-section" aria-label="About me">
+    <div class="story-inner">
+      <span class="story-kicker reveal">My story</span>
+      <h2 class="story-headline reveal delay-1">I didn't study growth.<br>I got thrown into it.</h2>
+      <div class="story-body">
+        <p class="reveal delay-2">
+          Early-stage startups don't have the luxury of time. When I first started working with B2B SaaS founders, I noticed the same pattern: <strong>brilliant products, terrible pipelines.</strong> Founders were building things people wanted, but nobody knew those things existed — or why they should care.
+        </p>
+        <div class="highlight-block reveal delay-2">
+          "Most early-stage teams don't need five specialists and a bloated agency retainer. They need one person who's done the work."
         </div>
-        <div class="step" style="background: var(--cream-2); border-color: var(--line);">
-          <span class="step-num">02</span>
-          <h3 style="color: var(--ink);">Pick the right service</h3>
-          <p style="color: var(--ink-soft);">Sometimes it's one thing. Sometimes outbound and positioning need to move
-            together, and I'll say which, honestly.</p>
-        </div>
-        <div class="step" style="background: var(--cream-2); border-color: var(--line);">
-          <span class="step-num">03</span>
-          <h3 style="color: var(--ink);">Run it, hands-on</h3>
-          <p style="color: var(--ink-soft);">I execute the work directly, no handoffs to a junior team member you've
-            never spoken to.</p>
-        </div>
-        <div class="step" style="background: var(--cream-2); border-color: var(--line);">
-          <span class="step-num">04</span>
-          <h3 style="color: var(--ink);">Report it straight</h3>
-          <p style="color: var(--ink-soft);">Weekly, same day, every week: what moved, what didn't, and what's changing
-            next.</p>
-        </div>
+        <p class="reveal delay-3">
+          So I became that person. I learned GTM strategy by running it. I learned LinkedIn outbound by writing thousands of messages and iterating on response rates in real-time. I learned product positioning by watching what language made founders' eyes light up — and what made prospects go cold.
+        </p>
+        <p class="reveal delay-3">
+          <strong>Then I automated the parts that were slowing everything down.</strong> Invoice generation, lead intake, CRM sync, AI research briefs — because if the pipeline's working but operations are choking, you're still losing.
+        </p>
+        <p class="reveal delay-4">
+          Today I work directly with early-stage B2B founders as the one operator who moves between positioning, outbound, and automation. No handoffs. No juniors doing your work. <strong>Just someone who's seen what breaks first — and knows how to fix it.</strong>
+        </p>
       </div>
     </div>
   </section>
 
-  <section class="metrics-section" style="padding-top: 1rem;">
-    <div class="metrics-heading">
-      <span class="kicker">Case study</span>
-      <h2>Real results, one client at a time.</h2>
+  <!-- WHAT I KNOW -->
+  <section class="know-section" aria-label="Skills and expertise">
+    <div class="know-inner">
+      <div class="know-heading">
+        <span class="kicker reveal">Where I live</span>
+        <h2 class="reveal delay-1">At the intersection of pipeline,<br>product, and automation.</h2>
+      </div>
+      <div class="know-grid">
+        <div class="know-card reveal delay-1">
+          <span class="card-icon">🎯</span>
+          <h3>GTM Strategy & Positioning</h3>
+          <p>ICP definition, messaging architecture, and website copy that converts. If prospects can't articulate why they need you, that's a positioning problem — not a market problem.</p>
+          <span class="card-tag">Strategy</span>
+        </div>
+        <div class="know-card reveal delay-2">
+          <span class="card-icon">📨</span>
+          <h3>LinkedIn Outbound</h3>
+          <p>Founder-led outbound that feels human. I write the sequences, manage the motion, and put real demos on your calendar. Not vanity metrics — actual conversations.</p>
+          <span class="card-tag">Pipeline</span>
+        </div>
+        <div class="know-card reveal delay-3">
+          <span class="card-icon">🔍</span>
+          <h3>Product Consultancy</h3>
+          <p>When meetings book but demos don't convert, there's a product gap. I help founders close that loop with onboarding improvements and conversion optimization.</p>
+          <span class="card-tag">Product</span>
+        </div>
+        <div class="know-card reveal delay-1">
+          <span class="card-icon">⚡</span>
+          <h3>Business Automation</h3>
+          <p>Custom workflows that remove the manual drag from operations: invoice generation, lead intake systems, CRM auto-sync, and AI research briefs under 60 seconds.</p>
+          <span class="card-tag">Automation</span>
+        </div>
+        <div class="know-card reveal delay-2">
+          <span class="card-icon">🧠</span>
+          <h3>AI-Powered Intelligence</h3>
+          <p>Using AI to build smarter outreach, faster research, and better personalization — not as a gimmick but as genuine leverage that lets you do more with less.</p>
+          <span class="card-tag">AI</span>
+        </div>
+        <div class="know-card reveal delay-3">
+          <span class="card-icon">📊</span>
+          <h3>Revenue Operations</h3>
+          <p>Connecting the dots between marketing, sales, and ops so nothing leaks. Weekly honest reporting on what moved, what didn't, and what changes next.</p>
+          <span class="card-tag">RevOps</span>
+        </div>
+      </div>
     </div>
-    <div class="case-study-grid">
-      <a href="/case-study-mpleai" class="case-card">
-        <div class="case-card-logo">
+  </section>
+
+  <!-- NUMBERS STRIP -->
+  <section class="numbers-strip" aria-label="Key results">
+    <div class="numbers-inner">
+      <div class="number-item reveal">
+        <div class="num">100+</div>
+        <div class="num-label">B2B demos booked<br>via LinkedIn outbound</div>
+      </div>
+      <div class="number-item reveal delay-1">
+        <div class="num">36.5%</div>
+        <div class="num-label">LinkedIn connection<br>acceptance rate</div>
+      </div>
+      <div class="number-item reveal delay-2">
+        <div class="num">3</div>
+        <div class="num-label">Core service areas<br>GTM · Product · Automation</div>
+      </div>
+      <div class="number-item reveal delay-3">
+        <div class="num">1</div>
+        <div class="num-label">Operator across<br>all of it. Me.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDY PREVIEW -->
+  <section class="case-preview" aria-label="Case studies">
+    <div class="case-preview-inner">
+      <div class="section-heading">
+        <span class="kicker reveal">Real work</span>
+        <h2 class="reveal delay-1">From the trenches.</h2>
+      </div>
+      <a href="/case-studies" class="case-banner reveal delay-2" id="caseStudyBanner">
+        <div class="case-banner-left">
           <img src="/assets/client-mple-logo.png" alt="mple.ai">
+          <div class="case-banner-stat">
+            <span class="big">100+</span>
+            <span class="small">Qualified B2B demos booked</span>
+          </div>
         </div>
-        <div class="case-card-body">
-          <span class="card-label">GTM &amp; Outbound Case Study</span>
-          <h3>From thin leads to 100+ booked meetings</h3>
-          <p>ICP targeting, personalized messaging, and better timing turned mple.ai's outbound around.</p>
-          <span class="case-card-cta">Read the case study →</span>
+        <div class="case-banner-right">
+          <span class="tag">GTM &amp; Outbound</span>
+          <h3>From stalled outbound to 100+ booked meetings for mple.ai</h3>
+          <p>How targeted ICP mapping, personalized messaging, and better timing turned a broken outbound motion into a real pipeline — in weeks, not quarters.</p>
+          <span class="case-banner-cta">Read the full story →</span>
         </div>
       </a>
     </div>
   </section>
 
-  <section class="final-cta">
-    <h2>Let's find the right starting point.</h2>
-    <p>One conversation, no obligation. Tell me what's not working and I'll tell you honestly where to start.</p>
-    <button type="button" class="cta-btn" onclick="openContactModal()">Get in touch
+  <!-- SERVICES PREVIEW -->
+  <section class="services-preview" aria-label="Services overview">
+    <div class="services-preview-inner">
+      <div class="section-heading">
+        <span class="kicker reveal">What I do</span>
+        <h2 class="reveal delay-1">Three capabilities.<br>One person. Deeply connected.</h2>
+      </div>
+      <div class="services-grid">
+        <a href="/what-i-do#gtm" class="service-preview-card reveal delay-1" id="svcGtm">
+          <span class="svc-num">01</span>
+          <h3>GTM Consultancy &amp; Outbound</h3>
+          <p>Positioning, ICP mapping, messaging, and done-for-you founder-led LinkedIn outbound that puts real demos on your calendar.</p>
+          <span class="svc-link">Explore →</span>
+        </a>
+        <a href="/what-i-do#product" class="service-preview-card reveal delay-2" id="svcProduct">
+          <span class="svc-num">02</span>
+          <h3>Product Consultancy</h3>
+          <p>A focused second opinion for when meetings book but demos don't convert. Onboarding, prioritization, feedback loops, and conversion optimization.</p>
+          <span class="svc-link">Explore →</span>
+        </a>
+        <a href="/what-i-do#automation" class="service-preview-card reveal delay-3" id="svcAutomation">
+          <span class="svc-num">03</span>
+          <h3>Business &amp; AI Automations</h3>
+          <p>Custom workflows for the ops work that's slowing you down: invoice generation, lead intake, CRM sync, and AI-powered research briefs.</p>
+          <span class="svc-link">Explore →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" aria-label="Contact call to action">
+    <h2 class="reveal">Let's figure out where to start.</h2>
+    <p class="reveal delay-1">One honest conversation. Tell me what's not working and I'll tell you exactly where the break is — and whether I'm the right person to fix it.</p>
+    <button type="button" class="cta-btn reveal delay-2" onclick="openContactModal()" id="finalCtaBtn">
+      Book a call
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
         <path d="M5 12h14M13 6l6 6-6 6" />
       </svg>
     </button>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <div class="footer-top">
       <div class="footer-brand-col">
         <div class="footer-brand">
-          <img src="/assets/logo-icon-transparent.png" alt="Firstword" width="28" height="28">
-          <span>Firstword</span>
+          <div class="mark-sm">R</div>
+          <span>Rudra Trivedi</span>
         </div>
-        <p class="footer-desc">Growth Operations & Positioning for Early-Stage B2B SaaS. One operator, hands-on.</p>
+        <p class="footer-desc">GTM Operator, Growth Strategist & AI Automation Builder for early-stage B2B SaaS. Hands-on, always.</p>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Navigate</h4>
           <ul>
             <li><a href="/">Home</a></li>
+            <li><a href="/what-i-do">What I Do</a></li>
             <li><a href="/case-studies">Case Studies</a></li>
-            <li><a href="/coming-soon?service=blogs">Blogs</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="/gtm-consultancy">GTM Consultancy</a></li>
-            <li><a href="/product-consultancy">Product Consultancy</a></li>
-            <li><a href="/automation">Automations</a></li>
+            <li><a href="/what-i-do#gtm">GTM Consultancy</a></li>
+            <li><a href="/what-i-do#product">Product Consultancy</a></li>
+            <li><a href="/what-i-do#automation">AI Automations</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-tagline">© 2026 <strong>Firstword</strong>. Growth Ops for Early-Stage B2B SaaS.</div>
+      <div class="footer-tagline">© 2026 <strong>Rudra Trivedi</strong>. Operator. Builder. Early-Stage B2B.</div>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/rudra-trivedi-t04/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18v-8.4H5.67V18h2.67zM7 8.4a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zM18.34 18v-4.6c0-2.46-1.31-3.61-3.06-3.61-1.41 0-2.04.78-2.39 1.32v-1.13H10.2c.04.75 0 8.02 0 8.02h2.69v-4.48c0-.24.02-.48.09-.65.2-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82V18h2.63z" />
+            <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18v-8.4H5.67V18h2.67zM7 8.4a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zM18.34 18v-4.6c0-2.46-1.31-3.61-3.06-3.61-1.41 0-2.04.78-2.39 1.32v-1.13H10.2c.04.75 0 8.02 0 8.02h2.69v-4.48c0-.24.02-.48.09-.65.2-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82V18h2.63z" />
           </svg>
         </a>
         <a href="mailto:rudra@f1rstword.com" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round">
-            <path d="M4 4h16v16H4z" opacity="0" />
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 6l-10 7L2 6" />
             <rect x="2" y="4" width="20" height="16" rx="2" />
           </svg>
@@ -1973,20 +1505,20 @@
       </div>
     </div>
   </footer>
-  <div class="modal-overlay" id="contactModal" aria-hidden="true">
-    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-      <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
+
+  <!-- CONTACT MODAL -->
+  <div class="modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close dialog">✕</button>
 
       <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
-        <!-- Formspree Anti-Spam Honeypot & Routing Config -->
-        <input type="hidden" name="_subject" value="New Lead Submission from Firstword Website">
+        <input type="hidden" name="_subject" value="New Lead Submission from Rudra's Portfolio">
         <input type="hidden" name="_to" value="rudra@f1rstword.com">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="display:none !important" aria-hidden="true">
 
         <span class="modal-eyebrow">Let's talk</span>
         <h3 id="modalTitle">Tell me a bit about you</h3>
-        <p class="modal-sub">I'll follow up within a day with next steps. No auto-responder, an actual reply from me.
-        </p>
+        <p class="modal-sub">I'll follow up within a day with next steps. No auto-responder — an actual reply from me.</p>
 
         <div class="form-group">
           <label for="cf-name">Name</label>
@@ -1999,216 +1531,104 @@
         </div>
 
         <div class="form-group">
-          <label for="cf-company">Company name</label>
-          <input type="text" id="cf-company" name="company" placeholder="Your company" required minlength="2">
-        </div>
-
-        <div class="form-group">
-          <label for="cf-service">Service needed</label>
-          <select id="cf-service" name="service" required data-default="">
-            <option value="" disabled selected>Select a service</option>
-            <option value="GTM Consultancy">GTM Consultancy (Positioning &amp; Outbound)</option>
+          <label for="cf-service">What are you looking for?</label>
+          <select id="cf-service" name="service" required>
+            <option value="" disabled selected>Select an area</option>
+            <option value="GTM & Outbound">GTM Consultancy &amp; Outbound</option>
             <option value="Product Consultancy">Product Consultancy</option>
-            <option value="Automations">Automations (SMB &amp; Operations)</option>
-            <option value="Not sure yet">Not sure yet — let's talk</option>
+            <option value="Automations">Business &amp; AI Automations</option>
+            <option value="Not sure">Not sure yet — let's chat</option>
           </select>
         </div>
 
-        <div class="form-group">
-          <label for="cf-phone">Phone number <span class="optional-tag">(optional)</span></label>
-          <input type="tel" id="cf-phone" name="phone" placeholder="+91 00000 00000">
-        </div>
-
-        <div class="form-error" id="formError">Please fill in your name, email, and company to continue.</div>
-
-        <button type="submit" class="modal-submit" id="submitBtn">
-          Send it over
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"
-            stroke-linecap="round">
-            <path d="M5 12h14M13 6l6 6-6 6" />
-          </svg>
+        <button type="submit" class="modal-submit" id="contactSubmitBtn">
+          Send it →
         </button>
-        <p class="modal-note">No spam. Just a real reply from a real person.</p>
+        <p class="modal-note">No spam. Honest reply within 24 hours.</p>
       </form>
 
-      <div class="modal-success" id="modalSuccess">
+      <div class="modal-success" id="contactSuccess">
         <span class="success-icon">🎉</span>
-        <h3>Got it, thank you!</h3>
-        <p>I'll be in touch within a day. Talk soon.</p>
+        <h3>You're in the queue.</h3>
+        <p>I'll reply personally within 24 hours. Talk soon.</p>
       </div>
     </div>
   </div>
 
   <script>
-    // highlight active nav link
-    (function(){
-      var path = window.location.pathname.replace(/\/+$/, '') || '/';
-      document.querySelectorAll('.nav-links a[href]').forEach(function(a){
-        var href = a.getAttribute('href').split('?')[0].replace(/\/+$/, '') || '/';
-        if (href === path) a.style.background = 'rgba(26,21,35,0.10)';
-      });
-    })();
+    /* ---------- MOBILE NAV ---------- */
     function toggleMobileNav() {
-      const navLinks = document.getElementById('navLinks');
-      const toggleBtn = document.getElementById('navToggleBtn');
+      const btn = document.getElementById('navToggleBtn');
+      const links = document.getElementById('navLinks');
       const scrim = document.getElementById('navScrim');
-      const isOpen = navLinks.classList.toggle('open');
-      toggleBtn.classList.toggle('active', isOpen);
-      toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      scrim.classList.toggle('open', isOpen);
-      document.body.style.overflow = isOpen ? 'hidden' : '';
-      if (!isOpen) {
-        const servicesItem = document.getElementById('servicesNavItem');
-        if (servicesItem) servicesItem.classList.remove('mobile-open');
-      }
+      const open = links.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', open);
+      scrim.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
     }
 
-    // close mobile nav on Escape
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') {
-        const navLinks = document.getElementById('navLinks');
-        if (navLinks && navLinks.classList.contains('open')) toggleMobileNav();
-      }
-    });
-
-    function toggleServicesMobile(e) {
-      if (window.innerWidth <= 880) {
-        e.preventDefault();
-        document.getElementById('servicesNavItem').classList.toggle('mobile-open');
-        return false;
-      }
-      // on desktop, let it behave as a normal link (currently '#', update when Services page exists)
-      return true;
-    }
-
-    function openContactModal() {
-      document.getElementById('contactModal').classList.add('open');
-      document.getElementById('contactModal').setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
-      // pre-select the service dropdown based on the current page, if it hasn't been touched yet
-      const serviceSelect = document.getElementById('cf-service');
-      if (serviceSelect && !serviceSelect.dataset.userChanged) {
-        const defaultVal = serviceSelect.getAttribute('data-default');
-        if (defaultVal) {
-          for (const opt of serviceSelect.options) {
-            if (opt.value === defaultVal) { serviceSelect.value = defaultVal; break; }
-          }
+    /* ---------- SCROLL REVEAL ---------- */
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
-      }
-    }
-    function closeContactModal() {
-      document.getElementById('contactModal').classList.remove('open');
-      document.getElementById('contactModal').setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-      // reset error state so a stale error doesn't linger next time the modal opens
-      const errorEl = document.getElementById('formError');
-      if (errorEl) errorEl.classList.remove('show');
-      ['cf-name', 'cf-email', 'cf-company', 'cf-service'].forEach(function (id) {
-        const el = document.getElementById(id);
-        if (el) el.style.borderColor = '';
       });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => observer.observe(el));
+
+    /* ---------- CONTACT MODAL ---------- */
+    function openContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => modal.querySelector('input, select, button:not(.modal-close)').focus(), 100);
     }
-    // close on backdrop click
-    document.getElementById('contactModal').addEventListener('click', function (e) {
+
+    function closeContactModal() {
+      const modal = document.getElementById('contactModal');
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.getElementById('contactModal').addEventListener('click', function(e) {
       if (e.target === this) closeContactModal();
     });
-    // close on Escape
-    document.addEventListener('keydown', function (e) {
+
+    document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') closeContactModal();
     });
 
-    // handle submit via fetch so we can show an in-modal success state
-    const contactForm = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const formError = document.getElementById('formError');
-    const serviceSelectEl = document.getElementById('cf-service');
-    if (serviceSelectEl) {
-      serviceSelectEl.addEventListener('change', function () {
-        this.dataset.userChanged = 'true';
-      });
-    }
-
-    // Real email check: needs a local part, an @, and a domain with a valid-looking TLD.
-    // Works for company emails, Gmail, or any other domain.
-    function isValidEmail(value) {
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-      return emailPattern.test(value);
-    }
-
-    function setFieldInvalid(inputEl, invalid) {
-      if (invalid) {
-        inputEl.style.borderColor = '#D64545';
-      } else {
-        inputEl.style.borderColor = '';
-      }
-    }
-
-    contactForm.addEventListener('submit', function (e) {
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
       e.preventDefault();
-      formError.classList.remove('show');
-
-      // Honeypot check for spam bots
-      const gotchaInput = contactForm.querySelector('input[name="_gotcha"]');
-      if (gotchaInput && gotchaInput.value.trim() !== '') {
-        contactForm.classList.add('hide');
-        document.getElementById('modalSuccess').classList.add('show');
-        return;
-      }
-
-      const nameInput = document.getElementById('cf-name');
-      const emailInput = document.getElementById('cf-email');
-      const companyInput = document.getElementById('cf-company');
-      const serviceInput = document.getElementById('cf-service');
-
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const company = companyInput.value.trim();
-      const service = serviceInput.value.trim();
-
-      setFieldInvalid(nameInput, false);
-      setFieldInvalid(emailInput, false);
-      setFieldInvalid(companyInput, false);
-      setFieldInvalid(serviceInput, false);
-
-      const missing = [];
-      if (!name || name.length < 2) { missing.push('name'); setFieldInvalid(nameInput, true); }
-      if (!email) { missing.push('email'); setFieldInvalid(emailInput, true); }
-      else if (!isValidEmail(email)) { missing.push('a valid email'); setFieldInvalid(emailInput, true); }
-      if (!company || company.length < 2) { missing.push('company name'); setFieldInvalid(companyInput, true); }
-      if (!service) { missing.push('a service'); setFieldInvalid(serviceInput, true); }
-
-      if (missing.length > 0) {
-        const fieldList = missing.join(', ');
-        formError.textContent = 'Please add ' + fieldList + ' to continue.';
-        formError.classList.add('show');
-        return;
-      }
-
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
-
-      fetch(contactForm.action, {
-        method: 'POST',
-        body: new FormData(contactForm),
-        headers: { 'Accept': 'application/json' }
-      })
-        .then(function (response) {
-          if (response.ok) {
-            contactForm.classList.add('hide');
-            document.getElementById('modalSuccess').classList.add('show');
-          } else {
-            throw new Error('Submission failed');
-          }
-        })
-        .catch(function () {
-          formError.textContent = "Something went wrong. Please try again, or email me directly.";
-          formError.classList.add('show');
-          submitBtn.disabled = false;
-          submitBtn.textContent = 'Send it over';
+      const btn = document.getElementById('contactSubmitBtn');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+      try {
+        const res = await fetch(this.action, {
+          method: 'POST',
+          body: new FormData(this),
+          headers: { 'Accept': 'application/json' }
         });
+        if (res.ok) {
+          this.classList.add('hide');
+          document.getElementById('contactSuccess').classList.add('show');
+        } else {
+          btn.disabled = false;
+          btn.textContent = 'Send it →';
+          alert('Something went wrong. Please email me directly at rudra@f1rstword.com');
+        }
+      } catch (err) {
+        btn.disabled = false;
+        btn.textContent = 'Send it →';
+      }
     });
   </script>
 
 </body>
-
 </html>
