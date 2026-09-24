@@ -1,10 +1,10 @@
-# Firstword robots.txt
+# Firstword & Rudra Trivedi Portfolio robots.txt
 # https://first-word.netlify.app
 
 User-agent: *
 Allow: /
 
-# Explicit rules for AI / Answer Engine Crawlers (AEO)
+# Explicit permissions & optimized access for AI / LLM / Answer Engine Crawlers (AEO / GEO)
 User-agent: GPTBot
 Allow: /
 
@@ -17,10 +17,19 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
-User-agent: Google-Extended
+User-agent: Claude-Web
 Allow: /
 
 User-agent: Anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GoogleOther
+Allow: /
+
+User-agent: Applebot-Extended
 Allow: /
 
 User-agent: Bytespider
@@ -28,6 +37,16 @@ Allow: /
 
 User-agent: CCBot
 Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+# Machine-readable discovery files for LLMs
+# https://first-word.netlify.app/llms.txt
+# https://first-word.netlify.app/llms-full.txt
 
 # XML Sitemap Location
 Sitemap: https://first-word.netlify.app/sitemap.xml

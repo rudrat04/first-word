@@ -3,19 +3,18 @@
 # New portfolio pages
 /what-i-do             /what-i-do.html             200
 /case-studies          /case-studies.html          200
+/case-study-mpleai     /case-study-mpleai.html     200
 
 # Old service pages → redirect to new What I Do page with anchors
-/gtm-consultancy       /what-i-do#gtm              301
+/marketing-strategy    /what-i-do#strategy         301
+/gtm-consultancy       /what-i-do#strategy         301
 /product-consultancy   /what-i-do#product          301
 /automation            /what-i-do#automation       301
 
 # Old aliases → new pages
-/gtm-strategy          /what-i-do#gtm              301
-/website-positioning   /what-i-do#gtm              301
-/linkedin-outbound     /what-i-do#gtm              301
-
-# Old case study page → fold into new case studies page
-/case-study-mpleai     /case-studies               301
+/gtm-strategy          /what-i-do#strategy         301
+/website-positioning   /what-i-do#strategy         301
+/linkedin-outbound     /what-i-do#strategy         301
 
 # Legacy
 /coming-soon           /                           301

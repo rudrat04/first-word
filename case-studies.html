@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Case Studies — Rudra Trivedi</title>
-  <meta name="description" content="Real stories from real client work. See how Rudra Trivedi turned mple.ai's stalled outbound into 100+ qualified B2B demos.">
+  <meta name="description" content="Real stories from real client work. See how Rudra Trivedi audits bottlenecks, executes low-hanging wins, and builds reliable marketing & growth engines.">
   <link rel="canonical" href="https://first-word.netlify.app/case-studies">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://first-word.netlify.app/case-studies">
   <meta property="og:title" content="Case Studies — Rudra Trivedi">
-  <meta property="og:description" content="Real stories from real client work. mple.ai: 100+ qualified B2B demos via LinkedIn outbound.">
+  <meta property="og:description" content="Real stories from real client work: marketing audits, growth strategy, and pipeline execution.">
   <meta property="og:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://first-word.netlify.app/case-studies">
   <meta property="twitter:title" content="Case Studies — Rudra Trivedi">
-  <meta property="twitter:description" content="Real stories from real client work. mple.ai: 100+ qualified B2B demos via LinkedIn outbound.">
+  <meta property="twitter:description" content="Real stories from real client work: marketing audits, growth strategy, and pipeline execution.">
   <meta property="twitter:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -61,28 +61,17 @@
     /* ---------- SCROLL REVEAL ---------- */
     .reveal {
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
+      transform: translateY(24px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
     }
     .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-left {
-      opacity: 0; transform: translateX(-40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal-right {
-      opacity: 0; transform: translateX(40px);
-      transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .reveal-left.visible, .reveal-right.visible { opacity: 1; transform: translateX(0); }
     .delay-1 { transition-delay: 0.1s; }
-    .delay-2 { transition-delay: 0.2s; }
-    .delay-3 { transition-delay: 0.3s; }
-    .delay-4 { transition-delay: 0.4s; }
+    .delay-2 { transition-delay: 0.18s; }
 
     /* ---------- NAVBAR ---------- */
     .navbar {
       position: fixed;
-      top: 1.25rem; left: 50%;
+      top: 1rem; left: 50%;
       transform: translateX(-50%);
       z-index: 90;
       width: min(94%, 1180px);
@@ -90,8 +79,8 @@
       align-items: center;
       justify-content: space-between;
       gap: 1.5rem;
-      padding: 0.7rem 0.9rem 0.7rem 1.1rem;
-      background: rgba(255, 246, 238, 0.6);
+      padding: 0.65rem 0.9rem 0.65rem 1.1rem;
+      background: rgba(255, 246, 238, 0.65);
       backdrop-filter: blur(18px) saturate(160%);
       -webkit-backdrop-filter: blur(18px) saturate(160%);
       border: 1.5px solid rgba(26, 21, 35, 0.14);
@@ -108,7 +97,7 @@
     }
 
     .nav-logo .mark {
-      width: 34px; height: 34px;
+      width: 32px; height: 32px;
       border-radius: 10px;
       background: var(--ink);
       display: flex;
@@ -121,7 +110,7 @@
       content: 'R';
       font-family: 'Fraunces', serif;
       font-weight: 900;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       color: var(--coral);
     }
 
@@ -150,7 +139,7 @@
       font-weight: 600;
       color: var(--ink);
       text-decoration: none;
-      padding: 0.5rem 0.9rem;
+      padding: 0.45rem 0.85rem;
       border-radius: 999px;
       transition: background 0.15s ease;
       white-space: nowrap;
@@ -226,17 +215,17 @@
       .nav-links a.nav-cta { margin: 1rem 0 0; border-radius: 999px; text-align: center; padding: 0.9rem; }
     }
 
-    /* ---------- HERO ---------- */
+    /* ---------- HERO COMPACT ---------- */
     .hero {
       position: relative;
-      min-height: 75vh;
+      min-height: auto;
       background: linear-gradient(180deg, #EAB4A8 0%, #E7A7BE 28%, #C6A3D6 55%, #8FA9DA 85%, #6C97D2 100%);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: clamp(7rem, 16vw, 10rem) clamp(1rem, 4vw, 1.5rem) clamp(5rem, 8vw, 7rem);
+      padding: clamp(5.5rem, 10vw, 7rem) clamp(1rem, 4vw, 1.5rem) clamp(2rem, 3.5vw, 2.75rem);
       overflow: hidden;
     }
 
@@ -259,28 +248,11 @@
       background: rgba(255, 255, 255, 0.85);
       border: 1.5px solid var(--ink);
       border-radius: 999px;
-      padding: 0.45rem 1.1rem;
-      font-size: 0.82rem;
+      padding: 0.35rem 1rem;
+      font-size: 0.8rem;
       font-weight: 600;
-      margin-bottom: 2rem;
-      box-shadow: 3px 3px 0 rgba(26, 21, 35, 0.25);
-      animation: fadeSlideDown 0.8s ease forwards;
-    }
-
-    @keyframes fadeSlideDown {
-      from { opacity: 0; transform: translateY(-16px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-eyebrow .dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: var(--coral);
-      animation: pulse 1.8s ease-in-out infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.3); opacity: 0.6; }
+      margin-bottom: 1.25rem;
+      box-shadow: 2px 2px 0 rgba(26, 21, 35, 0.25);
     }
 
     .hero-headline {
@@ -288,135 +260,125 @@
       z-index: 2;
       font-family: 'Fraunces', serif;
       font-weight: 900;
-      font-size: clamp(2.8rem, 7.5vw, 6rem);
-      line-height: 0.95;
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      line-height: 1;
       letter-spacing: -0.02em;
       color: #FFEDD9;
       -webkit-text-stroke: 2px var(--ink);
       text-shadow:
         1px 1px 0 var(--coral-dark), 2px 2px 0 var(--coral-dark),
         3px 3px 0 var(--coral-dark), 4px 4px 0 var(--coral-dark),
-        5px 5px 0 var(--coral-dark), 6px 6px 0 var(--coral-dark),
-        7px 7px 0 var(--coral-dark), 8px 8px 0 var(--coral-dark),
-        9px 9px 14px rgba(26, 21, 35, 0.35);
-      max-width: 16ch;
+        5px 5px 0 var(--coral-dark), 6px 6px 10px rgba(26, 21, 35, 0.35);
+      max-width: 18ch;
       margin-bottom: 0.3em;
-      animation: heroIn 0.9s ease 0.2s both;
-    }
-
-    @keyframes heroIn {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     .hero-sub {
       position: relative;
       z-index: 2;
-      font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-size: clamp(1rem, 1.8vw, 1.15rem);
       font-weight: 500;
-      max-width: 38ch;
+      max-width: 44ch;
       color: var(--ink);
       line-height: 1.5;
-      margin-bottom: 0;
-      animation: heroIn 0.9s ease 0.35s both;
     }
 
     /* ---------- WAVE ---------- */
     .wave-divider { display: block; width: 100%; height: auto; margin-top: -2px; }
 
-    /* ---------- CASE STUDY BODY ---------- */
-    .case-body {
+    /* ---------- MAIN CONTAINER ---------- */
+    .cases-container {
       background: var(--cream);
-      padding: 6rem 1.5rem 4rem;
+      padding: clamp(2rem, 4vw, 3rem) 1.5rem clamp(2.5rem, 5vw, 3.5rem);
     }
 
-    .case-inner {
-      max-width: 1100px;
+    .cases-inner {
+      max-width: 1120px;
       margin: 0 auto;
     }
 
-    /* Section label */
-    .section-kicker {
-      display: inline-block;
-      font-size: 0.82rem;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--coral-dark);
-      margin-bottom: 0.75rem;
-    }
-
-    /* ---------- CASE STUDY HEADER CARD ---------- */
-    .cs-header-card {
+    /* ---------- FEATURED CASE STUDY BANNER ---------- */
+    .case-banner {
+      display: grid;
+      grid-template-columns: 1fr 1.35fr;
+      gap: 0;
       background: var(--cream-2);
       border: 2px solid var(--ink);
       border-radius: 28px;
       overflow: hidden;
-      box-shadow: 8px 8px 0 var(--line);
-      margin-bottom: 5rem;
+      box-shadow: 8px 8px 0 var(--ink);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      margin-top: 1rem;
     }
 
-    .cs-header-top {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      min-height: 340px;
+    .case-banner:hover {
+      transform: translateY(-6px);
+      box-shadow: 10px 14px 0 var(--ink);
     }
 
-    @media (max-width: 700px) {
-      .cs-header-top { grid-template-columns: 1fr; min-height: auto; }
+    @media (max-width: 780px) {
+      .case-banner { grid-template-columns: 1fr; }
     }
 
-    .cs-header-left {
-      background: linear-gradient(160deg, #EAB4A8 0%, #C6A3D6 55%, #8FA9DA 100%);
+    .case-banner-left {
+      background: linear-gradient(160deg, #EAB4A8 0%, #C6A3D6 60%, #8FA9DA 100%);
+      padding: 3rem 2.5rem;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: space-between;
-      padding: 2.5rem 2rem;
+      gap: 2.5rem;
       border-right: 2px solid var(--ink);
-      gap: 1.5rem;
     }
 
-    @media (max-width: 700px) {
-      .cs-header-left { border-right: none; border-bottom: 2px solid var(--ink); flex-direction: row; flex-wrap: wrap; padding: 1.75rem 2rem; }
+    @media (max-width: 780px) {
+      .case-banner-left { border-right: none; border-bottom: 2px solid var(--ink); padding: 2rem; }
     }
 
-    .cs-header-left img { height: 36px; width: auto; }
-
-    .cs-stat-group { display: flex; flex-direction: column; gap: 1.25rem; }
-
-    @media (max-width: 700px) {
-      .cs-stat-group { flex-direction: row; flex-wrap: wrap; gap: 1rem; }
+    .case-banner-left img {
+      max-height: 40px;
+      width: auto;
+      max-width: 150px;
+      object-fit: contain;
+      display: block;
     }
 
-    .cs-stat {}
+    .case-banner-stat {
+      display: flex;
+      flex-direction: column;
+    }
 
-    .cs-stat .big {
+    .case-banner-stat .big { 
       font-family: 'Fraunces', serif;
       font-weight: 900;
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-size: clamp(3rem, 6vw, 4.5rem);
       line-height: 1;
       color: #FFEDD9;
       -webkit-text-stroke: 1.5px var(--ink);
-      text-shadow: 2px 2px 0 var(--coral-dark);
+      text-shadow: 3px 3px 0 var(--coral-dark);
     }
 
-    .cs-stat .label {
-      font-size: 0.85rem;
+    .case-banner-stat .small {
+      font-size: 1rem;
       font-weight: 600;
       color: var(--ink);
-      margin-top: 0.2rem;
+      margin-top: 0.3rem;
     }
 
-    .cs-header-right {
-      padding: 2.5rem 2.5rem;
+    .case-banner-right {
+      padding: 3rem 2.5rem;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
-    .cs-tag {
+    @media (max-width: 780px) {
+      .case-banner-right { padding: 2rem; }
+    }
+
+    .case-banner-right .tag {
       display: inline-block;
       font-size: 0.78rem;
       font-weight: 700;
@@ -429,300 +391,38 @@
       width: fit-content;
     }
 
-    .cs-header-right h2 {
+    .case-banner-right h3 {
       font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-size: clamp(1.6rem, 3.2vw, 2.3rem);
       line-height: 1.15;
       color: var(--ink);
     }
 
-    .cs-header-right .cs-tldr {
-      font-size: 1.05rem;
-      line-height: 1.6;
+    .case-banner-right p {
+      font-size: 1.02rem;
+      line-height: 1.65;
       color: var(--ink-soft);
-      max-width: 48ch;
+      max-width: 44ch;
     }
 
-    .cs-header-right .cs-tldr strong { color: var(--ink); }
-
-    .cs-header-meta {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      padding: 1.5rem 2.5rem;
-      border-top: 2px solid var(--ink);
-      background: rgba(26, 21, 35, 0.03);
-    }
-
-    .cs-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 0.15rem;
-    }
-
-    .cs-meta-item .meta-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-soft);
-    }
-
-    .cs-meta-item .meta-value {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-
-    /* ---------- STORY NARRATIVE ---------- */
-    .narrative-section {
-      margin-bottom: 5rem;
-    }
-
-    .narrative-heading {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--ink);
-      margin-bottom: 1.5rem;
-      line-height: 1.15;
-    }
-
-    .narrative-body {
-      display: flex;
-      flex-direction: column;
-      gap: 1.2rem;
-    }
-
-    .narrative-body p {
-      font-size: clamp(1rem, 1.7vw, 1.1rem);
-      line-height: 1.7;
-      color: var(--ink-soft);
-    }
-
-    .narrative-body p strong { color: var(--ink); }
-
-    .pull-quote {
-      padding: 1.5rem 1.75rem;
-      border-left: 4px solid var(--coral);
-      background: var(--cream-2);
-      border-radius: 0 16px 16px 0;
-      font-family: 'Fraunces', serif;
-      font-size: clamp(1.1rem, 2vw, 1.4rem);
-      font-weight: 500;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--ink);
-    }
-
-    /* ---------- METRICS GRID ---------- */
-    .metrics-section {
-      margin-bottom: 5rem;
-    }
-
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-
-    @media (max-width: 860px) {
-      .metrics-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 540px) {
-      .metrics-grid { grid-template-columns: 1fr; }
-    }
-
-    .metric-card {
-      background: var(--cream-2);
-      border: 2px solid var(--ink);
-      border-radius: 24px;
-      padding: 2rem 1.75rem;
-      position: relative;
-      box-shadow: 5px 5px 0 var(--line);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .metric-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 5px 12px 0 var(--line);
-    }
-
-    .metric-card .card-label {
+    .case-banner-cta {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--ink);
-      color: var(--cream);
-      padding: 0.3rem 0.75rem;
-      border-radius: 999px;
-      margin-bottom: 1.4rem;
-    }
-
-    .metric-card .big-number {
-      font-family: 'Fraunces', serif;
-      font-weight: 900;
-      font-size: clamp(2.8rem, 5.5vw, 3.8rem);
-      line-height: 1;
-      color: var(--coral);
-      -webkit-text-stroke: 1.5px var(--ink);
-      margin-bottom: 0.4rem;
-    }
-
-    .metric-card .metric-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 0.75rem;
-      color: var(--ink);
-    }
-
-    .metric-card .metric-plain {
-      font-size: 0.92rem;
-      line-height: 1.55;
-      color: var(--ink-soft);
-    }
-
-    .metric-card .metric-plain strong { color: var(--ink); }
-
-    .metric-card .card-foot {
-      margin-top: 1.25rem;
-      padding-top: 1rem;
-      border-top: 1.5px dashed var(--line);
-      font-size: 0.82rem;
-      color: var(--ink-soft);
-      display: flex;
-      align-items: center;
       gap: 0.5rem;
-    }
-
-    /* ---------- PROCESS TIMELINE ---------- */
-    .timeline-section { margin-bottom: 5rem; }
-
-    .timeline {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 24px;
-      top: 28px;
-      bottom: 28px;
-      width: 2px;
-      background: linear-gradient(to bottom, var(--coral), var(--sky-3));
-    }
-
-    @media (max-width: 500px) {
-      .timeline::before { left: 18px; }
-    }
-
-    .timeline-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
-      padding: 1.75rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .timeline-item:last-child { border-bottom: none; }
-
-    .timeline-dot {
-      flex-shrink: 0;
-      width: 48px; height: 48px;
-      border-radius: 50%;
-      background: var(--cream);
-      border: 2.5px solid var(--ink);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Fraunces', serif;
       font-weight: 700;
-      font-size: 1rem;
-      color: var(--coral);
-      position: relative;
-      z-index: 1;
-      box-shadow: 3px 3px 0 var(--line);
-    }
-
-    @media (max-width: 500px) {
-      .timeline-dot { width: 38px; height: 38px; font-size: 0.85rem; }
-      .timeline-item { gap: 1.25rem; }
-    }
-
-    .timeline-content {}
-
-    .timeline-content h4 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: var(--ink);
-    }
-
-    .timeline-content p {
-      font-size: 0.97rem;
-      line-height: 1.6;
-      color: var(--ink-soft);
-    }
-
-    .timeline-content p strong { color: var(--ink); }
-
-    /* ---------- LEARNINGS ---------- */
-    .learnings-section { margin-bottom: 5rem; }
-
-    .learnings-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
-
-    @media (max-width: 640px) {
-      .learnings-grid { grid-template-columns: 1fr; }
-    }
-
-    .learning-card {
-      background: var(--ink);
-      color: var(--cream);
-      border-radius: 20px;
-      padding: 1.75rem 1.5rem;
-      transition: transform 0.2s ease;
-    }
-
-    .learning-card:hover { transform: translateY(-3px); }
-
-    .learning-card .l-icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.75rem;
-      display: block;
-    }
-
-    .learning-card h4 {
-      font-family: 'Fraunces', serif;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .learning-card p {
-      font-size: 0.88rem;
-      line-height: 1.55;
-      color: rgba(255, 246, 238, 0.75);
+      color: var(--coral-dark);
+      font-size: 0.95rem;
+      border-bottom: 2px solid var(--coral-dark);
+      padding-bottom: 2px;
+      width: fit-content;
+      margin-top: 0.5rem;
     }
 
     /* ---------- FINAL CTA ---------- */
     .final-cta {
       background: linear-gradient(180deg, #6C97D2 0%, #8FA9DA 30%, #C6A3D6 60%, #E7A7BE 85%, #EAB4A8 100%);
-      padding: 7rem 1.5rem;
+      padding: clamp(4.5rem, 8vw, 6rem) 1.5rem;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -740,7 +440,7 @@
       position: relative;
       font-family: 'Fraunces', serif;
       font-weight: 900;
-      font-size: clamp(2.3rem, 6vw, 4.5rem);
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
       line-height: 1.05;
       color: #FFEDD9;
       -webkit-text-stroke: 1.5px var(--ink);
@@ -749,202 +449,257 @@
         3px 3px 0 var(--coral-dark), 4px 4px 0 var(--coral-dark),
         5px 5px 0 var(--coral-dark), 6px 6px 10px rgba(26, 21, 35, 0.3);
       max-width: 18ch;
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 0.85rem;
     }
 
     .final-cta p {
       position: relative;
-      max-width: 42ch;
-      margin: 0 auto 2.5rem;
-      font-size: 1.1rem;
-      font-weight: 500;
+      font-size: clamp(0.98rem, 1.8vw, 1.15rem);
+      max-width: 38ch;
+      margin: 0 auto 2rem;
       color: var(--ink);
+      font-weight: 500;
     }
 
     .cta-btn {
+      position: relative;
       display: inline-flex;
       align-items: center;
-      gap: 0.65rem;
+      gap: 0.6rem;
+      background: var(--coral);
+      color: var(--cream);
       font-family: 'Space Grotesk', sans-serif;
       font-weight: 700;
       font-size: 1.05rem;
-      background: var(--coral);
-      color: var(--cream);
-      padding: 0.95rem 1.9rem;
+      padding: 0.95rem 2.2rem;
       border-radius: 999px;
       border: 2px solid var(--ink);
       box-shadow: 4px 4px 0 var(--ink);
       cursor: pointer;
       text-decoration: none;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
     }
 
-    .cta-btn:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+    .cta-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--ink);
+      background: var(--coral-dark);
+    }
+
     .cta-btn svg { width: 18px; height: 18px; }
 
     /* ---------- FOOTER ---------- */
     footer {
       background: var(--ink);
-      color: rgba(255, 246, 238, 0.55);
-      padding: 3.5rem 1.5rem 2rem;
-      font-size: 0.85rem;
+      color: var(--cream);
+      padding: clamp(3.5rem, 6vw, 4.5rem) 1.5rem 2.5rem;
     }
-
-    footer strong { color: var(--cream); }
-    footer a { text-decoration: none; }
 
     .footer-top {
       max-width: 1100px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-      padding-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255, 246, 238, 0.12);
     }
 
-    .footer-brand-col { max-width: 260px; }
+    @media (max-width: 700px) {
+      .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    }
 
     .footer-brand {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.9rem;
+      gap: 0.75rem;
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
     }
 
     .footer-brand .mark-sm {
-      width: 28px; height: 28px;
-      border-radius: 8px;
+      width: 30px; height: 30px;
       background: var(--coral);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Fraunces', serif;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
       font-weight: 900;
-      font-size: 1rem;
+      font-size: 0.95rem;
       color: var(--cream);
     }
 
-    .footer-brand span { font-family: 'Fraunces', serif; font-weight: 700; font-size: 1.05rem; color: var(--cream); }
-    .footer-desc { font-size: 0.83rem; line-height: 1.5; }
-    .footer-cols { display: flex; gap: 3rem; flex-wrap: wrap; }
+    .footer-desc {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: rgba(255, 246, 238, 0.65);
+      max-width: 38ch;
+    }
+
+    .footer-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      color: var(--coral);
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 0.6rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-phone-link:hover { color: #FFA08D; }
+
+    .footer-cols { display: flex; gap: 3rem; }
 
     .footer-col h4 {
-      color: var(--cream);
-      font-size: 0.78rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      margin-bottom: 0.9rem;
+      color: var(--coral);
+      margin-bottom: 1rem;
     }
 
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
-    .footer-col a { color: rgba(255, 246, 238, 0.7); font-weight: 500; transition: color 0.15s ease; }
-    .footer-col a:hover { color: var(--coral); }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.65rem; }
+
+    .footer-col a {
+      color: rgba(255, 246, 238, 0.7);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.15s ease;
+    }
+
+    .footer-col a:hover { color: var(--cream); }
 
     .footer-bottom {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 2rem auto 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
       flex-wrap: wrap;
-      padding-top: 1.75rem;
-      border-top: 1px solid rgba(255, 246, 238, 0.12);
+      gap: 1rem;
+      font-size: 0.85rem;
+      color: rgba(255, 246, 238, 0.45);
     }
 
-    .footer-tagline { font-size: 0.8rem; }
-    .footer-social { display: flex; align-items: center; gap: 0.75rem; }
+    .footer-social { display: flex; gap: 0.75rem; }
 
     .footer-social a {
-      display: flex; align-items: center; justify-content: center;
       width: 36px; height: 36px;
       border-radius: 50%;
-      background: rgba(255, 246, 238, 0.08);
+      border: 1px solid rgba(255, 246, 238, 0.2);
+      display: flex; align-items: center; justify-content: center;
       color: var(--cream);
-      transition: background 0.15s ease;
+      text-decoration: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
     }
 
-    .footer-social a:hover { background: var(--coral); color: var(--ink); }
-    .footer-social svg { width: 17px; height: 17px; }
-
-    @media (max-width: 640px) {
-      .footer-top { flex-direction: column; }
-      .footer-bottom { flex-direction: column; text-align: center; }
+    .footer-social a:hover {
+      border-color: var(--coral);
+      background: rgba(255, 82, 51, 0.15);
     }
 
-    /* ---------- CONTACT MODAL ---------- */
+    .footer-social a svg { width: 16px; height: 16px; }
+
+    /* ---------- MODAL ---------- */
     .modal-overlay {
-      position: fixed; inset: 0;
-      background: rgba(26, 21, 35, 0.55);
-      backdrop-filter: blur(3px);
       display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 21, 35, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 100;
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
-      z-index: 100;
     }
 
-    .modal-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
-    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    .modal-overlay.open { display: flex; }
 
     .modal-card {
       background: var(--cream);
       border: 2.5px solid var(--ink);
       border-radius: 28px;
-      max-width: 460px;
-      width: 100%;
+      box-shadow: 8px 8px 0 var(--ink);
+      width: min(100%, 520px);
+      padding: clamp(2rem, 5vw, 2.75rem);
+      position: relative;
       max-height: 90vh;
       overflow-y: auto;
-      padding: 2.5rem 2.25rem 2.25rem;
-      position: relative;
-      box-shadow: 8px 8px 0 var(--coral);
-      animation: popIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+      animation: modalIn 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    @keyframes popIn {
-      from { opacity: 0; transform: scale(0.9) translateY(10px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
+    @keyframes modalIn {
+      from { transform: scale(0.94) translateY(10px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
     }
 
     .modal-close {
       position: absolute;
-      top: 1.1rem; right: 1.1rem;
+      top: 1.25rem; right: 1.25rem;
       width: 36px; height: 36px;
       border-radius: 50%;
-      border: 2px solid var(--ink);
-      background: var(--cream);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      border: 1.5px solid var(--ink);
+      background: var(--cream-2);
       cursor: pointer;
       font-size: 1.1rem;
-      color: var(--ink);
-      transition: transform 0.15s ease, background 0.15s ease;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s ease;
     }
 
-    .modal-close:hover { background: var(--coral); color: var(--cream); transform: rotate(90deg); }
+    .modal-close:hover { background: var(--coral); color: var(--cream); }
 
-    .modal-eyebrow { display: inline-block; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral-dark); margin-bottom: 0.6rem; }
+    .modal-eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--coral-dark);
+      margin-bottom: 0.5rem;
+    }
 
-    .modal-card h3 { font-family: 'Fraunces', serif; font-weight: 800; font-size: 1.7rem; line-height: 1.15; margin-bottom: 0.5rem; }
+    .modal-card h3 {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
 
-    .modal-card .modal-sub { font-size: 0.92rem; color: var(--ink-soft); margin-bottom: 1.6rem; line-height: 1.5; }
+    .modal-sub {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.5;
+      margin-bottom: 1.75rem;
+    }
 
-    .form-group { margin-bottom: 1.1rem; }
-    .form-group label { display: block; font-size: 0.8rem; font-weight: 700; margin-bottom: 0.4rem; }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
 
-    .form-group input, .form-group select {
-      width: 100%;
+    .form-group label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .form-group input,
+    .form-group select {
       font-family: 'Space Grotesk', sans-serif;
-      font-size: 0.98rem;
-      padding: 0.75rem 1rem;
-      border: 2px solid var(--ink);
+      font-size: 0.95rem;
+      padding: 0.85rem 1.1rem;
+      border: 1.5px solid var(--ink);
       border-radius: 12px;
       background: var(--cream-2);
       color: var(--ink);
       transition: border-color 0.15s ease, box-shadow 0.15s ease;
+      width: 100%;
     }
 
     .form-group select {
@@ -1018,198 +773,44 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-eyebrow"><span class="dot"></span> Case Studies</div>
-    <h1 class="hero-headline">Real work.<br>Real results.</h1>
-    <p class="hero-sub">I don't take credit for things I didn't do. Here's the story of the work — the problem, what I tried, what worked, and the numbers that came out.</p>
+    <h1 class="hero-headline">Real Work.<br>Real Results.</h1>
+    <p class="hero-sub">No made-up case studies or inflated agency claims. Here is the breakdown of real client engagements.</p>
   </section>
 
   <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FFF6EE"/>
   </svg>
 
-  <!-- CASE STUDY: mple.ai -->
-  <section class="case-body" aria-labelledby="case-mpleai-heading">
-    <div class="case-inner">
+  <!-- CASE STUDIES HUB -->
+  <main class="cases-container">
+    <div class="cases-inner">
 
-      <!-- HEADER CARD -->
-      <div class="cs-header-card reveal">
-        <div class="cs-header-top">
-          <div class="cs-header-left">
-            <img src="/assets/client-mple-logo.png" alt="mple.ai">
-            <div class="cs-stat-group">
-              <div class="cs-stat">
-                <div class="big">100+</div>
-                <div class="label">Demos booked</div>
-              </div>
-              <div class="cs-stat">
-                <div class="big">36.5%</div>
-                <div class="label">Connection acceptance rate</div>
-              </div>
-            </div>
-          </div>
-          <div class="cs-header-right">
-            <span class="cs-tag">GTM &amp; LinkedIn Outbound</span>
-            <h2 id="case-mpleai-heading">From stalled outbound to 100+ qualified B2B meetings</h2>
-            <p class="cs-tldr">
-              mple.ai had a solid product and a small but motivated team. What they <em>didn't</em> have was a working outbound motion. Vague ICPs, generic sequences, and zero tracking. <strong>I rebuilt it from the ground up — and then ran it.</strong>
-            </p>
+      <!-- FEATURED CASE STUDY: MPLE.AI -->
+      <a href="/case-study-mpleai" class="case-banner reveal delay-1" id="caseStudyMple">
+        <div class="case-banner-left">
+          <img src="/assets/client-mple-logo.png" alt="mple.ai">
+          <div class="case-banner-stat">
+            <span class="big">100+</span>
+            <span class="small">Qualified B2B demos booked</span>
           </div>
         </div>
-        <div class="cs-header-meta">
-          <div class="cs-meta-item">
-            <span class="meta-label">Client</span>
-            <span class="meta-value">mple.ai</span>
-          </div>
-          <div class="cs-meta-item">
-            <span class="meta-label">Service</span>
-            <span class="meta-value">GTM Consultancy &amp; LinkedIn Outbound</span>
-          </div>
-          <div class="cs-meta-item">
-            <span class="meta-label">Industry</span>
-            <span class="meta-value">B2B SaaS / AI Tools</span>
-          </div>
-          <div class="cs-meta-item">
-            <span class="meta-label">Timeline</span>
-            <span class="meta-value">3 months of active outbound</span>
-          </div>
+        <div class="case-banner-right">
+          <span class="tag">Marketing Strategy &amp; Audits</span>
+          <h3>From stalled outbound to 100+ booked meetings for mple.ai</h3>
+          <p>How targeted ICP mapping, personalized messaging, and stage auditing turned a broken outbound motion into a predictable pipeline — in weeks, not quarters.</p>
+          <span class="case-banner-cta">Read the full case study →</span>
         </div>
-      </div>
-
-      <!-- THE PROBLEM -->
-      <div class="narrative-section">
-        <span class="section-kicker reveal">The problem</span>
-        <h3 class="narrative-heading reveal delay-1">Outbound was happening. Nothing was converting.</h3>
-        <div class="narrative-body">
-          <p class="reveal delay-1">
-            When I first spoke to the mple.ai team, they weren't sitting still. They were sending connection requests, writing messages, and booking calls. <strong>But nothing was converting into real pipeline.</strong>
-          </p>
-          <p class="reveal delay-2">
-            The issue wasn't effort. The issue was that nobody had taken the time to actually define who they were talking to, what those people cared about, or why mple.ai was the right solution for their specific problem. The messaging was generic. The ICP was essentially "anyone who might benefit from AI tools in their workflow." That's not an ICP — that's a prayer.
-          </p>
-          <div class="pull-quote reveal delay-2">
-            "They were sending hundreds of messages a month with near-zero response rate. The problem wasn't volume — it was that nobody felt like the message was for them."
-          </div>
-          <p class="reveal delay-3">
-            On top of the messaging problem, there was no tracking. No A/B testing. No understanding of which segments responded better, which message frames landed, or what time of day/week got more replies. The outbound was a black box — and the team was flying blind inside it.
-          </p>
-        </div>
-      </div>
-
-      <!-- THE APPROACH -->
-      <div class="narrative-section">
-        <span class="section-kicker reveal">What I did</span>
-        <h3 class="narrative-heading reveal delay-1">Rebuilt the motion from the ICP down.</h3>
-        <div class="narrative-body">
-          <p class="reveal delay-1">
-            Before writing a single message, I spent two weeks on discovery: talking to existing customers, reviewing sales call recordings, and mapping which industries, roles, and company sizes had the clearest problem-to-solution fit for mple.ai. The goal was to narrow, not broaden — to get <strong>precise rather than comprehensive.</strong>
-          </p>
-          <p class="reveal delay-2">
-            Out of that process came three distinct ICP segments with specific targeting criteria, pain point frames, and timing signals. Each segment got its own messaging — not just a different opening line, but a completely different angle based on how that persona thinks about their problem.
-          </p>
-        </div>
-      </div>
-
-      <!-- PROCESS TIMELINE -->
-      <div class="timeline-section">
-        <span class="section-kicker reveal">The execution</span>
-        <h3 class="narrative-heading reveal delay-1">Week by week, iteration by iteration.</h3>
-        <div class="timeline">
-          <div class="timeline-item reveal delay-1">
-            <div class="timeline-dot">01</div>
-            <div class="timeline-content">
-              <h4>ICP Discovery & Segmentation (Weeks 1–2)</h4>
-              <p>Customer interviews, sales call analysis, and competitive research to define three tight ICP segments. Each with job titles, company stages, and specific pain triggers that mple.ai actually solves.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal delay-2">
-            <div class="timeline-dot">02</div>
-            <div class="timeline-content">
-              <h4>Messaging Architecture (Week 3)</h4>
-              <p>Three distinct message frameworks — one per segment. Connection request, follow-up sequence, and value messages written and reviewed. No generic copy, no AI-written spam. <strong>Specific, human, direct.</strong></p>
-            </div>
-          </div>
-          <div class="timeline-item reveal delay-3">
-            <div class="timeline-dot">03</div>
-            <div class="timeline-content">
-              <h4>Outbound Launch (Weeks 4–6)</h4>
-              <p>Outbound went live across all three segments. Tracking in place: acceptance rate, response rate, reply sentiment, and meeting booked rate. A/B testing message variants weekly.</p>
-            </div>
-          </div>
-          <div class="timeline-item reveal delay-4">
-            <div class="timeline-dot">04</div>
-            <div class="timeline-content">
-              <h4>Optimize & Scale (Weeks 7–12)</h4>
-              <p>Dropped the lowest-performing segment. Doubled down on the two that worked. <strong>Refined timing, message length, and personalization depth</strong> based on real response data. Scale up volume within what worked.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- METRICS -->
-      <div class="metrics-section">
-        <span class="section-kicker reveal">The results</span>
-        <h3 class="narrative-heading reveal delay-1">Three months of data that speak for themselves.</h3>
-        <div class="metrics-grid">
-          <div class="metric-card reveal delay-1">
-            <span class="card-label">Outbound Performance</span>
-            <div class="big-number">36.5%</div>
-            <div class="metric-title">LinkedIn Connection Acceptance Rate</div>
-            <p class="metric-plain">Industry average hovers around <strong>20–25%</strong>. A 36.5% acceptance rate means the targeting was tight and the connection message felt personal enough to say yes to.</p>
-            <div class="card-foot">🎯 Measured across 3 ICP segments</div>
-          </div>
-          <div class="metric-card reveal delay-2">
-            <span class="card-label">Pipeline Built</span>
-            <div class="big-number">100+</div>
-            <div class="metric-title">Qualified B2B Demo Meetings Booked</div>
-            <p class="metric-plain">Not vanity meetings. <strong>Qualified demos</strong> with decision-makers at companies that fit the refined ICP — companies with real budget, real need, and real timelines.</p>
-            <div class="card-foot">📅 Over a 3-month active outbound period</div>
-          </div>
-          <div class="metric-card reveal delay-3">
-            <span class="card-label">System Built</span>
-            <div class="big-number">3</div>
-            <div class="metric-title">Fully Documented ICP Playbooks</div>
-            <p class="metric-plain">Not just results — a <strong>repeatable system</strong>. The ICP definitions, message frameworks, and tracking dashboards were handed off so the team could keep the motion running without me.</p>
-            <div class="card-foot">📋 Handoff documentation included</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- LEARNINGS -->
-      <div class="learnings-section">
-        <span class="section-kicker reveal">What I took away</span>
-        <h3 class="narrative-heading reveal delay-1">The honest lessons from this engagement.</h3>
-        <div class="learnings-grid">
-          <div class="learning-card reveal delay-1">
-            <span class="l-icon">🔍</span>
-            <h4>Specificity beats reach every time</h4>
-            <p>The instinct is always to talk to everyone. Narrowing to three tight segments and talking to each one in their own language is what moved the needle. Less breadth, more depth.</p>
-          </div>
-          <div class="learning-card reveal delay-2">
-            <span class="l-icon">⏰</span>
-            <h4>Timing signals are underrated</h4>
-            <p>Certain triggers — new funding, headcount growth, product launches — dramatically increased response rates. The right message at the right moment is 3x more effective than a perfect message at the wrong time.</p>
-          </div>
-          <div class="learning-card reveal delay-3">
-            <span class="l-icon">🔄</span>
-            <h4>The first 4 weeks are a data-collection exercise</h4>
-            <p>Don't judge outbound by week 2 results. The first month is learning what doesn't work. The real gains come from iteration cycles in weeks 6–12.</p>
-          </div>
-          <div class="learning-card reveal delay-4">
-            <span class="l-icon">📝</span>
-            <h4>Short messages. Clear ask. Human tone.</h4>
-            <p>Every message format that worked followed the same pattern: short, specific to them, one clear call to action. Anything longer than 4 sentences got significantly worse response rates.</p>
-          </div>
-        </div>
-      </div>
+      </a>
 
     </div>
-  </section>
+  </main>
 
   <!-- FINAL CTA -->
   <section class="final-cta">
     <h2 class="reveal">Want a story like this?</h2>
-    <p class="reveal delay-1">If your outbound is happening but nothing is converting — or if you haven't started yet — let's figure out where the break is.</p>
+    <p class="reveal delay-1">If you need an honest audit of your growth stage and a reliable system to build pipeline, let's talk.</p>
     <button type="button" class="cta-btn reveal delay-2" onclick="openContactModal()" id="finalCtaBtn">
-      Talk to me about your pipeline
+      Talk to me about your growth
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
         <path d="M5 12h14M13 6l6 6-6 6" />
       </svg>
@@ -1224,7 +825,13 @@
           <div class="mark-sm">R</div>
           <span>Rudra Trivedi</span>
         </div>
-        <p class="footer-desc">GTM Operator, Growth Strategist & AI Automation Builder for early-stage B2B SaaS. Hands-on, always.</p>
+        <p class="footer-desc">Marketing Strategist, Growth Auditor &amp; AI Automation Builder for early-stage B2B SaaS. Hands-on, always.</p>
+        <a href="tel:+919867625784" class="footer-phone-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          +91 9867625784
+        </a>
       </div>
       <div class="footer-cols">
         <div class="footer-col">
@@ -1238,7 +845,7 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="/what-i-do#gtm">GTM Consultancy</a></li>
+            <li><a href="/what-i-do#strategy">Marketing Strategy &amp; Audits</a></li>
             <li><a href="/what-i-do#product">Product Consultancy</a></li>
             <li><a href="/what-i-do#automation">AI Automations</a></li>
           </ul>
@@ -1248,6 +855,11 @@
     <div class="footer-bottom">
       <div class="footer-tagline">© 2026 <strong>Rudra Trivedi</strong>. Operator. Builder. Early-Stage B2B.</div>
       <div class="footer-social">
+        <a href="tel:+919867625784" aria-label="Phone: +91 9867625784" title="+91 9867625784">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </a>
         <a href="https://www.linkedin.com/in/rudra-trivedi-t04/" target="_blank" rel="noopener" aria-label="LinkedIn">
           <svg viewBox="0 0 24 24" fill="currentColor">
             <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.34 18v-8.4H5.67V18h2.67zM7 8.4a1.55 1.55 0 100-3.1 1.55 1.55 0 000 3.1zM18.34 18v-4.6c0-2.46-1.31-3.61-3.06-3.61-1.41 0-2.04.78-2.39 1.32v-1.13H10.2c.04.75 0 8.02 0 8.02h2.69v-4.48c0-.24.02-.48.09-.65.2-.48.63-.98 1.37-.98.97 0 1.36.74 1.36 1.82V18h2.63z" />
@@ -1266,7 +878,7 @@
   <!-- CONTACT MODAL -->
   <div class="modal-overlay" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-card">
-      <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close">✕</button>
+      <button type="button" class="modal-close" onclick="closeContactModal()" aria-label="Close dialog">✕</button>
 
       <form class="modal-form" id="contactForm" action="https://formspree.io/f/xbdnlrwr" method="POST">
         <input type="hidden" name="_subject" value="New Lead Submission from Rudra's Portfolio">
@@ -1291,7 +903,7 @@
           <label for="cf-service">What are you looking for?</label>
           <select id="cf-service" name="service" required>
             <option value="" disabled selected>Select an area</option>
-            <option value="GTM & Outbound">GTM Consultancy &amp; Outbound</option>
+            <option value="Marketing Strategy & Audits">Marketing Strategy &amp; Audits</option>
             <option value="Product Consultancy">Product Consultancy</option>
             <option value="Automations">Business &amp; AI Automations</option>
             <option value="Not sure">Not sure yet — let's chat</option>
@@ -1322,7 +934,7 @@
       document.body.style.overflow = open ? 'hidden' : '';
     }
 
-    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealEls = document.querySelectorAll('.reveal');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -1330,7 +942,7 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    }, { threshold: 0.1, rootMargin: '0px 0px -20px 0px' });
     revealEls.forEach(el => observer.observe(el));
 
     function openContactModal() {
