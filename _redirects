@@ -4,6 +4,7 @@
 /what-i-do             /what-i-do.html             200
 /case-studies          /case-studies.html          200
 /case-study-mpleai     /case-study-mpleai.html     200
+/diu                   /diu.html                   200
 
 # Old service pages → redirect to new What I Do page with anchors
 /marketing-strategy    /what-i-do#strategy         301
