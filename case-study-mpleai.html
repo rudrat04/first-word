@@ -4,18 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>mple.ai Case Study — Rudra Trivedi</title>
+  <title>mple.ai Case Study | Rudra Trivedi</title>
   <meta name="description" content="How Rudra Trivedi audited mple.ai's stalled outbound motion, rebuilt ICP targeting and messaging, and delivered 100+ qualified B2B SaaS demos.">
   <link rel="canonical" href="https://first-word.netlify.app/case-study-mpleai">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://first-word.netlify.app/case-study-mpleai">
-  <meta property="og:title" content="mple.ai Case Study — Rudra Trivedi">
+  <meta property="og:title" content="mple.ai Case Study | Rudra Trivedi">
   <meta property="og:description" content="From stalled outbound to 100+ qualified B2B SaaS demos via targeted ICP messaging & LinkedIn outbound.">
   <meta property="og:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://first-word.netlify.app/case-study-mpleai">
-  <meta property="twitter:title" content="mple.ai Case Study — Rudra Trivedi">
+  <meta property="twitter:title" content="mple.ai Case Study | Rudra Trivedi">
   <meta property="twitter:description" content="From stalled outbound to 100+ qualified B2B SaaS demos via targeted ICP messaging & LinkedIn outbound.">
   <meta property="twitter:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
@@ -199,19 +199,23 @@
       .nav-toggle { display: flex; }
       .nav-links {
         display: none;
-        position: fixed;
-        top: 0; left: 0; right: 0;
+        position: absolute;
+        top: calc(100% + 0.6rem); left: 0; right: 0;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
         background: var(--cream);
-        border-bottom: 2px solid var(--ink);
-        padding: 5rem 1.5rem 2rem;
-        z-index: 85;
-        box-shadow: 0 8px 40px rgba(26, 21, 35, 0.18);
+        border: 2px solid var(--ink);
+        border-radius: 24px;
+        padding: 0.5rem 1.25rem 1.25rem;
+        z-index: 95;
+        box-shadow: 6px 6px 0 var(--ink);
+        max-height: calc(100vh - 6rem);
+        overflow-y: auto;
       }
       .nav-links.open { display: flex; }
       .nav-links li { border-bottom: 1px solid var(--line); }
+      .nav-links li:last-child { border-bottom: none; }
       .nav-links a { display: block; padding: 0.9rem 0.5rem; border-radius: 0; font-size: 1.1rem; }
       .nav-links a.nav-cta { margin: 1rem 0 0; border-radius: 999px; text-align: center; padding: 0.9rem; }
     }
@@ -1026,8 +1030,10 @@
 
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="/what-i-do">What I Do</a></li>
+      <li><a href="/what-i-do">Services</a></li>
       <li><a href="/case-studies" class="active">Case Studies</a></li>
+      <li><a href="/#experience">Experience</a></li>
+      <li><a href="/assets/Rudra-Trivedi-Resume.pdf" download>Resume</a></li>
       <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;" id="navCtaBtn">Let's Talk</a></li>
     </ul>
   </nav>
@@ -1073,7 +1079,7 @@
             <span class="cs-tag">Marketing Strategy &amp; Audits</span>
             <h2>From stalled outbound to 100+ qualified B2B meetings</h2>
             <p class="cs-tldr">
-              mple.ai had a solid AI product and an energetic team. What they <em>didn't</em> have was a functioning marketing system. Vague ICPs, spray-and-pray sequences, and zero tracking. <strong>I audited the bottlenecks, rebuilt the motion from the ground up, and executed it into a predictable pipeline.</strong>
+              mple.ai had a solid AI product and an energetic team. What they <em>didn't</em> have was a functioning marketing system. Vague ICPs, spray and pray sequences, and zero tracking. <strong>I audited the bottlenecks, rebuilt the motion from the ground up, and executed it into a predictable pipeline.</strong>
             </p>
           </div>
         </div>
@@ -1103,13 +1109,13 @@
         <h3 class="narrative-heading reveal delay-1">Outbound was happening. Nothing was converting.</h3>
         <div class="narrative-body">
           <p class="reveal delay-1">
-            When I first audited mple.ai's pipeline, the team wasn't idle. They were sending connection requests, writing follow-ups, and burning hours every week. <strong>Yet their conversion into qualified meetings was flatlining.</strong>
+            When I first audited mple.ai's pipeline, the team wasn't idle. They were sending connection requests, writing follow ups, and burning hours every week. <strong>Yet their conversion into qualified meetings was flatlining.</strong>
           </p>
           <p class="reveal delay-2">
             My stage audit quickly highlighted the core breakdown: their ICP was defined as <em>"anyone who might benefit from AI tools."</em> That lack of specificity meant every outbound message felt like generic spam. Prospects couldn't tell why they should care, and the team had zero conversion tracking to pinpoint where replies died.
           </p>
           <div class="pull-quote reveal delay-2">
-            "The problem wasn't outreach volume — it was that nobody felt like the message was tailored to their exact pain."
+            "The problem wasn't outreach volume, it was that nobody felt like the message was tailored to their exact pain."
           </div>
         </div>
       </div>
@@ -1123,7 +1129,7 @@
             I began with customer interview audits and sales call analysis to identify the 3 specific verticals that had acute urgency for mple.ai's solution.
           </p>
           <p class="reveal delay-2">
-            Instead of broad blasting, I created tailored messaging architectures for each persona — focusing on their immediate operational headache. Then I established an A/B tested outbound cadence with direct tracking dashboards.
+            Instead of broad blasting, I created tailored messaging architectures for each persona, focusing on their immediate operational headache. Then I established an A/B tested outbound cadence with direct tracking dashboards.
           </p>
         </div>
       </div>
@@ -1131,34 +1137,34 @@
       <!-- 3. THE EXECUTION -->
       <div class="timeline-section">
         <span class="section-kicker reveal">3. The Execution</span>
-        <h3 class="narrative-heading reveal delay-1">Step-by-step audit to scalable engine.</h3>
+        <h3 class="narrative-heading reveal delay-1">Step by step audit to scalable engine.</h3>
         <div class="timeline">
           <div class="timeline-item reveal delay-1">
             <div class="timeline-dot">01</div>
             <div class="timeline-content">
-              <h4>Stage Audit &amp; ICP Segmentation (Weeks 1–2)</h4>
-              <p>Audited existing messaging and customer calls. Narrowed focus from a generic audience down to 3 high-converting persona segments.</p>
+              <h4>Stage Audit &amp; ICP Segmentation (Weeks 1 to 2)</h4>
+              <p>Audited existing messaging and customer calls. Narrowed focus from a generic audience down to 3 high converting persona segments.</p>
             </div>
           </div>
           <div class="timeline-item reveal delay-2">
             <div class="timeline-dot">02</div>
             <div class="timeline-content">
-              <h4>Messaging Architecture &amp; Low-Hanging Wins (Week 3)</h4>
-              <p>Drafted bespoke value propositions and short, high-relevance message scripts. Fixed immediate profile positioning gaps.</p>
+              <h4>Messaging Architecture &amp; Low Hanging Wins (Week 3)</h4>
+              <p>Drafted bespoke value propositions and short, high relevance message scripts. Fixed immediate profile positioning gaps.</p>
             </div>
           </div>
           <div class="timeline-item reveal delay-3">
             <div class="timeline-dot">03</div>
             <div class="timeline-content">
-              <h4>Outbound Launch &amp; Live Tracking (Weeks 4–6)</h4>
+              <h4>Outbound Launch &amp; Live Tracking (Weeks 4 to 6)</h4>
               <p>Launched live campaigns with weekly reply sentiment tracking, acceptance rate optimization, and objection handling.</p>
             </div>
           </div>
           <div class="timeline-item reveal delay-1">
             <div class="timeline-dot">04</div>
             <div class="timeline-content">
-              <h4>Scale &amp; System Playbook Handoff (Weeks 7–12)</h4>
-              <p>Doubled down on the highest-yielding ICPs, scaling meeting volume to 100+ demos and handing off a documented playbook.</p>
+              <h4>Scale &amp; System Playbook Handoff (Weeks 7 to 12)</h4>
+              <p>Doubled down on the highest yielding ICPs, scaling meeting volume to 100+ demos and handing off a documented playbook.</p>
             </div>
           </div>
         </div>
@@ -1173,15 +1179,15 @@
             <span class="card-label">Outbound Conversion</span>
             <div class="big-number">36.5%</div>
             <div class="metric-title">Connection Acceptance Rate</div>
-            <p class="metric-plain">Industry benchmarks hover between <strong>20–25%</strong>. A 36.5% rate proved the targeting resonated immediately.</p>
+            <p class="metric-plain">Industry benchmarks hover between <strong>20 to 25%</strong>. A 36.5% rate proved the targeting resonated immediately.</p>
             <div class="card-foot">🎯 Verified across 3 ICP segments</div>
           </div>
           <div class="metric-card reveal delay-2">
             <span class="card-label">Qualified Pipeline</span>
             <div class="big-number">100+</div>
             <div class="metric-title">B2B Demo Meetings Booked</div>
-            <p class="metric-plain">Qualified demos with target decision-makers, feeding sales pipeline consistently over the 3-month run.</p>
-            <div class="card-foot">📅 3-month active campaign</div>
+            <p class="metric-plain">Qualified demos with target decision makers, feeding sales pipeline consistently over the 3 month run.</p>
+            <div class="card-foot">📅 3 month active campaign</div>
           </div>
           <div class="metric-card reveal delay-3">
             <span class="card-label">Asset Delivered</span>
@@ -1205,7 +1211,7 @@
           </div>
           <div class="learning-card reveal delay-2">
             <span class="l-icon">⏱️</span>
-            <h4>Low-hanging fruit fixes build early momentum</h4>
+            <h4>Low hanging fruit fixes build early momentum</h4>
             <p>Rewriting the first 2 sentences of their outreach generated instant replies within 48 hours while the broader roadmap was being finalized.</p>
           </div>
           <div class="learning-card reveal delay-1">
@@ -1233,7 +1239,7 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <h2 class="reveal">Want a story like this?</h2>
-    <p class="reveal delay-1">If your outbound is happening but nothing is converting — or if you need to build reliable marketing systems — let's find the bottlenecks.</p>
+    <p class="reveal delay-1">If your outbound is happening but nothing is converting, or if you need to build reliable marketing systems, let's find the bottlenecks.</p>
     <button type="button" class="cta-btn reveal delay-2" onclick="openContactModal()" id="finalCtaBtn">
       Talk to me about your pipeline
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -1250,7 +1256,7 @@
           <div class="mark-sm">R</div>
           <span>Rudra Trivedi</span>
         </div>
-        <p class="footer-desc">Marketing Strategist, Growth Auditor &amp; AI Automation Builder for early-stage B2B SaaS. Hands-on, always.</p>
+        <p class="footer-desc">Marketing Strategist, Growth Auditor &amp; AI Automation Builder for early stage B2B SaaS. Hands on, always.</p>
         <a href="tel:+919867625784" class="footer-phone-link">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -1278,7 +1284,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-tagline">© 2026 <strong>Rudra Trivedi</strong>. Operator. Builder. Early-Stage B2B.</div>
+      <div class="footer-tagline">© 2026 <strong>Rudra Trivedi</strong>. Operator. Builder. Early Stage B2B.</div>
       <div class="footer-social">
         <a href="tel:+919867625784" aria-label="Phone: +91 9867625784" title="+91 9867625784">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1312,7 +1318,7 @@
 
         <span class="modal-eyebrow">Let's talk</span>
         <h3 id="modalTitle">Tell me a bit about you</h3>
-        <p class="modal-sub">I'll follow up within a day. No auto-responder — an actual reply from me.</p>
+        <p class="modal-sub">I'll follow up within a day. No auto responder, an actual reply from me.</p>
 
         <div class="form-group">
           <label for="cf-name">Name</label>
@@ -1331,7 +1337,7 @@
             <option value="Marketing Strategy & Audits">Marketing Strategy &amp; Audits</option>
             <option value="Product Consultancy">Product Consultancy</option>
             <option value="Automations">Business &amp; AI Automations</option>
-            <option value="Not sure">Not sure yet — let's chat</option>
+            <option value="Not sure">Not sure yet, let's chat</option>
           </select>
         </div>
 
@@ -1414,6 +1420,14 @@
         btn.disabled = false;
         btn.textContent = 'Send it →';
       }
+    });
+  
+    /* close mobile menu on link tap or Escape */
+    document.querySelectorAll('#navLinks a').forEach(a => a.addEventListener('click', () => {
+      if (document.getElementById('navLinks').classList.contains('open')) toggleMobileNav();
+    }));
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && document.getElementById('navLinks').classList.contains('open')) toggleMobileNav();
     });
   </script>
 
