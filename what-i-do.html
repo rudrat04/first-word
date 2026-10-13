@@ -1053,6 +1053,25 @@
     .ind-line h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral-dark); margin-bottom: 0.35rem; }
     .ind-line p { font-size: 0.92rem; line-height: 1.5; color: var(--ink-soft); }
     .ind-line .ind-small { font-size: 0.82rem; margin-top: 0.4rem; opacity: 0.85; }
+
+    /* ---------- MOBILE: always visible Let's Talk + compact hero chips ---------- */
+    .nav-cta-mobile { display: none; }
+    @media (max-width: 900px) {
+      .nav-cta-mobile {
+        display: inline-flex; align-items: center; margin-left: auto; flex-shrink: 0;
+        background: var(--coral); color: var(--cream); font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.85rem; font-weight: 700; text-decoration: none; padding: 0.45rem 0.95rem;
+        border: 1.5px solid var(--ink); border-radius: 999px; box-shadow: 2px 2px 0 var(--ink);
+        white-space: nowrap;
+      }
+      .nav-links li:has(.nav-cta) { display: none; }
+    }
+    @media (max-width: 350px) { .nav-logo .wordmark { display: none; } }
+    @media (max-width: 600px) {
+      .quick-facts { gap: 0.4rem; margin-top: 1.25rem; }
+      .quick-facts span { font-size: 0.74rem; padding: 0.25rem 0.7rem; }
+      .quick-facts span:nth-child(2) { display: none; }
+    }
   </style>
 </head>
 
@@ -1064,6 +1083,8 @@
       <div class="mark"></div>
       <span class="wordmark">Rudra <span>Trivedi</span></span>
     </a>
+
+    <a href="#" class="nav-cta-mobile" onclick="openContactModal(); return false;">Let's Talk</a>
 
     <button type="button" class="nav-toggle" id="navToggleBtn" onclick="toggleMobileNav()" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
