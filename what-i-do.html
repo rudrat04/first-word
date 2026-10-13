@@ -5,18 +5,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>What I Do | Rudra Trivedi</title>
-  <meta name="description" content="Marketing Strategy & Audits, Product Strategy, and AI Automations by Rudra Trivedi, hands on operator for early stage B2B SaaS teams.">
+  <meta name="description" content="Sales, RevOps and GTM architecture, product marketing, website creation and industry automations by Rudra Trivedi, freelance GTM engineer.">
   <link rel="canonical" href="https://first-word.netlify.app/what-i-do">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://first-word.netlify.app/what-i-do">
   <meta property="og:title" content="What I Do | Rudra Trivedi">
-  <meta property="og:description" content="Marketing Strategy & Audits, Product Strategy, and AI Automations for early stage B2B SaaS teams.">
+  <meta property="og:description" content="Sales, RevOps and GTM architecture, product marketing, website creation and industry automations.">
   <meta property="og:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://first-word.netlify.app/what-i-do">
   <meta property="twitter:title" content="What I Do | Rudra Trivedi">
-  <meta property="twitter:description" content="Marketing Strategy & Audits, Product Strategy, and AI Automations for early stage B2B SaaS teams.">
+  <meta property="twitter:description" content="Sales, RevOps and GTM architecture, product marketing, website creation and industry automations.">
   <meta property="twitter:image" content="https://first-word.netlify.app/assets/logo-full.png">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -83,7 +83,8 @@
     /* ---------- NAVBAR ---------- */
     .navbar {
       position: fixed;
-      top: 1.25rem; left: 50%;
+      top: 1.25rem;
+      left: 50%;
       transform: translateX(-50%);
       z-index: 90;
       width: min(94%, 1180px);
@@ -109,12 +110,14 @@
     }
 
     .nav-logo .mark {
-      width: 34px; height: 34px;
+      width: 34px;
+      height: 34px;
       border-radius: 10px;
       background: var(--ink);
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
       flex-shrink: 0;
     }
 
@@ -124,6 +127,7 @@
       font-weight: 900;
       font-size: 1.2rem;
       color: var(--coral);
+      line-height: 1;
     }
 
     .nav-logo .wordmark {
@@ -135,7 +139,10 @@
       white-space: nowrap;
     }
 
-    .nav-logo .wordmark span { color: var(--coral); font-style: italic; }
+    .nav-logo .wordmark span {
+      color: var(--coral);
+      font-style: italic;
+    }
 
     .nav-links {
       display: flex;
@@ -153,12 +160,11 @@
       text-decoration: none;
       padding: 0.5rem 0.9rem;
       border-radius: 999px;
-      transition: background 0.15s ease;
+      transition: background 0.15s ease, color 0.15s ease;
       white-space: nowrap;
     }
 
     .nav-links a:hover { background: rgba(26, 21, 35, 0.08); }
-    .nav-links a.active { background: rgba(26, 21, 35, 0.08); }
 
     .nav-links a.nav-cta {
       background: var(--coral);
@@ -174,6 +180,7 @@
       box-shadow: 3px 3px 0 var(--ink);
     }
 
+    /* ---------- MOBILE NAV ---------- */
     .nav-toggle {
       display: none;
       flex-direction: column;
@@ -187,7 +194,8 @@
 
     .nav-toggle span {
       display: block;
-      width: 22px; height: 2px;
+      width: 22px;
+      height: 2px;
       background: var(--ink);
       border-radius: 2px;
       transition: transform 0.2s ease, opacity 0.2s ease;
@@ -206,7 +214,7 @@
     }
     .nav-scrim.open { display: block; }
 
-    @media (max-width: 760px) {
+    @media (max-width: 900px) {
       .nav-toggle { display: flex; }
 
       .nav-links {
@@ -227,11 +235,29 @@
       }
 
       .nav-links.open { display: flex; }
+
       .nav-links li { border-bottom: 1px solid var(--line); }
       .nav-links li:last-child { border-bottom: none; }
-      .nav-links a { display: block; padding: 0.9rem 0.5rem; border-radius: 0; font-size: 1.1rem; }
-      .nav-links a.nav-cta { margin: 1rem 0 0; border-radius: 999px; text-align: center; padding: 0.9rem; }
+      .nav-links a {
+        display: block;
+        padding: 0.9rem 0.5rem;
+        border-radius: 0;
+        font-size: 1.1rem;
+      }
+
+      .nav-links a.nav-cta {
+        margin: 1rem 0 0;
+        border-radius: 999px;
+        text-align: center;
+        padding: 0.9rem;
+      }
     }
+
+    @media (max-width: 400px) {
+      .navbar { padding: 0.5rem 0.55rem 0.5rem 0.75rem; }
+      .nav-logo .wordmark { font-size: 1rem; }
+    }
+    .nav-links a.active { background: rgba(26, 21, 35, 0.08); }
 
     /* ---------- HERO ---------- */
     .hero {
@@ -972,6 +998,61 @@
     .modal-form.hide { display: none; }
 
     a:focus-visible, button:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+  
+    /* ---------- INDUSTRY AUTOMATIONS ---------- */
+    .ind-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.1rem; margin-top: 1rem; }
+    @media (max-width: 960px) { .ind-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 620px) { .ind-grid { grid-template-columns: 1fr; } }
+    .ind-card { background: #FFF6EE; color: #1A1523; border: 2px solid #1A1523; border-radius: 20px; padding: 1.25rem 1.3rem; box-shadow: 4px 4px 0 #FF5233; }
+    .ind-card h4 { font-family: 'Fraunces', serif; font-size: 1.05rem; line-height: 1.25; margin-bottom: 0.7rem; }
+    .ind-card ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+    .ind-card li { font-size: 0.86rem; line-height: 1.45; color: #453B52; }
+    .ind-card li strong { color: #1A1523; }
+    .lvl { display: inline-block; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; border: 1.5px solid #1A1523; border-radius: 999px; padding: 0.05rem 0.5rem; margin-right: 0.45rem; vertical-align: 1px; }
+    .lvl.e { background: #CFEFD6; } .lvl.m { background: #FFE2A8; }
+    .ind-note { margin-top: 1.25rem; font-size: 0.9rem; line-height: 1.55; color: inherit; opacity: 0.85; max-width: 70ch; }
+    .service-section.alt { background: var(--cream-2); }
+    .proof-card + .proof-card { margin-top: 1.25rem; }
+
+    /* ---------- COMPACT SERVICES (tabs) ---------- */
+    .hero { min-height: auto; padding-bottom: clamp(2.5rem, 5vw, 3.5rem); }
+    .svc-tabs-wrap { scroll-margin-top: 5.5rem; background: var(--cream); padding: 0.5rem 1.25rem 0; }
+    .svc-tabs { max-width: 1120px; margin: -1.6rem auto 0; position: relative; z-index: 3; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; }
+    @media (max-width: 860px) { .svc-tabs { grid-template-columns: repeat(2, 1fr); } }
+    .svc-tab { display: flex; align-items: center; gap: 0.6rem; text-align: left; background: #FFFDF9; border: 2px solid var(--ink); border-radius: 16px; padding: 0.8rem 1rem; font-family: 'Space Grotesk', sans-serif; cursor: pointer; box-shadow: 3px 3px 0 var(--ink); transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; color: var(--ink); }
+    .svc-tab:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--ink); }
+    .svc-tab .n { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.15rem; color: var(--coral); }
+    .svc-tab .t { font-weight: 700; font-size: 0.92rem; line-height: 1.25; }
+    .svc-tab[aria-selected="true"] { background: var(--coral); color: var(--cream); box-shadow: 4px 4px 0 var(--ink); }
+    .svc-tab[aria-selected="true"] .n { color: var(--cream); }
+    .js .service-section { display: none; }
+    .js .service-section.is-active { display: block; animation: fadeIn 0.25s ease; }
+    .service-section, .service-section:nth-child(odd), .service-section:nth-child(even), .service-section.alt { background: var(--cream); padding: clamp(1.75rem, 3.5vw, 2.5rem) 1.25rem 3rem; }
+    .service-header { gap: 1.5rem; margin-bottom: 1.5rem; }
+    .s-num { font-size: 2.6rem; margin-bottom: 0.25rem; }
+    .s-headline { font-size: clamp(1.5rem, 3vw, 2.1rem); }
+    .s-body { font-size: 0.95rem; line-height: 1.55; }
+    .hook-box { padding: 0.8rem 1rem; font-size: 0.88rem; margin-top: 0.9rem; }
+    .deliverables-heading, .process-heading { font-size: 0.78rem; margin-bottom: 0.7rem; }
+    .deliverables-grid { grid-template-columns: repeat(4, 1fr); gap: 0.8rem; }
+    @media (max-width: 960px) { .deliverables-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .deliverables-grid { grid-template-columns: 1fr; } }
+    .deliverable-card { padding: 1rem 1rem; }
+    .deliverable-card .d-icon { font-size: 1.3rem; margin-bottom: 0.3rem; }
+    .deliverable-card h4 { font-size: 0.98rem; }
+    .deliverable-card p { font-size: 0.84rem; line-height: 1.45; }
+    .process-strip { margin-top: 1.5rem; padding-top: 1.25rem; }
+    .process-steps { grid-template-columns: repeat(4, 1fr); gap: 0.7rem; }
+    @media (max-width: 860px) { .process-steps { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .process-steps { grid-template-columns: 1fr; } }
+    .process-step { padding: 0.8rem 0.9rem; }
+    .process-step h4 { font-size: 0.92rem; }
+    .process-step p { font-size: 0.8rem; line-height: 1.4; }
+    .proof-card { margin-top: 1.25rem; padding: 1.1rem 1.3rem; }
+    .ind-line { margin-top: 1.5rem; background: var(--cream-2); border: 2px solid var(--ink); border-radius: 18px; padding: 1rem 1.2rem; box-shadow: 4px 4px 0 var(--ink); }
+    .ind-line h4 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--coral-dark); margin-bottom: 0.35rem; }
+    .ind-line p { font-size: 0.92rem; line-height: 1.5; color: var(--ink-soft); }
+    .ind-line .ind-small { font-size: 0.82rem; margin-top: 0.4rem; opacity: 0.85; }
   </style>
 </head>
 
@@ -991,7 +1072,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
       <li><a href="/what-i-do" class="active">Services</a></li>
-      <li><a href="/case-studies">Case Studies</a></li>
+      <li><a href="/case-studies">Projects</a></li>
       <li><a href="/#experience">Experience</a></li>
       <li><a href="/assets/Rudra-Trivedi-Resume.pdf" download>Resume</a></li>
       <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;" id="navCtaBtn">Let's Talk</a></li>
@@ -1003,46 +1084,38 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-eyebrow"><span class="dot"></span> Services</div>
-    <h1 class="hero-headline">Three things.<br>Done deeply.</h1>
-    <p class="hero-sub">I don't do ten services at half the depth. I do <strong>three things end to end</strong>, Marketing Strategy & Audits, Product Strategy, and AI Automations, and I'm hands on across all of them.</p>
-    <button type="button" class="cta-btn" onclick="openContactModal()" id="heroCtaBtn">
-      Talk to me
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
-        <path d="M5 12h14M13 6l6 6-6 6" />
-      </svg>
-    </button>
+    <h1 class="hero-headline">Four services. One person.</h1>
+    <p class="hero-sub">For business owners, founders, and sales or marketing heads, in any industry.</p>
   </section>
 
   <svg class="wave-divider" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FFF6EE"/>
   </svg>
 
-  <!-- INTRO STRIP -->
-  <section class="intro-strip">
-    <p class="reveal">Most early stage teams don't need five specialists. They need <span class="highlight">one person who's done the work</span>, and who can see how strategy, audits, product, and ops are all connected anyway.</p>
-  </section>
 
-  <!-- ================================================================
-       SERVICE 01: MARKETING STRATEGY & AUDITS
-  ================================================================ -->
+    <!-- SERVICE TABS -->
+  <div class="svc-tabs-wrap">
+    <div class="svc-tabs" role="tablist" aria-label="Services">
+      <button type="button" class="svc-tab" role="tab" data-target="strategy"><span class="n">01</span><span class="t">Sales, RevOps &amp; GTM</span></button>
+      <button type="button" class="svc-tab" role="tab" data-target="marketing"><span class="n">02</span><span class="t">Product Marketing</span></button>
+      <button type="button" class="svc-tab" role="tab" data-target="website"><span class="n">03</span><span class="t">Website Creation</span></button>
+      <button type="button" class="svc-tab" role="tab" data-target="automation"><span class="n">04</span><span class="t">Industry Automations</span></button>
+    </div>
+  </div>
+
   <section class="service-section" id="strategy" aria-labelledby="strategy-heading">
-    <span id="gtm" style="display:none;" aria-hidden="true"></span>
     <div class="service-inner">
       <div class="service-header">
         <div class="service-header-left">
           <span class="s-num reveal">01</span>
-          <span class="s-kicker reveal delay-1">Marketing Strategy &amp; Audits</span>
-          <h2 class="s-headline reveal delay-2" id="strategy-heading">Stop guessing. Build systems that scale.</h2>
+          <span class="s-kicker reveal delay-1">Sales, RevOps &amp; GTM Architecture</span>
+          <h2 class="s-headline reveal delay-2" id="strategy-heading">Design and automate your revenue architecture.</h2>
         </div>
         <div class="service-header-right reveal-right delay-1">
-          <p class="s-body">
-            Early stage marketing rarely fails from lack of effort, it fails from fragmented experiments and missing systems. You're trying tactics in the dark without knowing where the pipeline is leaking.
-          </p>
-          <p class="s-body" style="margin-top: 1rem;">
-            <strong>I audit your current stage, uncover high impact findings, execute immediate low hanging fruit wins, and build reliable marketing systems with long term roadmaps.</strong> No generic advice. Just actionable diagnosis, quick wins, and repeatable growth engines.
-          </p>
+          <p class="s-body">Most sales and operations setups grew by accident: a CRM nobody trusts, follow ups that depend on memory, and handoffs that drop leads. I help you design how sales, operations and go to market actually work.</p>
+          <p class="s-body" style="margin-top: 1rem;"><strong>Then I automate the repeat parts.</strong> Reminders, follow ups, lead routing, CRM updates and invoices, built on the tools you already use.</p>
           <div class="hook-box">
-            <strong>Best for:</strong> Early stage B2B founders who want to diagnose what's broken in their growth engine and build a reliable marketing playbook instead of random experiments.
+            <strong>Best for:</strong> Founders, business owners, and sales or marketing heads who want a clear, working revenue system instead of ad hoc fixes.
           </div>
         </div>
       </div>
@@ -1051,23 +1124,23 @@
       <div class="deliverables-grid">
         <div class="deliverable-card reveal delay-1">
           <span class="d-icon">🔍</span>
-          <h4>Stage &amp; Growth Audit</h4>
-          <p>Comprehensive audit of your existing channels, positioning, ICP, and conversion funnels to pinpoint exact bottlenecks and revenue leaks.</p>
+          <h4>A review of how you sell today</h4>
+          <p>I look at your funnel, CRM, handoffs and tools to find where leads and revenue leak.</p>
         </div>
         <div class="deliverable-card reveal delay-2">
-          <span class="d-icon">⚡</span>
-          <h4>Findings &amp; Low Hanging Fruits</h4>
-          <p>Prioritized action matrix of immediate, high impact fixes you can deploy in days to unlock quick growth wins before burning budget.</p>
+          <span class="d-icon">🗺️</span>
+          <h4>A clear design</h4>
+          <p>Who does what, and when, from first enquiry to closed deal, written down so the team can follow it.</p>
         </div>
         <div class="deliverable-card reveal delay-3">
-          <span class="d-icon">🛠️</span>
-          <h4>Reliable Marketing Systems</h4>
-          <p>Repeatable messaging frameworks, outbound playbooks, content cadences, and operational tooling tailored specifically for your stage.</p>
+          <span class="d-icon">⚡</span>
+          <h4>Automation for the repeat parts</h4>
+          <p>Reminders, follow ups, lead routing, CRM sync and invoices, so people spend time selling.</p>
         </div>
         <div class="deliverable-card reveal delay-4">
-          <span class="d-icon">🗺️</span>
-          <h4>Long Road Roadmap &amp; Advisory</h4>
-          <p>A sequenced 90 to 180 day strategic roadmap with clear milestones, KPI benchmarks, and guidance so your team can sustain growth independently.</p>
+          <span class="d-icon">🤖</span>
+          <h4>GTM and RevOps automations</h4>
+          <p>Instant lead intake, AI prospect briefs, meeting briefs and pipeline alerts, built around your sales motion.</p>
         </div>
       </div>
 
@@ -1076,23 +1149,116 @@
         <div class="process-steps">
           <div class="process-step reveal delay-1">
             <span class="step-num">01</span>
-            <h4>Stage Audit</h4>
-            <p>Deep dive into your analytics, customer conversations, messaging, and outbound channels to uncover the real bottlenecks.</p>
+            <h4>Review</h4>
+            <p>Walk through how you sell and work today, with your team and your data.</p>
           </div>
           <div class="process-step reveal delay-2">
             <span class="step-num">02</span>
-            <h4>Findings &amp; Quick Wins</h4>
-            <p>I deliver the audit findings report and immediately execute the low hanging fruit fixes for rapid impact.</p>
+            <h4>Design</h4>
+            <p>Map the target setup: stages, owners, rules and the tools that support them.</p>
           </div>
           <div class="process-step reveal delay-3">
             <span class="step-num">03</span>
-            <h4>System Design &amp; Execution</h4>
-            <p>We build the repeatable marketing systems, messaging architectures, and outbound motions.</p>
+            <h4>Automate</h4>
+            <p>Build the automations for the repeat parts and test them on real cases.</p>
           </div>
           <div class="process-step reveal delay-4">
             <span class="step-num">04</span>
-            <h4>Long Road Roadmap</h4>
-            <p>A clear long term roadmap and KPI scorecard handed off so your team scales with predictability.</p>
+            <h4>Handover</h4>
+            <p>Documentation, a walkthrough, and a watch period so everything runs cleanly.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-stat">
+          <div class="big-num">30 min</div>
+          <div class="proof-label">Saved per lead</div>
+        </div>
+        <div class="divider"></div>
+        <div class="proof-text">
+          <p>For <strong>mple.ai</strong>, I built a system that emails the sales team an AI research brief with every LinkedIn reply: who the prospect is, what the reply means, a suggested response and discovery questions.</p>
+          <a href="/case-study-ai-reply-brief" class="proof-link">Read the case study →</a>
+        </div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-stat">
+          <div class="big-num">f1</div>
+          <div class="proof-label">Portfolio project</div>
+        </div>
+        <div class="divider"></div>
+        <div class="proof-text">
+          <p><strong>f1rstword</strong> is an account copilot I built for B2B sales. It finds the right companies and people, watches signals, scores new enquiries, and keeps HubSpot up to date.</p>
+          <a href="/#f1rstwordProject" class="proof-link">See the project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="service-section alt" id="marketing" aria-labelledby="marketing-heading">
+    <div class="service-inner">
+      <div class="service-header">
+        <div class="service-header-left">
+          <span class="s-num reveal">02</span>
+          <span class="s-kicker reveal delay-1">Product Marketing</span>
+          <h2 class="s-headline reveal delay-2" id="marketing-heading">Say the right thing, to the right people.</h2>
+        </div>
+        <div class="service-header-right reveal-right delay-1">
+          <p class="s-body">Good products still struggle when nobody can explain them in one sentence. I help you decide what to say, who to say it to, and how to reach them.</p>
+          <p class="s-body" style="margin-top: 1rem;"><strong>Messaging, positioning and a go to market plan</strong> you can actually run, with outbound playbooks that turned into 100+ booked demos for mple.ai.</p>
+          <div class="hook-box">
+            <strong>Best for:</strong> Teams launching or relaunching a product or service, or whose pitch is not landing with the right buyers.
+          </div>
+        </div>
+      </div>
+
+      <div class="deliverables-heading reveal">What you get</div>
+      <div class="deliverables-grid">
+        <div class="deliverable-card reveal delay-1">
+          <span class="d-icon">💬</span>
+          <h4>Messaging</h4>
+          <p>How to describe what you sell, in words your buyers use.</p>
+        </div>
+        <div class="deliverable-card reveal delay-2">
+          <span class="d-icon">🎯</span>
+          <h4>Positioning</h4>
+          <p>Why customers should choose you over the alternatives.</p>
+        </div>
+        <div class="deliverable-card reveal delay-3">
+          <span class="d-icon">🧭</span>
+          <h4>Go to market plan</h4>
+          <p>Who to target, which channels to use, and what to do in the first 90 days.</p>
+        </div>
+        <div class="deliverable-card reveal delay-4">
+          <span class="d-icon">📣</span>
+          <h4>Outbound playbooks</h4>
+          <p>ICP segments, tailored sequences and tracking, so outreach turns into conversations.</p>
+        </div>
+      </div>
+
+      <div class="process-strip">
+        <div class="process-heading reveal">How it works</div>
+        <div class="process-steps">
+          <div class="process-step reveal delay-1">
+            <span class="step-num">01</span>
+            <h4>Listen</h4>
+            <p>Customer calls, your pitch, your competitors and your numbers.</p>
+          </div>
+          <div class="process-step reveal delay-2">
+            <span class="step-num">02</span>
+            <h4>Define</h4>
+            <p>Pick the ICP, the problem you own and the angle that sets you apart.</p>
+          </div>
+          <div class="process-step reveal delay-3">
+            <span class="step-num">03</span>
+            <h4>Write</h4>
+            <p>Messaging, positioning and scripts you can use straight away.</p>
+          </div>
+          <div class="process-step reveal delay-4">
+            <span class="step-num">04</span>
+            <h4>Launch</h4>
+            <p>A plan for reaching customers, with simple metrics to learn from.</p>
           </div>
         </div>
       </div>
@@ -1111,26 +1277,19 @@
     </div>
   </section>
 
-  <!-- ================================================================
-       SERVICE 02: PRODUCT CONSULTANCY
-  ================================================================ -->
-  <section class="service-section dark" id="product" aria-labelledby="product-heading">
+  <section class="service-section" id="website" aria-labelledby="website-heading">
     <div class="service-inner">
       <div class="service-header">
         <div class="service-header-left">
-          <span class="s-num reveal">02</span>
-          <span class="s-kicker reveal delay-1">Product Consultancy</span>
-          <h2 class="s-headline reveal delay-2" id="product-heading">When demos book but don't convert.</h2>
+          <span class="s-num reveal">03</span>
+          <span class="s-kicker reveal delay-1">Website Creation</span>
+          <h2 class="s-headline reveal delay-2" id="website-heading">A simple website customers can find and use.</h2>
         </div>
         <div class="service-header-right reveal-right delay-1">
-          <p class="s-body">
-            Sometimes the outbound is working, meetings are booking, but something's happening in the demo or after it that's killing the deal. That's usually a product problem, not a sales problem.
-          </p>
-          <p class="s-body" style="margin-top: 1rem;">
-            <strong>I come in as a focused second opinion.</strong> I look at onboarding flows, feature gaps exposed by customer conversations, and conversion drop offs, then help you close the loop between what you're promising in the pitch and what you're delivering in the product.
-          </p>
+          <p class="s-body">Your website should answer three questions fast: what you do, who you are, and how to reach you.</p>
+          <p class="s-body" style="margin-top: 1rem;"><strong>I design and build a simple, clear website</strong>, set up and live, with the messaging done first so the pages actually work.</p>
           <div class="hook-box">
-            <strong>Best for:</strong> Teams where growth work is surfacing product gaps, onboarding friction, feature confusion, or demo to close leakage you can't fully explain.
+            <strong>Best for:</strong> Businesses with no website, or one that is outdated, slow, or hard to use on a phone.
           </div>
         </div>
       </div>
@@ -1138,24 +1297,24 @@
       <div class="deliverables-heading reveal">What you get</div>
       <div class="deliverables-grid">
         <div class="deliverable-card reveal delay-1">
-          <span class="d-icon">🔍</span>
-          <h4>Onboarding Audit</h4>
-          <p>A clear walkthrough of your activation flow with specific friction points and what to fix first.</p>
+          <span class="d-icon">📱</span>
+          <h4>Works on phone and computer</h4>
+          <p>Fast, clean and readable on every screen.</p>
         </div>
         <div class="deliverable-card reveal delay-2">
-          <span class="d-icon">🎛️</span>
-          <h4>Feature Prioritization</h4>
-          <p>Helping you build the right thing next, based on what customers actually need vs. what's in the backlog.</p>
+          <span class="d-icon">🗂️</span>
+          <h4>Clear pages</h4>
+          <p>What you do, who you are and how to reach you, with nothing extra.</p>
         </div>
         <div class="deliverable-card reveal delay-3">
-          <span class="d-icon">💬</span>
-          <h4>Customer Feedback Loops</h4>
-          <p>Setting up structured ways to turn customer conversations into actionable product signals.</p>
+          <span class="d-icon">✍️</span>
+          <h4>Messaging first</h4>
+          <p>Copy that explains your offer clearly before the design starts.</p>
         </div>
         <div class="deliverable-card reveal delay-4">
-          <span class="d-icon">📈</span>
-          <h4>Conversion Optimization</h4>
-          <p>Identifying where demos are leaking and what product or process change closes the gap.</p>
+          <span class="d-icon">🚀</span>
+          <h4>Set up and live</h4>
+          <p>Domain, hosting, contact forms and basics handled, ready to use.</p>
         </div>
       </div>
 
@@ -1164,49 +1323,42 @@
         <div class="process-steps">
           <div class="process-step reveal delay-1">
             <span class="step-num">01</span>
-            <h4>Audit Session</h4>
-            <p>I walk your product, your onboarding, and your demo, looking for the breaks that customers don't tell you about directly.</p>
+            <h4>Brief</h4>
+            <p>What you sell, who it is for and what visitors should do.</p>
           </div>
           <div class="process-step reveal delay-2">
             <span class="step-num">02</span>
-            <h4>Gap Analysis</h4>
-            <p>Structured report on where the positioning to product gap exists and what's most impacting conversion.</p>
+            <h4>Design</h4>
+            <p>Page structure and look, shared with you before anything is built.</p>
           </div>
           <div class="process-step reveal delay-3">
             <span class="step-num">03</span>
-            <h4>Prioritized Fixes</h4>
-            <p>A focused list of the 3 to 5 changes that will have real impact, not a 40 item backlog rewrite.</p>
+            <h4>Build</h4>
+            <p>Responsive pages, contact forms and basic search friendliness.</p>
           </div>
           <div class="process-step reveal delay-4">
             <span class="step-num">04</span>
-            <h4>Ongoing Loop</h4>
-            <p>Optional ongoing work to monitor the feedback loop and iterate as the product evolves.</p>
+            <h4>Launch</h4>
+            <p>Go live, test every page and form, and hand over the keys.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ================================================================
-       SERVICE 03: BUSINESS & AI AUTOMATIONS
-  ================================================================ -->
-  <section class="service-section" id="automation" aria-labelledby="automation-heading">
+  <section class="service-section alt" id="automation" aria-labelledby="automation-heading">
     <div class="service-inner">
       <div class="service-header">
         <div class="service-header-left">
-          <span class="s-num reveal">03</span>
-          <span class="s-kicker reveal delay-1">Business &amp; AI Automations</span>
-          <h2 class="s-headline reveal delay-2" id="automation-heading">The pipeline works. Now let ops keep up.</h2>
+          <span class="s-num reveal">04</span>
+          <span class="s-kicker reveal delay-1">Industry Automations</span>
+          <h2 class="s-headline reveal delay-2" id="automation-heading">Automations for the way your business already works.</h2>
         </div>
         <div class="service-header-right reveal-right delay-1">
-          <p class="s-body">
-            Growth creates operational load. When outbound starts working, suddenly your team is drowning in manual processes, invoice generation, lead routing, CRM updates, research that takes hours.
-          </p>
-          <p class="s-body" style="margin-top: 1rem;">
-            <strong>I build custom automations for SMBs and B2B teams</strong> that remove the manual drag from your operations. Using tools like Make, Zapier, n8n, and custom AI pipelines, I turn hours of busywork into sub 60 second automated workflows.
-          </p>
+          <p class="s-body">Every industry has the same few chores that eat hours: chasing leads, sending reminders, logging orders, raising invoices. These are ready patterns for your industry, set up on the tools you already use.</p>
+          <p class="s-body" style="margin-top: 1rem;"><strong>These are different from GTM and RevOps automations</strong> (service 01), which are built around a sales motion. Industry automations remove day to day admin from the business itself.</p>
           <div class="hook-box">
-            <strong>Best for:</strong> SMBs and B2B teams where operations are bottlenecking growth, or where manual processes are burning time that should go into selling or building.
+            <strong>Best for:</strong> Owners of clinics, agencies, firms, shops and other service or trade businesses whose staff spend time on repeat admin.
           </div>
         </div>
       </div>
@@ -1214,25 +1366,30 @@
       <div class="deliverables-heading reveal">What you get</div>
       <div class="deliverables-grid">
         <div class="deliverable-card reveal delay-1">
-          <span class="d-icon">🧾</span>
-          <h4>Invoice Automation</h4>
-          <p>Automated invoice generation and delivery from form submissions, CRM triggers, or payment events.</p>
+          <span class="d-icon">🔔</span>
+          <h4>Reminders and follow ups</h4>
+          <p>Appointments, renewals, deadlines and payments, sent on time without chasing.</p>
         </div>
         <div class="deliverable-card reveal delay-2">
-          <span class="d-icon">⚡</span>
-          <h4>Instant Lead Intake</h4>
-          <p>Lead form → CRM entry → Slack/WhatsApp alert → follow up triggered in under 60 seconds. Automatically.</p>
+          <span class="d-icon">📥</span>
+          <h4>Intake and routing</h4>
+          <p>Enquiries from forms, WhatsApp and email logged and sent to the right person.</p>
         </div>
         <div class="deliverable-card reveal delay-3">
-          <span class="d-icon">🔄</span>
-          <h4>CRM Auto Sync</h4>
-          <p>Keep your CRM clean and current without manual entry, synced from forms, emails, and calls automatically.</p>
+          <span class="d-icon">🧾</span>
+          <h4>Orders, invoices and billing</h4>
+          <p>Entries, confirmations and invoices created automatically.</p>
         </div>
         <div class="deliverable-card reveal delay-4">
-          <span class="d-icon">🤖</span>
-          <h4>AI Research Briefs</h4>
-          <p>Automated pre call research delivered in under a minute: company context, recent news, talking points.</p>
+          <span class="d-icon">📊</span>
+          <h4>Alerts and updates</h4>
+          <p>Stock, delays and status changes pushed to your team and your customers.</p>
         </div>
+      </div>
+      <div class="ind-line reveal">
+        <h4>Built for</h4>
+        <p>Real estate, insurance, education, law firms, trading, accounting, clinics, salons, D2C and ecommerce, professional services, restaurants, and logistics. Your industry not listed? Ask, most patterns carry over.</p>
+        <p class="ind-small">Easy to medium builds: quick to set up and cheap to run. More complex, higher value automations are available after an initial project.</p>
       </div>
 
       <div class="process-strip">
@@ -1240,23 +1397,23 @@
         <div class="process-steps">
           <div class="process-step reveal delay-1">
             <span class="step-num">01</span>
-            <h4>Ops Audit</h4>
-            <p>I map your current manual workflows and find the 2 to 3 that are burning the most time.</p>
+            <h4>Ops audit</h4>
+            <p>I map your manual workflows and find the 2 or 3 burning the most time.</p>
           </div>
           <div class="process-step reveal delay-2">
             <span class="step-num">02</span>
-            <h4>Design & Spec</h4>
-            <p>Clear blueprint for each automation, what triggers it, what it does, and what it outputs.</p>
+            <h4>Design and spec</h4>
+            <p>A blueprint for each automation: what triggers it, what it does, what it outputs.</p>
           </div>
           <div class="process-step reveal delay-3">
             <span class="step-num">03</span>
-            <h4>Build & Test</h4>
-            <p>I build the automation, test it against edge cases, and document how it works so you're never dependent on me.</p>
+            <h4>Build and test</h4>
+            <p>I build it, test edge cases and document how it works.</p>
           </div>
           <div class="process-step reveal delay-4">
             <span class="step-num">04</span>
             <h4>Handover</h4>
-            <p>Full walkthrough, documentation, and a 2 week watch period to make sure everything's running cleanly.</p>
+            <p>Walkthrough, documentation and a 2 week watch period.</p>
           </div>
         </div>
       </div>
@@ -1266,7 +1423,7 @@
   <!-- FINAL CTA -->
   <section class="final-cta">
     <h2 class="reveal">Not sure where to start?</h2>
-    <p class="reveal delay-1">One conversation is enough. Tell me what's not working and I'll tell you honestly which service (if any) is the right fit, and what to tackle first.</p>
+    <p class="reveal delay-1">One conversation is enough. Message me and I'll tell you honestly what will help most, and what won't.</p>
     <button type="button" class="cta-btn reveal delay-2" onclick="openContactModal()" id="finalCtaBtn">
       Let's figure it out
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
@@ -1283,7 +1440,7 @@
           <div class="mark-sm">R</div>
           <span>Rudra Trivedi</span>
         </div>
-        <p class="footer-desc">Marketing Strategist, Auditor &amp; AI Automation Builder for early stage B2B SaaS. Hands on, always.</p>
+        <p class="footer-desc">Freelance GTM engineer. I design sales, RevOps and go to market systems, then automate them. Hands on, always.</p>
         <div style="margin-top: 0.75rem;">
           <a href="tel:+919867625784" style="color: var(--coral); font-weight: 700; text-decoration: none; font-size: 0.92rem; display: inline-flex; align-items: center; gap: 0.4rem;">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
@@ -1296,16 +1453,19 @@
           <h4>Navigate</h4>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/what-i-do">What I Do</a></li>
-            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/what-i-do">Services</a></li>
+            <li><a href="/case-studies">Projects</a></li>
+            <li><a href="/#experience">Experience</a></li>
+            <li><a href="/assets/Rudra-Trivedi-Resume.pdf" download>Resume</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="/what-i-do#strategy">Marketing Strategy &amp; Audits</a></li>
-            <li><a href="/what-i-do#product">Product Consultancy</a></li>
-            <li><a href="/what-i-do#automation">AI Automations</a></li>
+            <li><a href="/what-i-do#strategy">Sales, RevOps &amp; GTM</a></li>
+            <li><a href="/what-i-do#marketing">Product Marketing</a></li>
+            <li><a href="/what-i-do#website">Website Creation</a></li>
+            <li><a href="/what-i-do#automation">Industry Automations</a></li>
           </ul>
         </div>
       </div>
@@ -1361,9 +1521,10 @@
           <label for="cf-service">What are you looking for?</label>
           <select id="cf-service" name="service" required>
             <option value="" disabled selected>Select an area</option>
-            <option value="Marketing Strategy & Audits">Marketing Strategy &amp; Audits</option>
-            <option value="Product Consultancy">Product Consultancy</option>
-            <option value="Automations">Business &amp; AI Automations</option>
+            <option value="Sales, RevOps & GTM Architecture">Sales, RevOps &amp; GTM Architecture</option>
+            <option value="Product Marketing">Product Marketing</option>
+            <option value="Website Creation">Website Creation</option>
+            <option value="Industry Automations">Industry Automations</option>
             <option value="Not sure">Not sure yet, let's chat</option>
           </select>
         </div>
@@ -1458,6 +1619,24 @@
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape' && document.getElementById('navLinks').classList.contains('open')) toggleMobileNav();
     });
+  
+    /* ---------- SERVICE TABS ---------- */
+    (function () {
+      document.documentElement.classList.add('js');
+      const tabs = [...document.querySelectorAll('.svc-tab')];
+      const panels = [...document.querySelectorAll('.service-section')];
+      const ids = panels.map(p => p.id);
+      function show(id, scroll) {
+        if (!ids.includes(id)) id = ids[0];
+        panels.forEach(p => p.classList.toggle('is-active', p.id === id));
+        tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.target === id));
+        panels.find(p => p.id === id).querySelectorAll('[class*="reveal"]').forEach(e => e.classList.add('visible'));
+        if (scroll) document.querySelector('.svc-tabs-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      tabs.forEach(t => t.addEventListener('click', () => { history.replaceState(null, '', '#' + t.dataset.target); show(t.dataset.target, false); }));
+      window.addEventListener('hashchange', () => show(location.hash.slice(1), true));
+      show(location.hash.slice(1), !!location.hash);
+    })();
   </script>
 
 </body>

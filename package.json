@@ -1,0 +1,10 @@
+{
+  "name": "rudra-trivedi-portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "serve . -l 8765 -c serve.json"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
