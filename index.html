@@ -1362,6 +1362,25 @@
       .quick-facts span { font-size: 0.74rem; padding: 0.25rem 0.7rem; }
       .quick-facts span:nth-child(2) { display: none; }
     }
+
+    /* ---------- F1RSTWORD CARD BUTTONS ---------- */
+    .case-banner.f1 { cursor: default; margin-top: 1.5rem; }
+    .case-banner.f1:hover { transform: none; box-shadow: 6px 6px 0 var(--ink); }
+    .f1-logo { padding: 0; }
+    .f1-logo img { display: block; height: 46px; width: auto; }
+    .f1-links { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 0.6rem; }
+    .f1-links .svc-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
+      min-height: 44px; padding: 0.6rem 1.25rem; margin: 0; width: auto;
+      font-family: 'Space Grotesk', sans-serif; font-size: 0.9rem; font-weight: 700; text-decoration: none;
+      color: var(--ink); background: var(--cream); border: 2px solid var(--ink); border-radius: 999px;
+      box-shadow: 3px 3px 0 var(--ink); transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+    .f1-links .svc-btn:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 var(--ink); background: #FFFDF9; color: var(--ink); }
+    .f1-links .svc-btn:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--ink); }
+    .f1-links .svc-btn.primary { background: var(--coral); color: var(--cream); }
+    .f1-links .svc-btn.primary:hover { background: var(--coral-dark); color: var(--cream); }
+    @media (max-width: 520px) { .f1-links .svc-btn { flex: 1 1 100%; } }
   </style>
 </head>
 
@@ -1565,9 +1584,9 @@
           <h3>f1rstword: know who to contact, and when</h3>
           <p>An account copilot for B2B sales. It finds the right companies and people, watches the signals that matter, scores new enquiries in about 10 seconds, and keeps HubSpot up to date. Outreach stays manual: nothing is ever sent to a prospect. Built on Supabase and HubSpot.</p>
           <div class="f1-links">
+            <a href="/f1rstword" class="svc-btn primary">Read project page →</a>
             <a href="https://drive.google.com/file/d/1fCdeYLq3ycv3fBa9GLvGw3EUB2y1EGOr/view?usp=sharing" target="_blank" rel="noopener" class="svc-btn">Watch demo ↗</a>
-            <a href="/f1rstword" class="svc-btn">Read project page →</a>
-            <a href="https://github.com/rudrat04/gtm-copilot" target="_blank" rel="noopener" class="svc-btn">View code ↗</a>
+            <a href="https://github.com/rudrat04/f1rstword-showcase" target="_blank" rel="noopener" class="svc-btn">View code ↗</a>
           </div>
         </div>
       </div>
