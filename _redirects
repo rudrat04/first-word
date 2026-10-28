@@ -9,7 +9,6 @@ https://first-word.netlify.app/*  https://f1rstword.com/:splat  301!
 /case-study-mpleai     /case-study-mpleai.html     200
 /case-study-ai-reply-brief /case-study-ai-reply-brief.html 200
 /f1rstword             /f1rstword.html             200
-/diu                   /diu.html                   200
 
 # Old service pages → redirect to new What I Do page with anchors
 /marketing-strategy    /what-i-do#strategy         301

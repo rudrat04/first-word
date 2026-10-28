@@ -3,7 +3,6 @@
 
 User-agent: *
 Allow: /
-Disallow: /diu
 
 # Explicit permissions & optimized access for AI / LLM / Answer Engine Crawlers (AEO / GEO)
 User-agent: GPTBot
