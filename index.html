@@ -97,13 +97,14 @@
 }
   </script>
 
-  <link rel="preload" as="image" href="/assets/rudra.webp">
+  <link rel="preload" as="image" href="/assets/rudra-760.webp" imagesrcset="/assets/rudra-760.webp 760w, /assets/rudra.webp 1254w" imagesizes="(max-width: 900px) 300px, 380px">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://fonts.googleapis.com">
   <link rel="dns-prefetch" href="https://fonts.gstatic.com">
   <meta name="theme-color" content="#FF5233">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet"></noscript>
 
   <style>
     :root {
@@ -260,7 +261,7 @@
     .nav-links a:hover { background: rgba(26, 21, 35, 0.08); }
 
     .nav-links a.nav-cta {
-      background: var(--coral);
+      background: var(--coral-dark);
       color: var(--cream);
       border: 1.5px solid var(--ink);
       box-shadow: 2px 2px 0 var(--ink);
@@ -268,7 +269,7 @@
     }
 
     .nav-links a.nav-cta:hover {
-      background: var(--coral-dark);
+      background: #A83019;
       transform: translate(-1px, -1px);
       box-shadow: 3px 3px 0 var(--ink);
     }
@@ -1008,7 +1009,7 @@
 
     .footer-cols { display: flex; gap: 3rem; flex-wrap: wrap; }
 
-    .footer-col h4 {
+    .footer-col h3 {
       color: var(--cream);
       font-size: 0.78rem;
       font-weight: 700;
@@ -1146,7 +1147,7 @@
       margin-top: 1.25rem; background: #FFF1B8; border: 2px solid var(--ink); border-radius: 6px 6px 22px 6px;
       padding: 1.1rem 1.3rem 1.2rem; box-shadow: 4px 4px 0 var(--ink); transform: rotate(-1.2deg);
     }
-    .now-note h4 { font-family: 'Caveat', cursive; font-size: 1.7rem; line-height: 1; margin-bottom: 0.4rem; }
+    .now-note h3 { font-family: 'Caveat', cursive; font-size: 1.7rem; line-height: 1; margin-bottom: 0.4rem; }
     .now-note ul { list-style: none; display: flex; flex-direction: column; gap: 0.3rem; }
     .now-note li { font-size: 0.95rem; color: var(--ink); line-height: 1.4; }
     .now-note li::before { content: '☕ '; }
@@ -1398,7 +1399,7 @@
     @media (max-width: 900px) {
       .nav-cta-mobile {
         display: inline-flex; align-items: center; margin-left: auto; flex-shrink: 0;
-        background: var(--coral); color: var(--cream); font-family: 'Space Grotesk', sans-serif;
+        background: var(--coral-dark); color: var(--cream); font-family: 'Space Grotesk', sans-serif;
         font-size: 0.85rem; font-weight: 700; text-decoration: none; padding: 0.45rem 0.95rem;
         border: 1.5px solid var(--ink); border-radius: 999px; box-shadow: 2px 2px 0 var(--ink);
         white-space: nowrap;
@@ -1499,6 +1500,8 @@
 
   <div class="nav-scrim" id="navScrim" onclick="toggleMobileNav()"></div>
 
+  <main id="main">
+
   <!-- HERO -->
   <section class="hero hero-me" aria-label="Introduction">
     <div class="hero-grid">
@@ -1528,7 +1531,7 @@
       <div class="photo-wrap">
         <div class="photo-frame">
           <span class="tape" aria-hidden="true"></span>
-          <img src="/assets/rudra.webp" alt="Portrait of Rudra Trivedi in a dark blazer and light blue shirt, standing in a bright office" width="1254" height="1254" fetchpriority="high">
+          <img src="/assets/rudra-760.webp" srcset="/assets/rudra-760.webp 760w, /assets/rudra.webp 1254w" sizes="(max-width: 900px) 300px, 380px" alt="Portrait of Rudra Trivedi in a dark blazer and light blue shirt, standing in a bright office" width="1254" height="1254" fetchpriority="high">
           <span class="photo-caption">that's me ☺</span>
         </div>
         <span class="sticker s1">Open to freelance work</span>
@@ -1548,7 +1551,7 @@
         <span class="story-kicker">A little about me</span>
         <h2 class="story-headline">I didn't study growth.<br>I got thrown into it.</h2>
         <div class="now-note reveal delay-1">
-          <h4>Right now</h4>
+          <h3>Right now</h3>
           <ul>
             <li>Freelancing with founders and business owners</li>
             <li>Building a GTM copilot app, a project called f1rstword</li>
@@ -1594,7 +1597,7 @@
             <li>Positioning: why customers should choose you</li>
             <li>A go to market plan to reach customers</li>
           </ul>
-          <a href="/product-marketing" class="svc-btn">Explore this →</a>
+          <a href="/product-marketing" class="svc-btn" aria-label="Explore Product Marketing">Explore this →</a>
         </div>
         <div class="service-preview-card reveal delay-3" id="svcWebsite">
           <span class="svc-num">03</span>
@@ -1605,7 +1608,7 @@
             <li>Clear pages: what you do, who you are, how to reach you</li>
             <li>Set up and live, ready to use</li>
           </ul>
-          <a href="/website-creation" class="svc-btn">Explore this →</a>
+          <a href="/website-creation" class="svc-btn" aria-label="Explore Website Creation">Explore this →</a>
         </div>
         <div class="service-preview-card reveal delay-4" id="svcAutomation">
           <span class="svc-num">04</span>
@@ -1616,7 +1619,7 @@
             <li>Order, invoice and billing automation</li>
             <li>Status updates and alerts for your team and customers</li>
           </ul>
-          <a href="/industry-automations" class="svc-btn">See patterns by industry →</a>
+          <a href="/industry-automations" class="svc-btn" aria-label="Explore Industry Automations">See patterns by industry →</a>
         </div>
       </div>
     </div>
@@ -1751,6 +1754,8 @@
     </button>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-top">
@@ -1769,7 +1774,7 @@
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h3>Navigate</h3>
           <ul>
             <li><a href="/">Home</a></li>
                   <li><a href="/what-i-do">Services</a></li>
@@ -1779,7 +1784,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h3>Services</h3>
           <ul>
             <li><a href="/gtm-systems">GTM Systems</a></li>
             <li><a href="/product-marketing">Product Marketing</a></li>

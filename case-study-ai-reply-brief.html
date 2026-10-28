@@ -29,7 +29,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta name="theme-color" content="#FF5233">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <script type="application/ld+json">
 {
@@ -219,7 +220,7 @@
     .nav-links a:hover { background: rgba(26, 21, 35, 0.08); }
 
     .nav-links a.nav-cta {
-      background: var(--coral);
+      background: var(--coral-dark);
       color: var(--cream);
       border: 1.5px solid var(--ink);
       box-shadow: 2px 2px 0 var(--ink);
@@ -227,7 +228,7 @@
     }
 
     .nav-links a.nav-cta:hover {
-      background: var(--coral-dark);
+      background: #A83019;
       transform: translate(-1px, -1px);
       box-shadow: 3px 3px 0 var(--ink);
     }
@@ -917,7 +918,7 @@
 
     .footer-cols { display: flex; gap: 3rem; }
 
-    .footer-col h4 {
+    .footer-col h3 {
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.1em;
@@ -1144,7 +1145,7 @@
     @media (max-width: 900px) {
       .nav-cta-mobile {
         display: inline-flex; align-items: center; margin-left: auto; flex-shrink: 0;
-        background: var(--coral); color: var(--cream); font-family: 'Space Grotesk', sans-serif;
+        background: var(--coral-dark); color: var(--cream); font-family: 'Space Grotesk', sans-serif;
         font-size: 0.85rem; font-weight: 700; text-decoration: none; padding: 0.45rem 0.95rem;
         border: 1.5px solid var(--ink); border-radius: 999px; box-shadow: 2px 2px 0 var(--ink);
         white-space: nowrap;
@@ -1460,7 +1461,7 @@
       </div>
       <div class="footer-cols">
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h3>Navigate</h3>
           <ul>
             <li><a href="/">Home</a></li>
                   <li><a href="/what-i-do">Services</a></li>
@@ -1470,7 +1471,7 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Services</h4>
+          <h3>Services</h3>
           <ul>
             <li><a href="/gtm-systems">GTM Systems</a></li>
             <li><a href="/product-marketing">Product Marketing</a></li>

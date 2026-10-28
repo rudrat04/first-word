@@ -29,7 +29,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <meta name="theme-color" content="#FF5233">
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
   <script type="application/ld+json">
 {
@@ -260,7 +261,7 @@
     .nav-links a:hover { background: rgba(26, 21, 35, 0.08); }
 
     .nav-links a.nav-cta {
-      background: var(--coral);
+      background: var(--coral-dark);
       color: var(--cream);
       border: 1.5px solid var(--ink);
       box-shadow: 2px 2px 0 var(--ink);
@@ -268,7 +269,7 @@
     }
 
     .nav-links a.nav-cta:hover {
-      background: var(--coral-dark);
+      background: #A83019;
       transform: translate(-1px, -1px);
       box-shadow: 3px 3px 0 var(--ink);
     }
@@ -1165,7 +1166,7 @@
     @media (max-width: 900px) {
       .nav-cta-mobile {
         display: inline-flex; align-items: center; margin-left: auto; flex-shrink: 0;
-        background: var(--coral); color: var(--cream); font-family: 'Space Grotesk', sans-serif;
+        background: var(--coral-dark); color: var(--cream); font-family: 'Space Grotesk', sans-serif;
         font-size: 0.85rem; font-weight: 700; text-decoration: none; padding: 0.45rem 0.95rem;
         border: 1.5px solid var(--ink); border-radius: 999px; box-shadow: 2px 2px 0 var(--ink);
         white-space: nowrap;
@@ -1253,6 +1254,8 @@
   </nav>
 
   <div class="nav-scrim" id="navScrim" onclick="toggleMobileNav()"></div>
+
+  <main id="main">
 
   <!-- HERO -->
   <section class="hero">
@@ -1399,6 +1402,8 @@
       </svg>
     </button>
   </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer>
