@@ -1,3 +1,6 @@
+# Canonical domain: send the netlify subdomain to f1rstword.com
+https://first-word.netlify.app/*  https://f1rstword.com/:splat  301!
+
 # Clean URL rewrites & 301 Redirects for Rudra Trivedi Portfolio
 
 # New portfolio pages
