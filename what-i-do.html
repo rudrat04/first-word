@@ -1206,6 +1206,33 @@
     .svc-more-links a { text-decoration: none; color: var(--ink); background: #FFFDF9; border: 2px solid var(--ink); border-radius: 999px; padding: 0.55rem 1.1rem; font-weight: 700; font-size: 0.92rem; box-shadow: 3px 3px 0 var(--ink); }
     .svc-more-links a:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--ink); }
     a.deliverable-card { display: block; text-decoration: none; color: inherit; }
+
+    /* ---------- NAV DROPDOWNS ---------- */
+    .nav-links .has-dd { position: relative; }
+    .nav-links .has-dd > a { display: inline-flex; align-items: center; gap: 0.35rem; }
+    .dd-chev { transition: transform 0.15s ease; }
+    .dd-menu { list-style: none; display: none; position: absolute; top: 100%; left: 0; min-width: 230px; padding: 0.6rem 0 0; z-index: 100; }
+    .dd-menu::before { content: ''; position: absolute; inset: 0.6rem 0 0 0; background: var(--cream); border: 2px solid var(--ink); border-radius: 18px; box-shadow: 4px 4px 0 var(--ink); z-index: -1; }
+    .dd-menu li { padding: 0 0.4rem; }
+    .dd-menu li:first-child { padding-top: 0.4rem; }
+    .dd-menu li:last-child { padding-bottom: 0.4rem; }
+    .nav-links .dd-menu a { display: block; border-radius: 12px; padding: 0.55rem 0.8rem; font-size: 0.9rem; }
+    .nav-links .dd-menu li:last-child a { color: var(--coral-dark); }
+    .has-dd:hover > .dd-menu, .has-dd:focus-within > .dd-menu { display: block; }
+    .has-dd:hover .dd-chev, .has-dd:focus-within .dd-chev { transform: rotate(180deg); }
+    @media (max-width: 900px) {
+      .nav-links .has-dd > a { display: block; }
+      .nav-links .has-dd > a .dd-chev { display: none; }
+      .dd-menu { display: block; position: static; min-width: 0; padding: 0 0 0.6rem 1rem; }
+      .dd-menu::before { display: none; }
+      .dd-menu li, .dd-menu li:first-child, .dd-menu li:last-child { padding: 0; border-bottom: none; }
+      .nav-links .dd-menu a { padding: 0.5rem 0.5rem; font-size: 1rem; font-weight: 500; }
+    }
+    .svc-hub-list { margin-bottom: 2rem; }
+    .svc-intro { display: grid; grid-template-columns: 1fr 1.4fr; gap: 1.5rem 2.5rem; padding: 1.75rem 0; border-top: 1.5px solid var(--line); }
+    @media (max-width: 800px) { .svc-intro { grid-template-columns: 1fr; } }
+    .svc-intro-tag { margin-top: 0.6rem; font-weight: 600; color: var(--ink-soft); }
+    .svc-intro .proof-link { display: inline-block; margin-top: 1rem; color: var(--coral-dark); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--coral-dark); }
   </style>
 </head>
 
@@ -1226,8 +1253,25 @@
 
     <ul class="nav-links" id="navLinks">
       <li><a href="/">Home</a></li>
-      <li><a href="/what-i-do" class="active">Services</a></li>
-      <li><a href="/case-studies">Projects</a></li>
+            <li class="has-dd">
+        <a href="/what-i-do" class="active" aria-haspopup="true">Services <svg class="dd-chev" width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></a>
+        <ul class="dd-menu">
+          <li><a href="/gtm-revops">Sales, RevOps &amp; GTM</a></li>
+          <li><a href="/product-marketing">Product Marketing</a></li>
+          <li><a href="/website-creation">Website Creation</a></li>
+          <li><a href="/industry-automations">Industry Automations</a></li>
+          <li><a href="/what-i-do">All services</a></li>
+        </ul>
+      </li>
+            <li class="has-dd">
+        <a href="/case-studies" aria-haspopup="true">Projects <svg class="dd-chev" width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></a>
+        <ul class="dd-menu">
+          <li><a href="/case-study-mpleai">mple.ai: 100+ demos</a></li>
+          <li><a href="/case-study-ai-reply-brief">AI Reply Brief System</a></li>
+          <li><a href="/f1rstword">f1rstword copilot</a></li>
+          <li><a href="/case-studies">All projects</a></li>
+        </ul>
+      </li>
       <li><a href="/#experience">Experience</a></li>
       <li><a href="/assets/Rudra-Trivedi-Resume.pdf" download>Resume</a></li>
       <li><a href="#" class="nav-cta" onclick="openContactModal(); return false;" id="navCtaBtn">Let's Talk</a></li>
@@ -1247,31 +1291,57 @@
     <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FFF6EE"/>
   </svg>
 
-  <section class="service-section is-active" aria-labelledby="svc-hub-heading">
+  <section class="service-section is-active svc-hub" aria-label="Services overview">
     <div class="service-inner">
-      <h2 class="s-headline" id="svc-hub-heading" style="margin-bottom:1.5rem">Pick the one that fits</h2>
-      <div class="deliverables-grid">
-        <a class="deliverable-card" href="/gtm-revops">
-          <span class="d-icon">🧭</span>
-          <h4>Sales, RevOps &amp; GTM</h4>
-          <p>Design how sales, operations and go to market work, then automate the repeat parts.</p>
-        </a>
-        <a class="deliverable-card" href="/product-marketing">
-          <span class="d-icon">💬</span>
-          <h4>Product Marketing</h4>
-          <p>Messaging, positioning, a 90-day plan and outbound playbooks that turn into conversations.</p>
-        </a>
-        <a class="deliverable-card" href="/website-creation">
-          <span class="d-icon">📱</span>
-          <h4>Website Creation</h4>
-          <p>A simple, fast site with the messaging done first, set up and live.</p>
-        </a>
-        <a class="deliverable-card" href="/industry-automations">
-          <span class="d-icon">⚡</span>
-          <h4>Industry Automations</h4>
-          <p>Reminders, intake, invoices and alerts for service and trade businesses.</p>
-        </a>
-      </div>
+      <nav class="svc-more-links svc-hub-list" aria-label="Services"><a href="/gtm-revops">Sales, RevOps &amp; GTM</a><a href="/product-marketing">Product Marketing</a><a href="/website-creation">Website Creation</a><a href="/industry-automations">Industry Automations</a></nav>
+      <article class="svc-intro">
+        <div class="svc-intro-head">
+          <span class="s-num">01</span>
+          <h2 class="s-headline">Sales, RevOps &amp; GTM</h2>
+          <p class="svc-intro-tag">Design and automate your revenue architecture.</p>
+        </div>
+        <div class="svc-intro-body">
+          <p class="s-body">Most sales setups grew by accident: a CRM nobody trusts, follow ups that depend on memory, and handoffs that drop leads. I review how you sell today, design how sales, operations and go to market should work, then automate the repeat parts on the tools you already use.</p>
+          <div class="hook-box"><strong>Best for:</strong> Founders, owners, and sales or marketing heads who want a working revenue system instead of ad hoc fixes.</div>
+          <a class="proof-link" href="/gtm-revops">Explore Sales, RevOps &amp; GTM →</a>
+        </div>
+      </article>
+      <article class="svc-intro">
+        <div class="svc-intro-head">
+          <span class="s-num">02</span>
+          <h2 class="s-headline">Product Marketing</h2>
+          <p class="svc-intro-tag">Say the right thing, to the right people.</p>
+        </div>
+        <div class="svc-intro-body">
+          <p class="s-body">Good products still struggle when nobody can explain them in one sentence. I work out your messaging and positioning, plan the first 90 days of go to market, and build outbound playbooks, the kind that produced 100+ qualified demos for mple.ai.</p>
+          <div class="hook-box"><strong>Best for:</strong> Teams launching or relaunching a product, or whose pitch is not landing with the right buyers.</div>
+          <a class="proof-link" href="/product-marketing">Explore Product Marketing →</a>
+        </div>
+      </article>
+      <article class="svc-intro">
+        <div class="svc-intro-head">
+          <span class="s-num">03</span>
+          <h2 class="s-headline">Website Creation</h2>
+          <p class="svc-intro-tag">A simple website customers can find and use.</p>
+        </div>
+        <div class="svc-intro-body">
+          <p class="s-body">Your website should answer three questions fast: what you do, who you are, and how to reach you. I write the messaging first, then design and build a clean, fast site and set it live, with domain, hosting and contact forms handled.</p>
+          <div class="hook-box"><strong>Best for:</strong> Businesses with no website, or one that is outdated, slow, or hard to use on a phone.</div>
+          <a class="proof-link" href="/website-creation">Explore Website Creation →</a>
+        </div>
+      </article>
+      <article class="svc-intro">
+        <div class="svc-intro-head">
+          <span class="s-num">04</span>
+          <h2 class="s-headline">Industry Automations</h2>
+          <p class="svc-intro-tag">Automations for the way your business already works.</p>
+        </div>
+        <div class="svc-intro-body">
+          <p class="s-body">Every industry has the same few chores that eat hours: chasing leads, sending reminders, logging orders, raising invoices. I set up ready patterns for your industry on the tools you already use, after an audit of the two or three workflows costing you the most time.</p>
+          <div class="hook-box"><strong>Best for:</strong> Owners of clinics, agencies, firms, shops and other service or trade businesses whose staff spend time on repeat admin.</div>
+          <a class="proof-link" href="/industry-automations">Explore Industry Automations →</a>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -1334,7 +1404,15 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/what-i-do">Services</a></li>
-            <li><a href="/case-studies">Projects</a></li>
+                  <li class="has-dd">
+        <a href="/case-studies" aria-haspopup="true">Projects <svg class="dd-chev" width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></a>
+        <ul class="dd-menu">
+          <li><a href="/case-study-mpleai">mple.ai: 100+ demos</a></li>
+          <li><a href="/case-study-ai-reply-brief">AI Reply Brief System</a></li>
+          <li><a href="/f1rstword">f1rstword copilot</a></li>
+          <li><a href="/case-studies">All projects</a></li>
+        </ul>
+      </li>
             <li><a href="/#experience">Experience</a></li>
             <li><a href="/assets/Rudra-Trivedi-Resume.pdf" download>Resume</a></li>
           </ul>
