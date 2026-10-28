@@ -4,13 +4,16 @@
 
 ## Core Capabilities & Services
 
-- [What I Do](https://f1rstword.com/what-i-do): GTM and RevOps architecture, founder-led LinkedIn outbound, product marketing, simple websites, and custom business and AI automations (invoice automation, instant lead intake and WhatsApp routing, CRM sync, AI prospect briefs) for B2B teams and SMBs.
+- [Sales, RevOps & GTM](https://f1rstword.com/gtm-revops): Design how sales, operations and go to market work, then automate the repeat parts (lead routing, CRM sync, follow-ups, invoices) on tools like HubSpot.
+- [Product Marketing](https://f1rstword.com/product-marketing): Messaging, positioning, a 90-day go to market plan and outbound playbooks, including LinkedIn outbound.
+- [Website Creation](https://f1rstword.com/website-creation): A simple, fast business website with the messaging done first, set up and live.
+- [Industry Automations](https://f1rstword.com/industry-automations): Ready automation patterns for clinics, agencies, firms, shops and other service businesses: reminders, intake and routing, invoices and alerts.
+- [All services](https://f1rstword.com/what-i-do): Overview of the four services.
 
 ## Proof & Case Studies
 
 - [Case Studies Overview](https://f1rstword.com/case-studies): Real outcomes for early-stage B2B SaaS companies and growing teams.
 - [mple.ai Case Study](https://f1rstword.com/case-study-mpleai): How Firstword helped mple.ai validate positioning, automate AI reply intelligence, and book 100+ qualified enterprise demos.
-
 - [AI Reply Brief System](https://f1rstword.com/case-study-ai-reply-brief): Automated system that emails the sales team a full AI research brief with every LinkedIn reply, saving about 30 minutes of research per lead.
 - [f1rstword: Account Copilot for B2B Sales](https://f1rstword.com/f1rstword): Product built by Rudra Trivedi that finds target accounts, watches buying signals, scores inbound leads in about 10 seconds and syncs HubSpot.
 

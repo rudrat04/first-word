@@ -4,21 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>What I Do | Rudra Trivedi</title>
-  <meta name="description" content="Sales, RevOps and GTM architecture, product marketing, website creation and industry automations by Rudra Trivedi, freelance GTM engineer.">
+  <title>Services | Rudra Trivedi, Freelance GTM Engineer</title>
+  <meta name="description" content="Four services from freelance GTM engineer Rudra Trivedi: Sales, RevOps and GTM, product marketing, website creation and industry automations.">
   <link rel="canonical" href="https://f1rstword.com/what-i-do">
   <link rel="manifest" href="/site.webmanifest">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://f1rstword.com/what-i-do">
-  <meta property="og:title" content="What I Do | Rudra Trivedi">
-  <meta property="og:description" content="What Rudra Trivedi does: GTM and RevOps architecture, product marketing, simple websites and automations for B2B teams and SMBs.">
+  <meta property="og:title" content="Services | Rudra Trivedi, Freelance GTM Engineer">
+  <meta property="og:description" content="Four services from freelance GTM engineer Rudra Trivedi: Sales, RevOps and GTM, product marketing, website creation and industry automations.">
   <meta property="og:image" content="https://f1rstword.com/assets/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://f1rstword.com/what-i-do">
-  <meta property="twitter:title" content="What I Do | Rudra Trivedi">
-  <meta property="twitter:description" content="What Rudra Trivedi does: GTM and RevOps architecture, product marketing, simple websites and automations for B2B teams and SMBs.">
+  <meta property="twitter:title" content="Services | Rudra Trivedi, Freelance GTM Engineer">
+  <meta property="twitter:description" content="Four services from freelance GTM engineer Rudra Trivedi: Sales, RevOps and GTM, product marketing, website creation and industry automations.">
   <meta property="twitter:image" content="https://f1rstword.com/assets/og-image.png">
   <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png">
@@ -36,18 +36,46 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebPage",
+      "@type": "CollectionPage",
       "@id": "https://f1rstword.com/what-i-do#page",
       "url": "https://f1rstword.com/what-i-do",
-      "name": "What I Do | Rudra Trivedi",
-      "description": "Sales, RevOps and GTM architecture, product marketing, website creation and industry automations by Rudra Trivedi, freelance GTM engineer.",
+      "name": "Services | Rudra Trivedi",
       "isPartOf": {
         "@id": "https://f1rstword.com/#website"
       },
       "about": {
-        "@id": "https://f1rstword.com/#person"
+        "@id": "https://f1rstword.com/#org"
       },
       "inLanguage": "en"
+    },
+    {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Sales, RevOps & GTM",
+          "url": "https://f1rstword.com/gtm-revops"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Product Marketing",
+          "url": "https://f1rstword.com/product-marketing"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Website Creation",
+          "url": "https://f1rstword.com/website-creation"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Industry Automations",
+          "url": "https://f1rstword.com/industry-automations"
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -61,7 +89,7 @@
         {
           "@type": "ListItem",
           "position": 2,
-          "name": "What I Do",
+          "name": "Services",
           "item": "https://f1rstword.com/what-i-do"
         }
       ]
@@ -88,26 +116,10 @@
         },
         {
           "@type": "Question",
-          "name": "Do you run LinkedIn outbound?",
+          "name": "Which services do you offer?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. I set up founder-led LinkedIn outbound: targeting, messaging, list building and safe, human-paced sequences. For mple.ai this produced 100+ qualified demos, and you can read the full story in the case study."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What kind of work can be automated?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Common examples are invoice generation, instant lead intake and WhatsApp or email follow-up, document checklists and deadline alerts, CRM data sync, and AI-written research briefs that land with every prospect reply."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which tools do you work with?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "HubSpot, Google Sheets, Airtable, Supabase, Slack, WhatsApp and email, plus SQL databases. I build around the tools your team already uses rather than asking you to switch."
+            "text": "Four: Sales, RevOps and GTM architecture; product marketing and outbound playbooks; website creation; and industry automations."
           }
         },
         {
@@ -1187,6 +1199,13 @@
       .quick-facts span { font-size: 0.74rem; padding: 0.25rem 0.7rem; }
       .quick-facts span:nth-child(2) { display: none; }
     }
+    .service-section { display: block; }
+    .svc-more { max-width: 1120px; margin: 0 auto; padding: 0 1.25rem 3rem; }
+    .svc-more h2 { font-family: 'Fraunces', serif; font-weight: 900; font-size: 1.4rem; margin-bottom: 1rem; }
+    .svc-more-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .svc-more-links a { text-decoration: none; color: var(--ink); background: #FFFDF9; border: 2px solid var(--ink); border-radius: 999px; padding: 0.55rem 1.1rem; font-weight: 700; font-size: 0.92rem; box-shadow: 3px 3px 0 var(--ink); }
+    .svc-more-links a:hover { transform: translate(-1px,-1px); box-shadow: 4px 4px 0 var(--ink); }
+    a.deliverable-card { display: block; text-decoration: none; color: inherit; }
   </style>
 </head>
 
@@ -1228,335 +1247,34 @@
     <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FFF6EE"/>
   </svg>
 
-
-    <!-- SERVICE TABS -->
-  <div class="svc-tabs-wrap">
-    <div class="svc-tabs" role="tablist" aria-label="Services">
-      <button type="button" class="svc-tab" role="tab" data-target="strategy"><span class="n">01</span><span class="t">Sales, RevOps &amp; GTM</span></button>
-      <button type="button" class="svc-tab" role="tab" data-target="marketing"><span class="n">02</span><span class="t">Product Marketing</span></button>
-      <button type="button" class="svc-tab" role="tab" data-target="website"><span class="n">03</span><span class="t">Website Creation</span></button>
-      <button type="button" class="svc-tab" role="tab" data-target="automation"><span class="n">04</span><span class="t">Industry Automations</span></button>
-    </div>
-  </div>
-
-  <section class="service-section" id="strategy" aria-labelledby="strategy-heading">
+  <section class="service-section is-active" aria-labelledby="svc-hub-heading">
     <div class="service-inner">
-      <div class="service-header">
-        <div class="service-header-left">
-          <span class="s-num reveal">01</span>
-          <span class="s-kicker reveal delay-1">Sales, RevOps &amp; GTM Architecture</span>
-          <h2 class="s-headline reveal delay-2" id="strategy-heading">Design and automate your revenue architecture.</h2>
-        </div>
-        <div class="service-header-right reveal-right delay-1">
-          <p class="s-body">Most sales and operations setups grew by accident: a CRM nobody trusts, follow ups that depend on memory, and handoffs that drop leads. I help you design how sales, operations and go to market actually work.</p>
-          <p class="s-body" style="margin-top: 1rem;"><strong>Then I automate the repeat parts.</strong> Reminders, follow ups, lead routing, CRM updates and invoices, built on the tools you already use.</p>
-          <div class="hook-box">
-            <strong>Best for:</strong> Founders, business owners, and sales or marketing heads who want a clear, working revenue system instead of ad hoc fixes.
-          </div>
-        </div>
-      </div>
-
-      <div class="deliverables-heading reveal">What you get</div>
+      <h2 class="s-headline" id="svc-hub-heading" style="margin-bottom:1.5rem">Pick the one that fits</h2>
       <div class="deliverables-grid">
-        <div class="deliverable-card reveal delay-1">
-          <span class="d-icon">🔍</span>
-          <h4>A review of how you sell today</h4>
-          <p>I look at your funnel, CRM, handoffs and tools to find where leads and revenue leak.</p>
-        </div>
-        <div class="deliverable-card reveal delay-2">
-          <span class="d-icon">🗺️</span>
-          <h4>A clear design</h4>
-          <p>Who does what, and when, from first enquiry to closed deal, written down so the team can follow it.</p>
-        </div>
-        <div class="deliverable-card reveal delay-3">
-          <span class="d-icon">⚡</span>
-          <h4>Automation for the repeat parts</h4>
-          <p>Reminders, follow ups, lead routing, CRM sync and invoices, so people spend time selling.</p>
-        </div>
-        <div class="deliverable-card reveal delay-4">
-          <span class="d-icon">🤖</span>
-          <h4>GTM and RevOps automations</h4>
-          <p>Instant lead intake, AI prospect briefs, meeting briefs and pipeline alerts, built around your sales motion.</p>
-        </div>
-      </div>
-
-      <div class="process-strip">
-        <div class="process-heading reveal">How it works</div>
-        <div class="process-steps">
-          <div class="process-step reveal delay-1">
-            <span class="step-num">01</span>
-            <h4>Review</h4>
-            <p>Walk through how you sell and work today, with your team and your data.</p>
-          </div>
-          <div class="process-step reveal delay-2">
-            <span class="step-num">02</span>
-            <h4>Design</h4>
-            <p>Map the target setup: stages, owners, rules and the tools that support them.</p>
-          </div>
-          <div class="process-step reveal delay-3">
-            <span class="step-num">03</span>
-            <h4>Automate</h4>
-            <p>Build the automations for the repeat parts and test them on real cases.</p>
-          </div>
-          <div class="process-step reveal delay-4">
-            <span class="step-num">04</span>
-            <h4>Handover</h4>
-            <p>Documentation, a walkthrough, and a watch period so everything runs cleanly.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="proof-card reveal">
-        <div class="proof-stat">
-          <div class="big-num">30 min</div>
-          <div class="proof-label">Saved per lead</div>
-        </div>
-        <div class="divider"></div>
-        <div class="proof-text">
-          <p>For <strong>mple.ai</strong>, I built a system that emails the sales team an AI research brief with every LinkedIn reply: who the prospect is, what the reply means, a suggested response and discovery questions.</p>
-          <a href="/case-study-ai-reply-brief" class="proof-link">Read the case study →</a>
-        </div>
-      </div>
-
-      <div class="proof-card reveal">
-        <div class="proof-stat">
-          <div class="big-num">f1</div>
-          <div class="proof-label">Portfolio project</div>
-        </div>
-        <div class="divider"></div>
-        <div class="proof-text">
-          <p><strong>f1rstword</strong> is an account copilot I built for B2B sales. It finds the right companies and people, watches signals, scores new enquiries, and keeps HubSpot up to date.</p>
-          <a href="/#f1rstwordProject" class="proof-link">See the project →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-section alt" id="marketing" aria-labelledby="marketing-heading">
-    <div class="service-inner">
-      <div class="service-header">
-        <div class="service-header-left">
-          <span class="s-num reveal">02</span>
-          <span class="s-kicker reveal delay-1">Product Marketing</span>
-          <h2 class="s-headline reveal delay-2" id="marketing-heading">Say the right thing, to the right people.</h2>
-        </div>
-        <div class="service-header-right reveal-right delay-1">
-          <p class="s-body">Good products still struggle when nobody can explain them in one sentence. I help you decide what to say, who to say it to, and how to reach them.</p>
-          <p class="s-body" style="margin-top: 1rem;"><strong>Messaging, positioning and a go to market plan</strong> you can actually run, with outbound playbooks that turned into 100+ booked demos for mple.ai.</p>
-          <div class="hook-box">
-            <strong>Best for:</strong> Teams launching or relaunching a product or service, or whose pitch is not landing with the right buyers.
-          </div>
-        </div>
-      </div>
-
-      <div class="deliverables-heading reveal">What you get</div>
-      <div class="deliverables-grid">
-        <div class="deliverable-card reveal delay-1">
-          <span class="d-icon">💬</span>
-          <h4>Messaging</h4>
-          <p>How to describe what you sell, in words your buyers use.</p>
-        </div>
-        <div class="deliverable-card reveal delay-2">
-          <span class="d-icon">🎯</span>
-          <h4>Positioning</h4>
-          <p>Why customers should choose you over the alternatives.</p>
-        </div>
-        <div class="deliverable-card reveal delay-3">
+        <a class="deliverable-card" href="/gtm-revops">
           <span class="d-icon">🧭</span>
-          <h4>Go to market plan</h4>
-          <p>Who to target, which channels to use, and what to do in the first 90 days.</p>
-        </div>
-        <div class="deliverable-card reveal delay-4">
-          <span class="d-icon">📣</span>
-          <h4>Outbound playbooks</h4>
-          <p>ICP segments, tailored sequences and tracking, so outreach turns into conversations.</p>
-        </div>
-      </div>
-
-      <div class="process-strip">
-        <div class="process-heading reveal">How it works</div>
-        <div class="process-steps">
-          <div class="process-step reveal delay-1">
-            <span class="step-num">01</span>
-            <h4>Listen</h4>
-            <p>Customer calls, your pitch, your competitors and your numbers.</p>
-          </div>
-          <div class="process-step reveal delay-2">
-            <span class="step-num">02</span>
-            <h4>Define</h4>
-            <p>Pick the ICP, the problem you own and the angle that sets you apart.</p>
-          </div>
-          <div class="process-step reveal delay-3">
-            <span class="step-num">03</span>
-            <h4>Write</h4>
-            <p>Messaging, positioning and scripts you can use straight away.</p>
-          </div>
-          <div class="process-step reveal delay-4">
-            <span class="step-num">04</span>
-            <h4>Launch</h4>
-            <p>A plan for reaching customers, with simple metrics to learn from.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="proof-card reveal">
-        <div class="proof-stat">
-          <div class="big-num">100+</div>
-          <div class="proof-label">Demos booked</div>
-        </div>
-        <div class="divider"></div>
-        <div class="proof-text">
-          <p>For <strong>mple.ai</strong>, auditing their stalled outbound motion and rebuilding their messaging &amp; segmentation unlocked 100+ qualified B2B meetings, with a 36.5% LinkedIn acceptance rate and real demo conversations.</p>
-          <a href="/case-studies" class="proof-link">Read the full case study →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="service-section" id="website" aria-labelledby="website-heading">
-    <div class="service-inner">
-      <div class="service-header">
-        <div class="service-header-left">
-          <span class="s-num reveal">03</span>
-          <span class="s-kicker reveal delay-1">Website Creation</span>
-          <h2 class="s-headline reveal delay-2" id="website-heading">A simple website customers can find and use.</h2>
-        </div>
-        <div class="service-header-right reveal-right delay-1">
-          <p class="s-body">Your website should answer three questions fast: what you do, who you are, and how to reach you.</p>
-          <p class="s-body" style="margin-top: 1rem;"><strong>I design and build a simple, clear website</strong>, set up and live, with the messaging done first so the pages actually work.</p>
-          <div class="hook-box">
-            <strong>Best for:</strong> Businesses with no website, or one that is outdated, slow, or hard to use on a phone.
-          </div>
-        </div>
-      </div>
-
-      <div class="deliverables-heading reveal">What you get</div>
-      <div class="deliverables-grid">
-        <div class="deliverable-card reveal delay-1">
+          <h4>Sales, RevOps &amp; GTM</h4>
+          <p>Design how sales, operations and go to market work, then automate the repeat parts.</p>
+        </a>
+        <a class="deliverable-card" href="/product-marketing">
+          <span class="d-icon">💬</span>
+          <h4>Product Marketing</h4>
+          <p>Messaging, positioning, a 90-day plan and outbound playbooks that turn into conversations.</p>
+        </a>
+        <a class="deliverable-card" href="/website-creation">
           <span class="d-icon">📱</span>
-          <h4>Works on phone and computer</h4>
-          <p>Fast, clean and readable on every screen.</p>
-        </div>
-        <div class="deliverable-card reveal delay-2">
-          <span class="d-icon">🗂️</span>
-          <h4>Clear pages</h4>
-          <p>What you do, who you are and how to reach you, with nothing extra.</p>
-        </div>
-        <div class="deliverable-card reveal delay-3">
-          <span class="d-icon">✍️</span>
-          <h4>Messaging first</h4>
-          <p>Copy that explains your offer clearly before the design starts.</p>
-        </div>
-        <div class="deliverable-card reveal delay-4">
-          <span class="d-icon">🚀</span>
-          <h4>Set up and live</h4>
-          <p>Domain, hosting, contact forms and basics handled, ready to use.</p>
-        </div>
-      </div>
-
-      <div class="process-strip">
-        <div class="process-heading reveal">How it works</div>
-        <div class="process-steps">
-          <div class="process-step reveal delay-1">
-            <span class="step-num">01</span>
-            <h4>Brief</h4>
-            <p>What you sell, who it is for and what visitors should do.</p>
-          </div>
-          <div class="process-step reveal delay-2">
-            <span class="step-num">02</span>
-            <h4>Design</h4>
-            <p>Page structure and look, shared with you before anything is built.</p>
-          </div>
-          <div class="process-step reveal delay-3">
-            <span class="step-num">03</span>
-            <h4>Build</h4>
-            <p>Responsive pages, contact forms and basic search friendliness.</p>
-          </div>
-          <div class="process-step reveal delay-4">
-            <span class="step-num">04</span>
-            <h4>Launch</h4>
-            <p>Go live, test every page and form, and hand over the keys.</p>
-          </div>
-        </div>
+          <h4>Website Creation</h4>
+          <p>A simple, fast site with the messaging done first, set up and live.</p>
+        </a>
+        <a class="deliverable-card" href="/industry-automations">
+          <span class="d-icon">⚡</span>
+          <h4>Industry Automations</h4>
+          <p>Reminders, intake, invoices and alerts for service and trade businesses.</p>
+        </a>
       </div>
     </div>
   </section>
 
-  <section class="service-section alt" id="automation" aria-labelledby="automation-heading">
-    <div class="service-inner">
-      <div class="service-header">
-        <div class="service-header-left">
-          <span class="s-num reveal">04</span>
-          <span class="s-kicker reveal delay-1">Industry Automations</span>
-          <h2 class="s-headline reveal delay-2" id="automation-heading">Automations for the way your business already works.</h2>
-        </div>
-        <div class="service-header-right reveal-right delay-1">
-          <p class="s-body">Every industry has the same few chores that eat hours: chasing leads, sending reminders, logging orders, raising invoices. These are ready patterns for your industry, set up on the tools you already use.</p>
-          <p class="s-body" style="margin-top: 1rem;"><strong>These are different from GTM and RevOps automations</strong> (service 01), which are built around a sales motion. Industry automations remove day to day admin from the business itself.</p>
-          <div class="hook-box">
-            <strong>Best for:</strong> Owners of clinics, agencies, firms, shops and other service or trade businesses whose staff spend time on repeat admin.
-          </div>
-        </div>
-      </div>
-
-      <div class="deliverables-heading reveal">What you get</div>
-      <div class="deliverables-grid">
-        <div class="deliverable-card reveal delay-1">
-          <span class="d-icon">🔔</span>
-          <h4>Reminders and follow ups</h4>
-          <p>Appointments, renewals, deadlines and payments, sent on time without chasing.</p>
-        </div>
-        <div class="deliverable-card reveal delay-2">
-          <span class="d-icon">📥</span>
-          <h4>Intake and routing</h4>
-          <p>Enquiries from forms, WhatsApp and email logged and sent to the right person.</p>
-        </div>
-        <div class="deliverable-card reveal delay-3">
-          <span class="d-icon">🧾</span>
-          <h4>Orders, invoices and billing</h4>
-          <p>Entries, confirmations and invoices created automatically.</p>
-        </div>
-        <div class="deliverable-card reveal delay-4">
-          <span class="d-icon">📊</span>
-          <h4>Alerts and updates</h4>
-          <p>Stock, delays and status changes pushed to your team and your customers.</p>
-        </div>
-      </div>
-      <div class="ind-line reveal">
-        <h4>Built for</h4>
-        <p>Real estate, insurance, education, law firms, trading, accounting, clinics, salons, D2C and ecommerce, professional services, restaurants, and logistics. Your industry not listed? Ask, most patterns carry over.</p>
-        <p class="ind-small">Easy to medium builds: quick to set up and cheap to run. More complex, higher value automations are available after an initial project.</p>
-      </div>
-
-      <div class="process-strip">
-        <div class="process-heading reveal">How it works</div>
-        <div class="process-steps">
-          <div class="process-step reveal delay-1">
-            <span class="step-num">01</span>
-            <h4>Ops audit</h4>
-            <p>I map your manual workflows and find the 2 or 3 burning the most time.</p>
-          </div>
-          <div class="process-step reveal delay-2">
-            <span class="step-num">02</span>
-            <h4>Design and spec</h4>
-            <p>A blueprint for each automation: what triggers it, what it does, what it outputs.</p>
-          </div>
-          <div class="process-step reveal delay-3">
-            <span class="step-num">03</span>
-            <h4>Build and test</h4>
-            <p>I build it, test edge cases and document how it works.</p>
-          </div>
-          <div class="process-step reveal delay-4">
-            <span class="step-num">04</span>
-            <h4>Handover</h4>
-            <p>Walkthrough, documentation and a 2 week watch period.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FINAL CTA -->
   <section class="faq" id="faq" aria-labelledby="faq-heading">
     <div class="faq-inner">
       <h2 id="faq-heading">Common questions</h2>
@@ -1569,16 +1287,8 @@
         <p>B2B SaaS teams and small and mid-sized businesses in any industry, from founders running their first outbound to operations teams drowning in manual work. I&#x27;m based in Mumbai.</p>
       </details>
       <details class="faq-item">
-        <summary>Do you run LinkedIn outbound?</summary>
-        <p>Yes. I set up founder-led LinkedIn outbound: targeting, messaging, list building and safe, human-paced sequences. For mple.ai this produced 100+ qualified demos, and you can read the full story in the case study.</p>
-      </details>
-      <details class="faq-item">
-        <summary>What kind of work can be automated?</summary>
-        <p>Common examples are invoice generation, instant lead intake and WhatsApp or email follow-up, document checklists and deadline alerts, CRM data sync, and AI-written research briefs that land with every prospect reply.</p>
-      </details>
-      <details class="faq-item">
-        <summary>Which tools do you work with?</summary>
-        <p>HubSpot, Google Sheets, Airtable, Supabase, Slack, WhatsApp and email, plus SQL databases. I build around the tools your team already uses rather than asking you to switch.</p>
+        <summary>Which services do you offer?</summary>
+        <p>Four: Sales, RevOps and GTM architecture; product marketing and outbound playbooks; website creation; and industry automations.</p>
       </details>
       <details class="faq-item">
         <summary>What is f1rstword?</summary>
@@ -1632,10 +1342,10 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="/what-i-do#strategy">Sales, RevOps &amp; GTM</a></li>
-            <li><a href="/what-i-do#marketing">Product Marketing</a></li>
-            <li><a href="/what-i-do#website">Website Creation</a></li>
-            <li><a href="/what-i-do#automation">Industry Automations</a></li>
+            <li><a href="/gtm-revops">Sales, RevOps &amp; GTM</a></li>
+            <li><a href="/product-marketing">Product Marketing</a></li>
+            <li><a href="/website-creation">Website Creation</a></li>
+            <li><a href="/industry-automations">Industry Automations</a></li>
           </ul>
         </div>
       </div>
@@ -1790,23 +1500,8 @@
       if (e.key === 'Escape' && document.getElementById('navLinks').classList.contains('open')) toggleMobileNav();
     });
   
-    /* ---------- SERVICE TABS ---------- */
-    (function () {
-      document.documentElement.classList.add('js');
-      const tabs = [...document.querySelectorAll('.svc-tab')];
-      const panels = [...document.querySelectorAll('.service-section')];
-      const ids = panels.map(p => p.id);
-      function show(id, scroll) {
-        if (!ids.includes(id)) id = ids[0];
-        panels.forEach(p => p.classList.toggle('is-active', p.id === id));
-        tabs.forEach(t => t.setAttribute('aria-selected', t.dataset.target === id));
-        panels.find(p => p.id === id).querySelectorAll('[class*="reveal"]').forEach(e => e.classList.add('visible'));
-        if (scroll) document.querySelector('.svc-tabs-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      tabs.forEach(t => t.addEventListener('click', () => { history.replaceState(null, '', '#' + t.dataset.target); show(t.dataset.target, false); }));
-      window.addEventListener('hashchange', () => show(location.hash.slice(1), true));
-      show(location.hash.slice(1), !!location.hash);
-    })();
+    /* ---------- SERVICE PAGE: show content ---------- */
+    document.querySelectorAll('.service-section [class*="reveal"]').forEach(e => e.classList.add('visible'));
   </script>
 
 </body>

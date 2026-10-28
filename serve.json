@@ -2,13 +2,45 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/marketing-strategy", "destination": "/what-i-do", "type": 301 },
-    { "source": "/gtm-consultancy", "destination": "/what-i-do", "type": 301 },
-    { "source": "/product-consultancy", "destination": "/what-i-do", "type": 301 },
-    { "source": "/automation", "destination": "/what-i-do", "type": 301 },
-    { "source": "/gtm-strategy", "destination": "/what-i-do", "type": 301 },
-    { "source": "/website-positioning", "destination": "/what-i-do", "type": 301 },
-    { "source": "/linkedin-outbound", "destination": "/what-i-do", "type": 301 },
-    { "source": "/coming-soon", "destination": "/", "type": 301 }
+    {
+      "source": "/marketing-strategy",
+      "destination": "/gtm-revops",
+      "type": 301
+    },
+    {
+      "source": "/gtm-consultancy",
+      "destination": "/gtm-revops",
+      "type": 301
+    },
+    {
+      "source": "/gtm-strategy",
+      "destination": "/gtm-revops",
+      "type": 301
+    },
+    {
+      "source": "/product-consultancy",
+      "destination": "/product-marketing",
+      "type": 301
+    },
+    {
+      "source": "/website-positioning",
+      "destination": "/product-marketing",
+      "type": 301
+    },
+    {
+      "source": "/linkedin-outbound",
+      "destination": "/product-marketing",
+      "type": 301
+    },
+    {
+      "source": "/automation",
+      "destination": "/industry-automations",
+      "type": 301
+    },
+    {
+      "source": "/coming-soon",
+      "destination": "/",
+      "type": 301
+    }
   ]
 }

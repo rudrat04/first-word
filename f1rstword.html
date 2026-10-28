@@ -1171,6 +1171,9 @@
     .stack-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0 1.25rem; }
     .stack-chips span { background: var(--cream-2); border: 1.5px solid var(--ink); border-radius: 999px; padding: 0.3rem 0.85rem; font-size: 0.82rem; font-weight: 600; }
     .inline-link { color: var(--coral-dark); font-weight: 700; }
+    .cs-summary { max-width: 70ch; margin: 0 0 1.25rem; font-size: 1.02rem; line-height: 1.6; color: var(--ink-soft, #453B52); }
+    .cs-summary strong { color: var(--ink, #1A1523); }
+    .cs-updated { font-size: 0.82rem; opacity: 0.75; margin: -0.5rem 0 1.5rem; }
   </style>
 </head>
 
@@ -1220,11 +1223,14 @@
         <a href="/case-studies" class="back-btn">← Back to All Case Studies</a>
       </div>
 
+      <p class="cs-summary"><strong>In short:</strong> f1rstword is an account copilot I built for B2B sales. It finds the right companies and people, watches buying signals, scores inbound leads in about 10 seconds and keeps HubSpot in sync, while outreach stays human.</p>
+      <p class="cs-updated">Last updated: <time datetime="2026-10-29">29 October 2026</time></p>
+
       <!-- HEADER OVERVIEW CARD -->
       <div class="cs-header-card reveal">
         <div class="cs-header-top">
           <div class="cs-header-left">
-            <img src="/assets/f1rstword-logo.png" alt="f1rstword logo" style="max-height:48px;width:auto;">
+            <img loading="lazy" width="1130" height="306" src="/assets/f1rstword-logo.webp" alt="f1rstword logo" style="max-height:48px;width:auto;">
             <div class="cs-stat-group">
               <div class="cs-stat"><div class="big">10 sec</div><div class="label">Inbound lead to alert</div></div>
               <div class="cs-stat"><div class="big">40</div><div class="label">Security and behaviour checks</div></div>
@@ -1414,10 +1420,10 @@
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="/what-i-do#strategy">Sales, RevOps &amp; GTM</a></li>
-            <li><a href="/what-i-do#marketing">Product Marketing</a></li>
-            <li><a href="/what-i-do#website">Website Creation</a></li>
-            <li><a href="/what-i-do#automation">Industry Automations</a></li>
+            <li><a href="/gtm-revops">Sales, RevOps &amp; GTM</a></li>
+            <li><a href="/product-marketing">Product Marketing</a></li>
+            <li><a href="/website-creation">Website Creation</a></li>
+            <li><a href="/industry-automations">Industry Automations</a></li>
           </ul>
         </div>
       </div>
