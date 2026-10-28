@@ -4,7 +4,7 @@
 
 ## Core Capabilities & Services
 
-- [Sales, RevOps & GTM](https://f1rstword.com/gtm-revops): Design how sales, operations and go to market work, then automate the repeat parts (lead routing, CRM sync, follow-ups, invoices) on tools like HubSpot.
+- [GTM Systems](https://f1rstword.com/gtm-systems): Design how sales, operations and go to market work, then automate the repeat parts (lead routing, CRM sync, follow-ups, invoices) on tools like HubSpot.
 - [Product Marketing](https://f1rstword.com/product-marketing): Messaging, positioning, a 90-day go to market plan and outbound playbooks, including LinkedIn outbound.
 - [Website Creation](https://f1rstword.com/website-creation): A simple, fast business website with the messaging done first, set up and live.
 - [Industry Automations](https://f1rstword.com/industry-automations): Ready automation patterns for clinics, agencies, firms, shops and other service businesses: reminders, intake and routing, invoices and alerts.

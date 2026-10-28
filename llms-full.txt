@@ -7,7 +7,7 @@ Firstword is a Growth Operations, GTM, and Business Process Automation consultan
 
 ## Detailed Service Breakdown
 
-### 1. Sales, RevOps & GTM (`/gtm-revops`) and Product Marketing (`/product-marketing`)
+### 1. GTM Systems (`/gtm-systems`) and Product Marketing (`/product-marketing`)
 - **Objective**: Establish predictable customer acquisition, high-converting website positioning, ICP mapping, 90-day execution motions, and founder-led LinkedIn outbound.
 - **Approach**:
   - Website positioning audit & copywriting overhaul: rewriting above-the-fold narrative so visitors understand core value in 5 seconds.

@@ -4,17 +4,17 @@
   "redirects": [
     {
       "source": "/marketing-strategy",
-      "destination": "/gtm-revops",
+      "destination": "/gtm-systems",
       "type": 301
     },
     {
       "source": "/gtm-consultancy",
-      "destination": "/gtm-revops",
+      "destination": "/gtm-systems",
       "type": 301
     },
     {
       "source": "/gtm-strategy",
-      "destination": "/gtm-revops",
+      "destination": "/gtm-systems",
       "type": 301
     },
     {
@@ -40,6 +40,11 @@
     {
       "source": "/coming-soon",
       "destination": "/",
+      "type": 301
+    },
+    {
+      "source": "/gtm-revops",
+      "destination": "/gtm-systems",
       "type": 301
     }
   ]

@@ -3,7 +3,8 @@ https://first-word.netlify.app/*  https://f1rstword.com/:splat  301!
 
 # Clean URL rewrites
 /what-i-do                 /what-i-do.html                 200
-/gtm-revops                /gtm-revops.html                200
+/gtm-systems               /gtm-systems.html               200
+/gtm-revops                /gtm-systems                    301
 /product-marketing         /product-marketing.html         200
 /website-creation          /website-creation.html          200
 /industry-automations      /industry-automations.html      200
@@ -13,9 +14,9 @@ https://first-word.netlify.app/*  https://f1rstword.com/:splat  301!
 /f1rstword                 /f1rstword.html                 200
 
 # Old service pages and aliases -> new pages
-/marketing-strategy    /gtm-revops             301
-/gtm-consultancy       /gtm-revops             301
-/gtm-strategy          /gtm-revops             301
+/marketing-strategy    /gtm-systems             301
+/gtm-consultancy       /gtm-systems             301
+/gtm-strategy          /gtm-systems             301
 /product-consultancy   /product-marketing      301
 /website-positioning   /product-marketing      301
 /linkedin-outbound     /product-marketing      301
