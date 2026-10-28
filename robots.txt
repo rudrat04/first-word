@@ -1,8 +1,9 @@
 # Firstword & Rudra Trivedi Portfolio robots.txt
-# https://first-word.netlify.app
+# https://f1rstword.com
 
 User-agent: *
 Allow: /
+Disallow: /diu
 
 # Explicit permissions & optimized access for AI / LLM / Answer Engine Crawlers (AEO / GEO)
 User-agent: GPTBot
@@ -45,8 +46,8 @@ User-agent: OAI-SearchBot
 Allow: /
 
 # Machine-readable discovery files for LLMs
-# https://first-word.netlify.app/llms.txt
-# https://first-word.netlify.app/llms-full.txt
+# https://f1rstword.com/llms.txt
+# https://f1rstword.com/llms-full.txt
 
 # XML Sitemap Location
-Sitemap: https://first-word.netlify.app/sitemap.xml
+Sitemap: https://f1rstword.com/sitemap.xml

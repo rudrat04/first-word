@@ -4,15 +4,19 @@
 
 ## Core Capabilities & Services
 
-- [GTM Consultancy & Outbound](https://first-word.netlify.app/gtm-consultancy): Go-To-Market roadmap, website positioning & conversion copywriting, ICP targeting, and done-for-you founder-led LinkedIn outbound execution that puts qualified demos on the calendar.
-- [Product Consultancy](https://first-word.netlify.app/product-consultancy): Product strategy, onboarding optimization, and feature prioritization grounded in direct buyer feedback.
-- [Business & AI Automations](https://first-word.netlify.app/automation): Custom workflow automation for SMBs and B2B teams — invoice automation, instant lead generation intake & WhatsApp routing, operations workflows, CRM data sync, and AI prospect intelligence briefs (e.g. 60-second AI briefs with buyer triggers, suggested replies, and demo prep). Covers Real Estate, Customs Brokerage, Insurance, Legal Firms, and Tech teams.
+- [GTM Consultancy & Outbound](https://f1rstword.com/gtm-consultancy): Go-To-Market roadmap, website positioning & conversion copywriting, ICP targeting, and done-for-you founder-led LinkedIn outbound execution that puts qualified demos on the calendar.
+- [Product Consultancy](https://f1rstword.com/product-consultancy): Product strategy, onboarding optimization, and feature prioritization grounded in direct buyer feedback.
+- [Business & AI Automations](https://f1rstword.com/automation): Custom workflow automation for SMBs and B2B teams — invoice automation, instant lead generation intake & WhatsApp routing, operations workflows, CRM data sync, and AI prospect intelligence briefs (e.g. 60-second AI briefs with buyer triggers, suggested replies, and demo prep). Covers Real Estate, Customs Brokerage, Insurance, Legal Firms, and Tech teams.
 
 ## Proof & Case Studies
 
-- [Case Studies Overview](https://first-word.netlify.app/case-studies): Real outcomes for early-stage B2B SaaS companies and growing teams.
-- [mple.ai Case Study](https://first-word.netlify.app/case-study-mpleai): How Firstword helped mple.ai validate positioning, automate AI reply intelligence, and book 100+ qualified enterprise demos.
+- [Case Studies Overview](https://f1rstword.com/case-studies): Real outcomes for early-stage B2B SaaS companies and growing teams.
+- [mple.ai Case Study](https://f1rstword.com/case-study-mpleai): How Firstword helped mple.ai validate positioning, automate AI reply intelligence, and book 100+ qualified enterprise demos.
+
+- [AI Reply Brief System](https://f1rstword.com/case-study-ai-reply-brief): Automated system that emails the sales team a full AI research brief with every LinkedIn reply, saving about 30 minutes of research per lead.
+- [f1rstword: Account Copilot for B2B Sales](https://f1rstword.com/f1rstword): Product built by Rudra Trivedi that finds target accounts, watches buying signals, scores inbound leads in about 10 seconds and syncs HubSpot.
+- [What I Do](https://f1rstword.com/what-i-do): Services overview: GTM strategy, product marketing, websites and automation.
 
 ## Detailed Context & Deep AI Indexing
 
-- [Full Site Documentation (llms-full.txt)](https://first-word.netlify.app/llms-full.txt): Comprehensive service breakdown, audience profiles, frameworks, and engagement models for LLM deep retrieval.
+- [Full Site Documentation (llms-full.txt)](https://f1rstword.com/llms-full.txt): Comprehensive service breakdown, audience profiles, frameworks, and engagement models for LLM deep retrieval.

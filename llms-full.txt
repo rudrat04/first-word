@@ -49,5 +49,5 @@ Firstword is a Growth Operations, GTM, and Business Process Automation consultan
 ## Contact & Location
 
 - **Email**: rudra@f1rstword.com
-- **Website**: https://first-word.netlify.app/
+- **Website**: https://f1rstword.com/
 - **Primary Focus**: B2B SaaS Growth Ops, GTM Consultancy, Website Positioning, LinkedIn Outbound, Business & AI Automations

@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://first-word.netlify.app/</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://f1rstword.com/</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://first-word.netlify.app/what-i-do</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://f1rstword.com/what-i-do</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://first-word.netlify.app/case-studies</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://f1rstword.com/case-studies</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://first-word.netlify.app/case-study-mpleai</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://f1rstword.com/case-study-mpleai</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://first-word.netlify.app/case-study-ai-reply-brief</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://f1rstword.com/case-study-ai-reply-brief</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://first-word.netlify.app/f1rstword</loc>
-    <lastmod>2026-09-24</lastmod>
+    <loc>https://f1rstword.com/f1rstword</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
