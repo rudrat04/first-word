@@ -7,7 +7,7 @@ Firstword is a Growth Operations, GTM, and Business Process Automation consultan
 
 ## Detailed Service Breakdown
 
-### 1. GTM Consultancy & Outbound (`/gtm-consultancy`)
+### 1. GTM Consultancy & Outbound (`/what-i-do`)
 - **Objective**: Establish predictable customer acquisition, high-converting website positioning, ICP mapping, 90-day execution motions, and founder-led LinkedIn outbound.
 - **Approach**:
   - Website positioning audit & copywriting overhaul: rewriting above-the-fold narrative so visitors understand core value in 5 seconds.
@@ -16,7 +16,7 @@ Firstword is a Growth Operations, GTM, and Business Process Automation consultan
   - Done-for-you LinkedIn Outbound: sourcing lists, writing tailored sequences, safe human pacing, and warm conversation-to-demo conversion.
 - **Key Proof**: 36.5% connection acceptance rate, 31.6% reply rate, 100+ demos booked, 20% conversion from reply to meeting.
 
-### 2. Product Consultancy (`/product-consultancy`)
+### 2. Product Consultancy (`/what-i-do`)
 - **Objective**: Align product UX, onboarding, and core features with buyer expectations and growth goals.
 - **Approach**:
   - User onboarding funnel review and friction identification.
@@ -24,7 +24,7 @@ Firstword is a Growth Operations, GTM, and Business Process Automation consultan
   - Strategic feedback loops from sales conversations back to product roadmap.
 - **Key Outcomes**: Higher demo-to-trial conversion, improved user activation, and reduced churn.
 
-### 3. Business & AI Automations (`/automation`)
+### 3. Business & AI Automations (`/what-i-do`)
 - **Objective**: Eliminate repetitive manual operations, accelerate speed-to-lead, and provide real-time AI intelligence to teams across channels they already use (WhatsApp, Slack, Email, CRM, Sheets).
 - **Core Automation Capabilities**:
   - **Invoice & Billing Automation**: Automatic generation and dispatch of invoices from deal/job/shipment creation with CRM/Sheet sync.
