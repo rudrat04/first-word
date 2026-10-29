@@ -1,22 +1,8 @@
-# Canonical domain: send the netlify subdomain to f1rstword.com
-https://first-word.netlify.app/*  https://f1rstword.com/:splat  301!
-
-# Clean URL rewrites
-/what-i-do                 /what-i-do.html                 200
-/gtm-systems               /gtm-systems.html               200
-/gtm-revops                /gtm-systems                    301
-/product-marketing         /product-marketing.html         200
-/website-creation          /website-creation.html          200
-/industry-automations      /industry-automations.html      200
-/case-studies              /case-studies.html              200
-/case-study-mpleai         /case-study-mpleai.html         200
-/case-study-ai-reply-brief /case-study-ai-reply-brief.html 200
-/f1rstword                 /f1rstword.html                 200
-
-# Old service pages and aliases -> new pages
-/marketing-strategy    /gtm-systems             301
-/gtm-consultancy       /gtm-systems             301
-/gtm-strategy          /gtm-systems             301
+# Old service pages and aliases -> current pages
+/marketing-strategy    /gtm-systems            301
+/gtm-consultancy       /gtm-systems            301
+/gtm-strategy          /gtm-systems            301
+/gtm-revops            /gtm-systems            301
 /product-consultancy   /product-marketing      301
 /website-positioning   /product-marketing      301
 /linkedin-outbound     /product-marketing      301
