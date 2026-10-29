@@ -1,3 +1,15 @@
+# Permanent (301) redirects from .html URLs to clean URLs
+/index.html  /  301
+/what-i-do.html  /what-i-do  301
+/gtm-systems.html  /gtm-systems  301
+/product-marketing.html  /product-marketing  301
+/website-creation.html  /website-creation  301
+/industry-automations.html  /industry-automations  301
+/case-studies.html  /case-studies  301
+/case-study-mpleai.html  /case-study-mpleai  301
+/case-study-ai-reply-brief.html  /case-study-ai-reply-brief  301
+/f1rstword.html  /f1rstword  301
+
 # Old service pages and aliases -> current pages
 /marketing-strategy    /gtm-systems            301
 /gtm-consultancy       /gtm-systems            301
