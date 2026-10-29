@@ -1,0 +1,12 @@
+# Files in the repo root that must not be published
+.assetsignore
+wrangler.jsonc
+package.json
+package-lock.json
+serve.json
+.gitignore
+.gitattributes
+.git
+.claude
+node_modules
+*.md
