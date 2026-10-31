@@ -1,27 +1,13 @@
-@font-face{font-family: 'Caveat';font-style: normal;font-weight: 600 700;font-display: swap;src: url(/assets/fonts/Caveat-normal-600.woff2) format('woff2')}
-.fwg{position: fixed;left: 0;top: 0;z-index: 70;display: none;width: 56px;height: 56px;font-family: 'Space Grotesk',sans-serif;will-change: transform}
-.fwg.on{display: block}
-.fwg-plane{position: relative;display: block;width: 56px;height: 56px;padding: 0;border: none;background: none;cursor: pointer}
-.fwg-plane::after{content: '';position: absolute;inset: -8px}
-.fwg-turn{display: block;width: 100%;height: 100%;transform-origin: 50% 50%}
-.fwg-bob{display: block;width: 100%;height: 100%;animation: fwg-bob 3.4s ease-in-out infinite}
-.fwg.flying .fwg-bob{animation-play-state: paused}
-.fwg-bob svg{display: block;width: 100%;height: 100%;overflow: visible;filter: drop-shadow(3px 3px 0 var(--ink,#1A1523))}
-.fwg-bubble{position: absolute;top: 50%;transform: translateY(-50%);z-index: 2;max-width: calc(100vw - 110px);opacity: 0;visibility: hidden;transition: opacity 0.25s ease,visibility 0.25s ease}
-.fwg-bubble.show,.fwg-plane:hover ~ .fwg-bubble,.fwg-plane:focus-visible ~ .fwg-bubble,.fwg-bubble:focus-within{opacity: 1;visibility: visible}
-.fwg.open .fwg-bubble{opacity: 0;visibility: hidden}
-.fwg.side-l .fwg-bubble{left: 70px}
-.fwg.side-r .fwg-bubble{right: 70px}
-.fwg-bubble-btn{position: relative;display: block;padding: 0.2rem 0.9rem 0.3rem;border: 2px solid var(--ink,#1A1523);border-radius: 14px;background: var(--cream-2,#FBEEE0);box-shadow: 3px 3px 0 var(--ink,#1A1523);color: var(--ink,#1A1523);font-family: 'Caveat',cursive;font-size: 1.4rem;font-weight: 700;line-height: 1.15;text-align: left;text-decoration: none;white-space: nowrap;cursor: pointer}
-.fwg-bubble-btn:hover{background: #FFF1B8}
-.fwg-bubble-btn::before{content: '';position: absolute;top: 50%;width: 10px;height: 10px;background: inherit;border: 2px solid var(--ink,#1A1523)}
-.fwg.side-l .fwg-bubble-btn::before{left: -7px;border-right: none;border-top: none;transform: translateY(-50%) rotate(45deg)}
-.fwg.side-r .fwg-bubble-btn::before{right: -7px;border-left: none;border-bottom: none;transform: translateY(-50%) rotate(45deg)}
-.fwg-trail{position: fixed;inset: 0;z-index: 69;width: 100%;height: 100%;pointer-events: none}
-.fwg-trail path{fill: none;stroke: var(--coral,#FF5233);stroke-width: 3;stroke-linecap: round;stroke-dasharray: 1 11;opacity: 0}
-.fwg-panel{position: fixed;bottom: 84px;z-index: 71;display: none;width: min(340px,calc(100vw - 2rem));max-height: calc(100vh - 7rem);max-height: calc(100dvh - 7rem);overflow-y: auto;padding: 1.25rem 1.2rem 1rem;background: var(--cream,#FFF6EE);border: 2.5px solid var(--ink,#1A1523);border-radius: 22px;box-shadow: 6px 6px 0 var(--coral,#FF5233);font-family: 'Space Grotesk',sans-serif}
-.fwg-panel.side-l{left: 16px}
-.fwg-panel.side-r{right: 16px}
+.fwg{position: fixed;left: 16px;bottom: 16px;z-index: 70;opacity: 0;visibility: hidden;transform: translateY(12px);transition: opacity 0.4s ease,transform 0.4s ease,visibility 0.4s;font-family: 'Space Grotesk',sans-serif}
+.fwg.on{opacity: 1;visibility: visible;transform: none}
+.fwg-pill{display: flex;align-items: center;gap: 0.6rem;min-height: 48px;padding: 0.35rem 1.1rem 0.35rem 0.4rem;border: 2.5px solid var(--ink,#1A1523);border-radius: 999px;background: #FFFDF9;box-shadow: 3px 3px 0 var(--ink,#1A1523);color: var(--ink,#1A1523);font: inherit;font-size: 0.95rem;font-weight: 700;cursor: pointer;transition: transform 0.15s ease,box-shadow 0.15s ease,background 0.15s ease}
+.fwg-pill:hover{transform: translate(-1px,-1px);box-shadow: 4px 4px 0 var(--ink,#1A1523);background: #FFF1B8}
+.fwg-icon{flex-shrink: 0;display: flex;align-items: center;justify-content: center;width: 36px;height: 36px;border: 2px solid var(--ink,#1A1523);border-radius: 50%;background: #FFD5A0}
+.fwg-icon svg{display: block;width: 20px;height: 20px;transform: rotate(25deg)}
+.fwg-text{white-space: nowrap;transition: opacity 0.25s ease}
+.fwg-text.fade{opacity: 0}
+.fwg.open .fwg-pill{background: #FFF1B8}
+.fwg-panel{position: fixed;left: 16px;bottom: 76px;z-index: 71;display: none;width: min(340px,calc(100vw - 2rem));max-height: calc(100vh - 7rem);max-height: calc(100dvh - 7rem);overflow-y: auto;padding: 1.25rem 1.2rem 1rem;background: var(--cream,#FFF6EE);border: 2.5px solid var(--ink,#1A1523);border-radius: 22px;box-shadow: 6px 6px 0 var(--coral,#FF5233);font-family: 'Space Grotesk',sans-serif}
 .fwg-panel.open{display: block;animation: fwg-pop 0.25s cubic-bezier(0.34,1.56,0.64,1)}
 .fwg-panel h2{font-family: 'Fraunces',serif;font-weight: 800;font-size: 1.4rem;line-height: 1.15;margin: 0 2rem 0.35rem 0;color: var(--ink,#1A1523)}
 .fwg-panel p{margin: 0 0 1rem;font-size: 0.9rem;line-height: 1.45;color: var(--ink-soft,#453B52)}
@@ -35,8 +21,7 @@
 .fwg-arr{margin-left: auto;color: var(--coral-dark,#C23A20)}
 .fwg-back{margin: 0 0 0.7rem;padding: 0;border: none;background: none;color: var(--coral-dark,#C23A20);font: inherit;font-size: 0.84rem;font-weight: 700;cursor: pointer}
 .fwg-hide{display: block;margin: 0.9rem auto 0;padding: 0.2rem;border: none;background: none;color: var(--ink-soft,#453B52);font: inherit;font-size: 0.76rem;text-decoration: underline;cursor: pointer}
-.fwg-btn:focus-visible,.fwg-plane:focus-visible,.fwg-close:focus-visible,.fwg-back:focus-visible,.fwg-hide:focus-visible,.fwg-bubble-btn:focus-visible{outline: 3px solid var(--coral,#FF5233);outline-offset: 3px}
-@keyframes fwg-bob{0%,100%{transform: translateY(0)}50%{transform: translateY(-5px)}}
+.fwg-btn:focus-visible,.fwg-pill:focus-visible,.fwg-close:focus-visible,.fwg-back:focus-visible,.fwg-hide:focus-visible{outline: 3px solid var(--coral,#FF5233);outline-offset: 3px}
 @keyframes fwg-pop{from{opacity: 0;transform: translateY(10px) scale(0.94)}to{opacity: 1;transform: none}}
-@media (max-width: 480px){.fwg-panel{bottom: 76px}.fwg-panel.side-l{left: 12px}.fwg-panel.side-r{right: 12px}.fwg-bubble-btn{font-size: 1.25rem}}
-@media print{.fwg,.fwg-panel,.fwg-trail{display: none !important}}
+@media (max-width: 480px){.fwg{left: 12px;bottom: 12px}.fwg-pill{min-height: 46px;font-size: 0.9rem}.fwg-panel{left: 12px;bottom: 70px}}
+@media print{.fwg,.fwg-panel{display: none !important}}
