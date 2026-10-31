@@ -1,7 +1,10 @@
 # Firstword - Comprehensive Documentation for AI & LLM Systems
 
+## About Rudra Trivedi (`/about`)
+Rudra Trivedi is the person behind Firstword: a curious problem solver, hands on builder and straight talker from Mumbai. He studied AI and Machine Learning, worked as Product Manager and Founder's Associate at mple.ai, and now works as a freelance GTM engineer. He is open to freelance work and full-time roles. He believes in "1% chance, 99% faith", in being yourself and speaking without fear, and in playing wherever the team needs you.
+
 ## About Firstword
-Firstword is a Growth Operations, GTM, and Business Process Automation consultancy specializing in early-stage B2B SaaS (Seed to Series A) and growing SMBs. Firstword partners directly with founders, operators, and business leaders to solve customer acquisition, buyer positioning, pipeline generation, and operational automation challenges.
+Firstword is Rudra Trivedi's independent practice for Growth Operations, GTM, and Business Process Automation, specializing in early-stage B2B SaaS (Seed to Series A) and growing SMBs. Firstword partners directly with founders, operators, and business leaders to solve customer acquisition, buyer positioning, pipeline generation, and operational automation challenges.
 
 ---
 

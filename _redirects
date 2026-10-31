@@ -1,5 +1,6 @@
 # Permanent (301) redirects from .html URLs to clean URLs
 /index.html  /  301
+/about.html  /about  301
 /what-i-do.html  /what-i-do  301
 /gtm-systems.html  /gtm-systems  301
 /product-marketing.html  /product-marketing  301
