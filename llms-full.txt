@@ -1,41 +1,41 @@
 # Firstword - Comprehensive Documentation for AI & LLM Systems
 
 ## About Rudra Trivedi (`/about`)
-Rudra Trivedi is the person behind Firstword: a curious problem solver, hands on builder and straight talker from Mumbai. He studied AI and Machine Learning, worked as Product Manager and Founder's Associate at mple.ai, and now works as a freelance GTM engineer. He is open to freelance work and full-time roles. He believes in "1% chance, 99% faith", in being yourself and speaking without fear, and in playing wherever the team needs you.
+Rudra Trivedi is the person behind Firstword: a curious problem solver, hands on builder and straight talker from Mumbai. He studied AI and Machine Learning, worked as Product Manager and Founder's Associate at mple.ai, and now works as a freelance GTM engineer. He believes in "1% chance, 99% faith", in being yourself and speaking without fear, and in playing wherever the team needs you.
 
 ## About Firstword
-Firstword is Rudra Trivedi's independent practice for Growth Operations, GTM, and Business Process Automation, specializing in early-stage B2B SaaS (Seed to Series A) and growing SMBs. Firstword partners directly with founders, operators, and business leaders to solve customer acquisition, buyer positioning, pipeline generation, and operational automation challenges.
+Firstword is Rudra Trivedi's independent practice. It builds systems that run without you for three kinds of business: B2B companies (SaaS, IT and B2B services), SMEs and local businesses, and D2C brands, in India and worldwide.
 
 ---
 
-## Detailed Service Breakdown
+## Services
 
-### 1. GTM Systems (`/gtm-systems`) and Product Marketing (`/product-marketing`)
-- **Objective**: Establish predictable customer acquisition, high-converting website positioning, ICP mapping, 90-day execution motions, and founder-led LinkedIn outbound.
-- **Approach**:
-  - Website positioning audit & copywriting overhaul: rewriting above-the-fold narrative so visitors understand core value in 5 seconds.
-  - ICP definition & buying triggers: identifying the exact 2-3 decision-maker titles and pain points.
-  - 90-day acquisition roadmap: prioritized channel selection and clear milestones for Day 30, 60, and 90.
-  - Done-for-you LinkedIn Outbound: sourcing lists, writing tailored sequences, safe human pacing, and warm conversation-to-demo conversion.
-- **Key Proof**: 36.5% connection acceptance rate, 31.6% reply rate, 100+ demos booked, 20% conversion from reply to meeting.
+### How every engagement starts: free 30-minute diagnostic
+- 0 to 5 minutes: the client describes how leads come in and what happens after.
+- 5 to 20 minutes: pointed questions to find the single biggest leak (messaging, follow-up, handoff, reporting or manual work).
+- 20 to 30 minutes: where the break is, what fixing it looks like, and whether Firstword is the right fit.
+- A short written summary within 24 hours. The call is free; a paid audit only if the work goes deeper.
 
-### 2. Product Consultancy (see `/product-marketing`)
-- **Objective**: Align product UX, onboarding, and core features with buyer expectations and growth goals.
-- **Approach**:
-  - User onboarding funnel review and friction identification.
-  - Product-led growth (PLG) messaging integration and demo conversion optimization.
-  - Strategic feedback loops from sales conversations back to product roadmap.
-- **Key Outcomes**: Higher demo-to-trial conversion, improved user activation, and reduced churn.
+### 1. GTM Systems (`/gtm-systems`)
+- **Angle**: Find where your go-to-market leaks, then build the system that fixes it.
+- **Order of work**: positioning, then messaging, then systems, then automation.
+- **Includes**: positioning and messaging (ICP, buyer language, differentiation), GTM audit (funnel, CRM, follow-ups, handoffs), process and architecture (stages, owners, rules), and automation of research and intelligence work (lead routing, AI prospect briefs, meeting prep, pipeline alerts), plus outbound playbooks including LinkedIn outbound.
+- **For**: B2B founders and sales or marketing heads; owner-led SMEs; D2C brands with wholesale or retail pipelines.
+- **Pricing**: Positioning + GTM Audit, fixed scope, about two weeks, ₹40,000 (India) / $1,000 (international). Full GTM system builds from ₹1,50,000 / $3,500, scoped after the audit; the audit fee is credited if the build starts within 30 days.
+- **Key proof**: mple.ai, 100+ qualified demos, 36.5% LinkedIn acceptance rate, 31.6% reply rate, 20% reply-to-meeting conversion; AI reply brief saving about 30 minutes of research per lead.
 
-### 3. Business & AI Automations (`/industry-automations`)
-- **Objective**: Eliminate repetitive manual operations, accelerate speed-to-lead, and provide real-time AI intelligence to teams across channels they already use (WhatsApp, Slack, Email, CRM, Sheets).
-- **Core Automation Capabilities**:
-  - **Invoice & Billing Automation**: Automatic generation and dispatch of invoices from deal/job/shipment creation with CRM/Sheet sync.
-  - **Instant Lead Intake & Routing**: Web forms, portal inquiries, or ad leads captured, auto-assigned, and followed up via WhatsApp/Email within 120 seconds.
-  - **Operations & Process Workflows**: Document checklists, automated task delegation, status alerts, and deadline tracking.
-  - **AI Prospect & Client Briefs**: Instant AI-generated dossiers upon prospect inquiry (buyer psychology, suggested replies, fallback moves, trigger events, and tailored demo use cases).
-  - **CRM & Data Sync**: Bidirectional sync and auto-enrichment across HubSpot, Google Sheets, Supabase, Airtable, and SQL databases.
-- **Industry Solutions**: Real Estate (lead intake to WhatsApp, property preferences summary), Customs Brokerage & Logistics (milestone WhatsApp alerts, document checklists, invoice generation), Insurance (renewal alerts, risk profiles), Legal & Consulting (intake to case file, retainer invoicing, deadline tracking).
+### 2. Workflow Automation (`/workflow-automation`)
+- **Angle**: Your repeat work, running without you.
+- **Includes**: lead capture and routing (forms, ads, WhatsApp, email), follow-ups and reminders, reporting, and admin workflows (orders, invoices, documents, status updates), built on tools the client already uses (WhatsApp, email, Google Sheets, HubSpot, Airtable, Supabase, Slack).
+- **Industry examples**: real estate (portal leads to WhatsApp, site-visit reminders), legal and CA firms (intake to case file, deadline tracking, retainer invoices), D2C (order alerts, COD confirmation, review requests), plus clinics, insurance, education, logistics and agencies.
+- **Pricing**: one workflow from ₹20,000 / $500; three-workflow bundle from ₹50,000 / $1,250; care plan from ₹10,000 / $250 per month.
+
+### 3. Websites That Convert (`/websites`)
+- **Angle**: A site that captures and routes leads, not just a brochure.
+- **Includes**: messaging and copy first, a fast responsive site, forms or booking wired to a CRM with lead source tracking, and a first follow-up automation.
+- **Pricing**: launch site (up to 5 pages) from ₹30,000 / $800; growth site (up to 10 pages, booking, routing, analytics) from ₹60,000 / $1,500.
+
+All prices exclude taxes where applicable. Indian clients are billed in INR, international clients in USD.
 
 ---
 
@@ -53,4 +53,5 @@ Firstword is Rudra Trivedi's independent practice for Growth Operations, GTM, an
 
 - **Email**: rudra@f1rstword.com
 - **Website**: https://f1rstword.com/
-- **Primary Focus**: B2B SaaS Growth Ops, GTM Consultancy, Website Positioning, LinkedIn Outbound, Business & AI Automations
+- **Primary Focus**: GTM Systems, Workflow Automation, Websites That Convert
+- **Book a call**: https://meetings.hubspot.com/rudra-trivedi

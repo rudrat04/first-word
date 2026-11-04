@@ -19,22 +19,22 @@
     },
     {
       "source": "/product-consultancy",
-      "destination": "/product-marketing",
+      "destination": "/gtm-systems",
       "type": 301
     },
     {
       "source": "/website-positioning",
-      "destination": "/product-marketing",
+      "destination": "/gtm-systems",
       "type": 301
     },
     {
       "source": "/linkedin-outbound",
-      "destination": "/product-marketing",
+      "destination": "/gtm-systems",
       "type": 301
     },
     {
       "source": "/automation",
-      "destination": "/industry-automations",
+      "destination": "/workflow-automation",
       "type": 301
     },
     {
@@ -45,6 +45,21 @@
     {
       "source": "/gtm-revops",
       "destination": "/gtm-systems",
+      "type": 301
+    },
+    {
+      "source": "/product-marketing",
+      "destination": "/gtm-systems",
+      "type": 301
+    },
+    {
+      "source": "/industry-automations",
+      "destination": "/workflow-automation",
+      "type": 301
+    },
+    {
+      "source": "/website-creation",
+      "destination": "/websites",
       "type": 301
     }
   ]

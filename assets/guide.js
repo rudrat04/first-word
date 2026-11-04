@@ -25,8 +25,9 @@
       items: [
         ['See proof it works', '/case-studies'],
         ['What can you do for me?', '/what-i-do'],
+        ['What does it cost?', '/what-i-do#pricing'],
         ['Who is behind this?', '/about#story'],
-        ["Let's talk", '#contact']
+        ['Book a free diagnostic', '#contact']
       ]
     },
     hire: {
@@ -39,7 +40,7 @@
         ["What I've built", '/case-studies'],
         ['Get my resume', '/assets/Rudra-Trivedi-Resume.pdf', true],
         ['Who I am', '/about#story'],
-        ["Let's talk", '#contact']
+        ['Get in touch', '#contact']
       ]
     }
   };

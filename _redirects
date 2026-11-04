@@ -3,9 +3,11 @@
 /about.html  /about  301
 /what-i-do.html  /what-i-do  301
 /gtm-systems.html  /gtm-systems  301
-/product-marketing.html  /product-marketing  301
-/website-creation.html  /website-creation  301
-/industry-automations.html  /industry-automations  301
+/product-marketing.html  /gtm-systems  301
+/websites.html  /websites  301
+/website-creation.html  /websites  301
+/workflow-automation.html  /workflow-automation  301
+/industry-automations.html  /workflow-automation  301
 /case-studies.html  /case-studies  301
 /case-study-mpleai.html  /case-study-mpleai  301
 /case-study-ai-reply-brief.html  /case-study-ai-reply-brief  301
@@ -16,8 +18,13 @@
 /gtm-consultancy       /gtm-systems            301
 /gtm-strategy          /gtm-systems            301
 /gtm-revops            /gtm-systems            301
-/product-consultancy   /product-marketing      301
-/website-positioning   /product-marketing      301
-/linkedin-outbound     /product-marketing      301
-/automation            /industry-automations   301
+/product-consultancy   /gtm-systems            301
+/website-positioning   /gtm-systems            301
+/linkedin-outbound     /gtm-systems            301
+/automation            /workflow-automation    301
 /coming-soon           /                       301
+
+# Services merged or renamed (Nov 2026)
+/product-marketing     /gtm-systems            301
+/industry-automations  /workflow-automation    301
+/website-creation      /websites               301
