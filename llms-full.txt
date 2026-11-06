@@ -47,6 +47,19 @@ All prices exclude taxes where applicable. Indian clients are billed in INR, int
 - **Solution**: Firstword implemented an ICP messaging overhaul, ran founder-led LinkedIn outbound, and built an automated AI Reply Intelligence engine that delivered an in-depth AI Brief to sales reps in under 60 seconds upon every reply.
 - **Result**: 100+ enterprise demos booked, 20% reply-to-meeting conversion rate, and zero prep time per call.
 
+### Air Waterfall (`/case-study-air-waterfall`)
+- **Type**: Portfolio project (GTM Systems), live at https://enrich.f1rstword.com.
+- **What it does**: Finds the people at a company (company website, then People Data Labs, then public search results), then finds and verifies each person's work email through a cheap first waterfall: domain check, company website crawl, pattern guess, Reoon mailbox check. It stops at 0.85 confidence.
+- **Verdicts**: valid, likely, risky, invalid, not found. A guess with no independent confirmation is capped below valid; catch-all domains stay risky.
+- **Measured (small gold set of 14 known addresses)**: 0 false valid verdicts, 7 of 14 exact addresses returned, about 2.4 verifier credits per new lookup.
+- **Stack**: Node 22, TypeScript, Hono, Postgres (Neon), Drizzle, Render.
+
+### Outflank (`/case-study-outflank`)
+- **Type**: Open source project (MIT), GTM Systems. Code: https://github.com/rudrat04/outflank
+- **What it does**: Self-hosted competitor intelligence. A weekly GitHub Action in your own private repo fetches competitors' public pages, strips noise, diffs them, triages changes with a fast Claude model and analyses only material changes with a stronger one. Output: a digest issue, optional Slack or Discord message, and an up-to-date battlecard per competitor.
+- **Cost**: $0 in a quiet week (no model calls), with a hard per-run cost cap.
+- **Safeguards**: refuses to run in a public repo, respects robots.txt, public pages only, no telemetry.
+
 ---
 
 ## Contact & Location

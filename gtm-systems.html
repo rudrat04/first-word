@@ -140,7 +140,16 @@
     </button>
 
     <ul class="nav-links" id="navLinks">
-      <li><a href="/">Home</a></li>
+      <li class="has-dd">
+        <a href="/" aria-haspopup="true">Home <svg class="dd-chev" width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></a>
+        <ul class="dd-menu">
+          <li><a href="/#about">Who I am</a></li>
+          <li><a href="/#projects">My work</a></li>
+          <li><a href="/#services">What I do</a></li>
+          <li><a href="/#beliefs">What I believe</a></li>
+          <li><a href="/">Home page</a></li>
+        </ul>
+      </li>
       <li class="has-dd">
         <a href="/about" aria-haspopup="true">About <svg class="dd-chev" width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg></a>
         <ul class="dd-menu">
@@ -164,6 +173,8 @@
           <li><a href="/case-study-mpleai">mple.ai: 100+ demos</a></li>
           <li><a href="/case-study-ai-reply-brief">AI Reply Brief System</a></li>
           <li><a href="/f1rstword">f1rstword copilot</a></li>
+          <li><a href="/case-study-air-waterfall">Air Waterfall</a></li>
+          <li><a href="/case-study-outflank">Outflank</a></li>
           <li><a href="/case-studies">All projects</a></li>
         </ul>
       </li>
@@ -351,6 +362,30 @@
         <div class="proof-text">
           <p><strong>f1rstword</strong> is an account copilot I built for B2B sales. It finds the right companies and people, watches signals, scores new enquiries, and keeps HubSpot up to date.</p>
           <a href="/f1rstword" class="proof-link">See the project →</a>
+        </div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-stat">
+          <div class="big-num">0</div><svg class="pf-art" viewBox="0 0 120 128" aria-hidden="true"><rect class="sh fw" x="8" y="10" width="42" height="18" rx="5"/><rect class="sh fy" x="30" y="38" width="42" height="18" rx="5"/><rect class="sh fw" x="52" y="66" width="42" height="18" rx="5"/><path class="ln" d="M50 19h8v18M72 47h8v18" stroke-dasharray="4 5"/><rect class="sh fw" x="40" y="92" width="50" height="30" rx="5"/><path class="ln" d="M40 97l25 15 25-15"/><circle class="sh fc" cx="96" cy="94" r="10"/><path class="ln" d="M91 94l4 4 6-7"/></svg>
+          <div class="proof-label">False "valid" emails in testing</div>
+        </div>
+        <div class="divider"></div>
+        <div class="proof-text">
+          <p><strong>Air Waterfall</strong> finds the people at a company, then finds and verifies their work email, with the confidence, evidence and cost shown for every result.</p>
+          <a href="/case-study-air-waterfall" class="proof-link">Read the case study →</a>
+        </div>
+      </div>
+
+      <div class="proof-card reveal">
+        <div class="proof-stat">
+          <div class="big-num">$0</div><svg class="pf-art" viewBox="0 0 120 128" aria-hidden="true"><rect class="sh fw" x="14" y="20" width="62" height="86" rx="8" transform="rotate(-6 45 63)"/><path class="ln" d="M26 42h34M27 56h28M28 70h32M29 84h20"/><path class="ln" d="M84 18v44"/><path class="sh fc" d="M84 18h26l-7 9 7 9H84z"/><circle class="sh fy" cx="86" cy="92" r="16"/><path class="ln" d="M97 103l13 13"/></svg>
+          <div class="proof-label">LLM cost in a quiet week</div>
+        </div>
+        <div class="divider"></div>
+        <div class="proof-text">
+          <p><strong>Outflank</strong> is an open source agent that watches competitors' public pages and turns real changes into a weekly digest and current battlecards.</p>
+          <a href="/case-study-outflank" class="proof-link">Read the case study →</a>
         </div>
       </div>
     </div>

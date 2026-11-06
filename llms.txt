@@ -19,6 +19,8 @@
 - [mple.ai Case Study](https://f1rstword.com/case-study-mpleai): How Firstword helped mple.ai validate positioning, automate AI reply intelligence, and book 100+ qualified enterprise demos.
 - [AI Reply Brief System](https://f1rstword.com/case-study-ai-reply-brief): Automated system that emails the sales team a full AI research brief with every LinkedIn reply, saving about 30 minutes of research per lead.
 - [f1rstword: Account Copilot for B2B Sales](https://f1rstword.com/f1rstword): Product built by Rudra Trivedi that finds target accounts, watches buying signals, scores inbound leads in about 10 seconds and syncs HubSpot.
+- [Air Waterfall](https://f1rstword.com/case-study-air-waterfall): Tool built by Rudra Trivedi that finds the people at a company, then finds and verifies their work email through a cheap first waterfall (domain check, company website, pattern guess, mailbox check). Every result shows a confidence verdict, evidence and cost per step.
+- [Outflank](https://f1rstword.com/case-study-outflank): Open source, self-hosted competitor intelligence agent built by Rudra Trivedi. Watches competitors' public pages from a private GitHub repo, explains material changes with Claude, and keeps a battlecard per competitor current.
 
 ## Detailed Context & Deep AI Indexing
 
