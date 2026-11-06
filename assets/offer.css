@@ -73,3 +73,19 @@
 .self-proof p{font-size:0.92rem;line-height:1.55;color:var(--ink-soft)}
 .self-proof ul{margin:0.7rem 0 0;padding-left:1.1rem;font-size:0.9rem;line-height:1.55;color:var(--ink-soft)}
 .self-proof li+li{margin-top:0.3rem}
+
+/* ---------- Industry examples ---------- */
+.ind-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+@media (max-width:860px){.ind-grid{grid-template-columns:1fr}}
+.ind-card{background:var(--cream);border:2px solid var(--ink);border-radius:18px;padding:1.1rem 1.15rem 1.2rem;box-shadow:4px 4px 0 var(--ink);display:flex;flex-direction:column}
+.ind-card h3{font-family:'Fraunces',serif;font-weight:800;font-size:1.15rem;line-height:1.2;color:var(--ink);margin-bottom:0.2rem}
+.ind-card .ind-sub{font-size:0.8rem;font-weight:700;color:var(--coral-dark);margin-bottom:0.8rem}
+.ind-chain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:0}
+.ind-chain li{position:relative;font-size:0.86rem;line-height:1.4;color:var(--ink-soft);padding:0.5rem 0.75rem;background:var(--cream-2);border:1.5px solid var(--ink);border-radius:12px}
+.ind-chain li+li{margin-top:1.05rem}
+.ind-chain li+li::before{content:"";position:absolute;left:1.1rem;top:-1.05rem;height:1.05rem;border-left:2px dashed var(--ink)}
+.ind-chain li+li::after{content:"";position:absolute;left:calc(1.1rem - 5px);top:-0.32rem;border:5px solid transparent;border-top:6px solid var(--ink);border-bottom:0}
+.ind-chain li:last-child{background:#FFFDF9;border-color:var(--coral);color:var(--ink);font-weight:700}
+.ind-more{display:flex;flex-wrap:wrap;align-items:center;gap:0.5rem;margin-top:1rem}
+.ind-more .ind-more-label{font-size:0.82rem;color:var(--ink-soft);margin-right:0.25rem}
+.ind-more span.chip{font-size:0.8rem;font-weight:700;background:#FFFDF9;border:1.5px solid var(--ink);border-radius:999px;padding:0.25rem 0.75rem}
