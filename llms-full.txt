@@ -21,7 +21,7 @@ Firstword is Rudra Trivedi's independent practice. It builds systems that run wi
 - **Order of work**: positioning, then messaging, then systems, then automation.
 - **Includes**: positioning and messaging (ICP, buyer language, differentiation), GTM audit (funnel, CRM, follow-ups, handoffs), process and architecture (stages, owners, rules), and automation of research and intelligence work (lead routing, AI prospect briefs, meeting prep, pipeline alerts), plus outbound playbooks including LinkedIn outbound.
 - **For**: B2B founders and sales or marketing heads; owner-led SMEs; D2C brands with wholesale or retail pipelines.
-- **Pricing**: Positioning + GTM Audit, fixed scope, about two weeks, ₹24,000 (India) / $600 (international). Full GTM system builds from ₹1,50,000 / $3,500, scoped after the audit; the audit fee is credited if the build starts within 30 days.
+- **Pricing**: Positioning + GTM Audit, fixed scope, about two weeks, ₹20,000 (India) / $500 (international). Full GTM system builds from ₹1,00,000 / $2,500, scoped after the audit; the audit fee is credited if the build starts within 30 days.
 - **Key proof**: mple.ai, 100+ qualified demos, 36.5% LinkedIn acceptance rate, 31.6% reply rate, 20% reply-to-meeting conversion; AI reply brief saving about 30 minutes of research per lead.
 
 ### 2. Workflow Automation (`/workflow-automation`)
@@ -35,7 +35,7 @@ Firstword is Rudra Trivedi's independent practice. It builds systems that run wi
 - **Includes**: messaging and copy first, a fast responsive site, forms or booking wired to a CRM with lead source tracking, and a first follow-up automation.
 - **Pricing**: launch site (up to 5 pages) from ₹30,000 / $800; growth site (up to 10 pages, booking, routing, analytics) from ₹60,000 / $1,500.
 
-All prices exclude taxes where applicable. Indian clients are billed in INR, international clients in USD. Founding-client offer: the first three clients get 25% off their first project in exchange for a case study.
+All prices exclude taxes where applicable. Indian clients are billed in INR, international clients in USD. Founding-client offer: the first three clients get 25% off their first project in exchange for a case study (the Positioning + GTM Audit is ₹15,000 / $375 for founding clients).
 
 ---
 
