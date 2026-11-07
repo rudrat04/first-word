@@ -10,3 +10,7 @@ serve.json
 .claude
 node_modules
 *.md
+
+# Blog sources and build script (only the generated HTML ships)
+content
+scripts

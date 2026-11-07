@@ -22,6 +22,13 @@
 - [Air Waterfall](https://f1rstword.com/case-study-air-waterfall): Tool built by Rudra Trivedi that finds the people at a company, then finds and verifies their work email through a cheap first waterfall (domain check, company website, pattern guess, mailbox check). Every result shows a confidence verdict, evidence and cost per step.
 - [Outflank](https://f1rstword.com/case-study-outflank): Open source, self-hosted competitor intelligence agent built by Rudra Trivedi. Watches competitors' public pages from a private GitHub repo, explains material changes with Claude, and keeps a battlecard per competitor current.
 
+<!-- blog:start -->
+## Blog
+
+- [Blog](https://f1rstword.com/blog): Build stories from go to market work by Rudra Trivedi, with real numbers.
+- [Build it free first: the cheapest way to find out what Apollo is worth](https://f1rstword.com/blog/build-it-free-first): I built a cloud lead-enrichment tool on free tiers and made it log what every step cost. Here are the numbers, where free hurt, and the rule I'll use to decide whether a paid data plan like Apollo is worth it.
+
+<!-- blog:end -->
 ## Detailed Context & Deep AI Indexing
 
 - [Full Site Documentation (llms-full.txt)](https://f1rstword.com/llms-full.txt): Comprehensive service breakdown, audience profiles, frameworks, and engagement models for LLM deep retrieval.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>Rudra Trivedi: Blog</title>
+  <link>https://f1rstword.com/blog</link>
+  <atom:link href="https://f1rstword.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>Build stories from go to market work by Rudra Trivedi.</description>
+  <language>en</language>
+  <lastBuildDate>Sun, 08 Nov 2026 00:00:00 +0530</lastBuildDate>
+  <item>
+    <title>Build it free first: the cheapest way to find out what Apollo is worth</title>
+    <link>https://f1rstword.com/blog/build-it-free-first</link>
+    <guid isPermaLink="true">https://f1rstword.com/blog/build-it-free-first</guid>
+    <pubDate>Sun, 08 Nov 2026 00:00:00 +0530</pubDate>
+    <description>I built a cloud lead-enrichment tool on free tiers and made it log what every step cost. Here are the numbers, where free hurt, and the rule I&#x27;ll use to decide whether a paid data plan like Apollo is worth it.</description>
+  </item>
+</channel>
+</rss>

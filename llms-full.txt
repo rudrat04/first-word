@@ -60,6 +60,19 @@ All prices exclude taxes where applicable. Indian clients are billed in INR, int
 - **Cost**: $0 in a quiet week (no model calls), with a hard per-run cost cap.
 - **Safeguards**: refuses to run in a public repo, respects robots.txt, public pages only, no telemetry.
 
+<!-- blog:start -->
+## Blog (`/blog`)
+
+Written by Rudra Trivedi. Build stories with the method, the numbers and what broke.
+
+### Build it free first: the cheapest way to find out what Apollo is worth (`/blog/build-it-free-first`)
+- **Published**: 2026-11-08
+- **Topics**: GTM, Lead enrichment, Outbound, Apollo
+- **Summary**: I built a cloud lead-enrichment tool on free tiers and made it log what every step cost. Here are the numbers, where free hurt, and the rule I'll use to decide whether a paid data plan like Apollo is worth it.
+- **Sections**: The rule: no paid plan until free shows me where it hurts; The one feature that makes a free build worth doing; What free got me, said out loud; Where free hurt; Four problems that looked like reasons to pay. Only one really was.; Where paid would slot in; My prediction, and the rule I'll judge it by; The method, if you want to copy it
+- **Related project**: Air Waterfall (/case-study-air-waterfall)
+
+<!-- blog:end -->
 ---
 
 ## Contact & Location

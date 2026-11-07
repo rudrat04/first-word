@@ -39,7 +39,7 @@
         ['See my experience', '/about#experience'],
         ["What I've built", '/case-studies'],
         ['Get my resume', '/assets/Rudra-Trivedi-Resume.pdf', true],
-        ['Who I am', '/about#story'],
+        ['Read my writing', '/blog'],
         ['Get in touch', '#contact']
       ]
     }
