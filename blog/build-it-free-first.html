@@ -19,7 +19,7 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="article:published_time" content="2026-11-08T00:00:00+05:30">
-  <meta property="article:modified_time" content="2026-11-08T00:00:00+05:30">
+  <meta property="article:modified_time" content="2026-11-10T00:00:00+05:30">
   <meta property="article:author" content="https://www.linkedin.com/in/rudra-trivedi-t04/">
   <meta property="article:tag" content="GTM">
   <meta property="article:tag" content="Lead enrichment">
@@ -56,7 +56,7 @@
         "https://f1rstword.com/assets/blog/build-it-free-first/01-hero.webp"
       ],
       "datePublished": "2026-11-08T00:00:00+05:30",
-      "dateModified": "2026-11-08T00:00:00+05:30",
+      "dateModified": "2026-11-10T00:00:00+05:30",
       "author": {
         "@type": "Person",
         "@id": "https://f1rstword.com/#person",
@@ -83,7 +83,7 @@
         "name": "Rudra Trivedi: Blog"
       },
       "keywords": "GTM, Lead enrichment, Outbound, Apollo",
-      "wordCount": 1412,
+      "wordCount": 1312,
       "timeRequired": "PT6M",
       "inLanguage": "en",
       "about": {
@@ -272,7 +272,7 @@
         <a href="/blog" class="back-btn">← All posts</a>
         <ul class="post-tags" aria-label="Topics"><li>GTM</li><li>Lead enrichment</li><li>Outbound</li><li>Apollo</li></ul>
       </div>
-      <p class="cs-updated">Published <time datetime="2026-11-08">8 November 2026</time></p>
+      <p class="cs-updated">Published <time datetime="2026-11-08">8 November 2026</time> · Updated <time datetime="2026-11-10">10 November 2026</time></p>
       <nav class="post-toc" aria-labelledby="toc-h">
         <h2 id="toc-h">In this post</h2>
         <ol>
@@ -280,7 +280,7 @@
           <li><a href="#the-one-feature-that-makes-a-free-build-worth-doing">The one feature that makes a free build worth doing</a></li>
           <li><a href="#what-free-got-me-said-out-loud">What free got me, said out loud</a></li>
           <li><a href="#where-free-hurt">Where free hurt</a></li>
-          <li><a href="#four-problems-that-looked-like-reasons-to-pay-only-one-reall">Four problems that looked like reasons to pay. Only one really was.</a></li>
+          <li><a href="#three-problems-that-looked-like-reasons-to-pay-only-one-real">Three problems that looked like reasons to pay. Only one really was.</a></li>
           <li><a href="#where-paid-would-slot-in">Where paid would slot in</a></li>
           <li><a href="#my-prediction-and-the-rule-i-ll-judge-it-by">My prediction, and the rule I&#x27;ll judge it by</a></li>
           <li><a href="#the-method-if-you-want-to-copy-it">The method, if you want to copy it</a></li>
@@ -337,35 +337,28 @@
   <img src="/assets/blog/build-it-free-first/09-free-vs-paid.webp" alt="Free versus paid: what the free stack gives you and where it hurts, and what a paid plan would likely change (expected, not tested)." width="1600" height="968" loading="lazy" decoding="async">
   <figcaption>Free versus paid: what the free stack gives you and where it hurts, and what a paid plan would likely change (expected, not tested).</figcaption>
 </figure>
-<h2 id="four-problems-that-looked-like-reasons-to-pay-only-one-reall">Four problems that looked like reasons to pay. Only one really was.</h2>
-<p>This is the part I most want you to take away. The free build produced four problems that <em>looked</em> like reasons to upgrade. Only one of them was.</p>
-<h3 id="1-my-test-data-was-wrong-not-the-tool">1. My test data was wrong, not the tool.</h3>
-<p>I was grading my tool against addresses I <em>knew</em> worked. It marked two as &quot;valid&quot;, and by my list both were wrong. The tool said <code>jane.doe@acme.com</code>; my list said <code>janedoe@acme.com</code>. I almost went hunting for a better data source. Instead I opened the original thread: the address had a dot. The search view I&#x27;d exported my list from strips dots out of addresses. The tool was right.</p>
-<p>Had I trusted that first score, I&#x27;d have paid to fix a bug I didn&#x27;t have.</p>
-<figure>
-  <img src="/assets/blog/build-it-free-first/05-dots.webp" alt="Two views of the same inbox: the search listing strips the dot, the full message keeps it." width="1600" height="792" loading="lazy" decoding="async">
-  <figcaption>Two views of the same inbox: the search listing strips the dot, the full message keeps it.</figcaption>
-</figure>
-<h3 id="2-microsoft-365-says-no-to-mailboxes-that-exist">2. Microsoft 365 says &quot;no&quot; to mailboxes that exist.</h3>
+<h2 id="three-problems-that-looked-like-reasons-to-pay-only-one-real">Three problems that looked like reasons to pay. Only one really was.</h2>
+<p>This is the part I most want you to take away. The free build produced three problems that <em>looked</em> like reasons to upgrade. Only one of them was.</p>
+<h3 id="1-microsoft-365-says-no-to-mailboxes-that-exist">1. Microsoft 365 says &quot;no&quot; to mailboxes that exist.</h3>
 <p>A real person who had emailed me from a Microsoft-hosted company was marked as not existing. Paid data wouldn&#x27;t fix that; it&#x27;s a verification quirk. What it did cost me was credits: one lookup burned <strong>7 credits</strong> for a &quot;risky&quot; result because every guess got probed. Treating a &quot;no&quot; there as a penalty, not proof, and capping Microsoft-hosted domains at three probes brought the worst case down to about four.</p>
 <figure>
   <img src="/assets/blog/build-it-free-first/06-cost.webp" alt="Credits per person: about 2 on a clean Google domain, 7 on Microsoft 365 before the cap, about 4 after." width="1600" height="704" loading="lazy" decoding="async">
   <figcaption>Credits per person: about 2 on a clean Google domain, 7 on Microsoft 365 before the cap, about 4 after.</figcaption>
 </figure>
-<h3 id="3-catch-all-domains-can-t-be-proven-by-anyone">3. Catch-all domains can&#x27;t be proven by anyone.</h3>
+<h3 id="2-catch-all-domains-can-t-be-proven-by-anyone">2. Catch-all domains can&#x27;t be proven by anyone.</h3>
 <p>Some domains accept mail for any address, real or not. On those, no mailbox check proves anything, and no paid plan changes that. So &quot;valid&quot; has to be earned: a catch-all can&#x27;t score above 0.55, and a guess nothing independent confirmed can&#x27;t go above 0.84. I&#x27;d rather get &quot;risky, and here&#x27;s why&quot; than a green tick I can&#x27;t trust.</p>
 <figure>
   <img src="/assets/blog/build-it-free-first/04-verdict-ladder.webp" alt="The confidence ladder: caps at 0.55 and 0.84, and &quot;valid&quot; only with proof." width="1600" height="770" loading="lazy" decoding="async">
   <figcaption>The confidence ladder: caps at 0.55 and 0.84, and &quot;valid&quot; only with proof.</figcaption>
 </figure>
-<h3 id="4-the-people-data-was-noisy-and-paid-probably-would-fix-that">4. The people data was noisy, and paid probably would fix that.</h3>
+<h3 id="3-the-people-data-was-noisy-and-paid-probably-would-fix-that">3. The people data was noisy, and paid probably would fix that.</h3>
 <p>My team-page scraper once &quot;found&quot; seven staff on a homepage. Every one was a customer testimonial (&quot;Training Manager at Danone&quot;). A search for a company with a common name returned people from three unrelated companies. I fixed both with rules, but this is exactly the kind of problem better-filtered paid data should shrink.</p>
 <p>Put them side by side and you get a table I wish I&#x27;d had before opening my wallet:</p>
 <figure>
   <img src="/assets/blog/build-it-free-first/11-would-paid-fix-it.webp" alt="Would paying fix it? A table of what I hit and whether a paid plan would likely fix it." width="1600" height="1022" loading="lazy" decoding="async">
   <figcaption>Would paying fix it? A table of what I hit and whether a paid plan would likely fix it.</figcaption>
 </figure>
-<p>Of the seven things that actually broke, two a paid plan would plausibly help, one is just hosting and limits, and four it wouldn&#x27;t touch.</p>
+<p>Of the six things that actually broke, two a paid plan would plausibly help, one is just hosting and limits, and three it wouldn&#x27;t touch.</p>
 <h2 id="where-paid-would-slot-in">Where paid would slot in</h2>
 <p>A paid source isn&#x27;t a rewrite. It&#x27;s <strong>one more tile</strong> in the waterfall. Apollo&#x27;s people search takes title, seniority, company-size and location filters, which could replace three noisy free sources for finding people. And an Apollo or Hunter email, which typically arrives with a verification signal, would sit <em>before</em> my mailbox check so that some lookups end earlier and cheaper. The Apollo email-lookup adapter already exists in the code (it&#x27;s blocked by the plan, not by the design), and a people-search source would be a small addition.</p>
 <figure>
@@ -389,7 +382,7 @@
 <ol>
   <li><strong>Build the cheapest working version first</strong>, even if it&#x27;s ugly.</li>
   <li><strong>Log credits and the settling stage for every lookup.</strong> This is the whole trick.</li>
-  <li><strong>Keep a small known-good set, and write down where each answer came from.</strong> Mine came from a view that quietly dropped a character.</li>
+  <li><strong>Keep a small known-good set, and write down where each answer came from.</strong> Then you can trust your own scorecard.</li>
   <li><strong>Let the tool say &quot;I don&#x27;t know.&quot;</strong> &quot;Risky, because this is a catch-all&quot; is worth more than a hit rate that looks great.</li>
   <li><strong>Price each paid stage against the stage it would replace.</strong> Write your buy-or-skip rule before you test.</li>
 </ol>

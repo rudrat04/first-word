@@ -4,7 +4,7 @@ title: "Build it free first: the cheapest way to find out what Apollo is worth"
 seo_title: "Build It Free First: Is Apollo Worth Paying For? | Rudra Trivedi"
 description: "I built a cloud lead-enrichment tool on free tiers and made it log what every step cost. Here are the numbers, where free hurt, and the rule I'll use to decide whether a paid data plan like Apollo is worth it."
 date: 2026-11-08
-updated: 2026-11-08
+updated: 2026-11-10
 tags: GTM, Lead enrichment, Outbound, Apollo
 project: Air Waterfall
 project_url: /case-study-air-waterfall
@@ -68,35 +68,28 @@ Fourteen addresses is a smoke test, not proof, and "valid" is still uncalibrated
 
 ![Free versus paid: what the free stack gives you and where it hurts, and what a paid plan would likely change (expected, not tested).](images/09-free-vs-paid.png)
 
-## Four problems that looked like reasons to pay. Only one really was.
+## Three problems that looked like reasons to pay. Only one really was.
 
-This is the part I most want you to take away. The free build produced four problems that *looked* like reasons to upgrade. Only one of them was.
+This is the part I most want you to take away. The free build produced three problems that *looked* like reasons to upgrade. Only one of them was.
 
-**1. My test data was wrong, not the tool.**
-I was grading my tool against addresses I *knew* worked. It marked two as "valid", and by my list both were wrong. The tool said `jane.doe@acme.com`; my list said `janedoe@acme.com`. I almost went hunting for a better data source. Instead I opened the original thread: the address had a dot. The search view I'd exported my list from strips dots out of addresses. The tool was right.
-
-Had I trusted that first score, I'd have paid to fix a bug I didn't have.
-
-![Two views of the same inbox: the search listing strips the dot, the full message keeps it.](images/05-dots.png)
-
-**2. Microsoft 365 says "no" to mailboxes that exist.**
+**1. Microsoft 365 says "no" to mailboxes that exist.**
 A real person who had emailed me from a Microsoft-hosted company was marked as not existing. Paid data wouldn't fix that; it's a verification quirk. What it did cost me was credits: one lookup burned **7 credits** for a "risky" result because every guess got probed. Treating a "no" there as a penalty, not proof, and capping Microsoft-hosted domains at three probes brought the worst case down to about four.
 
 ![Credits per person: about 2 on a clean Google domain, 7 on Microsoft 365 before the cap, about 4 after.](images/06-cost.png)
 
-**3. Catch-all domains can't be proven by anyone.**
+**2. Catch-all domains can't be proven by anyone.**
 Some domains accept mail for any address, real or not. On those, no mailbox check proves anything, and no paid plan changes that. So "valid" has to be earned: a catch-all can't score above 0.55, and a guess nothing independent confirmed can't go above 0.84. I'd rather get "risky, and here's why" than a green tick I can't trust.
 
 ![The confidence ladder: caps at 0.55 and 0.84, and "valid" only with proof.](images/04-verdict-ladder.png)
 
-**4. The people data was noisy, and paid probably would fix that.**
+**3. The people data was noisy, and paid probably would fix that.**
 My team-page scraper once "found" seven staff on a homepage. Every one was a customer testimonial ("Training Manager at Danone"). A search for a company with a common name returned people from three unrelated companies. I fixed both with rules, but this is exactly the kind of problem better-filtered paid data should shrink.
 
 Put them side by side and you get a table I wish I'd had before opening my wallet:
 
 ![Would paying fix it? A table of what I hit and whether a paid plan would likely fix it.](images/11-would-paid-fix-it.png)
 
-Of the seven things that actually broke, two a paid plan would plausibly help, one is just hosting and limits, and four it wouldn't touch.
+Of the six things that actually broke, two a paid plan would plausibly help, one is just hosting and limits, and three it wouldn't touch.
 
 ## Where paid would slot in
 
@@ -122,7 +115,7 @@ Next, I want to run this exact test on one month of a paid plan and publish the 
 
 1. **Build the cheapest working version first**, even if it's ugly.
 2. **Log credits and the settling stage for every lookup.** This is the whole trick.
-3. **Keep a small known-good set, and write down where each answer came from.** Mine came from a view that quietly dropped a character.
+3. **Keep a small known-good set, and write down where each answer came from.** Then you can trust your own scorecard.
 4. **Let the tool say "I don't know."** "Risky, because this is a catch-all" is worth more than a hit rate that looks great.
 5. **Price each paid stage against the stage it would replace.** Write your buy-or-skip rule before you test.
 

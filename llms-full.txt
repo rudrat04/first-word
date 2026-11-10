@@ -69,7 +69,7 @@ Written by Rudra Trivedi. Build stories with the method, the numbers and what br
 - **Published**: 2026-11-08
 - **Topics**: GTM, Lead enrichment, Outbound, Apollo
 - **Summary**: I built a cloud lead-enrichment tool on free tiers and made it log what every step cost. Here are the numbers, where free hurt, and the rule I'll use to decide whether a paid data plan like Apollo is worth it.
-- **Sections**: The rule: no paid plan until free shows me where it hurts; The one feature that makes a free build worth doing; What free got me, said out loud; Where free hurt; Four problems that looked like reasons to pay. Only one really was.; Where paid would slot in; My prediction, and the rule I'll judge it by; The method, if you want to copy it
+- **Sections**: The rule: no paid plan until free shows me where it hurts; The one feature that makes a free build worth doing; What free got me, said out loud; Where free hurt; Three problems that looked like reasons to pay. Only one really was.; Where paid would slot in; My prediction, and the rule I'll judge it by; The method, if you want to copy it
 - **Related project**: Air Waterfall (/case-study-air-waterfall)
 
 <!-- blog:end -->
